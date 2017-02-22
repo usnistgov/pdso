@@ -1,0 +1,3189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/General'
+  OntologyIRI='http://el.nist.gov/cre/pdso/General' >
+
+<Prefix name='General' IRI='http://el.nist.gov/cre/pdso/General#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+<Prefix name='ISO-15926' IRI='http://el.nist.gov/cre/pdso/ISO-15926#'/>
+<Prefix name='Quantities' IRI='http://el.nist.gov/cre/pdso/Quantities#'/>
+<Prefix name='Materials' IRI='http://el.nist.gov/cre/pdso/Materials#'/>
+<Prefix name='Codes' IRI='http://el.nist.gov/cre/pdso/Codes#'/>
+<Prefix name='Time' IRI='http://el.nist.gov/cre/pdso/Time#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+<Import>http://el.nist.gov/cre/pdso/ISO-15926</Import>
+<Import>http://el.nist.gov/cre/pdso/Quantities</Import>
+<Import>http://el.nist.gov/cre/pdso/Materials</Import>
+<Import>http://el.nist.gov/cre/pdso/Codes</Import>
+<Import>http://el.nist.gov/cre/pdso/Time</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>General</Literal>
+  </Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+    <Literal>This section of the model introduces the common concepts surrounding Product Data Sheets, as distinct from their technical content.  In particular, this includes the several environments that use product data sheets:  plant design and procurement specifications, product catalogs and offerings, and status sheets from as-built and in-use (as-operated) measurements. </Literal>
+  </Annotation>
+
+<Declaration><Class IRI='#FluidRole' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidRole</IRI>
+  <Literal>FluidRole</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidRole</IRI>
+  <Literal>The functional purpose of the fluid flowing into (or out of) a Port.</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidRole.processFluid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidRole.processFluid</IRI>
+  <Literal>processFluid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidRole.processFluid</IRI>
+  <Literal>The fluid is the ProcessFluid and the Port is directly involved in the process flow. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidRole'/>
+  <NamedIndividual IRI='#FluidRole.processFluid'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidRole.coolingFluid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidRole.coolingFluid</IRI>
+  <Literal>coolingFluid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidRole.coolingFluid</IRI>
+  <Literal>The fluid serves to carry off heat, either through a heat exchanger that is part of the process, or as a means of cooling an Equipment item to maintain proper operating temperature. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidRole'/>
+  <NamedIndividual IRI='#FluidRole.coolingFluid'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidRole.flushingFluid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidRole.flushingFluid</IRI>
+  <Literal>flushingFluid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidRole.flushingFluid</IRI>
+  <Literal>The fluid serves only to flush the equipment unit when it is not in service.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidRole'/>
+  <NamedIndividual IRI='#FluidRole.flushingFluid'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#FluidRole.processFluid'/>
+  <NamedIndividual IRI='#FluidRole.coolingFluid'/>
+  <NamedIndividual IRI='#FluidRole.flushingFluid'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#FluidRole' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#FluidRole.processFluid'/>
+    <NamedIndividual IRI='#FluidRole.coolingFluid'/>
+    <NamedIndividual IRI='#FluidRole.flushingFluid'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#ItemUsage' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemUsage</IRI>
+  <Literal>ItemUsage</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemUsage</IRI>
+  <Literal>the status of a PlantItem with respect to active duty</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#ItemUsage.online' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemUsage.online</IRI>
+  <Literal>online</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemUsage.online</IRI>
+  <Literal>the Item plays an active role in an active process system</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#ItemUsage'/>
+  <NamedIndividual IRI='#ItemUsage.online'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#ItemUsage.standby' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemUsage.standby</IRI>
+  <Literal>standby</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemUsage.standby</IRI>
+  <Literal>the Item is part of an active process system, but is a standby or backup part of the system that is not normally (or currently) actively used</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#ItemUsage'/>
+  <NamedIndividual IRI='#ItemUsage.standby'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#ItemUsage.reserve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemUsage.reserve</IRI>
+  <Literal>reserve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemUsage.reserve</IRI>
+  <Literal>the item is not part of an active processing system.  It is being retained as a readily available replacement.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#ItemUsage'/>
+  <NamedIndividual IRI='#ItemUsage.reserve'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#ItemUsage.onOrder' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemUsage.onOrder</IRI>
+  <Literal>onOrder</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemUsage.onOrder</IRI>
+  <Literal>the Item is not currently physically available in the target Plant.  </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#ItemUsage'/>
+  <NamedIndividual IRI='#ItemUsage.onOrder'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#ItemUsage.online'/>
+  <NamedIndividual IRI='#ItemUsage.standby'/>
+  <NamedIndividual IRI='#ItemUsage.reserve'/>
+  <NamedIndividual IRI='#ItemUsage.onOrder'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#ItemUsage' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#ItemUsage.online'/>
+    <NamedIndividual IRI='#ItemUsage.standby'/>
+    <NamedIndividual IRI='#ItemUsage.reserve'/>
+    <NamedIndividual IRI='#ItemUsage.onOrder'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#PortType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PortType</IRI>
+  <Literal>PortType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PortType</IRI>
+  <Literal>Classification of a Port by its relationship to process fluid flow. </Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#PortType.Inlet' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PortType.Inlet</IRI>
+  <Literal>Inlet</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PortType.Inlet</IRI>
+  <Literal>The port is the/an inlet for process fluid flowing into the equipment, valve, etc. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PortType'/>
+  <NamedIndividual IRI='#PortType.Inlet'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PortType.Outlet' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PortType.Outlet</IRI>
+  <Literal>Outlet</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PortType.Outlet</IRI>
+  <Literal>The port is the/an outlet for process fluid flowing out from the equipment, valve, etc. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PortType'/>
+  <NamedIndividual IRI='#PortType.Outlet'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PortType.InletOutlet' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PortType.InletOutlet</IRI>
+  <Literal>InletOutlet</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PortType.InletOutlet</IRI>
+  <Literal>The port serves as an inlet or an outlet for process fluid flow.  Typically the port is normally an inlet, but it also accommodates backflow. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PortType'/>
+  <NamedIndividual IRI='#PortType.InletOutlet'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PortType.Drain' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PortType.Drain</IRI>
+  <Literal>Drain</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PortType.Drain</IRI>
+  <Literal>The port is an auxiliary outlet, typically used to drain the equipment for maintenance, or to relieve pressure in exceptional situations.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PortType'/>
+  <NamedIndividual IRI='#PortType.Drain'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PortType.Flush' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PortType.Flush</IRI>
+  <Literal>Flush</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PortType.Flush</IRI>
+  <Literal>The port is an auxiliary inlet, typically used flood the equipment with a non-process fluid, such as a neutralizer or cleanser, for maintenance purposes.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PortType'/>
+  <NamedIndividual IRI='#PortType.Flush'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#PortType.Inlet'/>
+  <NamedIndividual IRI='#PortType.Outlet'/>
+  <NamedIndividual IRI='#PortType.InletOutlet'/>
+  <NamedIndividual IRI='#PortType.Drain'/>
+  <NamedIndividual IRI='#PortType.Flush'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#PortType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#PortType.Inlet'/>
+    <NamedIndividual IRI='#PortType.Outlet'/>
+    <NamedIndividual IRI='#PortType.InletOutlet'/>
+    <NamedIndividual IRI='#PortType.Drain'/>
+    <NamedIndividual IRI='#PortType.Flush'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#Artefact' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Artefact</IRI>
+  <Literal>Artefact</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Artefact</IRI>
+  <Literal>An inanimate physical object that is made or given shape by man.
+
+Source: RDL http://posccaesar.org/rdl/RDS422594</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Artefact</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:coInanimatePhysicalObject'/>
+  <IRI>#Artefact</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Artefact</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS422594</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#ArtefactClass' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ArtefactClass</IRI>
+  <Literal>ArtefactClass</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ArtefactClass</IRI>
+  <Literal>A class whose members are classes of artefacts.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ArtefactClass</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ArtefactClass</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS201644</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#CertificationCode' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CertificationCode</IRI>
+  <Literal>CertificationCode</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CertificationCode</IRI>
+  <Literal>A standard code that designates the specific Certification, its properties, tests, and authorities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#CertificationCode' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#Connection' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Connection</IRI>
+  <Literal>Connection</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Connection</IRI>
+  <Literal>The (conceptual) connection between the Equipment and the piping system, which is ultimately implemented by some Port on the body or casing of the Equipment.</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#Connection.tag' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Connection.tag</IRI>
+  <Literal>Connection.tag</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Connection.tag</IRI>
+  <Literal>the identifier for the connection in the plant (functional) design</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Connection.tag'/>
+  <Class abbreviatedIRI='General:Connection' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Connection.tag'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Connection' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#Connection.tag' />
+  </DataMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Connection.type' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Connection.type</IRI>
+  <Literal>Connection.type</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Connection.type</IRI>
+  <Literal>The functional role of the Connection with respect to the valve: inlet, outlet, other. </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Connection.type'/>
+  <Class abbreviatedIRI='General:Connection' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Connection.type'/>
+  <Class abbreviatedIRI='General:PortType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Connection' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Connection.type' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ConnectionRating' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ConnectionRating</IRI>
+  <Literal>ConnectionRating</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ConnectionRating</IRI>
+  <Literal>Pressure class rating for the connection. Information should include the governing body (ASME etc). 
+Source: HI EDE 50.7 
+</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ConnectionRating' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#ConnectionType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ConnectionType</IRI>
+  <Literal>ConnectionType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ConnectionType</IRI>
+  <Literal>Type of the physical connector, taken from a standard or catalogue. 
+Usually the supplier&apos;s choice, but the owner may chose if the piping system has specific requirements.
+Source: HI EDE 50.7
+Some common values:16 AMP (16 AMP sanitary flange), Adapter, Blind, Brodie (manufacturer specific companion flange), Companion, DIN blind flange, DIN threaded flange, DIN flat face flange, DIN weld neck flange, DIN lapped joint flange, Female face - large, Female face - small, FF (Flat Face), Groove, Groove face - large, JIS (Japanese standard), Groove face - small, Lens joint (lens ring flange), LJ (Lapped Joints), Male face - large, Male face - small, O ring, Plate (manufacturer specific), Reducing (threaded flange), RF (Raised Face), RTJ (Ring Joint Face);, SO (Slip-On), Split-ring, SW (Socket Welding flange), TandG (Tongue and Groove), Tongue face - large, Tongue face - small, VS (Van Stone flange) , WN (Welding Neck</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ConnectionType' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#CostProfile' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CostProfile</IRI>
+  <Literal>CostProfile</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CostProfile</IRI>
+  <Literal>A characterization of the cost of operating or maintaining equipment.  This is usually phrased in units of currency/time, where the time can be elapsed time or time in active duty. But it may be more complex if it depends on specific uses of the equipment or on environmental conditions, etc.</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#DesignElement' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DesignElement</IRI>
+  <Literal>DesignElement</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DesignElement</IRI>
+  <Literal>Design elements are the basic units of a engineering, drawing, design or other visual pieces for a product.
+
+Source: Wikipedia</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:coFunctionalObject'/>
+  <IRI>#DesignElement</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#DesignElement</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#DesignElement.revision' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DesignElement.revision</IRI>
+  <Literal>DesignElement.revision</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DesignElement.revision</IRI>
+  <Literal>An identifier for a specific version of the DesignElement, when the design practice makes such a distinction.  
+
+In many cases, a SystemModel has a version but the elements in it are all considered to have that version.  In other practices, the SystemModel has a version, and the each DesignElement has a version that reflects the version of the SystemModel in which that element was last changed.  (This enables the reader to determine net change.)   A DesignElement &apos;revision&apos; reflects a change in one or more requirements associated with that element.
+</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#DesignElement.revision'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#DesignElement.revision'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:DesignElement' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#DesignElement.revision' />
+  </DataMaxCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#DesignElement.tagNumber' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DesignElement.tagNumber</IRI>
+  <Literal>DesignElement.tagNumber</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DesignElement.tagNumber</IRI>
+  <Literal>The identifier for the design element in the formal design specification.
+For example, the identifier for the element on a piping and instrumentation diagram, or on a circuit diagram.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#DesignElement.tagNumber'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#DesignElement.tagNumber'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:DesignElement' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#DesignElement.tagNumber' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Equipment' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Equipment</IRI>
+  <Literal>Equipment</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Equipment</IRI>
+  <Literal>a Plant Item that plays a significant role in transforming the process material or controlling a critical property of the material.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#Equipment</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Equipment' />
+  <Class abbreviatedIRI='General:PlantItem' />
+</SubClassOf>
+<Declaration><Class IRI='#EquipmentCharacterization' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#EquipmentCharacterization</IRI>
+  <Literal>EquipmentCharacterization</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#EquipmentCharacterization</IRI>
+  <Literal>ComponentCharacterization of Equipment Artefacts</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#EquipmentCharacterization</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#EquipmentCharacterization</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS8615020</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#EquipmentCharacterization</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#EquipmentCharacterization' />
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#FluidPort' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidPort</IRI>
+  <Literal>FluidPort</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidPort</IRI>
+  <Literal>An opening in any kind of container or vessel for the entry or egress of substances which behave as fluids, i.e. gases, liquids and fluidized solids. 
+
+Class: Feature (Port is FO)</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#FluidPort</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#FluidPort</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS897297401</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#FluidPort' />
+  <Class abbreviatedIRI='General:Port' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#FluidPort.flowType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidPort.flowType</IRI>
+  <Literal>FluidPort.flowType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidPort.flowType</IRI>
+  <Literal>The functional role of the Port with respect to the equipment: inlet, outlet, other. </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#FluidPort.flowType'/>
+  <Class abbreviatedIRI='General:FluidPort' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#FluidPort.flowType'/>
+  <Class abbreviatedIRI='General:PortType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:FluidPort' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#FluidPort.flowType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#FluidPort.fluidRole' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidPort.fluidRole</IRI>
+  <Literal>FluidPort.fluidRole</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidPort.fluidRole</IRI>
+  <Literal>The functional purpose of the fluid flowing through the Port: process fluid, flushing fluid, etc.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#FluidPort.fluidRole'/>
+  <Class abbreviatedIRI='General:FluidPort' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#FluidPort.fluidRole'/>
+  <Class abbreviatedIRI='General:FluidRole' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:FluidPort' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#FluidPort.fluidRole' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#FluidPort.size' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidPort.size</IRI>
+  <Literal>FluidPort.size</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidPort.size</IRI>
+  <Literal>The size of the port is usually its diameter.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#FluidPort.size'/>
+  <Class abbreviatedIRI='General:FluidPort' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#FluidPort.size'/>
+  <Class abbreviatedIRI='Quantities:Length' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:FluidPort' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#FluidPort.size' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Instrument' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Instrument</IRI>
+  <Literal>Instrument</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Instrument</IRI>
+  <Literal>A physical object that detects an aspect of something; records, modifies and/or displays such an aspect or performs a combination of these activities.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#Instrument</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Instrument' />
+  <Class abbreviatedIRI='General:PlantItem' />
+</SubClassOf>
+<Declaration><Class IRI='#InstrumentCharacterization' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#InstrumentCharacterization</IRI>
+  <Literal>InstrumentCharacterization</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#InstrumentCharacterization</IRI>
+  <Literal>Item Characterization of Instrument Artefacts
+
+The definition of the RDL object is a note about its source.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#InstrumentCharacterization</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#InstrumentCharacterization</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS17895905</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#InstrumentCharacterization</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#InstrumentCharacterization' />
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#ItemCharacterization' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization</IRI>
+  <Literal>ItemCharacterization</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization</IRI>
+  <Literal>A description of a system component, or of a product that may be offered as a system component.  The description characterizes the component using a set of properties and their values.
+
+ProoductCharacterizations are classified in two ways:  By what kind of thing is being characterized, and by the role of the characterization.
+
+Characterization roles include:
+- specifications for DesignElements, which specify the required characteristics of a system component to-be
+- specifications for ProductModels, which specify the nominal characteristics of a product as-offered
+- MeasuredStates, which specify the measured properties of a physical system component as-is at some point in time
+
+Characterization kinds mirror the kinds of Artifacts that are system components.  Taken from common industry practice, the generic categories include:
+- Equipment
+- Instrument
+- Valve
+- Other Line Elements
+In addition, the artifactType specifies a particular category of component, such as a Centrifugal Pump or a Motor-operated check valve.
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#ItemCharacterization</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ItemCharacterization' />
+  <Class abbreviatedIRI='General:ArtefactClass' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ItemCharacterization.itemType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.itemType</IRI>
+  <Literal>ItemCharacterization.itemType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.itemType</IRI>
+  <Literal> a specific category of product, that identifies principal functional or physical features.
+
+Examples: Centrifugal Pump, Motor-operated check valve.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ItemCharacterization.itemType'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ItemCharacterization.itemType'/>
+  <Class abbreviatedIRI='General:ItemType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ItemCharacterization' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ItemCharacterization.itemType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#ItemCharacterization.serviceDescription' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.serviceDescription</IRI>
+  <Literal>ItemCharacterization.serviceDescription</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.serviceDescription</IRI>
+  <Literal>A description intended to describe the purpose and intended use of an item.
+
+Source: http://posccaesar.org/rdl/RDS338939</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ItemCharacterization.serviceDescription'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ItemCharacterization.serviceDescription'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ItemCharacterization' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#ItemCharacterization.serviceDescription' />
+  </DataMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ItemCharacterization.serviceTime' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.serviceTime</IRI>
+  <Literal>ItemCharacterization.serviceTime</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.serviceTime</IRI>
+  <Literal>The amount of time (in years or months) the characterized Item is expected to be in service.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ItemCharacterization.serviceTime'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ItemCharacterization.serviceTime'/>
+  <Class abbreviatedIRI='Quantities:Time' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ItemCharacterization' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#ItemCharacterization.serviceTime' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ItemCharacterization.status' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.status</IRI>
+  <Literal>ItemCharacterization.status</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.status</IRI>
+  <Literal>A Code indicating the source, nature and/or quality of the ItemCharacterization.
+
+Note:  ItemCharacterizations are distinguished by what they are associated with, which represent different uses of ProductDataSheets.  Each of these has some form of version control:  DesignElements and ProductModels have revision numbers, MeasuredStates of actual PlantItems have timestamps.  But within the lifecycle, the Design, Build, Operate phases have subordinate phases in which elements of the characterization are refined.  The &apos;status&apos; element supports these lower-level distinctions.
+
+Note:  This specification does not support assignment of a status code to individual properties within an ItemCharacterization.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ItemCharacterization.status'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ItemCharacterization.status'/>
+  <Class abbreviatedIRI='General:ItemDataStatus' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ItemCharacterization' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#ItemCharacterization.status' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ItemDataStatus' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemDataStatus</IRI>
+  <Literal>ItemDataStatus</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemDataStatus</IRI>
+  <Literal>A Code indicating the source, nature or quality of an ItemCharacterization.
+
+Examples: Design specified, computed from design spec, estimated from design simulation, product specified, computed from product specification, result of product simulation, actual measurement as installed, actual measurement in operation, etc.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ItemDataStatus' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#ItemType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemType</IRI>
+  <Literal>ItemType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemType</IRI>
+  <Literal>A standard term, or a code from some reference catalog that specifies the kind/category of an Artefact.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ItemType' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#LineElement' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LineElement</IRI>
+  <Literal>LineElement</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#LineElement</IRI>
+  <Literal>A PlantItem that is part of the process fluid flow or a related maintenance or emergency flow, but is not considered Equipment or Instrumentation.  The primary subtypes are valves, pipes and couplings.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#LineElement</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#LineElement' />
+  <Class abbreviatedIRI='General:PlantItem' />
+</SubClassOf>
+<Declaration><Class IRI='#LineItemCharacterization' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LineItemCharacterization</IRI>
+  <Literal>LineItemCharacterization</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#LineItemCharacterization</IRI>
+  <Literal>Item Characterization of Line Item Artifacts
+A process piping equipment class that contains classes of equipment used in or in connection with a piping system.
+
+Source: RDL as Piping Component Class</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#LineItemCharacterization</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#LineItemCharacterization</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS225314</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#LineItemCharacterization</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#LineItemCharacterization' />
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#Location' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Location</IRI>
+  <Literal>Location</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Location</IRI>
+  <Literal>A place in physical space, on or near the surface of the earth.
+
+(Locations are specified by a number of attributes, none of which is described here.)</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#LocationId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LocationId</IRI>
+  <Literal>LocationId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#LocationId</IRI>
+  <Literal>A Code (or simply a Code value, a character string) that identifies a Location, possibly in the context of a more general Location.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#LocationId' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#MaintenanceLevel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MaintenanceLevel</IRI>
+  <Literal>MaintenanceLevel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MaintenanceLevel</IRI>
+  <Literal>A level of effort assigned to the maintenance of a system or a system component.  It can be as simple as &quot;high, medium, low&quot; or some more complex system that identifies resource levels, skills, cost categories, etc.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#MaintenanceLevel' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#MeasuredState' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MeasuredState</IRI>
+  <Literal>MeasuredState</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MeasuredState</IRI>
+  <Literal>A set of measurements of properties of an Artefact that are made at a specific point in time.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#MeasuredState' />
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#MeasuredState.timestamp' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MeasuredState.timestamp</IRI>
+  <Literal>MeasuredState.timestamp</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MeasuredState.timestamp</IRI>
+  <Literal>The (nominal) Date and Time at which this set of measurements was made.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#MeasuredState.timestamp'/>
+  <Class abbreviatedIRI='General:MeasuredState' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#MeasuredState.timestamp'/>
+  <Datatype abbreviatedIRI='xsd:datetime' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:MeasuredState' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#MeasuredState.timestamp' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ModelType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ModelType</IRI>
+  <Literal>ModelType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ModelType</IRI>
+  <Literal>A particular category of formal model of a system.
+
+Example:  A Process Functional Model for the system.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ModelType' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#PartCharacterization' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PartCharacterization</IRI>
+  <Literal>PartCharacterization</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PartCharacterization</IRI>
+  <Literal>An element of an ItemCharacterization that characterizes a physical part of the items, and corresponds to a physical artefact (part) in the system or product described by the ItemCharacterization.
+
+This class is an abstraction.  Each interesting class of part is described separately according to the type of Product being characterized.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#PartCharacterization</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#Person' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Person</IRI>
+  <Literal>Person</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Person</IRI>
+  <Literal>&lt;p&gt;A human being, in this case, one who plays some significant role in the process of specifying, constructing, or operating a plant.&lt;/p&gt;
+&lt;p&gt;An organism that is a person.
+Engineer, plant manager, and student can be represented by instances of class_of_person.&lt;/p&gt;
+
+Source: RDL as I5926-4 PERSON</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Person</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Person</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS413954</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#Person.name' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Person.name</IRI>
+  <Literal>Person.name</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Person.name</IRI>
+  <Literal>The full name of the Person.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Person.name'/>
+  <Class abbreviatedIRI='General:Person' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Person.name'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Person' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Person.name' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#PipingAndInstrumentationDiagram' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PipingAndInstrumentationDiagram</IRI>
+  <Literal>PipingAndInstrumentationDiagram</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PipingAndInstrumentationDiagram</IRI>
+  <Literal>A diagram showing a schematic representation of a process system, including instrumentation.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#PipingAndInstrumentationDiagram</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#PipingAndInstrumentationDiagram</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS329894</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PipingAndInstrumentationDiagram' />
+  <Class abbreviatedIRI='General:SystemModel' />
+</SubClassOf>
+<Declaration><Class IRI='#Plant' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Plant</IRI>
+  <Literal>Plant</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Plant</IRI>
+  <Literal>A physical structure (or a planned physical structure) that is a system whose purpose is to make products.
+
+A facility that consists of the land, buildings, machinery, apparatus and fixtures employed in carrying on a trade or an industrial business.
+
+Source: RDL/M-W</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Plant</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Plant</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS7151797</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Plant' />
+  <Class abbreviatedIRI='General:System' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Plant.plantId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Plant.plantId</IRI>
+  <Literal>Plant.plantId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Plant.plantId</IRI>
+  <Literal>A formal identifier for the Plant, assigned by the Owner.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Plant.plantId'/>
+  <Class abbreviatedIRI='General:Plant' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Plant.plantId'/>
+  <Class abbreviatedIRI='Codes:OrganizationId' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Plant' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#Plant.plantId' />
+  </ObjectMinCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#PlantItem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem</IRI>
+  <Literal>PlantItem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem</IRI>
+  <Literal>Artefact that is a physical part of a process plant</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#PlantItem</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PlantItem' />
+  <Class abbreviatedIRI='General:Artefact' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PlantItem.maintenanceCost' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.maintenanceCost</IRI>
+  <Literal>PlantItem.maintenanceCost</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.maintenanceCost</IRI>
+  <Literal>Characterization of the cost of preventive and/or remedial maintenance of the PlantItem.  This is usually phrased in units of currency/time, where the time can be elapsed time or time in active duty, but it can be more complex.  (See CostProfile.) 
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.maintenanceCost'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.maintenanceCost'/>
+  <Class abbreviatedIRI='General:CostProfile' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PlantItem' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PlantItem.maintenanceCost' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PlantItem.maintenanceLevel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.maintenanceLevel</IRI>
+  <Literal>PlantItem.maintenanceLevel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.maintenanceLevel</IRI>
+  <Literal>The level of effort assigned to the maintenance of the PlantItem.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.maintenanceLevel'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.maintenanceLevel'/>
+  <Class abbreviatedIRI='General:MaintenanceLevel' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PlantItem' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PlantItem.maintenanceLevel' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PlantItem.serialNumber' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.serialNumber</IRI>
+  <Literal>PlantItem.serialNumber</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.serialNumber</IRI>
+  <Literal>A unique code assigned for identification of a single unit.
+
+Source: Wikipedia</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.serialNumber'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.serialNumber'/>
+  <Class abbreviatedIRI='Codes:Code' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PlantItem' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PlantItem.serialNumber' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PlantItem.usage' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.usage</IRI>
+  <Literal>PlantItem.usage</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.usage</IRI>
+  <Literal>the current service usage of the PlantItem: online, standby, etc.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.usage'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.usage'/>
+  <Class abbreviatedIRI='General:ItemUsage' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PlantItem' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PlantItem.usage' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Port' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Port</IRI>
+  <Literal>Port</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Port</IRI>
+  <Literal>A device which is a point of interface by which the a device communicates with another functional unit or system.
+
+Source: RDL
+
+Properly, a physical element of a device that implements a functional interface (a Connection).
+
+A (usually integral) element of a device (PlantItem) that accommodates physical connection and load transference and/or enables the flow of material, power or signals into or out of the device.
+ </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Port</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Port</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS1027742141</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#ProcessFlowDiagram' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFlowDiagram</IRI>
+  <Literal>ProcessFlowDiagram</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFlowDiagram</IRI>
+  <Literal>A schematic diagram describing the equipment limits and their interconnections, major process control functions, and major stream characteristics, including physical and transport properties, material flows, and energy flows.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ProcessFlowDiagram</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ProcessFlowDiagram</IRI>
+  <Literal>http://poscaesar.org/rdl/RDS331109</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ProcessFlowDiagram' />
+  <Class abbreviatedIRI='General:SystemModel' />
+</SubClassOf>
+<Declaration><Class IRI='#ProductCertification' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductCertification</IRI>
+  <Literal>ProductCertification</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductCertification</IRI>
+  <Literal>A set of performance tests and quality assurance tests, and qualification criteria that are stipulated in contracts, regulations, or specifications (typically called &quot;certification schemes&quot; in the product certification industry).
+
+Source: Wikipedia
+
+</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#ProductCertification.description' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductCertification.description</IRI>
+  <Literal>ProductCertification.description</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductCertification.description</IRI>
+  <Literal>A text description of the nature, properties, tests, and authorities, for the certification.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ProductCertification.description'/>
+  <Class abbreviatedIRI='General:ProductCertification' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ProductCertification.description'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductCertification' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#ProductCertification.description' />
+  </DataMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ProductDataSheet' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductDataSheet</IRI>
+  <Literal>ProductDataSheet</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductDataSheet</IRI>
+  <Literal>A description of a given Product or Component that is a set of defined fields within which information is supplied, to convey specific properties of the Product or component.
+
+Source: RDL http://posccaesar.org/rdl/page/RDS17987174</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ProductDataSheet</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ProductDataSheet</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS17987174</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#ProductDataSheet.date' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductDataSheet.date</IRI>
+  <Literal>ProductDataSheet.date</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductDataSheet.date</IRI>
+  <Literal>The date of issuance, or recording, of the Product Data Sheet</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ProductDataSheet.date'/>
+  <Class abbreviatedIRI='General:ProductDataSheet' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ProductDataSheet.date'/>
+  <Datatype abbreviatedIRI='xsd:date' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductDataSheet' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ProductDataSheet.date' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#ProductDataSheet.sheetId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductDataSheet.sheetId</IRI>
+  <Literal>ProductDataSheet.sheetId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductDataSheet.sheetId</IRI>
+  <Literal>An identification code for a data sheet.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ProductDataSheet.sheetId'/>
+  <Class abbreviatedIRI='General:ProductDataSheet' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ProductDataSheet.sheetId'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductDataSheet' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ProductDataSheet.sheetId' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ProductModel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductModel</IRI>
+  <Literal>ProductModel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductModel</IRI>
+  <Literal>An &apos;artefact class&apos; whose members are classes of individuals that are the outcome of a manufacturing process.
+
+Source: RDL as Manufactured Product Class</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ProductModel</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ProductModel</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS2065612231</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#ProductModel</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#ProductModel.partNumber' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductModel.partNumber</IRI>
+  <Literal>ProductModel.partNumber</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductModel.partNumber</IRI>
+  <Literal>A product code for a version of an artefact.
+The partNumber should be unique within the catalog of the manufacturer of the ProductModel.
+
+Source: RDL http://posccaesar.org/rdl/page/RDS8502722</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ProductModel.partNumber'/>
+  <Class abbreviatedIRI='General:ProductModel' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ProductModel.partNumber'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductModel' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ProductModel.partNumber' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#ProductModel.version' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductModel.version</IRI>
+  <Literal>ProductModel.version</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductModel.version</IRI>
+  <Literal>The identifier for a particular version of the nominal Product (Model).  It is essentially an extension of the partNumber.  
+
+A procurement specification or bill of materials for a System may identify a product by its partNumber, which is usually interpreted as the current version if there is any such distinction. But a plant manifest will identify the versions of the actual plant items. </Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ProductModel.version'/>
+  <Class abbreviatedIRI='General:ProductModel' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ProductModel.version'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductModel' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#ProductModel.version' />
+  </DataMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Project' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Project</IRI>
+  <Literal>Project</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Project</IRI>
+  <Literal>Business process consisting of a set of coherent activities intended for a specific purpose and managed as a whole.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Project</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Project</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS9629</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#Project.projectId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Project.projectId</IRI>
+  <Literal>Project.projectId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Project.projectId</IRI>
+  <Literal>Declared as an instance of a project and has a number as a label.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Project.projectId'/>
+  <Class abbreviatedIRI='General:Project' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Project.projectId'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Project' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Project.projectId' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#Project.projectTitle' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Project.projectTitle</IRI>
+  <Literal>Project.projectTitle</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Project.projectTitle</IRI>
+  <Literal>The identifier of the project activity.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Project.projectTitle'/>
+  <Class abbreviatedIRI='General:Project' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Project.projectTitle'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Project' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Project.projectTitle' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#SafetyFunctionCode' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SafetyFunctionCode</IRI>
+  <Literal>SafetyFunctionCode</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SafetyFunctionCode</IRI>
+  <Literal>a code for a class of functional unit whose members are engaged in safety related activities regarding personnel, environment and material assets. 
+
+Source: IEC 61511</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SafetyFunctionCode' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#SafetyInstrumentedFunction' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SafetyInstrumentedFunction</IRI>
+  <Literal>SafetyInstrumentedFunction</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SafetyInstrumentedFunction</IRI>
+  <Literal>A class of functionality involving safety related activities regarding personnel, environment and material assets. A safety function has a specified safety integrity level which is necessary to achieve functional safety. A safety instrumented function can be either a safety instrumented protection function or a safety instrumented control function.
+
+Source: IEC 61511</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#SafetyInstrumentedFunction.description' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SafetyInstrumentedFunction.description</IRI>
+  <Literal>SafetyInstrumentedFunction.description</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SafetyInstrumentedFunction.description</IRI>
+  <Literal>text description of the safety function</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#SafetyInstrumentedFunction.description'/>
+  <Class abbreviatedIRI='General:SafetyInstrumentedFunction' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#SafetyInstrumentedFunction.description'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SafetyInstrumentedFunction' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#SafetyInstrumentedFunction.description' />
+  </DataMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#SafetyIntegrityLevel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SafetyIntegrityLevel</IRI>
+  <Literal>SafetyIntegrityLevel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SafetyIntegrityLevel</IRI>
+  <Literal>Safety Integrity Level (SIL) is defined as a relative level of risk-reduction provided by a safety function, or to specify a target level of risk reduction. In simple terms, SIL is a measurement of performance required for a Safety Instrumented Function (SIF).
+
+Source: Wikipedia
+See Also:  IEC 61511</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SafetyIntegrityLevel' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#System' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#System</IRI>
+  <Literal>System</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#System</IRI>
+  <Literal>A collection of resources (people, machines, materials, software) that is organized for a purpose.
+
+A functional object that is an assembly of functional objects forming a network to provide a type of service or serving a common purpose.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#System</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#System</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS316259</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#System.id' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#System.id</IRI>
+  <Literal>System.id</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#System.id</IRI>
+  <Literal>A formal identifier for the (sub) System</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#System.id'/>
+  <Class abbreviatedIRI='General:System' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#System.id'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:System' />
+  <DataMinCardinality cardinality='1'>
+    <DataProperty IRI='#System.id' />
+  </DataMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#System.maintenanceLevel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#System.maintenanceLevel</IRI>
+  <Literal>System.maintenanceLevel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#System.maintenanceLevel</IRI>
+  <Literal>The level of effort assigned to the maintenance of the System</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#System.maintenanceLevel'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#System.maintenanceLevel'/>
+  <Class abbreviatedIRI='General:MaintenanceLevel' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:System' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#System.maintenanceLevel' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#System.name' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#System.name</IRI>
+  <Literal>System.name</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#System.name</IRI>
+  <Literal>The common name for the System, if any.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#System.name'/>
+  <Class abbreviatedIRI='General:System' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#System.name'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:System' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#System.name' />
+  </DataMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#SystemModel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemModel</IRI>
+  <Literal>SystemModel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemModel</IRI>
+  <Literal>A SystemModel is a formal description of the system at some level of abstraction and from some specific point of view.  Such models are typically diagrams with accompanying text.  The level and viewpoint for the model determines what is actually captured in the diagram.
+
+These ideas are scattered over several RDL classes:
+
+A simplified or idealized description or conception of a particular system, situation, or process (often in mathematical terms: so mathematical model) that is put forward as basis for calculations, predictions, or further investigation.
+
+Source: RDL as Model
+
+A diagram which is a topological representation of a system in which the information content depends on a specific requirement.
+
+Source: RDL as RDS345824 System Diagram
+
+A specification intended to be used to create an item
+
+Source: RDL as Design
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#SystemModel</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#SystemModel</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS11984375</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#SystemModel</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#SystemModel.modelId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemModel.modelId</IRI>
+  <Literal>SystemModel.modelId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemModel.modelId</IRI>
+  <Literal>The identifier for the SystemModel.
+
+Example:
+RDL: PIDIdentificationCode is defined as:	
+A document identification code that identifies a P and I diagram (P&amp;ID)
+Source: http://posccaesar.org/rdl/RDS13970840
+
+This is a special case of modelId.
+
+
+</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#SystemModel.modelId'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#SystemModel.modelId'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemModel' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#SystemModel.modelId' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#SystemModel.referenceDate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemModel.referenceDate</IRI>
+  <Literal>SystemModel.referenceDate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemModel.referenceDate</IRI>
+  <Literal>Date of published model.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#SystemModel.referenceDate'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#SystemModel.referenceDate'/>
+  <Datatype abbreviatedIRI='xsd:date' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemModel' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#SystemModel.referenceDate' />
+  </DataMaxCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#SystemModel.revision' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemModel.revision</IRI>
+  <Literal>SystemModel.revision</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemModel.revision</IRI>
+  <Literal>An identification code of a version of the model.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#SystemModel.revision'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#SystemModel.revision'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemModel' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#SystemModel.revision' />
+  </DataMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#SystemOperationalDiagram' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemOperationalDiagram</IRI>
+  <Literal>SystemOperationalDiagram</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemOperationalDiagram</IRI>
+  <Literal>A system diagram representing a particular operational condition.
+
+Source: RDL
+
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#SystemOperationalDiagram</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#SystemOperationalDiagram</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS345869</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SystemOperationalDiagram' />
+  <Class abbreviatedIRI='General:SystemModel' />
+</SubClassOf>
+<Declaration><Class IRI='#SystemSpecification' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemSpecification</IRI>
+  <Literal>SystemSpecification</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemSpecification</IRI>
+  <Literal>A SystemSpecification is a collection of models of a system, as-is or to-be, that together describe the system at the appropriate formal level of detail needed for some particular interface in the design, construction, and operation of the system.  These typically coincide with specific milestones in the lifecycle of the system.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#SystemSpecification</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#SystemSpecification</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS335744</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#SystemSpecification.revisionNumber' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemSpecification.revisionNumber</IRI>
+  <Literal>SystemSpecification.revisionNumber</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemSpecification.revisionNumber</IRI>
+  <Literal>A version identifier for a managed SystemSpecification
+</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#SystemSpecification.revisionNumber'/>
+  <Class abbreviatedIRI='General:SystemSpecification' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#SystemSpecification.revisionNumber'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemSpecification' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#SystemSpecification.revisionNumber' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#SystemSpecification.specificationId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemSpecification.specificationId</IRI>
+  <Literal>SystemSpecification.specificationId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemSpecification.specificationId</IRI>
+  <Literal>The identifier for the system specification that provides the context for the tag number.  In many cases, it is a drawing identifier.  </Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#SystemSpecification.specificationId'/>
+  <Class abbreviatedIRI='General:SystemSpecification' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#SystemSpecification.specificationId'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemSpecification' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#SystemSpecification.specificationId' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#WettedPart' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#WettedPart</IRI>
+  <Literal>WettedPart</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#WettedPart</IRI>
+  <Literal>The characterization of a part of a PlantItem (pump, valve, instrument, etc.) that makes direct contact with the process fluid.  As a consequence, the material of which it is constructed must be able to withstand the characteristics of the process fluid and perform correctly.
+
+The material is typically specified by the builder/owner, based on his knowledge of the process fluid. A recognized material  designation (ISO, ASTM, UNS, etc.) is recommended where possible.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#WettedPart</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#WettedPart' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Location.name' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Location.name</IRI>
+  <Literal>Location.name</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Location.name</IRI>
+  <Literal>a code that identifies the Location, according to some standard or locally used identification scheme</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Location.name'/>
+  <Class abbreviatedIRI='General:Location' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Location.name'/>
+  <Class abbreviatedIRI='General:LocationId' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Location' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#Location.name' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProductDataSheet.content' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductDataSheet.content</IRI>
+  <Literal>ProductDataSheet.content</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductDataSheet.content</IRI>
+  <Literal>The ComponentCharacterization (a set of properties) that forms the main content of the ProductDataSheet.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProductDataSheet.content'/>
+  <Class abbreviatedIRI='General:ProductDataSheet' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProductDataSheet.content'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductDataSheet' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProductDataSheet.content' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProductDataSheet.source' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductDataSheet.source</IRI>
+  <Literal>ProductDataSheet.source</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductDataSheet.source</IRI>
+  <Literal>The Organization that produced the Product Data Sheet.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProductDataSheet.source'/>
+  <Class abbreviatedIRI='General:ProductDataSheet' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProductDataSheet.source'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductDataSheet' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProductDataSheet.source' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#SafetyInstrumentedFunction.functionCode' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SafetyInstrumentedFunction.functionCode</IRI>
+  <Literal>SafetyInstrumentedFunction.functionCode</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SafetyInstrumentedFunction.functionCode</IRI>
+  <Literal>a code for a class of functional unit whose members are engaged in safety related activities regarding personnel, environment and material assets. 
+
+Source: IEC 61511</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SafetyInstrumentedFunction.functionCode'/>
+  <Class abbreviatedIRI='General:SafetyInstrumentedFunction' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SafetyInstrumentedFunction.functionCode'/>
+  <Class abbreviatedIRI='General:SafetyFunctionCode' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SafetyInstrumentedFunction' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#SafetyInstrumentedFunction.functionCode' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#SafetyInstrumentedFunction.integrityLevel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SafetyInstrumentedFunction.integrityLevel</IRI>
+  <Literal>SafetyInstrumentedFunction.integrityLevel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SafetyInstrumentedFunction.integrityLevel</IRI>
+  <Literal>Safety Integrity Level (SIL) is defined as a relative level of risk-reduction provided by a safety function, or to specify a target level of risk reduction. In simple terms, SIL is a measurement of performance required for a Safety Instrumented Function (SIF).
+
+Source: Wikipedia
+See Also:  IEC 61511</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SafetyInstrumentedFunction.integrityLevel'/>
+  <Class abbreviatedIRI='General:SafetyInstrumentedFunction' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SafetyInstrumentedFunction.integrityLevel'/>
+  <Class abbreviatedIRI='General:SafetyIntegrityLevel' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SafetyInstrumentedFunction' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#SafetyInstrumentedFunction.integrityLevel' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProductCertification.code' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductCertification.code</IRI>
+  <Literal>ProductCertification.code</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductCertification.code</IRI>
+  <Literal>A standard code that designates the specific Certification, its properties, tests, and authorities.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProductCertification.code'/>
+  <Class abbreviatedIRI='General:ProductCertification' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProductCertification.code'/>
+  <Class abbreviatedIRI='General:CertificationCode' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductCertification' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProductCertification.code' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PartCharacterization.item' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PartCharacterization.item</IRI>
+  <Literal>PartCharacterization.item</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PartCharacterization.item</IRI>
+  <Literal>The characterization that contains the description of the physical part.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#PartCharacterization.item</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isDerived'/>
+  <IRI>#PartCharacterization.item</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PartCharacterization.item'/>
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PartCharacterization.item'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PartCharacterization' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PartCharacterization.item' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ItemCharacterization.parts' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.parts</IRI>
+  <Literal>ItemCharacterization.parts</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.parts</IRI>
+  <Literal>the elements of the ItemCharacterization that describe physical parts of the Item being characterized</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#ItemCharacterization.parts</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isDerived'/>
+  <IRI>#ItemCharacterization.parts</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ItemCharacterization.parts'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ItemCharacterization.parts'/>
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</ObjectPropertyRange>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#PartCharacterization.item' />
+  <ObjectProperty IRI='#ItemCharacterization.parts' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#ItemCharacterization.connections' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.connections</IRI>
+  <Literal>ItemCharacterization.connections</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.connections</IRI>
+  <Literal>The logical connections to the described Item that are contained in the ItemCharacterization.
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#ItemCharacterization.connections</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ItemCharacterization.connections'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ItemCharacterization.connections'/>
+  <Class abbreviatedIRI='General:Connection' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#ItemCharacterization.usesModel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.usesModel</IRI>
+  <Literal>ItemCharacterization.usesModel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.usesModel</IRI>
+  <Literal>A SystemModel that is used to convey some part of the intended use and behaviors of the Item being characterized</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ItemCharacterization.usesModel'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ItemCharacterization.usesModel'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#InstrumentCharacterization.safetyFunction' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#InstrumentCharacterization.safetyFunction</IRI>
+  <Literal>InstrumentCharacterization.safetyFunction</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#InstrumentCharacterization.safetyFunction</IRI>
+  <Literal>safety function which is the purpose of, or forms part of the specifications for, the characterized Instrument.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#InstrumentCharacterization.safetyFunction'/>
+  <Class abbreviatedIRI='General:InstrumentCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#InstrumentCharacterization.safetyFunction'/>
+  <Class abbreviatedIRI='General:SafetyInstrumentedFunction' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:InstrumentCharacterization' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#InstrumentCharacterization.safetyFunction' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ItemCharacterization.forElement' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.forElement</IRI>
+  <Literal>ItemCharacterization.forElement</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.forElement</IRI>
+  <Literal>The DesignElements, if any, that include this ComponentCharacterization</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ItemCharacterization.forElement'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ItemCharacterization.forElement'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#DesignElement.specification' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DesignElement.specification</IRI>
+  <Literal>DesignElement.specification</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DesignElement.specification</IRI>
+  <Literal>The specifications for the physical Artefact that will fulfill this DesignElement</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#DesignElement.specification'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#DesignElement.specification'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:DesignElement' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#DesignElement.specification' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#ItemCharacterization.forElement' />
+  <ObjectProperty IRI='#DesignElement.specification' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#ItemCharacterization.certifications' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.certifications</IRI>
+  <Literal>ItemCharacterization.certifications</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.certifications</IRI>
+  <Literal>The characterized component has, or is required to have, the ProductCertification, i.e.,the component must have passed the associated certification process, according to a formal declaration by the appointed authority.  </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ItemCharacterization.certifications'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ItemCharacterization.certifications'/>
+  <Class abbreviatedIRI='General:ProductCertification' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#MeasuredState.ofItem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MeasuredState.ofItem</IRI>
+  <Literal>MeasuredState.ofItem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MeasuredState.ofItem</IRI>
+  <Literal>The individual Artefact that was measured, and that is characterized by this characterization.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#MeasuredState.ofItem'/>
+  <Class abbreviatedIRI='General:MeasuredState' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#MeasuredState.ofItem'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:MeasuredState' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#MeasuredState.ofItem' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PlantItem.state' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.state</IRI>
+  <Literal>PlantItem.state</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.state</IRI>
+  <Literal>The measured states of the Artefact</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.state'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.state'/>
+  <Class abbreviatedIRI='General:MeasuredState' />
+</ObjectPropertyRange>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#MeasuredState.ofItem' />
+  <ObjectProperty IRI='#PlantItem.state' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#PlantItem.model' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.model</IRI>
+  <Literal>PlantItem.model</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.model</IRI>
+  <Literal>The Product(Model) to which this Artefact (product instance) belongs.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.model'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.model'/>
+  <Class abbreviatedIRI='General:ProductModel' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PlantItem' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PlantItem.model' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PlantItem.ports' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.ports</IRI>
+  <Literal>PlantItem.ports</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.ports</IRI>
+  <Literal>The physical ports by which this Plant Item is connected to other physical elements of the plant.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#PlantItem.ports</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PlantItem.ports</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.ports'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.ports'/>
+  <Class abbreviatedIRI='General:Port' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#Plant.items' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Plant.items</IRI>
+  <Literal>Plant.items</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Plant.items</IRI>
+  <Literal>The PlantItems that are parts of the Plant</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isDerived'/>
+  <IRI>#Plant.items</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Plant.items'/>
+  <Class abbreviatedIRI='General:Plant' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Plant.items'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#PlantItem.inPlant' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.inPlant</IRI>
+  <Literal>PlantItem.inPlant</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.inPlant</IRI>
+  <Literal>The Plant that contains the PlantItem, if any.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isDerived'/>
+  <IRI>#PlantItem.inPlant</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.inPlant'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.inPlant'/>
+  <Class abbreviatedIRI='General:Plant' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PlantItem' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PlantItem.inPlant' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#Plant.items' />
+  <ObjectProperty IRI='#PlantItem.inPlant' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#PlantItem.location' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.location</IRI>
+  <Literal>PlantItem.location</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.location</IRI>
+  <Literal>the location of the PlantItem -- an area within the plant</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.location'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.location'/>
+  <Class abbreviatedIRI='General:Location' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PlantItem' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PlantItem.location' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#DesignElement.instance' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DesignElement.instance</IRI>
+  <Literal>DesignElement.instance</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DesignElement.instance</IRI>
+  <Literal>The physical Artefact that realizes the DesignElement in the system as-built or as-operated.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#DesignElement.instance'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#DesignElement.instance'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#PlantItem.realizesDesign' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.realizesDesign</IRI>
+  <Literal>PlantItem.realizesDesign</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.realizesDesign</IRI>
+  <Literal>The DesignElement that this Artefact realizes in the physical system</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.realizesDesign'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.realizesDesign'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PlantItem' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#PlantItem.realizesDesign' />
+  </ObjectMinCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#DesignElement.instance' />
+  <ObjectProperty IRI='#PlantItem.realizesDesign' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#Location.atLocation' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Location.atLocation</IRI>
+  <Literal>Location.atLocation</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Location.atLocation</IRI>
+  <Literal>another Location that wholly contains the Location.
+
+Example:  the State/Province in which a City Location is located.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Location.atLocation'/>
+  <Class abbreviatedIRI='General:Location' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Location.atLocation'/>
+  <Class abbreviatedIRI='General:Location' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#SystemModel.author' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemModel.author</IRI>
+  <Literal>SystemModel.author</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemModel.author</IRI>
+  <Literal>The person responsible for the SystemModel</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SystemModel.author'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SystemModel.author'/>
+  <Class abbreviatedIRI='General:Person' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemModel' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#SystemModel.author' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#SystemModel.type' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemModel.type</IRI>
+  <Literal>SystemModel.type</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemModel.type</IRI>
+  <Literal>The particular category of formal model of a system that this SystemModel embodies.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SystemModel.type'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SystemModel.type'/>
+  <Class abbreviatedIRI='General:ModelType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemModel' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#SystemModel.type' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#SystemModel.includesElement' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemModel.includesElement</IRI>
+  <Literal>SystemModel.includesElement</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemModel.includesElement</IRI>
+  <Literal>The DesignElements that are contained in the SystemModel.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#SystemModel.includesElement</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SystemModel.includesElement'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SystemModel.includesElement'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#DesignElement.inModel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DesignElement.inModel</IRI>
+  <Literal>DesignElement.inModel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DesignElement.inModel</IRI>
+  <Literal>The SystemModel that contains the DesignElement</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#DesignElement.inModel'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#DesignElement.inModel'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:DesignElement' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#DesignElement.inModel' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#SystemModel.includesElement' />
+  <ObjectProperty IRI='#DesignElement.inModel' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#SystemModel.ofSystem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemModel.ofSystem</IRI>
+  <Literal>SystemModel.ofSystem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemModel.ofSystem</IRI>
+  <Literal>The system that is modeled by the SystemModel.  The model presents an intentionally limited view of the System.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SystemModel.ofSystem'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SystemModel.ofSystem'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemModel' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#SystemModel.ofSystem' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Plant.operator' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Plant.operator</IRI>
+  <Literal>Plant.operator</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Plant.operator</IRI>
+  <Literal>the Organization that has contractual responsibility for operating the plant.  This may or may not be the same as the Owner.  Also an idle plant need not have any active operating organization.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Plant.operator'/>
+  <Class abbreviatedIRI='General:Plant' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Plant.operator'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Plant' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Plant.operator' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Plant.owner' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Plant.owner</IRI>
+  <Literal>Plant.owner</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Plant.owner</IRI>
+  <Literal>the Organization that owns the Plant</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Plant.owner'/>
+  <Class abbreviatedIRI='General:Plant' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Plant.owner'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Plant' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Plant.owner' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PartCharacterization.material' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PartCharacterization.material</IRI>
+  <Literal>PartCharacterization.material</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PartCharacterization.material</IRI>
+  <Literal>The material(s) of which the physical artefacts that correspond to the PartElement are (to be) made.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PartCharacterization.material'/>
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PartCharacterization.material'/>
+  <Class abbreviatedIRI='Materials:Material' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PartCharacterization' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#PartCharacterization.material' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Plant.location' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Plant.location</IRI>
+  <Literal>Plant.location</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Plant.location</IRI>
+  <Literal>The location of the plant, expressed as some combination of address elements, always including city, state/province, and country.  It may also include geospatial coordinates.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Plant.location'/>
+  <Class abbreviatedIRI='General:Plant' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Plant.location'/>
+  <Class abbreviatedIRI='General:Location' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Plant' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Plant.location' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#FluidPort.connectionType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidPort.connectionType</IRI>
+  <Literal>FluidPort.connectionType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidPort.connectionType</IRI>
+  <Literal>The physical structure of the Port connection. This is almost always a reference to an industry standard.  
+The supplier&apos;s catalog always specifies the connector type.  Depending on the nature of the equipment and the piping requirements, the owner may specify the type.
+Source: HI EDE 50.7
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#FluidPort.connectionType'/>
+  <Class abbreviatedIRI='General:FluidPort' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#FluidPort.connectionType'/>
+  <Class abbreviatedIRI='General:ConnectionType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:FluidPort' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#FluidPort.connectionType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#FluidPort.connectionRating' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidPort.connectionRating</IRI>
+  <Literal>FluidPort.connectionRating</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidPort.connectionRating</IRI>
+  <Literal>Pressure class rating for the physical connection. Information should include the governing body (ASME etc). 
+Usually provided by the manufacturer, but can be specified by owner to match his pipe system requirements.
+Source: HI EDE 50.7
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#FluidPort.connectionRating'/>
+  <Class abbreviatedIRI='General:FluidPort' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#FluidPort.connectionRating'/>
+  <Class abbreviatedIRI='General:ConnectionRating' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:FluidPort' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#FluidPort.connectionRating' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#FluidPort.connection' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidPort.connection</IRI>
+  <Literal>FluidPort.connection</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidPort.connection</IRI>
+  <Literal>The logical connection in the plant design, if any, that is implemented by the physical Port.  Logical connections for valves are usually unlabeled, unless the valve is a rotary valve that affects process flow.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#FluidPort.connection'/>
+  <Class abbreviatedIRI='General:FluidPort' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#FluidPort.connection'/>
+  <Class abbreviatedIRI='General:Connection' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:FluidPort' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#FluidPort.connection' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Connection.port' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Connection.port</IRI>
+  <Literal>Connection.port</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Connection.port</IRI>
+  <Literal>The physical port (characterization) that implements the connection</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Connection.port'/>
+  <Class abbreviatedIRI='General:Connection' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Connection.port'/>
+  <Class abbreviatedIRI='General:FluidPort' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Connection' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Connection.port' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#FluidPort.connection' />
+  <ObjectProperty IRI='#Connection.port' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#ProductModel.manufacturer' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductModel.manufacturer</IRI>
+  <Literal>ProductModel.manufacturer</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductModel.manufacturer</IRI>
+  <Literal>The Organization that manufactures and provides the Product artefacts described by the ProductModel.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProductModel.manufacturer'/>
+  <Class abbreviatedIRI='General:ProductModel' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProductModel.manufacturer'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductModel' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProductModel.manufacturer' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProductModel.satisfiesDesign' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductModel.satisfiesDesign</IRI>
+  <Literal>ProductModel.satisfiesDesign</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductModel.satisfiesDesign</IRI>
+  <Literal>The DesignElements (in a particular model) that Artefacts conforming to the ProductModel could satisfy.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProductModel.satisfiesDesign'/>
+  <Class abbreviatedIRI='General:ProductModel' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProductModel.satisfiesDesign'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#DesignElement.acceptableModel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DesignElement.acceptableModel</IRI>
+  <Literal>DesignElement.acceptableModel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DesignElement.acceptableModel</IRI>
+  <Literal>The ProductModels that are known to satisfy the requirements specified for the DesignElement</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#DesignElement.acceptableModel'/>
+  <Class abbreviatedIRI='General:DesignElement' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#DesignElement.acceptableModel'/>
+  <Class abbreviatedIRI='General:ProductModel' />
+</ObjectPropertyRange>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#ProductModel.satisfiesDesign' />
+  <ObjectProperty IRI='#DesignElement.acceptableModel' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#ItemCharacterization.forProduct' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ItemCharacterization.forProduct</IRI>
+  <Literal>ItemCharacterization.forProduct</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ItemCharacterization.forProduct</IRI>
+  <Literal>The ProductModel, if any, for which this Characterization forms the specifications.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ItemCharacterization.forProduct'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ItemCharacterization.forProduct'/>
+  <Class abbreviatedIRI='General:ProductModel' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ItemCharacterization' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#ItemCharacterization.forProduct' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProductModel.specification' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProductModel.specification</IRI>
+  <Literal>ProductModel.specification</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProductModel.specification</IRI>
+  <Literal>The specifications for product Artefacts that are instances of this ProductModel.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProductModel.specification'/>
+  <Class abbreviatedIRI='General:ProductModel' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProductModel.specification'/>
+  <Class abbreviatedIRI='General:ItemCharacterization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:ProductModel' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProductModel.specification' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#ItemCharacterization.forProduct' />
+  <ObjectProperty IRI='#ProductModel.specification' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#Project.baseProject' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Project.baseProject</IRI>
+  <Literal>Project.baseProject</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Project.baseProject</IRI>
+  <Literal>A larger Project that this Project/Job is part of.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Project.baseProject'/>
+  <Class abbreviatedIRI='General:Project' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Project.baseProject'/>
+  <Class abbreviatedIRI='General:Project' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Project' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Project.baseProject' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Project.job' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Project.job</IRI>
+  <Literal>Project.job</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Project.job</IRI>
+  <Literal>A smaller project or Job that is part of the Project</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Project.job'/>
+  <Class abbreviatedIRI='General:Project' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Project.job'/>
+  <Class abbreviatedIRI='General:Project' />
+</ObjectPropertyRange>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#Project.baseProject' />
+  <ObjectProperty IRI='#Project.job' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#SystemSpecification.underProject' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemSpecification.underProject</IRI>
+  <Literal>SystemSpecification.underProject</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemSpecification.underProject</IRI>
+  <Literal>The Project under which, or for which, the SystemSpecification is developed.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SystemSpecification.underProject'/>
+  <Class abbreviatedIRI='General:SystemSpecification' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SystemSpecification.underProject'/>
+  <Class abbreviatedIRI='General:Project' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemSpecification' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#SystemSpecification.underProject' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Project.specifications' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Project.specifications</IRI>
+  <Literal>Project.specifications</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Project.specifications</IRI>
+  <Literal>SystemSpecifications produced by the Project (and thus labeled with the Project id).</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Project.specifications'/>
+  <Class abbreviatedIRI='General:Project' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Project.specifications'/>
+  <Class abbreviatedIRI='General:SystemSpecification' />
+</ObjectPropertyRange>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#SystemSpecification.underProject' />
+  <ObjectProperty IRI='#Project.specifications' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#Project.responsibleOrganization' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Project.responsibleOrganization</IRI>
+  <Literal>Project.responsibleOrganization</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Project.responsibleOrganization</IRI>
+  <Literal>The Organization responsible for executing, or overseeing execution of, the Project.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Project.responsibleOrganization'/>
+  <Class abbreviatedIRI='General:Project' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Project.responsibleOrganization'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:Project' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Project.responsibleOrganization' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#System.specification' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#System.specification</IRI>
+  <Literal>System.specification</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#System.specification</IRI>
+  <Literal>The complete specifications for the System</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#System.specification'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#System.specification'/>
+  <Class abbreviatedIRI='General:SystemSpecification' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:System' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#System.specification' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#SystemSpecification.specifiesSystem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemSpecification.specifiesSystem</IRI>
+  <Literal>SystemSpecification.specifiesSystem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemSpecification.specifiesSystem</IRI>
+  <Literal>the system(s) that are described by the specification</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SystemSpecification.specifiesSystem'/>
+  <Class abbreviatedIRI='General:SystemSpecification' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SystemSpecification.specifiesSystem'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemSpecification' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#SystemSpecification.specifiesSystem' />
+  </ObjectMinCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#System.specification' />
+  <ObjectProperty IRI='#SystemSpecification.specifiesSystem' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#SystemModel.systemSpecification' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemModel.systemSpecification</IRI>
+  <Literal>SystemModel.systemSpecification</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemModel.systemSpecification</IRI>
+  <Literal>The overall SystemSpecification (and implicitly, the System) for which this SystemModel represents a particular view.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SystemModel.systemSpecification'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SystemModel.systemSpecification'/>
+  <Class abbreviatedIRI='General:SystemSpecification' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:SystemModel' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#SystemModel.systemSpecification' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#SystemSpecification.model' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SystemSpecification.model</IRI>
+  <Literal>SystemSpecification.model</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SystemSpecification.model</IRI>
+  <Literal> the particular SystemModels that capture specific views of the System being specified by the SystemSpecification</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#SystemSpecification.model</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SystemSpecification.model'/>
+  <Class abbreviatedIRI='General:SystemSpecification' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SystemSpecification.model'/>
+  <Class abbreviatedIRI='General:SystemModel' />
+</ObjectPropertyRange>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#SystemModel.systemSpecification' />
+  <ObjectProperty IRI='#SystemSpecification.model' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#System.subsystem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#System.subsystem</IRI>
+  <Literal>System.subsystem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#System.subsystem</IRI>
+  <Literal>a part of the System which is a System in its own right, and performs some functions that are part of the System functions</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#System.subsystem</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#System.subsystem'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#System.subsystem'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#System.inSystem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#System.inSystem</IRI>
+  <Literal>System.inSystem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#System.inSystem</IRI>
+  <Literal>The next larger system of which the System is a part (if any).</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#System.inSystem'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#System.inSystem'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:System' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#System.inSystem' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#System.subsystem' />
+  <ObjectProperty IRI='#System.inSystem' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#System.includedItem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#System.includedItem</IRI>
+  <Literal>System.includedItem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#System.includedItem</IRI>
+  <Literal>The Plant Items that are considered to be parts of the System</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#System.includedItem</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#System.includedItem'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#System.includedItem'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#PlantItem.inSystem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlantItem.inSystem</IRI>
+  <Literal>PlantItem.inSystem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlantItem.inSystem</IRI>
+  <Literal>the System that conceptually incorporates the PlantItem, and usually physically incorporates it in some way. 
+
+A PlantItem may be considered to stand alone or to be a subsystem in its own right.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PlantItem.inSystem'/>
+  <Class abbreviatedIRI='General:PlantItem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PlantItem.inSystem'/>
+  <Class abbreviatedIRI='General:System' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='General:PlantItem' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PlantItem.inSystem' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#System.includedItem' />
+  <ObjectProperty IRI='#PlantItem.inSystem' />
+</InverseObjectProperties>
+</Ontology>
+

@@ -1,0 +1,2070 @@
+
+Prefix( _:=<http://nist.gov/el/fowl/PDScommon/Codes#>)
+ Prefix( fowl:=<http://nist.gov/el/fowl/fowlannotations.owl#>)
+Ontology( <http://nist.gov/el/fowl/PDScommon/Codes> 
+  Annotation( rdfs:label "Codes")
+  Annotation( rdfs:comment "The Codes model is a general model of datatypes whose values are taken from standard “code lists”, rather than explicitly enumerated in the UML/OWL model per se.
+Each code list is a set of verbatim character string values specified by some standard, or specified by some active registry that keeps the current list of admissible values and their meanings.
+So each Code value properly consists of two parts:  the string value of the code itself, and the identification of the standard or registry that defines the Code value.  In some cases of actual use, the specification for the data property whose value is the Code value will specify the standard or registry, and thus permit the standard/registry identifier to be omitted from the Code representation.
+A detailed proper model of Codes and Code registries is contained in ISO 11179 “Metadata registries”.
+")
+  Annotation( rdfs:comment "produced by uml2fowl v0.1 on ???")
+
+
+Declaration( Datatype( _:RegistryID ))
+  AnnotationAssertion( rdfs:label _:RegistryID "RegistryID" )
+  AnnotationAssertion( rdfs:comment _:RegistryID
+  "A sequence of characters that uniquely identifies a code registry.  It may be the name or acryonym for a standard publication, the URI for a web-based registry, or a code in some catalog of registries." )
+SubClassOf ( _:RegistryID xsd:string )
+
+Declaration( Class( _:Code ))
+  AnnotationAssertion( rdfs:label _:Code "Code" )
+  AnnotationAssertion( rdfs:comment _:Code
+  "A term for some specific thing, or kind of thing, that is defined by a standard or by an industrial registry that specifies the acceptable terms for things of that kind.  A Code is a value taken from a standard \"code list\"
+For example, a metal alloy Code is an identifier for a particular metal alloy.  In  the case of common metals and alloys that are widely available, the code terms are specified by a standard chemical/metals industry registry.  Specialized alloys are usually identified by the metals producer and his product code.
+" )
+
+Declaration(  DataProperty( _:Code.value))
+  AnnotationAssertion( rdfs:label _:Code.value "value" )
+  AnnotationAssertion( rdfs:comment _:Code.value
+  "The code value per se – the unique identifier for the thing, that is defined in the standard or registry. " )
+SubclassOf( DataSomeValuesFrom(_:Code.value xsd:string) _:Code)
+SubclassOf( owl:thing DataAllValuesFrom(_:Code.value xsd:string))
+SubclassOf( _:Code DataExactCardinality( 1 _:Code.value))
+
+Declaration( Class( _:CodeRegistry ))
+  AnnotationAssertion( rdfs:label _:CodeRegistry "CodeRegistry" )
+  AnnotationAssertion( rdfs:comment _:CodeRegistry
+  "The standard, publication, or database that contains and maintains one or more standard \"code lists.\"
+Example: The Dunn & Bradstreet registry of business organizations.
+" )
+
+Declaration(  DataProperty( _:CodeRegistry.name))
+  AnnotationAssertion( rdfs:label _:CodeRegistry.name "name" )
+  AnnotationAssertion( rdfs:comment _:CodeRegistry.name
+  "the official formal name of the standard or registry." )
+SubclassOf( DataSomeValuesFrom(_:CodeRegistry.name xsd:string) _:CodeRegistry)
+SubclassOf( owl:thing DataAllValuesFrom(_:CodeRegistry.name xsd:string))
+SubclassOf( _:CodeRegistry DataExactCardinality( 1 _:CodeRegistry.name))
+
+Declaration(  ObjectProperty( _:Code.registryId))
+  AnnotationAssertion( rdfs:label _:Code.registryId "registryId" )
+  AnnotationAssertion( rdfs:comment _:Code.registryId
+  "The identifier for the Standard or Registry that standardizes the list of codes to which this code belongs." )
+SubclassOf( ObjectSomeValuesFrom(_:Code.registryId _:RegistryID) _:Code)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Code.registryId _:RegistryID))
+SubclassOf( _:Code ObjectExactCardinality( 1 _:Code.registryId))
+
+Declaration(  ObjectProperty( _:CodeRegistry.id))
+  AnnotationAssertion( rdfs:label _:CodeRegistry.id "id" )
+  AnnotationAssertion( rdfs:comment _:CodeRegistry.id
+  "the standard identifier for the registry that contains the code. 
+This is itself often a code from a code list used by a particular industry domain to identify reference standards and code list repositories.  A given registry can have multiple such identifiers in different code lists for different industries. 
+
+Example:  In many industry usages, the Dunn & Bradstreet registry is designated \"DUNS\".  In the United Nations CEFACT registry of code registries, the Dunn & Bradstreet registry is designated by code \"16\".
+" )
+SubclassOf( ObjectSomeValuesFrom(_:CodeRegistry.id _:RegistryID) _:CodeRegistry)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:CodeRegistry.id _:RegistryID))
+SubclassOf( _:CodeRegistry ObjectMinCardinality( 1 _:CodeRegistry.id))
+
+Declaration(  ObjectProperty( _:CodeRegistry.registeredCode))
+  AnnotationAssertion( rdfs:label _:CodeRegistry.registeredCode "registeredCode" )
+  AnnotationAssertion( rdfs:comment _:CodeRegistry.registeredCode
+  "the values in the \"code list\" in the registry. " )
+  AnnotationAssertion( uml:isComposite _:CodeRegistry.registeredCode "true" )
+SubclassOf( ObjectSomeValuesFrom(_:CodeRegistry.registeredCode _:Code) _:CodeRegistry)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:CodeRegistry.registeredCode _:Code))
+
+)
+
+
+Prefix( _:=<http://nist.gov/el/fowl/PDScommon/General#>)
+ Prefix( fowl:=<http://nist.gov/el/fowl/fowlannotations.owl#>)
+ Prefix( ISO-15926:=<ISO-15926 Profile.mdxml/ISO-15926#>)
+ Prefix( Codes:=<http://nist.gov/el/fowl/PDScommon/Codes#>)
+ Prefix( Time:=<http://nist.gov/el/fowl/PDScommon/Time#>)
+Ontology( <http://nist.gov/el/fowl/PDScommon/General> 
+ Import( <ISO-15926 Profile.mdxml/ISO-15926> )
+ Import( <http://nist.gov/el/fowl/PDScommon/Codes> )
+ Import( <http://nist.gov/el/fowl/PDScommon/Time> )
+  Annotation( rdfs:label "General")
+  Annotation( rdfs:comment "This section of the model introduces the common concepts surrounding Product Data Sheets, as distinct from their technical content.  In particular, this includes the several environments that use product data sheets:  plant design and procurement specifications, product catalogs and offerings, and status sheets from as-built and in-use (as-operated) measurements. ")
+  Annotation( rdfs:comment "produced by uml2fowl v0.1 on ???")
+
+
+Declaration( Class( _:FluidRole ))
+  AnnotationAssertion( rdfs:label _:FluidRole "FluidRole" )
+  AnnotationAssertion( rdfs:comment _:FluidRole
+  "The functional purpose of the fluid flowing into (or out of) a Port." )
+
+Declaration( NamedIndividual( _:FluidRole.processFluid ))
+  AnnotationAssertion( rdfs:label _:FluidRole.processFluid "processFluid" )
+  AnnotationAssertion( rdfs:comment _:FluidRole.processFluid
+  "The fluid is the ProcessFluid and the Port is directly involved in the process flow. " )
+ClassAssertion( _:FluidRole _:FluidRole.processFluid )
+
+Declaration( NamedIndividual( _:FluidRole.coolingFluid ))
+  AnnotationAssertion( rdfs:label _:FluidRole.coolingFluid "coolingFluid" )
+  AnnotationAssertion( rdfs:comment _:FluidRole.coolingFluid
+  "The fluid serves to carry off heat, either through a heat exchanger that is part of the process, or as a means of cooling an Equipment item to maintain proper operating temperature. " )
+ClassAssertion( _:FluidRole _:FluidRole.coolingFluid )
+
+Declaration( NamedIndividual( _:FluidRole.flushingFluid ))
+  AnnotationAssertion( rdfs:label _:FluidRole.flushingFluid "flushingFluid" )
+  AnnotationAssertion( rdfs:comment _:FluidRole.flushingFluid
+  "The fluid serves only to flush the equipment unit when it is not in service." )
+ClassAssertion( _:FluidRole _:FluidRole.flushingFluid )
+AllDifferent(
+ _:FluidRole.processFluid
+ _:FluidRole.coolingFluid
+ _:FluidRole.flushingFluid
+)
+EquivalentClasses( _:FluidRole ObjectOneOf(
+  _:FluidRole.processFluid
+  _:FluidRole.coolingFluid
+  _:FluidRole.flushingFluid
+))
+
+Declaration( Class( _:PortType ))
+  AnnotationAssertion( rdfs:label _:PortType "PortType" )
+  AnnotationAssertion( rdfs:comment _:PortType
+  "Classification of a Port by its relationship to process fluid flow. " )
+
+Declaration( NamedIndividual( _:PortType.Inlet ))
+  AnnotationAssertion( rdfs:label _:PortType.Inlet "Inlet" )
+  AnnotationAssertion( rdfs:comment _:PortType.Inlet
+  "The port is the/an inlet for process fluid flowing into the equipment, valve, etc. " )
+ClassAssertion( _:PortType _:PortType.Inlet )
+
+Declaration( NamedIndividual( _:PortType.Outlet ))
+  AnnotationAssertion( rdfs:label _:PortType.Outlet "Outlet" )
+  AnnotationAssertion( rdfs:comment _:PortType.Outlet
+  "The port is the/an outlet for process fluid flowing out from the equipment, valve, etc. " )
+ClassAssertion( _:PortType _:PortType.Outlet )
+
+Declaration( NamedIndividual( _:PortType.InletOutlet ))
+  AnnotationAssertion( rdfs:label _:PortType.InletOutlet "InletOutlet" )
+  AnnotationAssertion( rdfs:comment _:PortType.InletOutlet
+  "The port serves as an inlet or an outlet for process fluid flow.  Typically the port is normally an inlet, but it also accommodates backflow. " )
+ClassAssertion( _:PortType _:PortType.InletOutlet )
+
+Declaration( NamedIndividual( _:PortType.Drain ))
+  AnnotationAssertion( rdfs:label _:PortType.Drain "Drain" )
+  AnnotationAssertion( rdfs:comment _:PortType.Drain
+  "The port is an auxiliary outlet, typically used to drain the equipment for maintenance, or to relieve pressure in exceptional situations." )
+ClassAssertion( _:PortType _:PortType.Drain )
+
+Declaration( NamedIndividual( _:PortType.Flush ))
+  AnnotationAssertion( rdfs:label _:PortType.Flush "Flush" )
+  AnnotationAssertion( rdfs:comment _:PortType.Flush
+  "The port is an auxiliary inlet, typically used flood the equipment with a non-process fluid, such as a neutralizer or cleanser, for maintenance purposes." )
+ClassAssertion( _:PortType _:PortType.Flush )
+AllDifferent(
+ _:PortType.Inlet
+ _:PortType.Outlet
+ _:PortType.InletOutlet
+ _:PortType.Drain
+ _:PortType.Flush
+)
+EquivalentClasses( _:PortType ObjectOneOf(
+  _:PortType.Inlet
+  _:PortType.Outlet
+  _:PortType.InletOutlet
+  _:PortType.Drain
+  _:PortType.Flush
+))
+
+Declaration( Class( _:Artefact ))
+  AnnotationAssertion( rdfs:label _:Artefact "Artefact" )
+  AnnotationAssertion( rdfs:comment _:Artefact
+  "An inanimate physical object that is made or given shape by man.
+
+Source: RDL http://posccaesar.org/rdl/RDS422594" )
+  AnnotationAssertion( ISO-15926:RDLclass _:Artefact "true" )
+  AnnotationAssertion( ISO-15926:coInanimatePhysicalObject _:Artefact "true" )
+  AnnotationAssertion( ISO-15926:URI _:Artefact "http://posccaesar.org/rdl/RDS422594" )
+
+Declaration( Class( _:ArtefactClass ))
+  AnnotationAssertion( rdfs:label _:ArtefactClass "ArtefactClass" )
+  AnnotationAssertion( rdfs:comment _:ArtefactClass
+  "A class whose members are classes of artefacts.
+
+Source: RDL" )
+  AnnotationAssertion( ISO-15926:RDLclass _:ArtefactClass "true" )
+  AnnotationAssertion( ISO-15926:URI _:ArtefactClass "http://posccaesar.org/rdl/RDS201644" )
+
+Declaration( Class( _:CertificationCode ))
+  AnnotationAssertion( rdfs:label _:CertificationCode "CertificationCode" )
+  AnnotationAssertion( rdfs:comment _:CertificationCode
+  "A standard code that designates the specific Certification, its properties, tests, and authorities." )
+SubClassOf ( _:CertificationCode Codes:Code )
+
+Declaration( Class( _:Connection ))
+  AnnotationAssertion( rdfs:label _:Connection "Connection" )
+  AnnotationAssertion( rdfs:comment _:Connection
+  "The (conceptual) connection between the Equipment and the piping system, which is ultimately implemented by some Port on the body or casing of the Equipment." )
+
+Declaration(  DataProperty( _:Connection.tag))
+  AnnotationAssertion( rdfs:label _:Connection.tag "tag" )
+  AnnotationAssertion( rdfs:comment _:Connection.tag
+  "the identifier for the connection in the plant (functional) design" )
+SubclassOf( DataSomeValuesFrom(_:Connection.tag xsd:string) _:Connection)
+SubclassOf( owl:thing DataAllValuesFrom(_:Connection.tag xsd:string))
+SubclassOf( _:Connection DataMaxCardinality( 1 _:Connection.tag))
+
+Declaration(  ObjectProperty( _:Connection.type))
+  AnnotationAssertion( rdfs:label _:Connection.type "type" )
+  AnnotationAssertion( rdfs:comment _:Connection.type
+  "The functional role of the Connection with respect to the valve: inlet, outlet, other. " )
+SubclassOf( ObjectSomeValuesFrom(_:Connection.type _:PortType) _:Connection)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Connection.type _:PortType))
+SubclassOf( _:Connection ObjectExactCardinality( 1 _:Connection.type))
+
+Declaration( Class( _:ConnectionRating ))
+  AnnotationAssertion( rdfs:label _:ConnectionRating "ConnectionRating" )
+  AnnotationAssertion( rdfs:comment _:ConnectionRating
+  "Pressure class rating for the connection. Information should include the governing body (ASME etc). 
+Source: HI EDE 50.7 
+" )
+SubClassOf ( _:ConnectionRating Codes:Code )
+
+Declaration( Class( _:ConnectionType ))
+  AnnotationAssertion( rdfs:label _:ConnectionType "ConnectionType" )
+  AnnotationAssertion( rdfs:comment _:ConnectionType
+  "Type of the physical connector, taken from a standard or catalogue. 
+Usually the supplier's choice, but the owner may chose if the piping system has specific requirements.
+Source: HI EDE 50.7
+Some common values:16 AMP (16 AMP sanitary flange), Adapter, Blind, Brodie (manufacturer specific companion flange), Companion, DIN blind flange, DIN threaded flange, DIN flat face flange, DIN weld neck flange, DIN lapped joint flange, Female face â\" large, Female face â\" small, FF (Flat Face), Groove, Groove face â\" large, JIS (Japanese standard), Groove face â\" small, Lens joint (lens ring flange), LJ (Lapped Joints), Male face â\" large, Male face â\" small, O ring, Plate (manufacturer specific), Reducing (threaded flange), RF (Raised Face), RTJ (Ring Joint Face);, SO (Slip-On), Split-ring, SW (Socket Welding flange), TandG (Tongue and Groove), Tongue face â\" large, Tongue face â\" small, VS (Van Stone flange) , WN (Welding Neck)
+
+" )
+SubClassOf ( _:ConnectionType Codes:Code )
+
+Declaration( Class( _:DesignElement ))
+  AnnotationAssertion( rdfs:label _:DesignElement "DesignElement" )
+  AnnotationAssertion( rdfs:comment _:DesignElement
+  "Design elements are the basic units of a engineering, drawing, design or other visual pieces for a product.
+
+Source: Wikipedia" )
+  AnnotationAssertion( ISO-15926:coFunctionalObject _:DesignElement "true" )
+  AnnotationAssertion( uml:isAbstract _:DesignElement "true" )
+
+Declaration(  DataProperty( _:DesignElement.tagNumber))
+  AnnotationAssertion( rdfs:label _:DesignElement.tagNumber "tagNumber" )
+  AnnotationAssertion( rdfs:comment _:DesignElement.tagNumber
+  "The identifier for the design element in the formal design specification.
+For example, the identifier for the element on a piping and instrumentation diagram, or on a circuit diagram." )
+SubclassOf( DataSomeValuesFrom(_:DesignElement.tagNumber xsd:string) _:DesignElement)
+SubclassOf( owl:thing DataAllValuesFrom(_:DesignElement.tagNumber xsd:string))
+SubclassOf( _:DesignElement DataExactCardinality( 1 _:DesignElement.tagNumber))
+
+Declaration( Class( _:Equipment ))
+  AnnotationAssertion( rdfs:label _:Equipment "Equipment" )
+  AnnotationAssertion( rdfs:comment _:Equipment
+  "An artefact class that contains classes of artefacts or physical resources required for a purpose. " )
+  AnnotationAssertion( uml:isAbstract _:Equipment "true" )
+SubClassOf ( _:Equipment _:PlantItem )
+
+Declaration( Class( _:EquipmentCharacterization ))
+  AnnotationAssertion( rdfs:label _:EquipmentCharacterization "EquipmentCharacterization" )
+  AnnotationAssertion( rdfs:comment _:EquipmentCharacterization
+  "ComponentCharacterization of Equipment Artefacts" )
+  AnnotationAssertion( ISO-15926:RDLclass _:EquipmentCharacterization "true" )
+  AnnotationAssertion( ISO-15926:URI _:EquipmentCharacterization "http://posccaesar.org/rdl/RDS8615020" )
+  AnnotationAssertion( uml:isAbstract _:EquipmentCharacterization "true" )
+SubClassOf ( _:EquipmentCharacterization _:ItemCharacterization )
+
+Declaration( Class( _:FluidPort ))
+  AnnotationAssertion( rdfs:label _:FluidPort "FluidPort" )
+  AnnotationAssertion( rdfs:comment _:FluidPort
+  "An opening in any kind of container or vessel for the entry or egress of substances which behave as fluids, i.e. gases, liquids and fluidized solids. 
+
+Class: Feature (Port is FO)" )
+  AnnotationAssertion( ISO-15926:RDLclass _:FluidPort "true" )
+  AnnotationAssertion( ISO-15926:URI _:FluidPort "http://posccaesar.org/rdl/RDS897297401" )
+SubClassOf ( _:FluidPort _:Port )
+
+Declaration(  ObjectProperty( _:FluidPort.flowType))
+  AnnotationAssertion( rdfs:label _:FluidPort.flowType "flowType" )
+  AnnotationAssertion( rdfs:comment _:FluidPort.flowType
+  "The functional role of the Port with respect to the equipment: inlet, outlet, other. " )
+SubclassOf( ObjectSomeValuesFrom(_:FluidPort.flowType _:PortType) _:FluidPort)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:FluidPort.flowType _:PortType))
+SubclassOf( _:FluidPort ObjectExactCardinality( 1 _:FluidPort.flowType))
+
+Declaration(  ObjectProperty( _:FluidPort.fluidRole))
+  AnnotationAssertion( rdfs:label _:FluidPort.fluidRole "fluidRole" )
+  AnnotationAssertion( rdfs:comment _:FluidPort.fluidRole
+  "The functional purpose of the fluid flowing through the Port: process fluid, flushing fluid, etc." )
+SubclassOf( ObjectSomeValuesFrom(_:FluidPort.fluidRole _:FluidRole) _:FluidPort)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:FluidPort.fluidRole _:FluidRole))
+SubclassOf( _:FluidPort ObjectExactCardinality( 1 _:FluidPort.fluidRole))
+
+Declaration(  ObjectProperty( _:FluidPort.size))
+  AnnotationAssertion( rdfs:label _:FluidPort.size "size" )
+  AnnotationAssertion( rdfs:comment _:FluidPort.size
+  "The size of the port is usually its diameter." )
+SubclassOf( ObjectSomeValuesFrom(_:FluidPort.size Quantities:Length) _:FluidPort)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:FluidPort.size Quantities:Length))
+SubclassOf( _:FluidPort ObjectExactCardinality( 1 _:FluidPort.size))
+
+Declaration( Class( _:Instrument ))
+  AnnotationAssertion( rdfs:label _:Instrument "Instrument" )
+  AnnotationAssertion( rdfs:comment _:Instrument
+  "A physical object that detects an aspect of something; records, modifies and/or displays such an aspect or performs a combination of these activities." )
+  AnnotationAssertion( uml:isAbstract _:Instrument "true" )
+SubClassOf ( _:Instrument _:PlantItem )
+
+Declaration( Class( _:InstrumentCharacterization ))
+  AnnotationAssertion( rdfs:label _:InstrumentCharacterization "InstrumentCharacterization" )
+  AnnotationAssertion( rdfs:comment _:InstrumentCharacterization
+  "Item Characterization of Instrument Artefacts
+
+The definition of the RDL object is a note about its source." )
+  AnnotationAssertion( ISO-15926:RDLclass _:InstrumentCharacterization "true" )
+  AnnotationAssertion( ISO-15926:URI _:InstrumentCharacterization "http://posccaesar.org/rdl/RDS17895905" )
+  AnnotationAssertion( uml:isAbstract _:InstrumentCharacterization "true" )
+SubClassOf ( _:InstrumentCharacterization _:ItemCharacterization )
+
+Declaration( Class( _:ItemCharacterization ))
+  AnnotationAssertion( rdfs:label _:ItemCharacterization "ItemCharacterization" )
+  AnnotationAssertion( rdfs:comment _:ItemCharacterization
+  "A description of a system component, or of a product that may be offered as a system component.  The description characterizes the component using a set of properties and their values.
+
+ProoductCharacterizations are classified in two ways:  By what kind of thing is being characterized, and by the role of the characterization.
+
+Characterization roles include:
+- specifications for DesignElements, which specify the required characteristics of a system component to-be
+- specifications for ProductModels, which specify the nominal characteristics of a product as-offered
+- MeasuredStates, which specify the measured properties of a physical system component as-is at some point in time
+
+Characterization kinds mirror the kinds of Artifacts that are system components.  Taken from common industry practice, the generic categories include:
+- Equipment
+- Instrument
+- Valve
+- Other Line Elements
+In addition, the artifactType specifies a particular category of component, such as a Centrifugal Pump or a Motor-operated check valve.
+" )
+  AnnotationAssertion( uml:isAbstract _:ItemCharacterization "true" )
+SubClassOf ( _:ItemCharacterization _:ArtefactClass )
+
+Declaration(  DataProperty( _:ItemCharacterization.serviceDescription))
+  AnnotationAssertion( rdfs:label _:ItemCharacterization.serviceDescription "serviceDescription" )
+  AnnotationAssertion( rdfs:comment _:ItemCharacterization.serviceDescription
+  "A description intended to describe the purpose of an item.
+
+Source: http://posccaesar.org/rdl/RDS338939" )
+SubclassOf( DataSomeValuesFrom(_:ItemCharacterization.serviceDescription xsd:string) _:ItemCharacterization)
+SubclassOf( owl:thing DataAllValuesFrom(_:ItemCharacterization.serviceDescription xsd:string))
+SubclassOf( _:ItemCharacterization DataExactCardinality( 1 _:ItemCharacterization.serviceDescription))
+
+Declaration( Class( _:ItemType ))
+  AnnotationAssertion( rdfs:label _:ItemType "ItemType" )
+  AnnotationAssertion( rdfs:comment _:ItemType
+  "A standard term, or a code from some reference catalog that specifies the kind/category of an Artefact." )
+SubClassOf ( _:ItemType Codes:Code )
+
+Declaration( Class( _:LineElement ))
+  AnnotationAssertion( rdfs:label _:LineElement "LineElement" )
+  AnnotationAssertion( uml:isAbstract _:LineElement "true" )
+SubClassOf ( _:LineElement _:PlantItem )
+
+Declaration( Class( _:LineItemCharacterization ))
+  AnnotationAssertion( rdfs:label _:LineItemCharacterization "LineItemCharacterization" )
+  AnnotationAssertion( rdfs:comment _:LineItemCharacterization
+  "Item Characterization of Line Item Artifacts
+A process piping equipment class that contains classes of equipment used in or in connection with a piping system.
+
+Source: RDL as Piping Component Class" )
+  AnnotationAssertion( ISO-15926:RDLclass _:LineItemCharacterization "true" )
+  AnnotationAssertion( ISO-15926:URI _:LineItemCharacterization "http://posccaesar.org/rdl/RDS225314" )
+  AnnotationAssertion( uml:isAbstract _:LineItemCharacterization "true" )
+SubClassOf ( _:LineItemCharacterization _:ItemCharacterization )
+
+Declaration( Class( _:Location ))
+  AnnotationAssertion( rdfs:label _:Location "Location" )
+  AnnotationAssertion( rdfs:comment _:Location
+  "A place in physical space, on or near the surface of the earth.
+
+(Locations are specified by a number of attributes, none of which is described here.)" )
+
+Declaration( Class( _:MeasuredState ))
+  AnnotationAssertion( rdfs:label _:MeasuredState "MeasuredState" )
+  AnnotationAssertion( rdfs:comment _:MeasuredState
+  "A set of measurements of properties of an Artefact that are made at a specific point in time." )
+SubClassOf ( _:MeasuredState _:ItemCharacterization )
+
+Declaration(  DataProperty( _:MeasuredState.timestamp))
+  AnnotationAssertion( rdfs:label _:MeasuredState.timestamp "timestamp" )
+  AnnotationAssertion( rdfs:comment _:MeasuredState.timestamp
+  "The (nominal) Date and Time at which this set of measurements was made." )
+SubclassOf( DataSomeValuesFrom(_:MeasuredState.timestamp xsd:datetime) _:MeasuredState)
+SubclassOf( owl:thing DataAllValuesFrom(_:MeasuredState.timestamp xsd:datetime))
+SubclassOf( _:MeasuredState DataExactCardinality( 1 _:MeasuredState.timestamp))
+
+Declaration( Class( _:ModelType ))
+  AnnotationAssertion( rdfs:label _:ModelType "ModelType" )
+  AnnotationAssertion( rdfs:comment _:ModelType
+  "A particular category of formal model of a system.
+
+Example:  A Process Functional Model for the system." )
+SubClassOf ( _:ModelType Codes:Code )
+
+Declaration( Class( _:Organization ))
+  AnnotationAssertion( rdfs:label _:Organization "Organization" )
+  AnnotationAssertion( rdfs:comment _:Organization
+  "<p>An [individual] that is composed of temporal parts of people and other assets, and are organised with a particular purpose.</p>
+<p>Note: Company, government, and project team are subclasses of 'organization'. </p>
+
+Source: RDL" )
+  AnnotationAssertion( ISO-15926:RDLclass _:Organization "true" )
+  AnnotationAssertion( ISO-15926:URI _:Organization "http://jord-dev.org/rdl/RDS282149" )
+
+Declaration(  DataProperty( _:Organization.name))
+  AnnotationAssertion( rdfs:label _:Organization.name "name" )
+  AnnotationAssertion( rdfs:comment _:Organization.name
+  "An organization name string.
+
+Source: RDL" )
+SubclassOf( DataSomeValuesFrom(_:Organization.name xsd:string) _:Organization)
+SubclassOf( owl:thing DataAllValuesFrom(_:Organization.name xsd:string))
+SubclassOf( _:Organization DataExactCardinality( 1 _:Organization.name))
+
+Declaration( Class( _:OrganizationId ))
+  AnnotationAssertion( rdfs:label _:OrganizationId "OrganizationId" )
+  AnnotationAssertion( rdfs:comment _:OrganizationId
+  "An 'identifier' and a 'formatted string' [a Code] that identifies an 'organization'. 
+
+Source: RDL" )
+  AnnotationAssertion( ISO-15926:RDLclass _:OrganizationId "true" )
+  AnnotationAssertion( ISO-15926:URI _:OrganizationId "http://jord-dev.org/rdl/RDS1386499251" )
+SubClassOf ( _:OrganizationId Codes:Code )
+
+Declaration( Class( _:PartElement ))
+  AnnotationAssertion( rdfs:label _:PartElement "PartElement" )
+  AnnotationAssertion( rdfs:comment _:PartElement
+  "An element of the characterization that characterizes a physical part, and corresponds to a physical artefact (part) in the system or product described by the characterization.
+
+This class is an abstraction.  Each interesting class of part is described separately according to the type of Product being characterized." )
+  AnnotationAssertion( uml:isAbstract _:PartElement "true" )
+
+Declaration( Class( _:Person ))
+  AnnotationAssertion( rdfs:label _:Person "Person" )
+  AnnotationAssertion( rdfs:comment _:Person
+  "<p>A human being, in this case, one who plays some significant role in the process of specifying, constructing, or operating a plant.</p>
+<p>An organism that is a person.
+Engineer, plant manager, and student can be represented by instances of class_of_person.</p>
+
+Source: RDL as I5926-4 PERSON" )
+  AnnotationAssertion( ISO-15926:RDLclass _:Person "true" )
+  AnnotationAssertion( ISO-15926:URI _:Person "http://posccaesar.org/rdl/RDS413954" )
+
+Declaration(  DataProperty( _:Person.name))
+  AnnotationAssertion( rdfs:label _:Person.name "name" )
+  AnnotationAssertion( rdfs:comment _:Person.name
+  "The full name of the Person." )
+SubclassOf( DataSomeValuesFrom(_:Person.name xsd:string) _:Person)
+SubclassOf( owl:thing DataAllValuesFrom(_:Person.name xsd:string))
+SubclassOf( _:Person DataExactCardinality( 1 _:Person.name))
+
+Declaration( Class( _:Plant ))
+  AnnotationAssertion( rdfs:label _:Plant "Plant" )
+  AnnotationAssertion( rdfs:comment _:Plant
+  "A physical structure (or a planned physical structure) that is a system whose purpose is to make products.
+
+A facility that consists of the land, buildings, machinery, apparatus and fixtures employed in carrying on a trade or an industrial business.
+
+Source: RDL/M-W" )
+  AnnotationAssertion( ISO-15926:RDLclass _:Plant "true" )
+  AnnotationAssertion( ISO-15926:URI _:Plant "http://jord-dev.org/rdl/RDS7151797" )
+SubClassOf ( _:Plant _:System )
+
+Declaration(  ObjectProperty( _:Plant.id))
+  AnnotationAssertion( rdfs:label _:Plant.id "id" )
+  AnnotationAssertion( rdfs:comment _:Plant.id
+  "A formal identifier for the Plant, assigned by the Owner." )
+SubclassOf( ObjectSomeValuesFrom(_:Plant.id _:OrganizationId) _:Plant)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Plant.id _:OrganizationId))
+SubclassOf( _:Plant ObjectMinCardinality( 1 _:Plant.id))
+
+Declaration(  DataProperty( _:Plant.name))
+  AnnotationAssertion( rdfs:label _:Plant.name "name" )
+  AnnotationAssertion( rdfs:comment _:Plant.name
+  "The common name for the plant." )
+SubclassOf( DataSomeValuesFrom(_:Plant.name xsd:string) _:Plant)
+SubclassOf( owl:thing DataAllValuesFrom(_:Plant.name xsd:string))
+SubclassOf( _:Plant DataExactCardinality( 1 _:Plant.name))
+
+Declaration( Class( _:PlantItem ))
+  AnnotationAssertion( rdfs:label _:PlantItem "PlantItem" )
+  AnnotationAssertion( rdfs:comment _:PlantItem
+  "Artefact that is a physical part of a process plant" )
+  AnnotationAssertion( uml:isAbstract _:PlantItem "true" )
+SubClassOf ( _:PlantItem _:Artefact )
+
+Declaration(  DataProperty( _:PlantItem.serialNumber))
+  AnnotationAssertion( rdfs:label _:PlantItem.serialNumber "serialNumber" )
+  AnnotationAssertion( rdfs:comment _:PlantItem.serialNumber
+  "A unique code assigned for identification of a single unit.
+
+Source: Wikipedia" )
+SubclassOf( DataSomeValuesFrom(_:PlantItem.serialNumber xsd:string) _:PlantItem)
+SubclassOf( owl:thing DataAllValuesFrom(_:PlantItem.serialNumber xsd:string))
+SubclassOf( _:PlantItem DataMaxCardinality( 1 _:PlantItem.serialNumber))
+
+Declaration( Class( _:Port ))
+  AnnotationAssertion( rdfs:label _:Port "Port" )
+  AnnotationAssertion( rdfs:comment _:Port
+  "A device which is a point of interface by which the a device communicates with another functional unit or system.
+
+Source: RDL
+
+Properly, a physical element of a device that implements a functional interface (a Connection).
+
+A (usually integral) element of a device (PlantItem) that accommodates physical connection and load transference and/or enables the flow of material, power or signals into or out of the device.
+ " )
+  AnnotationAssertion( ISO-15926:RDLclass _:Port "true" )
+  AnnotationAssertion( ISO-15926:URI _:Port "http://posccaesar.org/rdl/RDS1027742141" )
+
+Declaration( Class( _:ProductCertification ))
+  AnnotationAssertion( rdfs:label _:ProductCertification "ProductCertification" )
+  AnnotationAssertion( rdfs:comment _:ProductCertification
+  "A set of performance tests and quality assurance tests, and qualification criteria that are stipulated in contracts, regulations, or specifications (typically called \"certification schemes\" in the product certification industry).
+
+Source: Wikipedia
+
+" )
+
+Declaration(  DataProperty( _:ProductCertification.description))
+  AnnotationAssertion( rdfs:label _:ProductCertification.description "description" )
+  AnnotationAssertion( rdfs:comment _:ProductCertification.description
+  "A text description of the nature, properties, tests, and authorities, for the certification." )
+SubclassOf( DataSomeValuesFrom(_:ProductCertification.description xsd:string) _:ProductCertification)
+SubclassOf( owl:thing DataAllValuesFrom(_:ProductCertification.description xsd:string))
+SubclassOf( _:ProductCertification DataMaxCardinality( 1 _:ProductCertification.description))
+
+Declaration( Class( _:ProductDataSheet ))
+  AnnotationAssertion( rdfs:label _:ProductDataSheet "ProductDataSheet" )
+  AnnotationAssertion( rdfs:comment _:ProductDataSheet
+  "A description of a given Product or Component that is a set of defined fields within which information is supplied, to convey specific properties of the Product or component.
+
+Source: RDL http://posccaesar.org/rdl/page/RDS17987174" )
+  AnnotationAssertion( ISO-15926:RDLclass _:ProductDataSheet "true" )
+  AnnotationAssertion( ISO-15926:URI _:ProductDataSheet "http://posccaesar.org/rdl/RDS17987174" )
+
+Declaration(  ObjectProperty( _:ProductDataSheet.date))
+  AnnotationAssertion( rdfs:label _:ProductDataSheet.date "date" )
+  AnnotationAssertion( rdfs:comment _:ProductDataSheet.date
+  "The date of issuance, or recording, of the Product Data Sheet" )
+SubclassOf( ObjectSomeValuesFrom(_:ProductDataSheet.date Time:Date) _:ProductDataSheet)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProductDataSheet.date Time:Date))
+SubclassOf( _:ProductDataSheet ObjectExactCardinality( 1 _:ProductDataSheet.date))
+
+Declaration(  DataProperty( _:ProductDataSheet.sheetId))
+  AnnotationAssertion( rdfs:label _:ProductDataSheet.sheetId "sheetId" )
+  AnnotationAssertion( rdfs:comment _:ProductDataSheet.sheetId
+  "An identification code for a data sheet." )
+SubclassOf( DataSomeValuesFrom(_:ProductDataSheet.sheetId xsd:string) _:ProductDataSheet)
+SubclassOf( owl:thing DataAllValuesFrom(_:ProductDataSheet.sheetId xsd:string))
+SubclassOf( _:ProductDataSheet DataExactCardinality( 1 _:ProductDataSheet.sheetId))
+
+Declaration( Class( _:ProductModel ))
+  AnnotationAssertion( rdfs:label _:ProductModel "ProductModel" )
+  AnnotationAssertion( rdfs:comment _:ProductModel
+  "An 'artefact class' whose members are classes of individuals that are the outcome of a manufacturing process.
+
+Source: RDL as Manufactured Product Class" )
+  AnnotationAssertion( ISO-15926:RDLclass _:ProductModel "true" )
+  AnnotationAssertion( ISO-15926:URI _:ProductModel "http://posccaesar.org/rdl/RDS2065612231" )
+  AnnotationAssertion( uml:isAbstract _:ProductModel "true" )
+
+Declaration(  DataProperty( _:ProductModel.partNumber))
+  AnnotationAssertion( rdfs:label _:ProductModel.partNumber "partNumber" )
+  AnnotationAssertion( rdfs:comment _:ProductModel.partNumber
+  "A product code for a version of an artefact.
+The partNumber should be unique within the catalog of the manufacturer of the ProductModel.
+
+Source: RDL http://posccaesar.org/rdl/page/RDS8502722" )
+SubclassOf( DataSomeValuesFrom(_:ProductModel.partNumber xsd:string) _:ProductModel)
+SubclassOf( owl:thing DataAllValuesFrom(_:ProductModel.partNumber xsd:string))
+SubclassOf( _:ProductModel DataExactCardinality( 1 _:ProductModel.partNumber))
+
+Declaration( Class( _:Project ))
+  AnnotationAssertion( rdfs:label _:Project "Project" )
+  AnnotationAssertion( rdfs:comment _:Project
+  "Business process consisting of a set of coherent activities intended for a specific purpose and managed as a whole.
+
+Source: RDL" )
+  AnnotationAssertion( ISO-15926:RDLclass _:Project "true" )
+  AnnotationAssertion( ISO-15926:URI _:Project "http://posccaesar.org/rdl/RDS9629" )
+
+Declaration(  DataProperty( _:Project.projectId))
+  AnnotationAssertion( rdfs:label _:Project.projectId "projectId" )
+  AnnotationAssertion( rdfs:comment _:Project.projectId
+  "Declared as an instance of a project and has a number as a label.
+
+Source: RDL" )
+SubclassOf( DataSomeValuesFrom(_:Project.projectId xsd:string) _:Project)
+SubclassOf( owl:thing DataAllValuesFrom(_:Project.projectId xsd:string))
+SubclassOf( _:Project DataExactCardinality( 1 _:Project.projectId))
+
+Declaration(  DataProperty( _:Project.projectTitle))
+  AnnotationAssertion( rdfs:label _:Project.projectTitle "projectTitle" )
+  AnnotationAssertion( rdfs:comment _:Project.projectTitle
+  "The identifier of the project activity.
+
+Source: HI EDE 50.7" )
+SubclassOf( DataSomeValuesFrom(_:Project.projectTitle xsd:string) _:Project)
+SubclassOf( owl:thing DataAllValuesFrom(_:Project.projectTitle xsd:string))
+SubclassOf( _:Project DataExactCardinality( 1 _:Project.projectTitle))
+
+Declaration( Class( _:SafetyFunctionCode ))
+  AnnotationAssertion( rdfs:label _:SafetyFunctionCode "SafetyFunctionCode" )
+  AnnotationAssertion( rdfs:comment _:SafetyFunctionCode
+  "a code for a class of functional unit whose members are engaged in safety related activities regarding personnel, environment and material assets. 
+
+Source: IEC 61511" )
+SubClassOf ( _:SafetyFunctionCode Codes:Code )
+
+Declaration( Class( _:SafetyInstrumentedFunction ))
+  AnnotationAssertion( rdfs:label _:SafetyInstrumentedFunction "SafetyInstrumentedFunction" )
+  AnnotationAssertion( rdfs:comment _:SafetyInstrumentedFunction
+  "A class of functionality involving safety related activities regarding personnel, environment and material assets. A safety function has a specified safety integrity level which is necessary to achieve functional safety. A safety instrumented function can be either a safety instrumented protection function or a safety instrumented control function.
+
+Source: IEC 61511" )
+
+Declaration(  DataProperty( _:SafetyInstrumentedFunction.description))
+  AnnotationAssertion( rdfs:label _:SafetyInstrumentedFunction.description "description" )
+  AnnotationAssertion( rdfs:comment _:SafetyInstrumentedFunction.description
+  "text description of the safety function" )
+SubclassOf( DataSomeValuesFrom(_:SafetyInstrumentedFunction.description xsd:string) _:SafetyInstrumentedFunction)
+SubclassOf( owl:thing DataAllValuesFrom(_:SafetyInstrumentedFunction.description xsd:string))
+SubclassOf( _:SafetyInstrumentedFunction DataMaxCardinality( 1 _:SafetyInstrumentedFunction.description))
+
+Declaration( Class( _:SafetyIntegrityLevel ))
+  AnnotationAssertion( rdfs:label _:SafetyIntegrityLevel "SafetyIntegrityLevel" )
+  AnnotationAssertion( rdfs:comment _:SafetyIntegrityLevel
+  "Safety Integrity Level (SIL) is defined as a relative level of risk-reduction provided by a safety function, or to specify a target level of risk reduction. In simple terms, SIL is a measurement of performance required for a Safety Instrumented Function (SIF).
+
+Source: Wikipedia
+See Also:  IEC 61511" )
+SubClassOf ( _:SafetyIntegrityLevel Codes:Code )
+
+Declaration( Class( _:System ))
+  AnnotationAssertion( rdfs:label _:System "System" )
+  AnnotationAssertion( rdfs:comment _:System
+  "A collection of resources (people, machines, materials, software) that is organized for a purpose.
+
+A functional object that is an assembly of functional objects forming a network to provide a type of service or serving a common purpose.
+
+Source: RDL" )
+  AnnotationAssertion( ISO-15926:RDLclass _:System "true" )
+  AnnotationAssertion( ISO-15926:URI _:System "http://jord-dev.org/rdl/RDS316259" )
+
+Declaration(  DataProperty( _:System.id))
+  AnnotationAssertion( rdfs:label _:System.id "id" )
+  AnnotationAssertion( rdfs:comment _:System.id
+  "A formal identifier for the (sub) System" )
+SubclassOf( DataSomeValuesFrom(_:System.id xsd:string) _:System)
+SubclassOf( owl:thing DataAllValuesFrom(_:System.id xsd:string))
+SubclassOf( _:System DataMinCardinality( 1 _:System.id))
+
+Declaration( Class( _:SystemModel ))
+  AnnotationAssertion( rdfs:label _:SystemModel "SystemModel" )
+  AnnotationAssertion( rdfs:comment _:SystemModel
+  "A simplified or idealized description or conception of a particular system, situation, or process (often in mathematical terms: so mathematical model) that is put forward as basis for calculations, predictions, or further investigation.
+
+Source: RDL as Model
+
+A specification intended to be used to create an item
+
+Source: RDL as Design
+
+A SystemDesign is a formal description of the system at some level of abstraction and from some specific point of view.  Such models are typically diagrams with accompanying text.  The level and viewpoint for the model determines what is actually captured in the diagram." )
+  AnnotationAssertion( ISO-15926:RDLclass _:SystemModel "true" )
+  AnnotationAssertion( ISO-15926:URI _:SystemModel "http://posccaesar.org/rdl/RDS11984375" )
+
+Declaration(  DataProperty( _:SystemModel.id))
+  AnnotationAssertion( rdfs:label _:SystemModel.id "id" )
+  AnnotationAssertion( rdfs:comment _:SystemModel.id
+  "The identifier for the SystemModel." )
+SubclassOf( DataSomeValuesFrom(_:SystemModel.id xsd:string) _:SystemModel)
+SubclassOf( owl:thing DataAllValuesFrom(_:SystemModel.id xsd:string))
+SubclassOf( _:SystemModel DataExactCardinality( 1 _:SystemModel.id))
+
+Declaration(  ObjectProperty( _:SystemModel.referenceDate))
+  AnnotationAssertion( rdfs:label _:SystemModel.referenceDate "referenceDate" )
+  AnnotationAssertion( rdfs:comment _:SystemModel.referenceDate
+  "Date of published model." )
+SubclassOf( ObjectSomeValuesFrom(_:SystemModel.referenceDate Time:Date) _:SystemModel)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SystemModel.referenceDate Time:Date))
+SubclassOf( _:SystemModel ObjectMaxCardinality( 1 _:SystemModel.referenceDate))
+
+Declaration(  DataProperty( _:SystemModel.revision))
+  AnnotationAssertion( rdfs:label _:SystemModel.revision "revision" )
+  AnnotationAssertion( rdfs:comment _:SystemModel.revision
+  "An identification code of a version of the model.
+
+Source: RDL" )
+SubclassOf( DataSomeValuesFrom(_:SystemModel.revision xsd:string) _:SystemModel)
+SubclassOf( owl:thing DataAllValuesFrom(_:SystemModel.revision xsd:string))
+SubclassOf( _:SystemModel DataMaxCardinality( 1 _:SystemModel.revision))
+
+Declaration( Class( _:SystemSpecification ))
+  AnnotationAssertion( rdfs:label _:SystemSpecification "SystemSpecification" )
+  AnnotationAssertion( rdfs:comment _:SystemSpecification
+  "A SystemSpecification is a collection of models of a system, as-is or to-be, that together describe the system at the appropriate formal level of detail needed for some particular interface in the design, construction, and operation of the system.  These typically coincide with specific milestones in the lifecycle of the system." )
+  AnnotationAssertion( ISO-15926:RDLclass _:SystemSpecification "true" )
+  AnnotationAssertion( ISO-15926:URI _:SystemSpecification "http://jord-dev.org/rdl/RDS335744" )
+
+Declaration(  DataProperty( _:SystemSpecification.revisionNumber))
+  AnnotationAssertion( rdfs:label _:SystemSpecification.revisionNumber "revisionNumber" )
+  AnnotationAssertion( rdfs:comment _:SystemSpecification.revisionNumber
+  "A version identifier for a managed SystemSpecification
+" )
+SubclassOf( DataSomeValuesFrom(_:SystemSpecification.revisionNumber xsd:integer) _:SystemSpecification)
+SubclassOf( owl:thing DataAllValuesFrom(_:SystemSpecification.revisionNumber xsd:integer))
+SubclassOf( _:SystemSpecification DataExactCardinality( 1 _:SystemSpecification.revisionNumber))
+
+Declaration(  DataProperty( _:SystemSpecification.specificationId))
+  AnnotationAssertion( rdfs:label _:SystemSpecification.specificationId "specificationId" )
+  AnnotationAssertion( rdfs:comment _:SystemSpecification.specificationId
+  "The identifier for the system specification that provides the context for the tag number.  In many cases, it is a drawing identifier.  " )
+SubclassOf( DataSomeValuesFrom(_:SystemSpecification.specificationId xsd:string) _:SystemSpecification)
+SubclassOf( owl:thing DataAllValuesFrom(_:SystemSpecification.specificationId xsd:string))
+SubclassOf( _:SystemSpecification DataExactCardinality( 1 _:SystemSpecification.specificationId))
+
+Declaration( Class( _:Transaction ))
+  AnnotationAssertion( rdfs:label _:Transaction "Transaction" )
+  AnnotationAssertion( rdfs:comment _:Transaction
+  "The creation/editting of the project document." )
+
+Declaration(  ObjectProperty( _:Transaction.transactionDate))
+  AnnotationAssertion( rdfs:label _:Transaction.transactionDate "transactionDate" )
+  AnnotationAssertion( rdfs:comment _:Transaction.transactionDate
+  "The date which the document was made/changed." )
+SubclassOf( ObjectSomeValuesFrom(_:Transaction.transactionDate :) _:Transaction)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Transaction.transactionDate :))
+SubclassOf( _:Transaction ObjectExactCardinality( 1 _:Transaction.transactionDate))
+
+Declaration(  DataProperty( _:Transaction.transactionType))
+  AnnotationAssertion( rdfs:label _:Transaction.transactionType "transactionType" )
+  AnnotationAssertion( rdfs:comment _:Transaction.transactionType
+  "Distinguishes what part of the lifecycle the transaction is taking place." )
+SubclassOf( DataSomeValuesFrom(_:Transaction.transactionType xsd:string) _:Transaction)
+SubclassOf( owl:thing DataAllValuesFrom(_:Transaction.transactionType xsd:string))
+SubclassOf( _:Transaction DataExactCardinality( 1 _:Transaction.transactionType))
+
+Declaration(  ObjectProperty( _:ItemCharacterization.itemType))
+  AnnotationAssertion( rdfs:label _:ItemCharacterization.itemType "itemType" )
+  AnnotationAssertion( rdfs:comment _:ItemCharacterization.itemType
+  " a specific category of product, that identifies principal functional or physical features.
+
+Examples: Centrifugal Pump, Motor-operated check valve." )
+SubclassOf( ObjectSomeValuesFrom(_:ItemCharacterization.itemType _:ItemType) _:ItemCharacterization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ItemCharacterization.itemType _:ItemType))
+SubclassOf( _:ItemCharacterization ObjectExactCardinality( 1 _:ItemCharacterization.itemType))
+
+Declaration(  ObjectProperty( _:ItemCharacterization.certifications))
+  AnnotationAssertion( rdfs:label _:ItemCharacterization.certifications "certifications" )
+  AnnotationAssertion( rdfs:comment _:ItemCharacterization.certifications
+  "The characterized component has, or is required to have, the ProductCertification, i.e.,the component must have passed the associated certification process, according to a formal declaration by the appointed authority.  " )
+SubclassOf( ObjectSomeValuesFrom(_:ItemCharacterization.certifications _:ProductCertification) _:ItemCharacterization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ItemCharacterization.certifications _:ProductCertification))
+
+Declaration(  ObjectProperty( _:ProductDataSheet.content))
+  AnnotationAssertion( rdfs:label _:ProductDataSheet.content "content" )
+  AnnotationAssertion( rdfs:comment _:ProductDataSheet.content
+  "The ComponentCharacterization (a set of properties) that forms the main content of the ProductDataSheet." )
+SubclassOf( ObjectSomeValuesFrom(_:ProductDataSheet.content _:ItemCharacterization) _:ProductDataSheet)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProductDataSheet.content _:ItemCharacterization))
+SubclassOf( _:ProductDataSheet ObjectExactCardinality( 1 _:ProductDataSheet.content))
+
+Declaration(  ObjectProperty( _:ProductDataSheet.source))
+  AnnotationAssertion( rdfs:label _:ProductDataSheet.source "source" )
+  AnnotationAssertion( rdfs:comment _:ProductDataSheet.source
+  "The Organization that produced the Product Data Sheet." )
+SubclassOf( ObjectSomeValuesFrom(_:ProductDataSheet.source _:Organization) _:ProductDataSheet)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProductDataSheet.source _:Organization))
+SubclassOf( _:ProductDataSheet ObjectExactCardinality( 1 _:ProductDataSheet.source))
+
+Declaration(  ObjectProperty( _:Project.responsibleOrganization))
+  AnnotationAssertion( rdfs:label _:Project.responsibleOrganization "responsibleOrganization" )
+  AnnotationAssertion( rdfs:comment _:Project.responsibleOrganization
+  "The Organization responsible for executing, or overseeing execution of, the Project." )
+SubclassOf( ObjectSomeValuesFrom(_:Project.responsibleOrganization _:Organization) _:Project)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Project.responsibleOrganization _:Organization))
+SubclassOf( _:Project ObjectExactCardinality( 1 _:Project.responsibleOrganization))
+
+Declaration(  ObjectProperty( _:SafetyInstrumentedFunction.functionCode))
+  AnnotationAssertion( rdfs:label _:SafetyInstrumentedFunction.functionCode "functionCode" )
+  AnnotationAssertion( rdfs:comment _:SafetyInstrumentedFunction.functionCode
+  "a code for a class of functional unit whose members are engaged in safety related activities regarding personnel, environment and material assets. 
+
+Source: IEC 61511" )
+SubclassOf( ObjectSomeValuesFrom(_:SafetyInstrumentedFunction.functionCode _:SafetyFunctionCode) _:SafetyInstrumentedFunction)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SafetyInstrumentedFunction.functionCode _:SafetyFunctionCode))
+SubclassOf( _:SafetyInstrumentedFunction ObjectMaxCardinality( 1 _:SafetyInstrumentedFunction.functionCode))
+
+Declaration(  ObjectProperty( _:SafetyInstrumentedFunction.integrityLevel))
+  AnnotationAssertion( rdfs:label _:SafetyInstrumentedFunction.integrityLevel "integrityLevel" )
+  AnnotationAssertion( rdfs:comment _:SafetyInstrumentedFunction.integrityLevel
+  "Safety Integrity Level (SIL) is defined as a relative level of risk-reduction provided by a safety function, or to specify a target level of risk reduction. In simple terms, SIL is a measurement of performance required for a Safety Instrumented Function (SIF).
+
+Source: Wikipedia
+See Also:  IEC 61511" )
+SubclassOf( ObjectSomeValuesFrom(_:SafetyInstrumentedFunction.integrityLevel _:SafetyIntegrityLevel) _:SafetyInstrumentedFunction)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SafetyInstrumentedFunction.integrityLevel _:SafetyIntegrityLevel))
+SubclassOf( _:SafetyInstrumentedFunction ObjectMaxCardinality( 1 _:SafetyInstrumentedFunction.integrityLevel))
+
+Declaration(  ObjectProperty( _:SystemModel.author))
+  AnnotationAssertion( rdfs:label _:SystemModel.author "author" )
+  AnnotationAssertion( rdfs:comment _:SystemModel.author
+  "The person responsible for the SystemModel" )
+SubclassOf( ObjectSomeValuesFrom(_:SystemModel.author _:Person) _:SystemModel)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SystemModel.author _:Person))
+SubclassOf( _:SystemModel ObjectMaxCardinality( 1 _:SystemModel.author))
+
+Declaration(  ObjectProperty( _:ProductCertification.code))
+  AnnotationAssertion( rdfs:label _:ProductCertification.code "code" )
+  AnnotationAssertion( rdfs:comment _:ProductCertification.code
+  "A standard code that designates the specific Certification, its properties, tests, and authorities." )
+SubclassOf( ObjectSomeValuesFrom(_:ProductCertification.code _:CertificationCode) _:ProductCertification)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProductCertification.code _:CertificationCode))
+SubclassOf( _:ProductCertification ObjectExactCardinality( 1 _:ProductCertification.code))
+
+Declaration(  ObjectProperty( _:PartElement.ofCharacterization))
+  AnnotationAssertion( rdfs:label _:PartElement.ofCharacterization "ofCharacterization" )
+  AnnotationAssertion( rdfs:comment _:PartElement.ofCharacterization
+  "The characterization that contains the description of the physical part." )
+  AnnotationAssertion( uml:isAbstract _:PartElement.ofCharacterization "true" )
+  AnnotationAssertion( uml:isDerived _:PartElement.ofCharacterization "true" )
+SubclassOf( ObjectSomeValuesFrom(_:PartElement.ofCharacterization _:ItemCharacterization) _:PartElement)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:PartElement.ofCharacterization _:ItemCharacterization))
+SubclassOf( _:PartElement ObjectExactCardinality( 1 _:PartElement.ofCharacterization))
+
+Declaration(  ObjectProperty( _:ItemCharacterization.elements))
+  AnnotationAssertion( rdfs:label _:ItemCharacterization.elements "elements" )
+  AnnotationAssertion( rdfs:comment _:ItemCharacterization.elements
+  "the elements of the ProductCharacterization that describe physical parts" )
+  AnnotationAssertion( uml:isAbstract _:ItemCharacterization.elements "true" )
+  AnnotationAssertion( uml:isDerived _:ItemCharacterization.elements "true" )
+SubclassOf( ObjectSomeValuesFrom(_:ItemCharacterization.elements _:PartElement) _:ItemCharacterization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ItemCharacterization.elements _:PartElement))
+InverseObjectProperties( _:PartElement.ofCharacterization _:ItemCharacterization.elements )
+
+Declaration(  ObjectProperty( _:ItemCharacterization.connections))
+  AnnotationAssertion( rdfs:label _:ItemCharacterization.connections "connections" )
+  AnnotationAssertion( uml:isComposite _:ItemCharacterization.connections "true" )
+SubclassOf( ObjectSomeValuesFrom(_:ItemCharacterization.connections _:Connection) _:ItemCharacterization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ItemCharacterization.connections _:Connection))
+
+Declaration(  ObjectProperty( _:DesignElement.safetyFunction))
+  AnnotationAssertion( rdfs:label _:DesignElement.safetyFunction "safetyFunction" )
+  AnnotationAssertion( rdfs:comment _:DesignElement.safetyFunction
+  "safety function which is the purpose of, or forms part of the specifications for, the DesignElement." )
+SubclassOf( ObjectSomeValuesFrom(_:DesignElement.safetyFunction _:SafetyInstrumentedFunction) _:DesignElement)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:DesignElement.safetyFunction _:SafetyInstrumentedFunction))
+SubclassOf( _:DesignElement ObjectMaxCardinality( 1 _:DesignElement.safetyFunction))
+
+Declaration(  ObjectProperty( _:ItemCharacterization.forElement))
+  AnnotationAssertion( rdfs:label _:ItemCharacterization.forElement "forElement" )
+  AnnotationAssertion( rdfs:comment _:ItemCharacterization.forElement
+  "The DesignElements, if any, that include this ComponentCharacterization" )
+SubclassOf( ObjectSomeValuesFrom(_:ItemCharacterization.forElement _:DesignElement) _:ItemCharacterization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ItemCharacterization.forElement _:DesignElement))
+
+Declaration(  ObjectProperty( _:DesignElement.specification))
+  AnnotationAssertion( rdfs:label _:DesignElement.specification "specification" )
+  AnnotationAssertion( rdfs:comment _:DesignElement.specification
+  "The specifications for the physical Artefact that will fulfill this DesignElement" )
+SubclassOf( ObjectSomeValuesFrom(_:DesignElement.specification _:ItemCharacterization) _:DesignElement)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:DesignElement.specification _:ItemCharacterization))
+SubclassOf( _:DesignElement ObjectExactCardinality( 1 _:DesignElement.specification))
+InverseObjectProperties( _:ItemCharacterization.forElement _:DesignElement.specification )
+
+Declaration(  ObjectProperty( _:MeasuredState.ofItem))
+  AnnotationAssertion( rdfs:label _:MeasuredState.ofItem "ofItem" )
+  AnnotationAssertion( rdfs:comment _:MeasuredState.ofItem
+  "The individual Artefact that was measured, and that is characterized by this characterization." )
+SubclassOf( ObjectSomeValuesFrom(_:MeasuredState.ofItem _:PlantItem) _:MeasuredState)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:MeasuredState.ofItem _:PlantItem))
+SubclassOf( _:MeasuredState ObjectExactCardinality( 1 _:MeasuredState.ofItem))
+
+Declaration(  ObjectProperty( _:PlantItem.state))
+  AnnotationAssertion( rdfs:label _:PlantItem.state "state" )
+  AnnotationAssertion( rdfs:comment _:PlantItem.state
+  "The measured states of the Artefact" )
+SubclassOf( ObjectSomeValuesFrom(_:PlantItem.state _:MeasuredState) _:PlantItem)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:PlantItem.state _:MeasuredState))
+InverseObjectProperties( _:MeasuredState.ofItem _:PlantItem.state )
+
+Declaration(  ObjectProperty( _:PlantItem.model))
+  AnnotationAssertion( rdfs:label _:PlantItem.model "model" )
+  AnnotationAssertion( rdfs:comment _:PlantItem.model
+  "The Product(Model) to which this Artefact (product instance) belongs." )
+SubclassOf( ObjectSomeValuesFrom(_:PlantItem.model _:ProductModel) _:PlantItem)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:PlantItem.model _:ProductModel))
+SubclassOf( _:PlantItem ObjectExactCardinality( 1 _:PlantItem.model))
+
+Declaration(  ObjectProperty( _:PlantItem.ports))
+  AnnotationAssertion( rdfs:label _:PlantItem.ports "ports" )
+  AnnotationAssertion( rdfs:comment _:PlantItem.ports
+  "The physical ports by which this Plant Item is connected to other physical elements of the plant." )
+  AnnotationAssertion( uml:isAbstract _:PlantItem.ports "true" )
+  AnnotationAssertion( uml:isComposite _:PlantItem.ports "true" )
+SubclassOf( ObjectSomeValuesFrom(_:PlantItem.ports _:Port) _:PlantItem)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:PlantItem.ports _:Port))
+
+Declaration(  ObjectProperty( _:Plant.items))
+  AnnotationAssertion( rdfs:label _:Plant.items "items" )
+  AnnotationAssertion( rdfs:comment _:Plant.items
+  "The PlantItems that are parts of the Plant" )
+  AnnotationAssertion( uml:isDerived _:Plant.items "true" )
+SubclassOf( ObjectSomeValuesFrom(_:Plant.items _:PlantItem) _:Plant)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Plant.items _:PlantItem))
+
+Declaration(  ObjectProperty( _:PlantItem.plant))
+  AnnotationAssertion( rdfs:label _:PlantItem.plant "plant" )
+  AnnotationAssertion( rdfs:comment _:PlantItem.plant
+  "The Plant that contains the PlantItem, if any." )
+  AnnotationAssertion( uml:isDerived _:PlantItem.plant "true" )
+SubclassOf( ObjectSomeValuesFrom(_:PlantItem.plant _:Plant) _:PlantItem)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:PlantItem.plant _:Plant))
+SubclassOf( _:PlantItem ObjectMaxCardinality( 1 _:PlantItem.plant))
+InverseObjectProperties( _:Plant.items _:PlantItem.plant )
+
+Declaration(  ObjectProperty( _:DesignElement.instance))
+  AnnotationAssertion( rdfs:label _:DesignElement.instance "instance" )
+  AnnotationAssertion( rdfs:comment _:DesignElement.instance
+  "The physical Artefact that realizes the DesignElement in the system as-built or as-operated." )
+SubclassOf( ObjectSomeValuesFrom(_:DesignElement.instance _:PlantItem) _:DesignElement)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:DesignElement.instance _:PlantItem))
+
+Declaration(  ObjectProperty( _:PlantItem.realizesDesign))
+  AnnotationAssertion( rdfs:label _:PlantItem.realizesDesign "realizesDesign" )
+  AnnotationAssertion( rdfs:comment _:PlantItem.realizesDesign
+  "The DesignElement that this Artefact realizes in the physical system" )
+SubclassOf( ObjectSomeValuesFrom(_:PlantItem.realizesDesign _:DesignElement) _:PlantItem)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:PlantItem.realizesDesign _:DesignElement))
+SubclassOf( _:PlantItem ObjectMinCardinality( 1 _:PlantItem.realizesDesign))
+InverseObjectProperties( _:DesignElement.instance _:PlantItem.realizesDesign )
+
+Declaration(  ObjectProperty( _:Location.withinLocation))
+  AnnotationAssertion( rdfs:label _:Location.withinLocation "withinLocation" )
+  AnnotationAssertion( rdfs:comment _:Location.withinLocation
+  "another Location that wholly contains the Location.
+
+Example:  the State/Province in which a City Location is located." )
+SubclassOf( ObjectSomeValuesFrom(_:Location.withinLocation _:Location) _:Location)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Location.withinLocation _:Location))
+
+Declaration(  ObjectProperty( _:SystemModel.type))
+  AnnotationAssertion( rdfs:label _:SystemModel.type "type" )
+  AnnotationAssertion( rdfs:comment _:SystemModel.type
+  "The particular category of formal model of a system that this SystemModel embodies." )
+SubclassOf( ObjectSomeValuesFrom(_:SystemModel.type _:ModelType) _:SystemModel)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SystemModel.type _:ModelType))
+SubclassOf( _:SystemModel ObjectExactCardinality( 1 _:SystemModel.type))
+
+Declaration(  ObjectProperty( _:SystemModel.includesElement))
+  AnnotationAssertion( rdfs:label _:SystemModel.includesElement "includesElement" )
+  AnnotationAssertion( rdfs:comment _:SystemModel.includesElement
+  "The DesignElements that are contained in the SystemModel." )
+  AnnotationAssertion( uml:isComposite _:SystemModel.includesElement "true" )
+SubclassOf( ObjectSomeValuesFrom(_:SystemModel.includesElement _:DesignElement) _:SystemModel)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SystemModel.includesElement _:DesignElement))
+
+Declaration(  ObjectProperty( _:DesignElement.inModel))
+  AnnotationAssertion( rdfs:label _:DesignElement.inModel "inModel" )
+  AnnotationAssertion( rdfs:comment _:DesignElement.inModel
+  "The SystemModel that contains the DesignElement" )
+SubclassOf( ObjectSomeValuesFrom(_:DesignElement.inModel _:SystemModel) _:DesignElement)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:DesignElement.inModel _:SystemModel))
+SubclassOf( _:DesignElement ObjectExactCardinality( 1 _:DesignElement.inModel))
+InverseObjectProperties( _:SystemModel.includesElement _:DesignElement.inModel )
+
+Declaration(  ObjectProperty( _:SystemModel.ofSystem))
+  AnnotationAssertion( rdfs:label _:SystemModel.ofSystem "ofSystem" )
+  AnnotationAssertion( rdfs:comment _:SystemModel.ofSystem
+  "The system that is modeled by the SystemModel.  The model presents an intentionally limited view of the System." )
+SubclassOf( ObjectSomeValuesFrom(_:SystemModel.ofSystem _:System) _:SystemModel)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SystemModel.ofSystem _:System))
+SubclassOf( _:SystemModel ObjectMinCardinality( 1 _:SystemModel.ofSystem))
+
+Declaration(  ObjectProperty( _:Organization.id))
+  AnnotationAssertion( rdfs:label _:Organization.id "id" )
+  AnnotationAssertion( rdfs:comment _:Organization.id
+  "An organization identifer string, usually associated with some registry.
+
+Source: RDL" )
+SubclassOf( ObjectSomeValuesFrom(_:Organization.id _:OrganizationId) _:Organization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Organization.id _:OrganizationId))
+SubclassOf( _:Organization ObjectMinCardinality( 1 _:Organization.id))
+
+Declaration(  ObjectProperty( _:Organization.operatesPlant))
+  AnnotationAssertion( rdfs:label _:Organization.operatesPlant "operatesPlant" )
+  AnnotationAssertion( rdfs:comment _:Organization.operatesPlant
+  "Plants that are operated by the Organization (usually only those operated under contract)" )
+SubclassOf( ObjectSomeValuesFrom(_:Organization.operatesPlant _:Plant) _:Organization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Organization.operatesPlant _:Plant))
+
+Declaration(  ObjectProperty( _:Plant.operator))
+  AnnotationAssertion( rdfs:label _:Plant.operator "operator" )
+  AnnotationAssertion( rdfs:comment _:Plant.operator
+  "the Organization that has contractual responsibility for operating the plant.  This may or may not be the same as the Owner.  Also an idle plant need not have any active operating organization." )
+SubclassOf( ObjectSomeValuesFrom(_:Plant.operator _:Organization) _:Plant)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Plant.operator _:Organization))
+SubclassOf( _:Plant ObjectMaxCardinality( 1 _:Plant.operator))
+InverseObjectProperties( _:Organization.operatesPlant _:Plant.operator )
+
+Declaration(  ObjectProperty( _:Organization.ownsPlant))
+  AnnotationAssertion( rdfs:label _:Organization.ownsPlant "ownsPlant" )
+  AnnotationAssertion( rdfs:comment _:Organization.ownsPlant
+  "Plants that are owned by the organization" )
+SubclassOf( ObjectSomeValuesFrom(_:Organization.ownsPlant _:Plant) _:Organization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Organization.ownsPlant _:Plant))
+
+Declaration(  ObjectProperty( _:Plant.owner))
+  AnnotationAssertion( rdfs:label _:Plant.owner "owner" )
+  AnnotationAssertion( rdfs:comment _:Plant.owner
+  "the Organization that owns the Plant" )
+SubclassOf( ObjectSomeValuesFrom(_:Plant.owner _:Organization) _:Plant)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Plant.owner _:Organization))
+SubclassOf( _:Plant ObjectExactCardinality( 1 _:Plant.owner))
+InverseObjectProperties( _:Organization.ownsPlant _:Plant.owner )
+
+Declaration(  ObjectProperty( _:PartElement.material))
+  AnnotationAssertion( rdfs:label _:PartElement.material "material" )
+  AnnotationAssertion( rdfs:comment _:PartElement.material
+  "The material(s) of which the physical artefacts that correspond to the PartElement are (to be) made." )
+SubclassOf( ObjectSomeValuesFrom(_:PartElement.material Materials:Material) _:PartElement)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:PartElement.material Materials:Material))
+SubclassOf( _:PartElement ObjectMinCardinality( 1 _:PartElement.material))
+
+Declaration(  ObjectProperty( _:Plant.location))
+  AnnotationAssertion( rdfs:label _:Plant.location "location" )
+SubclassOf( ObjectSomeValuesFrom(_:Plant.location _:Location) _:Plant)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Plant.location _:Location))
+SubclassOf( _:Plant ObjectExactCardinality( 1 _:Plant.location))
+
+Declaration(  ObjectProperty( _:FluidPort.connectionType))
+  AnnotationAssertion( rdfs:label _:FluidPort.connectionType "connectionType" )
+  AnnotationAssertion( rdfs:comment _:FluidPort.connectionType
+  "The physical structure of the Port connection. This is almost always a reference to an industry standard.  
+The supplier's catalog always specifies the connector type.  Depending on the nature of the equipment and the piping requirements, the owner may specify the type.
+Source: HI EDE 50.7
+" )
+SubclassOf( ObjectSomeValuesFrom(_:FluidPort.connectionType _:ConnectionType) _:FluidPort)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:FluidPort.connectionType _:ConnectionType))
+SubclassOf( _:FluidPort ObjectExactCardinality( 1 _:FluidPort.connectionType))
+
+Declaration(  ObjectProperty( _:FluidPort.connectionRating))
+  AnnotationAssertion( rdfs:label _:FluidPort.connectionRating "connectionRating" )
+  AnnotationAssertion( rdfs:comment _:FluidPort.connectionRating
+  "Pressure class rating for the physical connection. Information should include the governing body (ASME etc). 
+Usually provided by the manufacturer, but can be specified by owner to match his pipe system requirements.
+Source: HI EDE 50.7
+" )
+SubclassOf( ObjectSomeValuesFrom(_:FluidPort.connectionRating _:ConnectionRating) _:FluidPort)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:FluidPort.connectionRating _:ConnectionRating))
+SubclassOf( _:FluidPort ObjectExactCardinality( 1 _:FluidPort.connectionRating))
+
+Declaration(  ObjectProperty( _:FluidPort.connection))
+  AnnotationAssertion( rdfs:label _:FluidPort.connection "connection" )
+  AnnotationAssertion( rdfs:comment _:FluidPort.connection
+  "The logical connection in the plant design, if any, that is implemented by the physical Port.  Logical connections for valves are usually unlabeled, unless the valve is a rotary valve that affects process flow." )
+SubclassOf( ObjectSomeValuesFrom(_:FluidPort.connection _:Connection) _:FluidPort)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:FluidPort.connection _:Connection))
+SubclassOf( _:FluidPort ObjectMaxCardinality( 1 _:FluidPort.connection))
+
+Declaration(  ObjectProperty( _:Connection.port))
+  AnnotationAssertion( rdfs:label _:Connection.port "port" )
+  AnnotationAssertion( rdfs:comment _:Connection.port
+  "The physical port (characterization) that implements the connection" )
+SubclassOf( ObjectSomeValuesFrom(_:Connection.port _:FluidPort) _:Connection)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Connection.port _:FluidPort))
+SubclassOf( _:Connection ObjectMaxCardinality( 1 _:Connection.port))
+InverseObjectProperties( _:FluidPort.connection _:Connection.port )
+
+Declaration(  ObjectProperty( _:ProductModel.manufacturer))
+  AnnotationAssertion( rdfs:label _:ProductModel.manufacturer "manufacturer" )
+  AnnotationAssertion( rdfs:comment _:ProductModel.manufacturer
+  "The Organization that manufactures and provides the Product artefacts described by the ProductModel." )
+SubclassOf( ObjectSomeValuesFrom(_:ProductModel.manufacturer _:Organization) _:ProductModel)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProductModel.manufacturer _:Organization))
+SubclassOf( _:ProductModel ObjectExactCardinality( 1 _:ProductModel.manufacturer))
+
+Declaration(  ObjectProperty( _:Organization.offersProduct))
+  AnnotationAssertion( rdfs:label _:Organization.offersProduct "offersProduct" )
+  AnnotationAssertion( rdfs:comment _:Organization.offersProduct
+  "The Products in the manufacturing Organization's catalog" )
+SubclassOf( ObjectSomeValuesFrom(_:Organization.offersProduct _:ProductModel) _:Organization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Organization.offersProduct _:ProductModel))
+InverseObjectProperties( _:ProductModel.manufacturer _:Organization.offersProduct )
+
+Declaration(  ObjectProperty( _:ProductModel.satisfiesDesign))
+  AnnotationAssertion( rdfs:label _:ProductModel.satisfiesDesign "satisfiesDesign" )
+  AnnotationAssertion( rdfs:comment _:ProductModel.satisfiesDesign
+  "The DesignElements (in a particular model) that Artefacts conforming to the ProductModel could satisfy." )
+SubclassOf( ObjectSomeValuesFrom(_:ProductModel.satisfiesDesign _:DesignElement) _:ProductModel)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProductModel.satisfiesDesign _:DesignElement))
+
+Declaration(  ObjectProperty( _:DesignElement.acceptableModel))
+  AnnotationAssertion( rdfs:label _:DesignElement.acceptableModel "acceptableModel" )
+  AnnotationAssertion( rdfs:comment _:DesignElement.acceptableModel
+  "The ProductModels that are known to satisfy the requirements specified for the DesignElement" )
+SubclassOf( ObjectSomeValuesFrom(_:DesignElement.acceptableModel _:ProductModel) _:DesignElement)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:DesignElement.acceptableModel _:ProductModel))
+InverseObjectProperties( _:ProductModel.satisfiesDesign _:DesignElement.acceptableModel )
+
+Declaration(  ObjectProperty( _:ItemCharacterization.forProduct))
+  AnnotationAssertion( rdfs:label _:ItemCharacterization.forProduct "forProduct" )
+  AnnotationAssertion( rdfs:comment _:ItemCharacterization.forProduct
+  "The ProductModel, if any, for which this Characterization forms the specifications." )
+SubclassOf( ObjectSomeValuesFrom(_:ItemCharacterization.forProduct _:ProductModel) _:ItemCharacterization)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ItemCharacterization.forProduct _:ProductModel))
+SubclassOf( _:ItemCharacterization ObjectMaxCardinality( 1 _:ItemCharacterization.forProduct))
+
+Declaration(  ObjectProperty( _:ProductModel.specification))
+  AnnotationAssertion( rdfs:label _:ProductModel.specification "specification" )
+  AnnotationAssertion( rdfs:comment _:ProductModel.specification
+  "The specifications for product Artefacts that are instances of this ProductModel." )
+SubclassOf( ObjectSomeValuesFrom(_:ProductModel.specification _:ItemCharacterization) _:ProductModel)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProductModel.specification _:ItemCharacterization))
+SubclassOf( _:ProductModel ObjectExactCardinality( 1 _:ProductModel.specification))
+InverseObjectProperties( _:ItemCharacterization.forProduct _:ProductModel.specification )
+
+Declaration(  ObjectProperty( _:Project.baseProject))
+  AnnotationAssertion( rdfs:label _:Project.baseProject "baseProject" )
+  AnnotationAssertion( rdfs:comment _:Project.baseProject
+  "A larger Project that this Project/Job is part of." )
+SubclassOf( ObjectSomeValuesFrom(_:Project.baseProject _:Project) _:Project)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Project.baseProject _:Project))
+SubclassOf( _:Project ObjectMaxCardinality( 1 _:Project.baseProject))
+
+Declaration(  ObjectProperty( _:Project.job))
+  AnnotationAssertion( rdfs:label _:Project.job "job" )
+  AnnotationAssertion( rdfs:comment _:Project.job
+  "A smaller project or Job that is part of the Project" )
+SubclassOf( ObjectSomeValuesFrom(_:Project.job _:Project) _:Project)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Project.job _:Project))
+InverseObjectProperties( _:Project.baseProject _:Project.job )
+
+Declaration(  ObjectProperty( _:SystemSpecification.underProject))
+  AnnotationAssertion( rdfs:label _:SystemSpecification.underProject "underProject" )
+  AnnotationAssertion( rdfs:comment _:SystemSpecification.underProject
+  "The Project under which, or for which, the SystemSpecification is developed." )
+SubclassOf( ObjectSomeValuesFrom(_:SystemSpecification.underProject _:Project) _:SystemSpecification)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SystemSpecification.underProject _:Project))
+SubclassOf( _:SystemSpecification ObjectExactCardinality( 1 _:SystemSpecification.underProject))
+
+Declaration(  ObjectProperty( _:Project.specifications))
+  AnnotationAssertion( rdfs:label _:Project.specifications "specifications" )
+  AnnotationAssertion( rdfs:comment _:Project.specifications
+  "SystemSpecifications produced by the Project (and thus labeled with the Project id)." )
+SubclassOf( ObjectSomeValuesFrom(_:Project.specifications _:SystemSpecification) _:Project)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Project.specifications _:SystemSpecification))
+InverseObjectProperties( _:SystemSpecification.underProject _:Project.specifications )
+
+Declaration(  ObjectProperty( _:System.specification))
+  AnnotationAssertion( rdfs:label _:System.specification "specification" )
+  AnnotationAssertion( rdfs:comment _:System.specification
+  "The complete specifications for the System" )
+SubclassOf( ObjectSomeValuesFrom(_:System.specification _:SystemSpecification) _:System)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:System.specification _:SystemSpecification))
+SubclassOf( _:System ObjectExactCardinality( 1 _:System.specification))
+
+Declaration(  ObjectProperty( _:SystemSpecification.specifiesSystem))
+  AnnotationAssertion( rdfs:label _:SystemSpecification.specifiesSystem "specifiesSystem" )
+  AnnotationAssertion( rdfs:comment _:SystemSpecification.specifiesSystem
+  "the system(s) that are described by the specification" )
+SubclassOf( ObjectSomeValuesFrom(_:SystemSpecification.specifiesSystem _:System) _:SystemSpecification)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SystemSpecification.specifiesSystem _:System))
+SubclassOf( _:SystemSpecification ObjectMinCardinality( 1 _:SystemSpecification.specifiesSystem))
+InverseObjectProperties( _:System.specification _:SystemSpecification.specifiesSystem )
+
+Declaration(  ObjectProperty( _:SystemModel.systemSpecification))
+  AnnotationAssertion( rdfs:label _:SystemModel.systemSpecification "systemSpecification" )
+  AnnotationAssertion( rdfs:comment _:SystemModel.systemSpecification
+  "The overall SystemSpecification (and implicitly, the System) for which this SystemModel represents a particular view." )
+SubclassOf( ObjectSomeValuesFrom(_:SystemModel.systemSpecification _:SystemSpecification) _:SystemModel)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SystemModel.systemSpecification _:SystemSpecification))
+SubclassOf( _:SystemModel ObjectExactCardinality( 1 _:SystemModel.systemSpecification))
+
+Declaration(  ObjectProperty( _:SystemSpecification.model))
+  AnnotationAssertion( rdfs:label _:SystemSpecification.model "model" )
+  AnnotationAssertion( rdfs:comment _:SystemSpecification.model
+  " the particular SystemModels that capture specific views of the System being specified by the SystemSpecification" )
+  AnnotationAssertion( uml:isComposite _:SystemSpecification.model "true" )
+SubclassOf( ObjectSomeValuesFrom(_:SystemSpecification.model _:SystemModel) _:SystemSpecification)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:SystemSpecification.model _:SystemModel))
+InverseObjectProperties( _:SystemModel.systemSpecification _:SystemSpecification.model )
+
+Declaration(  ObjectProperty( _:System.subsystem))
+  AnnotationAssertion( rdfs:label _:System.subsystem "subsystem" )
+  AnnotationAssertion( rdfs:comment _:System.subsystem
+  "a part of the System which is a System in its own right, and performs some functions that are part of the System functions" )
+  AnnotationAssertion( uml:isComposite _:System.subsystem "true" )
+SubclassOf( ObjectSomeValuesFrom(_:System.subsystem _:System) _:System)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:System.subsystem _:System))
+
+Declaration(  ObjectProperty( _:System.inSystem))
+  AnnotationAssertion( rdfs:label _:System.inSystem "inSystem" )
+  AnnotationAssertion( rdfs:comment _:System.inSystem
+  "The next larger system of which the System is a part (if any)." )
+SubclassOf( ObjectSomeValuesFrom(_:System.inSystem _:System) _:System)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:System.inSystem _:System))
+SubclassOf( _:System ObjectMaxCardinality( 1 _:System.inSystem))
+InverseObjectProperties( _:System.subsystem _:System.inSystem )
+
+Declaration(  ObjectProperty( _:System.includedItem))
+  AnnotationAssertion( rdfs:label _:System.includedItem "includedItem" )
+SubclassOf( ObjectSomeValuesFrom(_:System.includedItem _:PlantItem) _:System)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:System.includedItem _:PlantItem))
+
+Declaration(  ObjectProperty( _:PlantItem.inSystem))
+  AnnotationAssertion( rdfs:label _:PlantItem.inSystem "inSystem" )
+SubclassOf( ObjectSomeValuesFrom(_:PlantItem.inSystem _:System) _:PlantItem)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:PlantItem.inSystem _:System))
+SubclassOf( _:PlantItem ObjectMaxCardinality( 1 _:PlantItem.inSystem))
+InverseObjectProperties( _:System.includedItem _:PlantItem.inSystem )
+
+)
+
+
+Prefix( _:=<http://nist.gov/el/fowl/PDScommon/Materials#>)
+ Prefix( fowl:=<http://nist.gov/el/fowl/fowlannotations.owl#>)
+ Prefix( ISO-15926:=<ISO-15926 Profile.mdxml/ISO-15926#>)
+ Prefix( Quantities:=<http://nist.gov/el/fowl/PDScommon/Quantities#>)
+ Prefix( Codes:=<http://nist.gov/el/fowl/PDScommon/Codes#>)
+Ontology( <http://nist.gov/el/fowl/PDScommon/Materials> 
+ Import( <ISO-15926 Profile.mdxml/ISO-15926> )
+ Import( <http://nist.gov/el/fowl/PDScommon/Quantities> )
+ Import( <http://nist.gov/el/fowl/PDScommon/Codes> )
+  Annotation( rdfs:label "Materials")
+  Annotation( rdfs:comment "The Materials package is a high-level abstract model of materials and fluids.  ")
+  Annotation( rdfs:comment "produced by uml2fowl v0.1 on ???")
+
+
+Declaration( Class( _:FluidType ))
+  AnnotationAssertion( rdfs:label _:FluidType "FluidType" )
+  AnnotationAssertion( rdfs:comment _:FluidType
+  "Pumped fluid characteristic based on pick list choices. 
+
+Values are provided by the owner/purchaser.
+
+Source: HI EDE 50.7" )
+
+Declaration( NamedIndividual( _:FluidType.Newtonian ))
+  AnnotationAssertion( rdfs:label _:FluidType.Newtonian "Newtonian" )
+ClassAssertion( _:FluidType _:FluidType.Newtonian )
+
+Declaration( NamedIndividual( _:FluidType.Non-Newtonian ))
+  AnnotationAssertion( rdfs:label _:FluidType.Non-Newtonian "Non-Newtonian" )
+ClassAssertion( _:FluidType _:FluidType.Non-Newtonian )
+
+Declaration( NamedIndividual( _:FluidType.Plastic ))
+  AnnotationAssertion( rdfs:label _:FluidType.Plastic "Plastic" )
+ClassAssertion( _:FluidType _:FluidType.Plastic )
+
+Declaration( NamedIndividual( _:FluidType.Bingham Plastic ))
+  AnnotationAssertion( rdfs:label _:FluidType.Bingham Plastic "Bingham Plastic" )
+ClassAssertion( _:FluidType _:FluidType.Bingham Plastic )
+
+Declaration( NamedIndividual( _:FluidType.Pseudo-Plastic ))
+  AnnotationAssertion( rdfs:label _:FluidType.Pseudo-Plastic "Pseudo-Plastic" )
+ClassAssertion( _:FluidType _:FluidType.Pseudo-Plastic )
+
+Declaration( NamedIndividual( _:FluidType.Thixotropic ))
+  AnnotationAssertion( rdfs:label _:FluidType.Thixotropic "Thixotropic" )
+ClassAssertion( _:FluidType _:FluidType.Thixotropic )
+
+Declaration( NamedIndividual( _:FluidType.Dilatent ))
+  AnnotationAssertion( rdfs:label _:FluidType.Dilatent "Dilatent" )
+ClassAssertion( _:FluidType _:FluidType.Dilatent )
+AllDifferent(
+ _:FluidType.Newtonian
+ _:FluidType.Non-Newtonian
+ _:FluidType.Plastic
+ _:FluidType.Bingham Plastic
+ _:FluidType.Pseudo-Plastic
+ _:FluidType.Thixotropic
+ _:FluidType.Dilatent
+)
+EquivalentClasses( _:FluidType ObjectOneOf(
+  _:FluidType.Newtonian
+  _:FluidType.Non-Newtonian
+  _:FluidType.Plastic
+  _:FluidType.Bingham Plastic
+  _:FluidType.Pseudo-Plastic
+  _:FluidType.Thixotropic
+  _:FluidType.Dilatent
+))
+
+Declaration( Datatype( _:MaterialKind ))
+  AnnotationAssertion( rdfs:label _:MaterialKind "MaterialKind" )
+  AnnotationAssertion( rdfs:comment _:MaterialKind
+  "A specification that describes the applicable materials.
+
+Source: RDL http://posccaesar.org/rdl/RDS329579" )
+
+Declaration( Class( _:Fluid ))
+  AnnotationAssertion( rdfs:label _:Fluid "Fluid" )
+  AnnotationAssertion( rdfs:comment _:Fluid
+  "A material/substance that is amorphous in structure and tends to flow or to conform to the outline of its container.
+a substance that is capable of flowing and that changes shape at a steady rate when acted on by a force that tends to change its shape.
+
+Source: RDL" )
+  AnnotationAssertion( ISO-15926:RDLclass _:Fluid "true" )
+  AnnotationAssertion( ISO-15926:URI _:Fluid "http://posccaesar.org/rdl/RDS13051278" )
+SubClassOf ( _:Fluid _:Material )
+
+Declaration(  DataProperty( _:Fluid.abrasiveProperty))
+  AnnotationAssertion( rdfs:label _:Fluid.abrasiveProperty "abrasiveProperty" )
+  AnnotationAssertion( rdfs:comment _:Fluid.abrasiveProperty
+  "True if the fluid flow can damage equipment by mechanical means; else false." )
+SubclassOf( DataSomeValuesFrom(_:Fluid.abrasiveProperty xsd:boolean) _:Fluid)
+SubclassOf( owl:thing DataAllValuesFrom(_:Fluid.abrasiveProperty xsd:boolean))
+SubclassOf( _:Fluid DataExactCardinality( 1 _:Fluid.abrasiveProperty))
+
+Declaration(  DataProperty( _:Fluid.corrosiveProperty))
+  AnnotationAssertion( rdfs:label _:Fluid.corrosiveProperty "corrosiveProperty" )
+  AnnotationAssertion( rdfs:comment _:Fluid.corrosiveProperty
+  "True if the fluid flow can damage equipment by chemical means; else false." )
+SubclassOf( DataSomeValuesFrom(_:Fluid.corrosiveProperty xsd:boolean) _:Fluid)
+SubclassOf( owl:thing DataAllValuesFrom(_:Fluid.corrosiveProperty xsd:boolean))
+SubclassOf( _:Fluid DataExactCardinality( 1 _:Fluid.corrosiveProperty))
+
+Declaration(  ObjectProperty( _:Fluid.density))
+  AnnotationAssertion( rdfs:label _:Fluid.density "density" )
+  AnnotationAssertion( rdfs:comment _:Fluid.density
+  "density of the Fluid at a reference temperature and pressure.
+<p>Out of context, the reference is standard temperature and pressure, i.e., 20 C and 1 atmosphere.</p>" )
+SubclassOf( ObjectSomeValuesFrom(_:Fluid.density Quantities:Density) _:Fluid)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Fluid.density Quantities:Density))
+SubclassOf( _:Fluid ObjectExactCardinality( 1 _:Fluid.density))
+
+Declaration(  ObjectProperty( _:Fluid.fluidType))
+  AnnotationAssertion( rdfs:label _:Fluid.fluidType "fluidType" )
+  AnnotationAssertion( rdfs:comment _:Fluid.fluidType
+  "Pumped fluid characteristic based on pick list choices. Data to be provided by owner/purchaser.
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:Fluid.fluidType _:FluidType) _:Fluid)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Fluid.fluidType _:FluidType))
+SubclassOf( _:Fluid ObjectExactCardinality( 1 _:Fluid.fluidType))
+
+Declaration(  ObjectProperty( _:Fluid.specificGravity))
+  AnnotationAssertion( rdfs:label _:Fluid.specificGravity "specificGravity" )
+  AnnotationAssertion( rdfs:comment _:Fluid.specificGravity
+  "<p>specific gravity of the Fluid at a reference temperature and pressure.</p>
+<p>Out of context, the reference is standard temperature and pressure, i.e., 20 C and 1 atmosphere.</p>" )
+SubclassOf( ObjectSomeValuesFrom(_:Fluid.specificGravity Quantities:SpecificGravity) _:Fluid)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Fluid.specificGravity Quantities:SpecificGravity))
+SubclassOf( _:Fluid ObjectExactCardinality( 1 _:Fluid.specificGravity))
+
+Declaration(  ObjectProperty( _:Fluid.specificHeat))
+  AnnotationAssertion( rdfs:label _:Fluid.specificHeat "specificHeat" )
+  AnnotationAssertion( rdfs:comment _:Fluid.specificHeat
+  "<p>specific heat of the Fluid at a reference pressure.</p>
+<p>Out of context, the reference pressure is 1 atmosphere.</p>" )
+SubclassOf( ObjectSomeValuesFrom(_:Fluid.specificHeat Quantities:SpecificHeat) _:Fluid)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Fluid.specificHeat Quantities:SpecificHeat))
+SubclassOf( _:Fluid ObjectExactCardinality( 1 _:Fluid.specificHeat))
+
+Declaration(  DataProperty( _:Fluid.toxicProperty))
+  AnnotationAssertion( rdfs:label _:Fluid.toxicProperty "toxicProperty" )
+  AnnotationAssertion( rdfs:comment _:Fluid.toxicProperty
+  "True if Acute or chronic exposure to the fluid can cause physical harm to humans. 
+
+Note:  Any toxic material has an associated Materials Safety Data Sheet (MSDS) that specifies risk, required handling, and required protection for persons and possibly equipment.  The owner of a material is required to provide the MSDS information. 
+" )
+SubclassOf( DataSomeValuesFrom(_:Fluid.toxicProperty xsd:boolean) _:Fluid)
+SubclassOf( owl:thing DataAllValuesFrom(_:Fluid.toxicProperty xsd:boolean))
+SubclassOf( _:Fluid DataExactCardinality( 1 _:Fluid.toxicProperty))
+
+Declaration(  ObjectProperty( _:Fluid.viscosity))
+  AnnotationAssertion( rdfs:label _:Fluid.viscosity "viscosity" )
+  AnnotationAssertion( rdfs:comment _:Fluid.viscosity
+  "<p>viscosity of the Fluid at a reference temperature and pressure.  </p>
+<p>Out of context, the reference is standard temperature and pressure, i.e., 20 C and 1 atmosphere.</p>" )
+SubclassOf( ObjectSomeValuesFrom(_:Fluid.viscosity Quantities:Viscosity) _:Fluid)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Fluid.viscosity Quantities:Viscosity))
+SubclassOf( _:Fluid ObjectExactCardinality( 1 _:Fluid.viscosity))
+
+Declaration( Class( _:Material ))
+  AnnotationAssertion( rdfs:label _:Material "Material" )
+  AnnotationAssertion( rdfs:comment _:Material
+  "Any substance, but particularly a substance of which things of interest consist or are made. 
+
+Source: RDL " )
+  AnnotationAssertion( ISO-15926:RDLclass _:Material "true" )
+  AnnotationAssertion( ISO-15926:URI _:Material "http://posccaesar.org/rdl/RDS505139131" )
+
+Declaration(  DataProperty( _:Material.description))
+  AnnotationAssertion( rdfs:label _:Material.description "description" )
+  AnnotationAssertion( rdfs:comment _:Material.description
+  "A general description of the Material, which may call out its special properties, non-quantifiable properties, or primary uses." )
+SubclassOf( DataSomeValuesFrom(_:Material.description xsd:string) _:Material)
+SubclassOf( owl:thing DataAllValuesFrom(_:Material.description xsd:string))
+
+Declaration(  DataProperty( _:Material.name))
+  AnnotationAssertion( rdfs:label _:Material.name "name" )
+  AnnotationAssertion( rdfs:comment _:Material.name
+  "The common name for the Material." )
+SubclassOf( DataSomeValuesFrom(_:Material.name xsd:string) _:Material)
+SubclassOf( owl:thing DataAllValuesFrom(_:Material.name xsd:string))
+
+Declaration( Class( _:MaterialType ))
+  AnnotationAssertion( rdfs:label _:MaterialType "MaterialType" )
+  AnnotationAssertion( rdfs:comment _:MaterialType
+  "A specification that describes the applicable materials.
+
+Source: RDL" )
+  AnnotationAssertion( ISO-15926:RDLclass _:MaterialType "true" )
+  AnnotationAssertion( ISO-15926:URI _:MaterialType "http://posccaesar.org/rdl/RDS329579" )
+SubClassOf ( _:MaterialType Codes:Code )
+
+Declaration( Class( _:ProcessFluidStream ))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream "ProcessFluidStream" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream
+  "A fluid stream that is a ProcessMaterial for some process.  
+
+Source: JORD RDL as Process Item Fluid Stream
+
+Note:  ProcessFluidStream characterizes the state of the fluid being processed at some specific point in the process.  It usually describes the (expected and possible) states of the fluid at the inlet to the train/line element that is the physical realization of that point in the process.
+
+Note:  The characteristics of the ProcessFluidStream are almost always provided by the plant owner/operator.
+" )
+  AnnotationAssertion( ISO-15926:RDLclass _:ProcessFluidStream "true" )
+  AnnotationAssertion( ISO-15926:URI _:ProcessFluidStream "http://posccaesar.org/rdl/RDS14309798" )
+SubClassOf ( _:ProcessFluidStream _:ProcessMaterial )
+SubClassOf ( _:ProcessFluidStream _:Fluid )
+
+Declaration(  DataProperty( _:ProcessFluidStream.GasInFluidDescription))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.GasInFluidDescription "GasInFluidDescription" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.GasInFluidDescription
+  "Text field describing the gas materials per unit weight of pumped fluid, the gas concentration by volume, the characteristics of solution and dissolution of the gas, and other relevant characteristics of the gas." )
+SubclassOf( DataSomeValuesFrom(_:ProcessFluidStream.GasInFluidDescription xsd:string) _:ProcessFluidStream)
+SubclassOf( owl:thing DataAllValuesFrom(_:ProcessFluidStream.GasInFluidDescription xsd:string))
+SubclassOf( _:ProcessFluidStream DataExactCardinality( 1 _:ProcessFluidStream.GasInFluidDescription))
+
+Declaration(  DataProperty( _:ProcessFluidStream.GasPresentInFluid))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.GasPresentInFluid "GasPresentInFluid" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.GasPresentInFluid
+  "Indicates whether gases are present in the fluid (Y/N).  If Yes, describe the characteristics of the gases in the \"Gases in Fluid Description.\"" )
+SubclassOf( DataSomeValuesFrom(_:ProcessFluidStream.GasPresentInFluid xsd:boolean) _:ProcessFluidStream)
+SubclassOf( owl:thing DataAllValuesFrom(_:ProcessFluidStream.GasPresentInFluid xsd:boolean))
+SubclassOf( _:ProcessFluidStream DataExactCardinality( 1 _:ProcessFluidStream.GasPresentInFluid))
+
+Declaration(  DataProperty( _:ProcessFluidStream.SolidsInFluidDescription))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.SolidsInFluidDescription "SolidsInFluidDescription" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.SolidsInFluidDescription
+  "Text field describing the solid materials per unit weight of pumped fluid, the solids concentration by volume, the minimum and maximum particle size or sphere size of the solid, the friability/attrition,  the solids hardness, or other relevant characteristics of the solids.
+
+Source: HI EDE 50.7" )
+SubclassOf( DataSomeValuesFrom(_:ProcessFluidStream.SolidsInFluidDescription xsd:string) _:ProcessFluidStream)
+SubclassOf( owl:thing DataAllValuesFrom(_:ProcessFluidStream.SolidsInFluidDescription xsd:string))
+SubclassOf( _:ProcessFluidStream DataExactCardinality( 1 _:ProcessFluidStream.SolidsInFluidDescription))
+
+Declaration(  DataProperty( _:ProcessFluidStream.SolidsPresentInFluid))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.SolidsPresentInFluid "SolidsPresentInFluid" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.SolidsPresentInFluid
+  "Indicates whether solids are present in the fluid (Y/N).  If Yes, describe the characteristics of the solids in the \"Solids in Fluid Description.\"
+
+Source: HI EDE 50.7" )
+SubclassOf( DataSomeValuesFrom(_:ProcessFluidStream.SolidsPresentInFluid xsd:boolean) _:ProcessFluidStream)
+SubclassOf( owl:thing DataAllValuesFrom(_:ProcessFluidStream.SolidsPresentInFluid xsd:boolean))
+SubclassOf( _:ProcessFluidStream DataExactCardinality( 1 _:ProcessFluidStream.SolidsPresentInFluid))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.SpecificGravityRange))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.SpecificGravityRange "SpecificGravityRange" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.SpecificGravityRange
+  "The range of specific gravities of the ProcessFluid over the given Temperature and pressure range, where the nominal value is at the nominal temperature and pressure." )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.SpecificGravityRange Quantities:SpecificGravityRange) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.SpecificGravityRange Quantities:SpecificGravityRange))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.SpecificGravityRange))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.SpecificGravityRated))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.SpecificGravityRated "SpecificGravityRated" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.SpecificGravityRated
+  "Specific gravity at the rated temperature
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.SpecificGravityRated Quantities:SpecificGravity) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.SpecificGravityRated Quantities:SpecificGravity))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.SpecificGravityRated))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.SpecificHeatRange))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.SpecificHeatRange "SpecificHeatRange" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.SpecificHeatRange
+  "The range of specific heat of the process fluid over the specified range of temperatures and pressures.
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.SpecificHeatRange Quantities:SpecificHeatRange) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.SpecificHeatRange Quantities:SpecificHeatRange))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.SpecificHeatRange))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.SpecificHeatRated))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.SpecificHeatRated "SpecificHeatRated" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.SpecificHeatRated
+  "The specific heat of the process fluid at the rated temperature and pressure.
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.SpecificHeatRated Quantities:SpecificHeat) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.SpecificHeatRated Quantities:SpecificHeat))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.SpecificHeatRated))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.TemperatureRange))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.TemperatureRange "TemperatureRange" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.TemperatureRange
+  "The range of fluid temperatures to which the processing equipment may be exposed. 
+
+The temperature is to be provided by the owner.
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.TemperatureRange Quantities:TemperatureRange) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.TemperatureRange Quantities:TemperatureRange))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.TemperatureRange))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.TemperatureRated))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.TemperatureRated "TemperatureRated" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.TemperatureRated
+  "The fluid temperature that corresponds with the rated conditions used to select the processing equipment.   Other rated fluid properties such as specific gravity, vapor pressure, and viscosity are determined at this temperature.
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.TemperatureRated Quantities:Temperature) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.TemperatureRated Quantities:Temperature))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.TemperatureRated))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.VaporPressureRange))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.VaporPressureRange "VaporPressureRange" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.VaporPressureRange
+  "Over the range of temperatures, the range of absolute pressures at which the liquid and its vapor are in equilibrium.
+
+Source: HI 3.3.9 - 2007
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.VaporPressureRange Quantities:PressureRange) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.VaporPressureRange Quantities:PressureRange))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.VaporPressureRange))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.VaporPressureRated))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.VaporPressureRated "VaporPressureRated" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.VaporPressureRated
+  "At the rated temperature, the absolute pressure at which the liquid and its vapor are in equilibrium   The data is provided by the purchaser/owner.  (HI 3.3.9 - 2007)
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.VaporPressureRated Quantities:Pressure) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.VaporPressureRated Quantities:Pressure))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.VaporPressureRated))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.ViscosityRange))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.ViscosityRange "ViscosityRange" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.ViscosityRange
+  "The range of viscosities of the fluid over the given TemperatureRange, with the nominalViscosity at the nominalTemperature.
+
+<note> Note: For non-Newtonian fluids, an apparent viscosity is provided that often depends on the rate of shear.</note>   
+
+Data is provided by the purchaser/owner.
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.ViscosityRange Quantities:ViscosityRange) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.ViscosityRange Quantities:ViscosityRange))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.ViscosityRange))
+
+Declaration(  ObjectProperty( _:ProcessFluidStream.ViscosityRated))
+  AnnotationAssertion( rdfs:label _:ProcessFluidStream.ViscosityRated "ViscosityRated" )
+  AnnotationAssertion( rdfs:comment _:ProcessFluidStream.ViscosityRated
+  "The fluid viscosity that corresponds with the rated conditions used to select the processing equipment.
+
+Source: HI EDE 50.7" )
+SubclassOf( ObjectSomeValuesFrom(_:ProcessFluidStream.ViscosityRated Quantities:Viscosity) _:ProcessFluidStream)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:ProcessFluidStream.ViscosityRated Quantities:Viscosity))
+SubclassOf( _:ProcessFluidStream ObjectExactCardinality( 1 _:ProcessFluidStream.ViscosityRated))
+
+Declaration( Class( _:ProcessMaterial ))
+  AnnotationAssertion( rdfs:label _:ProcessMaterial "ProcessMaterial" )
+  AnnotationAssertion( rdfs:comment _:ProcessMaterial
+  "A/the material being processed through a process or the supporting system, usually with the intent of yielding some product.  Technically a ProcessMaterial is a role of the actual Material, but many of the specified characteristics of a ProcessMaterial depend on the model for the process that the material undergoes. " )
+  AnnotationAssertion( ISO-15926:RDLclass _:ProcessMaterial "true" )
+  AnnotationAssertion( ISO-15926:URI _:ProcessMaterial "http://poscaesar.org/rdl/RDS13103201" )
+  AnnotationAssertion( uml:isAbstract _:ProcessMaterial "true" )
+SubClassOf ( _:ProcessMaterial _:Material )
+
+Declaration(  ObjectProperty( _:Material.type))
+  AnnotationAssertion( rdfs:label _:Material.type "type" )
+  AnnotationAssertion( rdfs:comment _:Material.type
+  "a name or code that indicates the physical form and chemical nature of the Material, providing sufficient information about its properties to determine its suitability for the intended use.
+
+Source: RDL http://posccaesar.org/rdl/RDS329579" )
+SubclassOf( ObjectSomeValuesFrom(_:Material.type _:MaterialType) _:Material)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Material.type _:MaterialType))
+SubclassOf( _:Material ObjectExactCardinality( 1 _:Material.type))
+
+)
+
+
+Prefix( _:=<http://nist.gov/el/fowl/PDScommon/Quantities#>)
+ Prefix( fowl:=<http://nist.gov/el/fowl/fowlannotations.owl#>)
+Ontology( <http://nist.gov/el/fowl/PDScommon/Quantities> 
+  Annotation( rdfs:label "Quantities")
+  Annotation( rdfs:comment "The Quantities model is a basic model of quantities and quantity values.  It is a simplification of the model given in section 1 of the International Vocubulary for Measurement.
+The basic idea is that a Quantity is an abstraction of measurements of some property of some thing.  A QuantityKind is a category of such measurements in which all members of the same category can be compared to one another.  Systems of quantities define certain QuantityKinds as “base quantities” and others as “derived quantities” that can be expressed in terms of base quantities.  
+Each modeled subclass of Quantity in this model is a QuantityKind that is used in describing some specified or measured aspects of the process and its equipment.
+A QuantityValue is a representation of a Quantity as a reference “unit” quantity and the ratio of the Quantity in question to that unit quantity.  Standard reference unit quantities exist, and are called “standard measurement units”.  The same Quantity can be expressed as different ratios to different units.
+So, a quantity specification for a property of a DesignElement is phrased as a QuantityValue, and in some cases may specify the required reference unit.  Experience teaches that assuming that “industry custom” will define the intended reference unit is a very risky practice.
+")
+  Annotation( rdfs:comment "produced by uml2fowl v0.1 on ???")
+
+
+Declaration( Class( _:AngularVelocity ))
+  AnnotationAssertion( rdfs:label _:AngularVelocity "AngularVelocity" )
+  AnnotationAssertion( rdfs:comment _:AngularVelocity
+  "the ratio of angular displacement to time of displacement for a rotating object.  By convention, angular displacement is given in full rotations (360-degree displacements) over time." )
+SubClassOf ( _:AngularVelocity _:Quanitity )
+
+Declaration( Class( _:AngularVelocityRange ))
+  AnnotationAssertion( rdfs:label _:AngularVelocityRange "AngularVelocityRange" )
+  AnnotationAssertion( rdfs:comment _:AngularVelocityRange
+  "A QuantityRange of AngularVelocity quantities." )
+SubClassOf ( _:AngularVelocityRange _:QuantityRange )
+
+Declaration( Class( _:Density ))
+  AnnotationAssertion( rdfs:label _:Density "Density" )
+  AnnotationAssertion( rdfs:comment _:Density
+  "the ratio of mass to volume of a substance " )
+SubClassOf ( _:Density _:Quanitity )
+
+Declaration( Class( _:Efficiency ))
+  AnnotationAssertion( rdfs:label _:Efficiency "Efficiency" )
+  AnnotationAssertion( rdfs:comment _:Efficiency
+  "the ratio of the energy consumed by an action or function to the energy produced as useful output of a particular type. " )
+SubClassOf ( _:Efficiency _:Quanitity )
+
+Declaration( Class( _:Energy ))
+  AnnotationAssertion( rdfs:label _:Energy "Energy" )
+  AnnotationAssertion( rdfs:comment _:Energy
+  "force applied over distance (kinetic energy), or the potential for applying force over a distance (potential energy)." )
+SubClassOf ( _:Energy _:Quanitity )
+
+Declaration( Class( _:Flowrate ))
+  AnnotationAssertion( rdfs:label _:Flowrate "Flowrate" )
+  AnnotationAssertion( rdfs:comment _:Flowrate
+  "the ratio of the volume of a flow to time " )
+SubClassOf ( _:Flowrate _:Quanitity )
+
+Declaration( Class( _:FlowrateRange ))
+  AnnotationAssertion( rdfs:label _:FlowrateRange "FlowrateRange" )
+  AnnotationAssertion( rdfs:comment _:FlowrateRange
+  "A QuantityRange of Flowrate quantities." )
+SubClassOf ( _:FlowrateRange _:QuantityRange )
+
+Declaration( Class( _:Length ))
+  AnnotationAssertion( rdfs:label _:Length "Length" )
+  AnnotationAssertion( rdfs:comment _:Length
+  "The \"length\" Quantity in the International System of Quantities (SI).  A quantification of linear displacement." )
+SubClassOf ( _:Length _:Quanitity )
+
+Declaration( Class( _:LengthRange ))
+  AnnotationAssertion( rdfs:label _:LengthRange "LengthRange" )
+  AnnotationAssertion( rdfs:comment _:LengthRange
+  "A QuantityRange of Length quantities." )
+SubClassOf ( _:LengthRange _:QuantityRange )
+
+Declaration( Class( _:Mass ))
+  AnnotationAssertion( rdfs:label _:Mass "Mass" )
+  AnnotationAssertion( rdfs:comment _:Mass
+  "The \"mass\" Quantity in the International System of Quantities (SI).  The amount of substance in a physical object." )
+SubClassOf ( _:Mass _:Quanitity )
+
+Declaration( Class( _:MeasurementUnit ))
+  AnnotationAssertion( rdfs:label _:MeasurementUnit "MeasurementUnit" )
+  AnnotationAssertion( rdfs:comment _:MeasurementUnit
+  "real scalar quantity, defined and adopted by convention, with which any other quantity of the same kind can be compared to express the ratio of the two quantities as a number
+
+Source: International Vocabulary for Measurements (VIM)
+" )
+SubClassOf ( _:MeasurementUnit _:Quanitity )
+
+Declaration(  DataProperty( _:MeasurementUnit.name))
+  AnnotationAssertion( rdfs:label _:MeasurementUnit.name "name" )
+  AnnotationAssertion( rdfs:comment _:MeasurementUnit.name
+  "Name of unit." )
+SubclassOf( DataSomeValuesFrom(_:MeasurementUnit.name xsd:string) _:MeasurementUnit)
+SubclassOf( owl:thing DataAllValuesFrom(_:MeasurementUnit.name xsd:string))
+SubclassOf( _:MeasurementUnit DataExactCardinality( 1 _:MeasurementUnit.name))
+
+Declaration(  DataProperty( _:MeasurementUnit.symbol))
+  AnnotationAssertion( rdfs:label _:MeasurementUnit.symbol "symbol" )
+  AnnotationAssertion( rdfs:comment _:MeasurementUnit.symbol
+  "Symbol of the unit." )
+SubclassOf( DataSomeValuesFrom(_:MeasurementUnit.symbol xsd:string) _:MeasurementUnit)
+SubclassOf( owl:thing DataAllValuesFrom(_:MeasurementUnit.symbol xsd:string))
+SubclassOf( _:MeasurementUnit DataExactCardinality( 1 _:MeasurementUnit.symbol))
+
+Declaration( Class( _:Power ))
+  AnnotationAssertion( rdfs:label _:Power "Power" )
+  AnnotationAssertion( rdfs:comment _:Power
+  "the ratio of the energy produced or consumed by a device or action to the time of production or consumption " )
+SubClassOf ( _:Power _:Quanitity )
+
+Declaration( Class( _:Pressure ))
+  AnnotationAssertion( rdfs:label _:Pressure "Pressure" )
+  AnnotationAssertion( rdfs:comment _:Pressure
+  "the ratio of force delivered to an area of a substance " )
+SubClassOf ( _:Pressure _:Quanitity )
+
+Declaration( Class( _:PressureRange ))
+  AnnotationAssertion( rdfs:label _:PressureRange "PressureRange" )
+  AnnotationAssertion( rdfs:comment _:PressureRange
+  "A QuantityRange of Pressure quantities." )
+SubClassOf ( _:PressureRange _:QuantityRange )
+
+Declaration( Class( _:Quanitity ))
+  AnnotationAssertion( rdfs:label _:Quanitity "Quanitity" )
+  AnnotationAssertion( rdfs:comment _:Quanitity
+  "property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference. Also the abstraction of the measured property that is considered to be the same across many individual things, such as a Length of 1 meter.
+
+A quantity is expressed by a QuantityValue.
+
+Quantity is an abstract class:  Every actual quantity is an instance of some specific subclass of Quantity.
+
+Source: International Vocabulary for Measurements (VIM)" )
+  AnnotationAssertion( uml:isAbstract _:Quanitity "true" )
+
+Declaration( Class( _:QuantityKind ))
+  AnnotationAssertion( rdfs:label _:QuantityKind "QuantityKind" )
+  AnnotationAssertion( rdfs:comment _:QuantityKind
+  "that aspect of quantities that makes them comparable to one another
+
+Any two quantities of the same quantity kind can be compared.  Two quantities of different kinds cannot be compared.
+
+Note: Therefore, each QuantityKind is itself a subtype of Quantity.  However, not every subtype of quantity is a QuantityKind.  The QuantityKinds are those that distinguish comparabilities.  For example, Length and Velocity are QuantityKinds, but Air Speed is the same QuantityKind as Velocity.
+
+Source: International Vocabulary for Measurements (VIM): \"kind of quantity\"
+" )
+
+Declaration(  DataProperty( _:QuantityKind.term))
+  AnnotationAssertion( rdfs:label _:QuantityKind.term "term" )
+  AnnotationAssertion( rdfs:comment _:QuantityKind.term
+  "A term that denotes the quantity kind.
+
+The quantity kinds defined in the International System of Quantities have standard terms." )
+SubclassOf( DataSomeValuesFrom(_:QuantityKind.term xsd:string) _:QuantityKind)
+SubclassOf( owl:thing DataAllValuesFrom(_:QuantityKind.term xsd:string))
+SubclassOf( _:QuantityKind DataMinCardinality( 1 _:QuantityKind.term))
+
+Declaration( Class( _:QuantityRange ))
+  AnnotationAssertion( rdfs:label _:QuantityRange "QuantityRange" )
+  AnnotationAssertion( rdfs:comment _:QuantityRange
+  "A specification for a range of abstract quantities of the same quantity kind, which 
+
+A specification for a range of Quantities of a particular kind as the range of values for some property.  It refers to any and all quantities of that kind that are greater than a minimum quantity and less than a maximum quantity.  A QuantityRange may also include a \"nominal Quantity\" that refers to the expected value for the property in normal use.
+
+A QuantityRange can be used in two ways.  
+  - It can specify a range of property values that a qualifying thing must support and/or has been tested to support.  In this sense, it represents the range of behaviors of a system that the qualifying thing is part of.  The nominal quantity then expresses the expected normal behavior of the system, which can be used in choosing an optimal thing, or an optimal configuration of the thing, to meet the specifications. 
+  - Alternatively, a QuantityRange can specify an upper and lower bound on a tolerated property of the thing, requiring only that the actual property of the thing fall within those bounds.
+Properties: abstract.  Like Quantity, every usage of a QuantityRange is of a specific kind of Quantity.
+" )
+  AnnotationAssertion( uml:isAbstract _:QuantityRange "true" )
+
+Declaration( Class( _:QuantityValue ))
+  AnnotationAssertion( rdfs:label _:QuantityValue "QuantityValue" )
+  AnnotationAssertion( rdfs:comment _:QuantityValue
+  "number and reference [unit] together expressing the magnitude
+of a quantity
+
+a characterization of the Quantity by a numeric value that is the ratio of the quantity to some reference quantity.  The reference quantity is called a ‘unit of measure’ or ‘measurement unit’, since it is the quantity whose ratio to the reference quantity is 1.
+
+Source: International Vocabulary for Measurements (VIM)
+
+" )
+
+Declaration(  DataProperty( _:QuantityValue.number))
+  AnnotationAssertion( rdfs:label _:QuantityValue.number "number" )
+  AnnotationAssertion( rdfs:comment _:QuantityValue.number
+  "the ratio of the Quantity to the Measurement Unit." )
+SubclassOf( DataSomeValuesFrom(_:QuantityValue.number xsd:decimal) _:QuantityValue)
+SubclassOf( owl:thing DataAllValuesFrom(_:QuantityValue.number xsd:decimal))
+SubclassOf( _:QuantityValue DataExactCardinality( 1 _:QuantityValue.number))
+
+Declaration( Class( _:QuantityValueRange ))
+  AnnotationAssertion( rdfs:label _:QuantityValueRange "QuantityValueRange" )
+  AnnotationAssertion( rdfs:comment _:QuantityValueRange
+  "The characterization of a QuantityRange in terms of multiples of a given MeasurementUnit." )
+
+Declaration(  DataProperty( _:QuantityValueRange.maxValue))
+  AnnotationAssertion( rdfs:label _:QuantityValueRange.maxValue "maxValue" )
+  AnnotationAssertion( rdfs:comment _:QuantityValueRange.maxValue
+  "The ratio of the maximumQuantity of the QuantityRange to the unit of the QuantityValueRange.
+" )
+SubclassOf( DataSomeValuesFrom(_:QuantityValueRange.maxValue xsd:decimal) _:QuantityValueRange)
+SubclassOf( owl:thing DataAllValuesFrom(_:QuantityValueRange.maxValue xsd:decimal))
+SubclassOf( _:QuantityValueRange DataExactCardinality( 1 _:QuantityValueRange.maxValue))
+
+Declaration(  DataProperty( _:QuantityValueRange.minValue))
+  AnnotationAssertion( rdfs:label _:QuantityValueRange.minValue "minValue" )
+  AnnotationAssertion( rdfs:comment _:QuantityValueRange.minValue
+  "The ratio of the minimumQuantity of the QuantityRange to the unit of the QuantityValueRange.
+" )
+SubclassOf( DataSomeValuesFrom(_:QuantityValueRange.minValue xsd:decimal) _:QuantityValueRange)
+SubclassOf( owl:thing DataAllValuesFrom(_:QuantityValueRange.minValue xsd:decimal))
+SubclassOf( _:QuantityValueRange DataExactCardinality( 1 _:QuantityValueRange.minValue))
+
+Declaration(  DataProperty( _:QuantityValueRange.nominalValue))
+  AnnotationAssertion( rdfs:label _:QuantityValueRange.nominalValue "nominalValue" )
+  AnnotationAssertion( rdfs:comment _:QuantityValueRange.nominalValue
+  "The ratio of the nominalQuantity of the QuantityRange, if any, to the unit of the QuantityValueRange.
+" )
+SubclassOf( DataSomeValuesFrom(_:QuantityValueRange.nominalValue xsd:decimal) _:QuantityValueRange)
+SubclassOf( owl:thing DataAllValuesFrom(_:QuantityValueRange.nominalValue xsd:decimal))
+SubclassOf( _:QuantityValueRange DataMaxCardinality( 1 _:QuantityValueRange.nominalValue))
+
+Declaration( Class( _:SpecificGravity ))
+  AnnotationAssertion( rdfs:label _:SpecificGravity "SpecificGravity" )
+  AnnotationAssertion( rdfs:comment _:SpecificGravity
+  "Specific gravity of a substance is the dimensionless ratio of the specific weight (the mass of a unit volume) of the substance to the specific weight of water at standard temperature and pressure.
+
+The mass of a unit volume of the substance may, of course, depend on the temperature and pressure conditions under which the substance is measured.  The reference specific weight of water is invariant." )
+SubClassOf ( _:SpecificGravity _:Quanitity )
+
+Declaration( Class( _:SpecificGravityRange ))
+  AnnotationAssertion( rdfs:label _:SpecificGravityRange "SpecificGravityRange" )
+  AnnotationAssertion( rdfs:comment _:SpecificGravityRange
+  "A QuantityRange of SpecificGravity quantities." )
+SubClassOf ( _:SpecificGravityRange _:QuantityRange )
+
+Declaration( Class( _:SpecificHeat ))
+  AnnotationAssertion( rdfs:label _:SpecificHeat "SpecificHeat" )
+  AnnotationAssertion( rdfs:comment _:SpecificHeat
+  "The amount of heat transferred to raise a unit mass of a substance 1 degree in temperature at a given temperature and constant pressure. Typical Units are kJ/(kg degC)." )
+SubClassOf ( _:SpecificHeat _:Quanitity )
+
+Declaration( Class( _:SpecificHeatRange ))
+  AnnotationAssertion( rdfs:label _:SpecificHeatRange "SpecificHeatRange" )
+  AnnotationAssertion( rdfs:comment _:SpecificHeatRange
+  "A QuantityRange of SpecificHeat quantities." )
+SubClassOf ( _:SpecificHeatRange _:QuantityRange )
+
+Declaration( Class( _:Temperature ))
+  AnnotationAssertion( rdfs:label _:Temperature "Temperature" )
+  AnnotationAssertion( rdfs:comment _:Temperature
+  "The \"temperature\" Quantity in the International System of Quantities (SI).  " )
+SubClassOf ( _:Temperature _:Quanitity )
+
+Declaration( Class( _:TemperatureRange ))
+  AnnotationAssertion( rdfs:label _:TemperatureRange "TemperatureRange" )
+  AnnotationAssertion( rdfs:comment _:TemperatureRange
+  "A QuantityRange of Temperature quantities." )
+SubClassOf ( _:TemperatureRange _:QuantityRange )
+
+Declaration( Class( _:Time ))
+  AnnotationAssertion( rdfs:label _:Time "Time" )
+  AnnotationAssertion( rdfs:comment _:Time
+  "The \"time\" Quantity in the International System of Quantities (SI).  An amount of time, a duration, as distinct from a point in time." )
+SubClassOf ( _:Time _:Quanitity )
+
+Declaration( Class( _:Viscosity ))
+  AnnotationAssertion( rdfs:label _:Viscosity "Viscosity" )
+  AnnotationAssertion( rdfs:comment _:Viscosity
+  "Fluid viscosity is the measure of the tendency of the fluid to resist internal shearing forces which are required to produce flow, at a reference temperature.  (HI 3.3.5-2007)  Viscosity may be described in kinematic viscosity units." )
+SubClassOf ( _:Viscosity _:Quanitity )
+
+Declaration( Class( _:ViscosityRange ))
+  AnnotationAssertion( rdfs:label _:ViscosityRange "ViscosityRange" )
+  AnnotationAssertion( rdfs:comment _:ViscosityRange
+  "A QuantityRange of Viscosity quantities." )
+SubClassOf ( _:ViscosityRange _:QuantityRange )
+
+Declaration( Class( _:Voltage ))
+  AnnotationAssertion( rdfs:label _:Voltage "Voltage" )
+SubClassOf ( _:Voltage _:Quanitity )
+
+Declaration( Class( _:Volume ))
+  AnnotationAssertion( rdfs:label _:Volume "Volume" )
+  AnnotationAssertion( rdfs:comment _:Volume
+  "an amount of three-dimensional space, expressed as a product of three lengths. " )
+SubClassOf ( _:Volume _:Quanitity )
+
+Declaration( Class( _:VolumeRange ))
+  AnnotationAssertion( rdfs:label _:VolumeRange "VolumeRange" )
+  AnnotationAssertion( rdfs:comment _:VolumeRange
+  "A QuantityRange of Volume quantities." )
+SubClassOf ( _:VolumeRange _:QuantityRange )
+
+Declaration(  ObjectProperty( _:QuantityValue.unit))
+  AnnotationAssertion( rdfs:label _:QuantityValue.unit "unit" )
+  AnnotationAssertion( rdfs:comment _:QuantityValue.unit
+  "The reference unit for the QuantityValue" )
+SubclassOf( ObjectSomeValuesFrom(_:QuantityValue.unit _:MeasurementUnit) _:QuantityValue)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:QuantityValue.unit _:MeasurementUnit))
+SubclassOf( _:QuantityValue ObjectMaxCardinality( 1 _:QuantityValue.unit))
+
+Declaration(  ObjectProperty( _:Quanitity.kind))
+  AnnotationAssertion( rdfs:label _:Quanitity.kind "kind" )
+  AnnotationAssertion( rdfs:comment _:Quanitity.kind
+  "The kind of quantity that the Quantity represents." )
+SubclassOf( ObjectSomeValuesFrom(_:Quanitity.kind _:QuantityKind) _:Quanitity)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Quanitity.kind _:QuantityKind))
+SubclassOf( _:Quanitity ObjectExactCardinality( 1 _:Quanitity.kind))
+
+Declaration(  ObjectProperty( _:QuantityRange.maximumQuantity))
+  AnnotationAssertion( rdfs:label _:QuantityRange.maximumQuantity "maximumQuantity" )
+  AnnotationAssertion( rdfs:comment _:QuantityRange.maximumQuantity
+  "The specification for the largest (maximum) Quantity that is within the QuantityRange. The ratio of each Quantity that is in the QuantityRange to this Quantity is less than or equal to 1." )
+SubclassOf( ObjectSomeValuesFrom(_:QuantityRange.maximumQuantity _:Quanitity) _:QuantityRange)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:QuantityRange.maximumQuantity _:Quanitity))
+SubclassOf( _:QuantityRange ObjectExactCardinality( 1 _:QuantityRange.maximumQuantity))
+
+Declaration(  ObjectProperty( _:QuantityRange.minimumQuantity))
+  AnnotationAssertion( rdfs:label _:QuantityRange.minimumQuantity "minimumQuantity" )
+  AnnotationAssertion( rdfs:comment _:QuantityRange.minimumQuantity
+  "The specification for the smallest (minimum) Quantity that is within the QuantityRange.  The ratio of each Quantity that is in the QuantityRange to this Quantity is greater than or equal to 1." )
+SubclassOf( ObjectSomeValuesFrom(_:QuantityRange.minimumQuantity _:Quanitity) _:QuantityRange)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:QuantityRange.minimumQuantity _:Quanitity))
+SubclassOf( _:QuantityRange ObjectExactCardinality( 1 _:QuantityRange.minimumQuantity))
+
+Declaration(  ObjectProperty( _:QuantityRange.nominalQuantity))
+  AnnotationAssertion( rdfs:label _:QuantityRange.nominalQuantity "nominalQuantity" )
+  AnnotationAssertion( rdfs:comment _:QuantityRange.nominalQuantity
+  "The specification for the typical or expected Quantity, whose lower and upper bounds are specified by the QuantityRange." )
+SubclassOf( ObjectSomeValuesFrom(_:QuantityRange.nominalQuantity _:Quanitity) _:QuantityRange)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:QuantityRange.nominalQuantity _:Quanitity))
+SubclassOf( _:QuantityRange ObjectMaxCardinality( 1 _:QuantityRange.nominalQuantity))
+
+Declaration(  ObjectProperty( _:QuantityValueRange.unit))
+  AnnotationAssertion( rdfs:label _:QuantityValueRange.unit "unit" )
+  AnnotationAssertion( rdfs:comment _:QuantityValueRange.unit
+  "The reference unit for the QuantityValueRange.  All of the values for the QuantityValueRange are multiples of this MeasurementUnit." )
+SubclassOf( ObjectSomeValuesFrom(_:QuantityValueRange.unit _:MeasurementUnit) _:QuantityValueRange)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:QuantityValueRange.unit _:MeasurementUnit))
+SubclassOf( _:QuantityValueRange ObjectMaxCardinality( 1 _:QuantityValueRange.unit))
+
+Declaration(  ObjectProperty( _:QuantityValue.quantity))
+  AnnotationAssertion( rdfs:label _:QuantityValue.quantity "quantity" )
+  AnnotationAssertion( rdfs:comment _:QuantityValue.quantity
+  "The Quantity that is expressed by the QuantityValue" )
+SubclassOf( ObjectSomeValuesFrom(_:QuantityValue.quantity _:Quanitity) _:QuantityValue)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:QuantityValue.quantity _:Quanitity))
+SubclassOf( _:QuantityValue ObjectExactCardinality( 1 _:QuantityValue.quantity))
+
+Declaration(  ObjectProperty( _:Quanitity.value))
+  AnnotationAssertion( rdfs:label _:Quanitity.value "value" )
+  AnnotationAssertion( rdfs:comment _:Quanitity.value
+  "expression of the Quantity as a ratio of the Quantity to a reference MeasurementUnit.  " )
+SubclassOf( ObjectSomeValuesFrom(_:Quanitity.value _:QuantityValue) _:Quanitity)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:Quanitity.value _:QuantityValue))
+SubclassOf( _:Quanitity ObjectMinCardinality( 1 _:Quanitity.value))
+InverseObjectProperties( _:QuantityValue.quantity _:Quanitity.value )
+
+Declaration(  ObjectProperty( _:QuantityRange.valueRange))
+  AnnotationAssertion( rdfs:label _:QuantityRange.valueRange "valueRange" )
+  AnnotationAssertion( rdfs:comment _:QuantityRange.valueRange
+  "an expression of the QuantityRange as a range of multipliers for a reference MeasurementUnit.  A QuantityRange is almost always expressed as a QuantityValueRange." )
+SubclassOf( ObjectSomeValuesFrom(_:QuantityRange.valueRange _:QuantityValueRange) _:QuantityRange)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:QuantityRange.valueRange _:QuantityValueRange))
+SubclassOf( _:QuantityRange ObjectMinCardinality( 1 _:QuantityRange.valueRange))
+
+Declaration(  ObjectProperty( _:QuantityValueRange.quantityRange))
+  AnnotationAssertion( rdfs:label _:QuantityValueRange.quantityRange "quantityRange" )
+  AnnotationAssertion( rdfs:comment _:QuantityValueRange.quantityRange
+  " the QuantityRange that the QuantityValueRange specifies." )
+SubclassOf( ObjectSomeValuesFrom(_:QuantityValueRange.quantityRange _:QuantityRange) _:QuantityValueRange)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:QuantityValueRange.quantityRange _:QuantityRange))
+SubclassOf( _:QuantityValueRange ObjectExactCardinality( 1 _:QuantityValueRange.quantityRange))
+InverseObjectProperties( _:QuantityRange.valueRange _:QuantityValueRange.quantityRange )
+
+)
+
+
+Prefix( _:=<http://nist.gov/el/fowl/PDScommon/Time#>)
+ Prefix( fowl:=<http://nist.gov/el/fowl/fowlannotations.owl#>)
+Ontology( <http://nist.gov/el/fowl/PDScommon/Time> 
+  Annotation( rdfs:label "Time")
+  Annotation( rdfs:comment "A specific version of the master document that defines the characteristics of ")
+  Annotation( rdfs:comment "produced by uml2fowl v0.1 on ???")
+
+
+Declaration( Datatype( _:ISO8601String ))
+  AnnotationAssertion( rdfs:label _:ISO8601String "ISO8601String" )
+  AnnotationAssertion( rdfs:comment _:ISO8601String
+  "A character string that represents a TimeCoordinate according a representation rule specified by ISO 8601:2004." )
+SubClassOf ( _:ISO8601String xsd:string )
+
+Declaration( Class( _:Date ))
+  AnnotationAssertion( rdfs:label _:Date "Date" )
+  AnnotationAssertion( rdfs:comment _:Date
+  "An AbsoluteTimeCoordinate that identifies a specific TimeInterval whose duration is 1 day, by specifying the DayOfMonth that identifies it, the MonthOfYear that identifies the Gregorian month in which the TimeInterval occurs, and the GregorianYear that identifies the Gregorian year in which it occurs. 
+
+Example:  20130730 (ISO 8601) or July 30, 2013." )
+SubClassOf ( _:Date _:TimeCoordinate )
+
+Declaration( Class( _:TimeCoordinate ))
+  AnnotationAssertion( rdfs:label _:TimeCoordinate "TimeCoordinate" )
+  AnnotationAssertion( rdfs:comment _:TimeCoordinate
+  "A structure of references to time points that identifies one or more time intervals.
+A time coordinate may have a simple string or binary form, or it may have a complex structure." )
+  AnnotationAssertion( uml:isAbstract _:TimeCoordinate "true" )
+
+Declaration( Class( _:TimeInterval ))
+  AnnotationAssertion( rdfs:label _:TimeInterval "TimeInterval" )
+  AnnotationAssertion( rdfs:comment _:TimeInterval
+  "a period of time, a segment of the linear flow of time from the Big Bang forward to the indefinite future" )
+
+Declaration( Class( _:TimeOfDay ))
+  AnnotationAssertion( rdfs:label _:TimeOfDay "TimeOfDay" )
+  AnnotationAssertion( rdfs:comment _:TimeOfDay
+  "A RelativeTimeCoordinate that identifies time intervals that have a duration of less than one day" )
+  AnnotationAssertion( uml:isAbstract _:TimeOfDay "true" )
+SubClassOf ( _:TimeOfDay _:TimeCoordinate )
+
+Declaration(  ObjectProperty( _:DateTime.date))
+  AnnotationAssertion( rdfs:label _:DateTime.date "date" )
+  AnnotationAssertion( rdfs:comment _:DateTime.date
+  "The Date part of the DateTime, which identifies exactly one day-long TimeInterval." )
+SubclassOf( ObjectSomeValuesFrom(_:DateTime.date _:Date) _:DateTime)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:DateTime.date _:Date))
+SubclassOf( _:DateTime ObjectExactCardinality( 1 _:DateTime.date))
+
+Declaration(  ObjectProperty( _:DateTime.time))
+  AnnotationAssertion( rdfs:label _:DateTime.time "time" )
+  AnnotationAssertion( rdfs:comment _:DateTime.time
+  "The TimeOfDay part of the DateTime, which identifies a part of the day identified by the .day of the DateTime." )
+SubclassOf( ObjectSomeValuesFrom(_:DateTime.time _:TimeOfDay) _:DateTime)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:DateTime.time _:TimeOfDay))
+SubclassOf( _:DateTime ObjectExactCardinality( 1 _:DateTime.time))
+
+Declaration(  ObjectProperty( _:TimeCoordinate.ISOForm))
+  AnnotationAssertion( rdfs:label _:TimeCoordinate.ISOForm "ISOForm" )
+  AnnotationAssertion( rdfs:comment _:TimeCoordinate.ISOForm
+  "Representation of the TimeCoordinate per ISO 8601" )
+SubclassOf( ObjectSomeValuesFrom(_:TimeCoordinate.ISOForm _:ISO8601String) _:TimeCoordinate)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:TimeCoordinate.ISOForm _:ISO8601String))
+SubclassOf( _:TimeCoordinate ObjectMaxCardinality( 1 _:TimeCoordinate.ISOForm))
+
+Declaration(  ObjectProperty( _:TimeCoordinate.timeOffset))
+  AnnotationAssertion( rdfs:label _:TimeCoordinate.timeOffset "timeOffset" )
+  AnnotationAssertion( rdfs:comment _:TimeCoordinate.timeOffset
+  "The offset (in minutes) for interpreting the TimeCoordinate relative to Universal Coordinated Time (UTC).  " )
+SubclassOf( ObjectSomeValuesFrom(_:TimeCoordinate.timeOffset Quantities:Time) _:TimeCoordinate)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:TimeCoordinate.timeOffset Quantities:Time))
+SubclassOf( _:TimeCoordinate ObjectMaxCardinality( 1 _:TimeCoordinate.timeOffset))
+
+Declaration(  ObjectProperty( _:TimeCoordinate.timeInterval))
+  AnnotationAssertion( rdfs:label _:TimeCoordinate.timeInterval "timeInterval" )
+  AnnotationAssertion( rdfs:comment _:TimeCoordinate.timeInterval
+  "The time interval(s) that the TimeCoordinate identifies." )
+SubclassOf( ObjectSomeValuesFrom(_:TimeCoordinate.timeInterval _:TimeInterval) _:TimeCoordinate)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:TimeCoordinate.timeInterval _:TimeInterval))
+SubclassOf( _:TimeCoordinate ObjectMinCardinality( 1 _:TimeCoordinate.timeInterval))
+
+Declaration(  ObjectProperty( _:TimeInterval.duration))
+  AnnotationAssertion( rdfs:label _:TimeInterval.duration "duration" )
+  AnnotationAssertion( rdfs:comment _:TimeInterval.duration
+  "the amount of time in the TimeInterval, the \"length\" of the time interval." )
+SubclassOf( ObjectSomeValuesFrom(_:TimeInterval.duration Quantities:Time) _:TimeInterval)
+SubclassOf( owl:thing ObjectAllValuesFrom(_:TimeInterval.duration Quantities:Time))
+SubclassOf( _:TimeInterval ObjectExactCardinality( 1 _:TimeInterval.duration))
+
+)

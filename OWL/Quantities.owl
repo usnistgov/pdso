@@ -1,0 +1,860 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/Quantities'
+  OntologyIRI='http://el.nist.gov/cre/pdso/Quantities' >
+
+<Prefix name='Quantities' IRI='http://el.nist.gov/cre/pdso/Quantities#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>Quantities</Literal>
+  </Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+    <Literal>The Quantities model is a basic model of quantities and quantity values.  It is a simplification of the model given in section 1 of the International Vocubulary for Measurement.
+The basic idea is that a Quantity is an abstraction of measurements of some property of some thing.  A QuantityKind is a category of such measurements in which all members of the same category can be compared to one another.  Systems of quantities define certain QuantityKinds as &amp;quot;base quantities&amp;quot; and others as &amp;quot;derived quantities&amp;quot; that can be expressed in terms of base quantities.  
+Each modeled subclass of Quantity in this model is a QuantityKind that is used in describing some specified or measured aspects of the process and its equipment.
+A QuantityValue is a representation of a Quantity as a reference &amp;quot;unit&amp;quot; quantity and the ratio of the Quantity in question to that unit quantity.  Standard reference unit quantities exist, and are called &amp;quot;standard measurement units&amp;quot;.  The same Quantity can be expressed as different ratios to different units.
+So, a quantity specification for a property of a DesignElement is phrased as a QuantityValue, and in some cases may specify the required reference unit.  Experience teaches that assuming that &amp;quot;industry custom&amp;quot; will define the intended reference unit is a very risky practice.
+</Literal>
+  </Annotation>
+
+<Declaration><Class IRI='#AngularVelocity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#AngularVelocity</IRI>
+  <Literal>AngularVelocity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#AngularVelocity</IRI>
+  <Literal>the ratio of angular displacement to time of displacement for a rotating object.  By convention, angular displacement is given in full rotations (360-degree displacements) over time.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#AngularVelocity' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#AngularVelocityRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#AngularVelocityRange</IRI>
+  <Literal>AngularVelocityRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#AngularVelocityRange</IRI>
+  <Literal>A QuantityRange of AngularVelocity quantities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#AngularVelocityRange' />
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</SubClassOf>
+<Declaration><Class IRI='#Density' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Density</IRI>
+  <Literal>Density</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Density</IRI>
+  <Literal>the ratio of mass to volume of a substance </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Density' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#Efficiency' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Efficiency</IRI>
+  <Literal>Efficiency</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Efficiency</IRI>
+  <Literal>the ratio of the energy consumed by an action or function to the energy produced as useful output of a particular type. </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Efficiency' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#Energy' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Energy</IRI>
+  <Literal>Energy</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Energy</IRI>
+  <Literal>force applied over distance (kinetic energy), or the potential for applying force over a distance (potential energy).</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Energy' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#Flowrate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Flowrate</IRI>
+  <Literal>Flowrate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Flowrate</IRI>
+  <Literal>the ratio of the volume of a flow to time </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Flowrate' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#FlowrateRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FlowrateRange</IRI>
+  <Literal>FlowrateRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FlowrateRange</IRI>
+  <Literal>A QuantityRange of Flowrate quantities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#FlowrateRange' />
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</SubClassOf>
+<Declaration><Class IRI='#Length' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Length</IRI>
+  <Literal>Length</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Length</IRI>
+  <Literal>The &quot;length&quot; Quantity in the International System of Quantities (SI).  A quantification of linear displacement.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Length' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#LengthRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LengthRange</IRI>
+  <Literal>LengthRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#LengthRange</IRI>
+  <Literal>A QuantityRange of Length quantities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#LengthRange' />
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</SubClassOf>
+<Declaration><Class IRI='#Mass' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Mass</IRI>
+  <Literal>Mass</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Mass</IRI>
+  <Literal>The &quot;mass&quot; Quantity in the International System of Quantities (SI).  The amount of substance in a physical object.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Mass' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#MeasurementUnit' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MeasurementUnit</IRI>
+  <Literal>MeasurementUnit</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MeasurementUnit</IRI>
+  <Literal>real scalar quantity, defined and adopted by convention, with which any other quantity of the same kind can be compared to express the ratio of the two quantities as a number
+
+Source: International Vocabulary for Measurements (VIM)
+</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#MeasurementUnit' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#MeasurementUnit.name' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MeasurementUnit.name</IRI>
+  <Literal>MeasurementUnit.name</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MeasurementUnit.name</IRI>
+  <Literal>Name of unit.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#MeasurementUnit.name'/>
+  <Class abbreviatedIRI='Quantities:MeasurementUnit' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#MeasurementUnit.name'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:MeasurementUnit' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#MeasurementUnit.name' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#MeasurementUnit.symbol' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MeasurementUnit.symbol</IRI>
+  <Literal>MeasurementUnit.symbol</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MeasurementUnit.symbol</IRI>
+  <Literal>Symbol of the unit.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#MeasurementUnit.symbol'/>
+  <Class abbreviatedIRI='Quantities:MeasurementUnit' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#MeasurementUnit.symbol'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:MeasurementUnit' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#MeasurementUnit.symbol' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Power' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Power</IRI>
+  <Literal>Power</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Power</IRI>
+  <Literal>the ratio of the energy produced or consumed by a device or action to the time of production or consumption </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Power' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#Pressure' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Pressure</IRI>
+  <Literal>Pressure</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Pressure</IRI>
+  <Literal>the ratio of force delivered to an area of a substance </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Pressure' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#PressureRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureRange</IRI>
+  <Literal>PressureRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PressureRange</IRI>
+  <Literal>A QuantityRange of Pressure quantities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PressureRange' />
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</SubClassOf>
+<Declaration><Class IRI='#Quantity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Quantity</IRI>
+  <Literal>Quantity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Quantity</IRI>
+  <Literal>property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference. Also the abstraction of the measured property that is considered to be the same across many individual things, such as a Length of 1 meter.
+
+A quantity is expressed by a QuantityValue.
+
+Quantity is an abstract class:  Every actual quantity is an instance of some specific subclass of Quantity.
+
+Source: International Vocabulary for Measurements (VIM)</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#Quantity</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#QuantityKind' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityKind</IRI>
+  <Literal>QuantityKind</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityKind</IRI>
+  <Literal>that aspect of quantities that makes them comparable to one another
+
+Any two quantities of the same quantity kind can be compared.  Two quantities of different kinds cannot be compared.
+
+Note: Therefore, each QuantityKind is itself a subtype of Quantity.  However, not every subtype of quantity is a QuantityKind.  The QuantityKinds are those that distinguish comparabilities.  For example, Length and Velocity are QuantityKinds, but Air Speed is the same QuantityKind as Velocity.
+
+Source: International Vocabulary for Measurements (VIM): &quot;kind of quantity&quot;
+</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#QuantityKind.term' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityKind.term</IRI>
+  <Literal>QuantityKind.term</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityKind.term</IRI>
+  <Literal>A term that denotes the quantity kind.
+
+The quantity kinds defined in the International System of Quantities have standard terms.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#QuantityKind.term'/>
+  <Class abbreviatedIRI='Quantities:QuantityKind' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#QuantityKind.term'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityKind' />
+  <DataMinCardinality cardinality='1'>
+    <DataProperty IRI='#QuantityKind.term' />
+  </DataMinCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#QuantityRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityRange</IRI>
+  <Literal>QuantityRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityRange</IRI>
+  <Literal>A specification for a range of abstract quantities of the same quantity kind, which 
+
+A specification for a range of Quantities of a particular kind as the range of values for some property.  It refers to any and all quantities of that kind that are greater than a minimum quantity and less than a maximum quantity.  A QuantityRange may also include a &quot;nominal Quantity&quot; that refers to the expected value for the property in normal use.
+
+A QuantityRange can be used in two ways.  
+  - It can specify a range of property values that a qualifying thing must support and/or has been tested to support.  In this sense, it represents the range of behaviors of a system that the qualifying thing is part of.  The nominal quantity then expresses the expected normal behavior of the system, which can be used in choosing an optimal thing, or an optimal configuration of the thing, to meet the specifications. 
+  - Alternatively, a QuantityRange can specify an upper and lower bound on a tolerated property of the thing, requiring only that the actual property of the thing fall within those bounds.
+Properties: abstract.  Like Quantity, every usage of a QuantityRange is of a specific kind of Quantity.
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#QuantityRange</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#QuantityValue' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValue</IRI>
+  <Literal>QuantityValue</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValue</IRI>
+  <Literal>number and reference [unit] together expressing the magnitude
+of a quantity
+
+a characterization of the Quantity by a numeric value that is the ratio of the quantity to some reference quantity.  The reference quantity is called a &apos;unit of measure&apos; or &apos;measurement unit&apos;, since it is the quantity whose ratio to the reference quantity is 1.
+
+Source: International Vocabulary for Measurements (VIM)
+
+</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#QuantityValue.number' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValue.number</IRI>
+  <Literal>QuantityValue.number</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValue.number</IRI>
+  <Literal>the ratio of the Quantity to the Measurement Unit.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#QuantityValue.number'/>
+  <Class abbreviatedIRI='Quantities:QuantityValue' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#QuantityValue.number'/>
+  <Datatype abbreviatedIRI='xsd:decimal' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityValue' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#QuantityValue.number' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#QuantityValueRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValueRange</IRI>
+  <Literal>QuantityValueRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValueRange</IRI>
+  <Literal>The characterization of a QuantityRange in terms of multiples of a given MeasurementUnit.</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#QuantityValueRange.maxValue' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValueRange.maxValue</IRI>
+  <Literal>QuantityValueRange.maxValue</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValueRange.maxValue</IRI>
+  <Literal>The ratio of the maximumQuantity of the QuantityRange to the unit of the QuantityValueRange.
+</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#QuantityValueRange.maxValue'/>
+  <Class abbreviatedIRI='Quantities:QuantityValueRange' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#QuantityValueRange.maxValue'/>
+  <Datatype abbreviatedIRI='xsd:decimal' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityValueRange' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#QuantityValueRange.maxValue' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#QuantityValueRange.minValue' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValueRange.minValue</IRI>
+  <Literal>QuantityValueRange.minValue</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValueRange.minValue</IRI>
+  <Literal>The ratio of the minimumQuantity of the QuantityRange to the unit of the QuantityValueRange.
+</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#QuantityValueRange.minValue'/>
+  <Class abbreviatedIRI='Quantities:QuantityValueRange' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#QuantityValueRange.minValue'/>
+  <Datatype abbreviatedIRI='xsd:decimal' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityValueRange' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#QuantityValueRange.minValue' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#QuantityValueRange.nominalValue' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValueRange.nominalValue</IRI>
+  <Literal>QuantityValueRange.nominalValue</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValueRange.nominalValue</IRI>
+  <Literal>The ratio of the nominalQuantity of the QuantityRange, if any, to the unit of the QuantityValueRange.
+</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#QuantityValueRange.nominalValue'/>
+  <Class abbreviatedIRI='Quantities:QuantityValueRange' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#QuantityValueRange.nominalValue'/>
+  <Datatype abbreviatedIRI='xsd:decimal' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityValueRange' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#QuantityValueRange.nominalValue' />
+  </DataMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#SpecificGravity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SpecificGravity</IRI>
+  <Literal>SpecificGravity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SpecificGravity</IRI>
+  <Literal>Specific gravity of a substance is the dimensionless ratio of the specific weight (the mass of a unit volume) of the substance to the specific weight of water at standard temperature and pressure.
+
+The mass of a unit volume of the substance may, of course, depend on the temperature and pressure conditions under which the substance is measured.  The reference specific weight of water is invariant.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SpecificGravity' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#SpecificGravityRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SpecificGravityRange</IRI>
+  <Literal>SpecificGravityRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SpecificGravityRange</IRI>
+  <Literal>A QuantityRange of SpecificGravity quantities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SpecificGravityRange' />
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</SubClassOf>
+<Declaration><Class IRI='#SpecificHeat' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SpecificHeat</IRI>
+  <Literal>SpecificHeat</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SpecificHeat</IRI>
+  <Literal>The amount of heat transferred to raise a unit mass of a substance 1 degree in temperature at a given temperature and constant pressure. Typical Units are kJ/(kg degC).</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SpecificHeat' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#SpecificHeatRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SpecificHeatRange</IRI>
+  <Literal>SpecificHeatRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SpecificHeatRange</IRI>
+  <Literal>A QuantityRange of SpecificHeat quantities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SpecificHeatRange' />
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</SubClassOf>
+<Declaration><Class IRI='#Temperature' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Temperature</IRI>
+  <Literal>Temperature</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Temperature</IRI>
+  <Literal>The &quot;temperature&quot; Quantity in the International System of Quantities (SI).  </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Temperature' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#TemperatureRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#TemperatureRange</IRI>
+  <Literal>TemperatureRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#TemperatureRange</IRI>
+  <Literal>A QuantityRange of Temperature quantities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#TemperatureRange' />
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</SubClassOf>
+<Declaration><Class IRI='#Time' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Time</IRI>
+  <Literal>Time</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Time</IRI>
+  <Literal>The &quot;time&quot; Quantity in the International System of Quantities (SI).  An amount of time, a duration, as distinct from a point in time.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Time' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#Viscosity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Viscosity</IRI>
+  <Literal>Viscosity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Viscosity</IRI>
+  <Literal>Fluid viscosity is the measure of the tendency of the fluid to resist internal shearing forces which are required to produce flow, at a reference temperature.  (HI 3.3.5-2007)  Viscosity may be described in kinematic viscosity units.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Viscosity' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#ViscosityRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ViscosityRange</IRI>
+  <Literal>ViscosityRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ViscosityRange</IRI>
+  <Literal>A QuantityRange of Viscosity quantities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ViscosityRange' />
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</SubClassOf>
+<Declaration><Class IRI='#Voltage' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Voltage</IRI>
+  <Literal>Voltage</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Voltage' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#Volume' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Volume</IRI>
+  <Literal>Volume</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Volume</IRI>
+  <Literal>an amount of three-dimensional space, expressed as a product of three lengths. </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Volume' />
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</SubClassOf>
+<Declaration><Class IRI='#VolumeRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#VolumeRange</IRI>
+  <Literal>VolumeRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#VolumeRange</IRI>
+  <Literal>A QuantityRange of Volume quantities.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#VolumeRange' />
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#QuantityValue.unit' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValue.unit</IRI>
+  <Literal>QuantityValue.unit</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValue.unit</IRI>
+  <Literal>The reference unit for the QuantityValue</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#QuantityValue.unit'/>
+  <Class abbreviatedIRI='Quantities:QuantityValue' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#QuantityValue.unit'/>
+  <Class abbreviatedIRI='Quantities:MeasurementUnit' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityValue' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#QuantityValue.unit' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Quantity.kind' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Quantity.kind</IRI>
+  <Literal>Quantity.kind</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Quantity.kind</IRI>
+  <Literal>The kind of quantity that the Quantity represents.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Quantity.kind'/>
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Quantity.kind'/>
+  <Class abbreviatedIRI='Quantities:QuantityKind' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:Quantity' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Quantity.kind' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#QuantityRange.maximumQuantity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityRange.maximumQuantity</IRI>
+  <Literal>QuantityRange.maximumQuantity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityRange.maximumQuantity</IRI>
+  <Literal>The specification for the largest (maximum) Quantity that is within the QuantityRange. The ratio of each Quantity that is in the QuantityRange to this Quantity is less than or equal to 1.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#QuantityRange.maximumQuantity'/>
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#QuantityRange.maximumQuantity'/>
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityRange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#QuantityRange.maximumQuantity' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#QuantityRange.minimumQuantity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityRange.minimumQuantity</IRI>
+  <Literal>QuantityRange.minimumQuantity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityRange.minimumQuantity</IRI>
+  <Literal>The specification for the smallest (minimum) Quantity that is within the QuantityRange.  The ratio of each Quantity that is in the QuantityRange to this Quantity is greater than or equal to 1.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#QuantityRange.minimumQuantity'/>
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#QuantityRange.minimumQuantity'/>
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityRange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#QuantityRange.minimumQuantity' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#QuantityRange.nominalQuantity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityRange.nominalQuantity</IRI>
+  <Literal>QuantityRange.nominalQuantity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityRange.nominalQuantity</IRI>
+  <Literal>The specification for the typical or expected Quantity, whose lower and upper bounds are specified by the QuantityRange.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#QuantityRange.nominalQuantity'/>
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#QuantityRange.nominalQuantity'/>
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityRange' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#QuantityRange.nominalQuantity' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#QuantityValueRange.unit' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValueRange.unit</IRI>
+  <Literal>QuantityValueRange.unit</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValueRange.unit</IRI>
+  <Literal>The reference unit for the QuantityValueRange.  All of the values for the QuantityValueRange are multiples of this MeasurementUnit.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#QuantityValueRange.unit'/>
+  <Class abbreviatedIRI='Quantities:QuantityValueRange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#QuantityValueRange.unit'/>
+  <Class abbreviatedIRI='Quantities:MeasurementUnit' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityValueRange' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#QuantityValueRange.unit' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#QuantityValue.quantity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValue.quantity</IRI>
+  <Literal>QuantityValue.quantity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValue.quantity</IRI>
+  <Literal>The Quantity that is expressed by the QuantityValue</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#QuantityValue.quantity'/>
+  <Class abbreviatedIRI='Quantities:QuantityValue' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#QuantityValue.quantity'/>
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityValue' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#QuantityValue.quantity' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Quantity.value' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Quantity.value</IRI>
+  <Literal>Quantity.value</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Quantity.value</IRI>
+  <Literal>expression of the Quantity as a ratio of the Quantity to a reference MeasurementUnit.  </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Quantity.value'/>
+  <Class abbreviatedIRI='Quantities:Quantity' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Quantity.value'/>
+  <Class abbreviatedIRI='Quantities:QuantityValue' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:Quantity' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#Quantity.value' />
+  </ObjectMinCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#QuantityValue.quantity' />
+  <ObjectProperty IRI='#Quantity.value' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#QuantityRange.valueRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityRange.valueRange</IRI>
+  <Literal>QuantityRange.valueRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityRange.valueRange</IRI>
+  <Literal>an expression of the QuantityRange as a range of multipliers for a reference MeasurementUnit.  A QuantityRange is almost always expressed as a QuantityValueRange.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#QuantityRange.valueRange'/>
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#QuantityRange.valueRange'/>
+  <Class abbreviatedIRI='Quantities:QuantityValueRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityRange' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#QuantityRange.valueRange' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#QuantityValueRange.quantityRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#QuantityValueRange.quantityRange</IRI>
+  <Literal>QuantityValueRange.quantityRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#QuantityValueRange.quantityRange</IRI>
+  <Literal> the QuantityRange that the QuantityValueRange specifies.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#QuantityValueRange.quantityRange'/>
+  <Class abbreviatedIRI='Quantities:QuantityValueRange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#QuantityValueRange.quantityRange'/>
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Quantities:QuantityValueRange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#QuantityValueRange.quantityRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#QuantityRange.valueRange' />
+  <ObjectProperty IRI='#QuantityValueRange.quantityRange' />
+</InverseObjectProperties>
+</Ontology>
+

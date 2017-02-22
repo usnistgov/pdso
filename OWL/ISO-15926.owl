@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/ISO-15926'
+  OntologyIRI='http://el.nist.gov/cre/pdso/ISO-15926' >
+
+<Prefix name='ISO-15926' IRI='http://el.nist.gov/cre/pdso/ISO-15926#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>ISO-15926</Literal>
+  </Annotation>
+
+<Declaration><AnnotationProperty IRI='#RDLclass' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RDLclass</IRI>
+  <Literal>RDLclass</Literal>
+</AnnotationAssertion>
+<Declaration><AnnotationProperty IRI='#coFunctionalObject' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#coFunctionalObject</IRI>
+  <Literal>coFunctionalObject</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#coFunctionalObject</IRI>
+  <Literal>The application of this stereotype indicates that the object is to be interpreted as a p2:class_of_functional_object. 
+
+ISO-15926-2 says this of class_of_functional_object: A &lt;class_of_functional_object&gt; is a &lt;class_of_arranged_individual&gt; that indicates the function or purpose of an object. EXAMPLE Pump, valve, and car are examples of &lt;class_of_functional_object&gt;. Particular models of pump, valve, car, etc are instances of &lt;class_of_inanimate_physical_object&gt; that are specializations of these instances of &lt;class_of_functional_object&gt;.</Literal>
+</AnnotationAssertion>
+<Declaration><AnnotationProperty IRI='#coInanimatePhysicalObject' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#coInanimatePhysicalObject</IRI>
+  <Literal>coInanimatePhysicalObject</Literal>
+</AnnotationAssertion>
+</Ontology>
+

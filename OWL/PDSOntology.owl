@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/PDSOntology'
+  OntologyIRI='http://el.nist.gov/cre/pdso/PDSOntology' >
+
+<Prefix name='PDSOntology' IRI='http://el.nist.gov/cre/pdso/PDSOntology#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+<Prefix name='Centrifugal_Pump' IRI='http://el.nist.gov/cre/pdso/Centrifugal_Pump#'/>
+<Prefix name='Valves' IRI='http://el.nist.gov/cre/pdso/Valves#'/>
+<Prefix name='Instruments' IRI='http://el.nist.gov/cre/pdso/Instruments#'/>
+<Prefix name='General' IRI='http://el.nist.gov/cre/pdso/General#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+<Import>http://el.nist.gov/cre/pdso/Centrifugal_Pump</Import>
+<Import>http://el.nist.gov/cre/pdso/Valves</Import>
+<Import>http://el.nist.gov/cre/pdso/Instruments</Import>
+<Import>http://el.nist.gov/cre/pdso/General</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>PDSOntology</Literal>
+  </Annotation>
+
+<Declaration><Class IRI='#PXSheet' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PXSheet</IRI>
+  <Literal>PXSheet</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PXSheet' />
+  <Class abbreviatedIRI='General:ProductDataSheet' />
+</SubClassOf>
+<Declaration><Class IRI='#PumpSheet' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpSheet</IRI>
+  <Literal>PumpSheet</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PumpSheet' />
+  <Class abbreviatedIRI='General:ProductDataSheet' />
+</SubClassOf>
+<Declaration><Class IRI='#ValveSheet' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveSheet</IRI>
+  <Literal>ValveSheet</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveSheet' />
+  <Class abbreviatedIRI='General:ProductDataSheet' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpSheet.forPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpSheet.forPump</IRI>
+  <Literal>PumpSheet.forPump</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpSheet.forPump'/>
+  <Class abbreviatedIRI='PDSOntology:PumpSheet' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpSheet.forPump'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='PDSOntology:PumpSheet' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpSheet.forPump' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PXSheet.forPX' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PXSheet.forPX</IRI>
+  <Literal>PXSheet.forPX</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PXSheet.forPX'/>
+  <Class abbreviatedIRI='PDSOntology:PXSheet' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PXSheet.forPX'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='PDSOntology:PXSheet' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PXSheet.forPX' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ValveSheet.forValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveSheet.forValve</IRI>
+  <Literal>ValveSheet.forValve</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveSheet.forValve'/>
+  <Class abbreviatedIRI='PDSOntology:ValveSheet' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveSheet.forValve'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='PDSOntology:ValveSheet' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveSheet.forValve' />
+  </ObjectExactCardinality>
+</SubClassOf>
+</Ontology>
+

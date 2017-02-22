@@ -1,0 +1,1385 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/ShaftSeals'
+  OntologyIRI='http://el.nist.gov/cre/pdso/ShaftSeals' >
+
+<Prefix name='ShaftSeals' IRI='http://el.nist.gov/cre/pdso/ShaftSeals#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+<Prefix name='ISO-15926' IRI='http://el.nist.gov/cre/pdso/ISO-15926#'/>
+<Prefix name='Quantities' IRI='http://el.nist.gov/cre/pdso/Quantities#'/>
+<Prefix name='General' IRI='http://el.nist.gov/cre/pdso/General#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+<Import>http://el.nist.gov/cre/pdso/ISO-15926</Import>
+<Import>http://el.nist.gov/cre/pdso/Quantities</Import>
+<Import>http://el.nist.gov/cre/pdso/General</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>ShaftSeals</Literal>
+  </Annotation>
+
+<Declaration><Class IRI='#HeatTreatment' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HeatTreatment</IRI>
+  <Literal>HeatTreatment</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HeatTreatment</IRI>
+  <Literal>Heat treating is a group of industrial and metalworking processes used to alter the physical, and sometimes chemical, properties of a material. Heat treatment involves the use of heating or chilling, normally to extreme temperatures, to achieve a desired result such as hardening or softening of a material. </Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#HeatTreatment.Annealed' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HeatTreatment.Annealed</IRI>
+  <Literal>Annealed</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HeatTreatment.Annealed</IRI>
+  <Literal>a heat treatment that alters a material to increase its ductility and to make it more workable</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#HeatTreatment'/>
+  <NamedIndividual IRI='#HeatTreatment.Annealed'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#HeatTreatment.PrecipitationHardened' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HeatTreatment.PrecipitationHardened</IRI>
+  <Literal>PrecipitationHardened</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HeatTreatment.PrecipitationHardened</IRI>
+  <Literal>Precipitation hardening, also called age hardening, is a heat treatment technique that relies on changes in solid solubility with temperature to add fine particles of an impurity to a metal alloy, thus altering the crystal structure of the cooled metal.
+
+Precipitation hardening  is used to increase the yield strength of malleable materials at high temperatures.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#HeatTreatment'/>
+  <NamedIndividual IRI='#HeatTreatment.PrecipitationHardened'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#HeatTreatment.CaseHardened' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HeatTreatment.CaseHardened</IRI>
+  <Literal>CaseHardened</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HeatTreatment.CaseHardened</IRI>
+  <Literal>Case hardening or surface hardening is the process of hardening the surface of a metal object while allowing the metal deeper underneath to remain soft, thus forming a thin layer of harder metal (called the &quot;case&quot;) at the surface. For steel or iron with low carbon content, which has poor to no hardenability of its own, the case hardening process involves infusing additional carbon into the case. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#HeatTreatment'/>
+  <NamedIndividual IRI='#HeatTreatment.CaseHardened'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#HeatTreatment.Tempered' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HeatTreatment.Tempered</IRI>
+  <Literal>Tempered</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HeatTreatment.Tempered</IRI>
+  <Literal>Tempering is a process of heat treating, which is used to increase the toughness of iron-based alloys. Tempering is usually performed after hardening, to reduce some of the excess hardness, and is done by heating the metal to a much lower temperature than was used for hardening, maintaining the temperature to achieve a desired effect and then quickly cooling the material to increase toughness.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#HeatTreatment'/>
+  <NamedIndividual IRI='#HeatTreatment.Tempered'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#HeatTreatment.Annealed'/>
+  <NamedIndividual IRI='#HeatTreatment.PrecipitationHardened'/>
+  <NamedIndividual IRI='#HeatTreatment.CaseHardened'/>
+  <NamedIndividual IRI='#HeatTreatment.Tempered'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#HeatTreatment' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#HeatTreatment.Annealed'/>
+    <NamedIndividual IRI='#HeatTreatment.PrecipitationHardened'/>
+    <NamedIndividual IRI='#HeatTreatment.CaseHardened'/>
+    <NamedIndividual IRI='#HeatTreatment.Tempered'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#PackingConstruction' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction</IRI>
+  <Literal>PackingConstruction</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction</IRI>
+  <Literal>An artefact involved in a connection where packing is the main component
+
+Source: ISO 15926 RDL
+http://posccaesar.org/rdl/RDS11160125</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.BraidOverBraid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.BraidOverBraid</IRI>
+  <Literal>BraidOverBraid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.BraidOverBraid</IRI>
+  <Literal>The braid-over-braid type of packing has a circular cross section. The center is sometimes composed of lead wires, which give strength to the packing and give the packing better shape-holding characteristics. The lead wires are covered with a braided jacket, which in turn is covered with another braided jacket. It is for this reason that the braid-over-braid type of packing is sometimes referred to as a jacket-over-jacket. This type of packing is also impregnated with lubricants.
+
+Source: (Brumbach 2013)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.BraidOverBraid'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.BraidOverCore' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.BraidOverCore</IRI>
+  <Literal>BraidOverCore</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.BraidOverCore</IRI>
+  <Literal>Round-braiding layers of yarns or wires over a core produces braid-over-core products. A core may be made from extruded plastic compounds, rubber, twisted yarns, or braided materials.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.BraidOverCore'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.Bulk' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.Bulk</IRI>
+  <Literal>Bulk</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.Bulk</IRI>
+  <Literal>The packing material is loose particles or an amorphous elastomer, and is held within the stuffing box by the combination of the shaft, the gland or rings, and the casing.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.Bulk'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.CombinationSets' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.CombinationSets</IRI>
+  <Literal>CombinationSets</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.CombinationSets</IRI>
+  <Literal>packing that is a combination of e-PTFE and Graphite materials, braided or layered.
+
+Source: (Girao and Guenther 2012)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.CombinationSets'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.CornerReinforced' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.CornerReinforced</IRI>
+  <Literal>CornerReinforced</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.CornerReinforced</IRI>
+  <Literal>The corner reinforcement comprises a top panel and two downwardly extending side panels and fits over the top end of a corner post to better distribute the load across the entire top end of the corner post and to reinforce the corner of the package to prevent the post and package from buckling, crushing or otherwise failing.
+ 
+Source: (Muyskens 2011)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.CornerReinforced'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.DieFormed' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.DieFormed</IRI>
+  <Literal>DieFormed</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.DieFormed</IRI>
+  <Literal>A type of ring packing, in which the ring cross-section is created by specially shaped die or mold. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.DieFormed'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.Extruded' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.Extruded</IRI>
+  <Literal>Extruded</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.Extruded</IRI>
+  <Literal>A wire packing that implies the application of an extrusion coating. Extrusion coating is the coating of a molten web of synthetic resin onto a substrate material. 
+
+Source: (Wikipedia 2013)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.Extruded'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.Interbraid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.Interbraid</IRI>
+  <Literal>Interbraid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.Interbraid</IRI>
+  <Literal>A combination of wires and/or fibres that are braided together in one or more layers to create a desired combination of strength and compressibility </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.Interbraid'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.Laminated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.Laminated</IRI>
+  <Literal>Laminated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.Laminated</IRI>
+  <Literal>A braided wire or fibre packing that is coated with a polymer to minimize wear, or prevent or minimize decomposition by chemical or mechanical action of the fluid.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.Laminated'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.SquareBraid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.SquareBraid</IRI>
+  <Literal>SquareBraid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.SquareBraid</IRI>
+  <Literal>Square Braid is also known as plaited braid. Yarns of various materials are processed on equipment where strands pass over and under strands running in the same direction. Resulting packings are usually supplied in square cross section but rectangular sizes can be also made in this method. The packing is usually soft and can carry a large percentage of lubricant. Square braided packings are not as harmful to equipment and are generally used for high speed rotary services at relatively low pressures.
+ 
+Source: (GHX Industrial 2013)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.SquareBraid'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.Twisted' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.Twisted</IRI>
+  <Literal>Twisted</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.Twisted</IRI>
+  <Literal>Twisted Packings are constructed of yarns of various materials, twisted together or around a core to obtain the desired size. One size of packing can be used for several stuffing box sizes, because of its twisted construction. Strands from a larger size can be untwisted and removed so that the remaining packing will fit a smaller size stuffing box. When metallic materials are used in the packing, they can be made to resist high temperatures and pressures, to resist the penetration of fluids, and to conform to the irregularities of worn equipment.
+ 
+Source: (GHX Industrial 2013)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.Twisted'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.WrappedRolled' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.WrappedRolled</IRI>
+  <Literal>WrappedRolled</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.WrappedRolled</IRI>
+  <Literal>Packing material that is taped around the shaft in multiple thin layers, constructed of some synthetic material with a low-friction surface, or graphite, or a fine fibre that is lubricated.  Commonly used on valve stems and other shafts that are not constantly rotating in service.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.WrappedRolled'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PackingConstruction.Folded' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PackingConstruction.Folded</IRI>
+  <Literal>Folded</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PackingConstruction.Folded</IRI>
+  <Literal>Packing that is formed by folding a flexible sheet material into plies, and wrapping the folded sheet around the shaft. The sheet material itself can be multiple layers of different materials.  Folded packing is often compressed by a sleeve.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PackingConstruction'/>
+  <NamedIndividual IRI='#PackingConstruction.Folded'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#PackingConstruction.BraidOverBraid'/>
+  <NamedIndividual IRI='#PackingConstruction.BraidOverCore'/>
+  <NamedIndividual IRI='#PackingConstruction.Bulk'/>
+  <NamedIndividual IRI='#PackingConstruction.CombinationSets'/>
+  <NamedIndividual IRI='#PackingConstruction.CornerReinforced'/>
+  <NamedIndividual IRI='#PackingConstruction.DieFormed'/>
+  <NamedIndividual IRI='#PackingConstruction.Extruded'/>
+  <NamedIndividual IRI='#PackingConstruction.Interbraid'/>
+  <NamedIndividual IRI='#PackingConstruction.Laminated'/>
+  <NamedIndividual IRI='#PackingConstruction.SquareBraid'/>
+  <NamedIndividual IRI='#PackingConstruction.Twisted'/>
+  <NamedIndividual IRI='#PackingConstruction.WrappedRolled'/>
+  <NamedIndividual IRI='#PackingConstruction.Folded'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#PackingConstruction' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#PackingConstruction.BraidOverBraid'/>
+    <NamedIndividual IRI='#PackingConstruction.BraidOverCore'/>
+    <NamedIndividual IRI='#PackingConstruction.Bulk'/>
+    <NamedIndividual IRI='#PackingConstruction.CombinationSets'/>
+    <NamedIndividual IRI='#PackingConstruction.CornerReinforced'/>
+    <NamedIndividual IRI='#PackingConstruction.DieFormed'/>
+    <NamedIndividual IRI='#PackingConstruction.Extruded'/>
+    <NamedIndividual IRI='#PackingConstruction.Interbraid'/>
+    <NamedIndividual IRI='#PackingConstruction.Laminated'/>
+    <NamedIndividual IRI='#PackingConstruction.SquareBraid'/>
+    <NamedIndividual IRI='#PackingConstruction.Twisted'/>
+    <NamedIndividual IRI='#PackingConstruction.WrappedRolled'/>
+    <NamedIndividual IRI='#PackingConstruction.Folded'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#SealArrangement' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealArrangement</IRI>
+  <Literal>SealArrangement</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealArrangement</IRI>
+  <Literal>general categorization of mechanical seal based on whether it is sprung from one side (single) or both sides (dual), and in the latter case, whether it has an internal pumping ring to circulate the buffer fluid. </Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#SealArrangement.DualNonpressurized' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealArrangement.DualNonpressurized</IRI>
+  <Literal>DualNonpressurized</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealArrangement.DualNonpressurized</IRI>
+  <Literal>A dual mechanical seal without a internal pumping ring between the seals. The circulation of buffer fluid is taken care of by an external system.
+
+Source: RDL 
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealArrangement'/>
+  <NamedIndividual IRI='#SealArrangement.DualNonpressurized'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealArrangement.DualPressurized' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealArrangement.DualPressurized</IRI>
+  <Literal>DualPressurized</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealArrangement.DualPressurized</IRI>
+  <Literal>A dual mechanical seal where a pumping ring is mounted between the two seals to boost the circulation of buffer fluid.
+
+Source: RDL 
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealArrangement'/>
+  <NamedIndividual IRI='#SealArrangement.DualPressurized'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealArrangement.Single' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealArrangement.Single</IRI>
+  <Literal>Single</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealArrangement.Single</IRI>
+  <Literal>A mechanical seal where the mating ring is pressed against the primary ring by the force from a single coil spring. 
+
+Source: RDL 
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealArrangement'/>
+  <NamedIndividual IRI='#SealArrangement.Single'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#SealArrangement.DualNonpressurized'/>
+  <NamedIndividual IRI='#SealArrangement.DualPressurized'/>
+  <NamedIndividual IRI='#SealArrangement.Single'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#SealArrangement' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#SealArrangement.DualNonpressurized'/>
+    <NamedIndividual IRI='#SealArrangement.DualPressurized'/>
+    <NamedIndividual IRI='#SealArrangement.Single'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#SealDesign' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealDesign</IRI>
+  <Literal>SealDesign</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealDesign</IRI>
+  <Literal>general categorization of mechanical seals, based on their activation mechanism </Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#SealDesign.BellowsElastomeric' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealDesign.BellowsElastomeric</IRI>
+  <Literal>BellowsElastomeric</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealDesign.BellowsElastomeric</IRI>
+  <Literal>A mechanical seal utilizing a bellows made of a flexible elastomer to act both as pusher spring and to provide secondary sealing.  The bellows compresses or extends as needed to maintain contact, while maintaining a solid elastomeric barrier between the seat ring and the casing/body.
+
+Source: RDL
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealDesign'/>
+  <NamedIndividual IRI='#SealDesign.BellowsElastomeric'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealDesign.BellowsMetallic' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealDesign.BellowsMetallic</IRI>
+  <Literal>BellowsMetallic</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealDesign.BellowsMetallic</IRI>
+  <Literal>A mechanical seal utilizing flexible metallic bellows to act both as pusher spring and to provide secondary sealing.  
+A mechanical seal comprising a shaft ring that rotates with the shaft and a seat ring that is sprung by a metal bellows to maintain constant metal-to-metal pressure at the surfaces of the rings, sealing the shaft.  The bellows compresses or extends as needed, while maintaining a solid metal barrier between the seat ring and the casing/body.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealDesign'/>
+  <NamedIndividual IRI='#SealDesign.BellowsMetallic'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealDesign.Pusher' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealDesign.Pusher</IRI>
+  <Literal>Pusher</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealDesign.Pusher</IRI>
+  <Literal>A mechanical seal in which a secondary seal is pushed along the shaft or shaft sleeve to compensate for face wear. 
+
+Source: RDL 
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealDesign'/>
+  <NamedIndividual IRI='#SealDesign.Pusher'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#SealDesign.BellowsElastomeric'/>
+  <NamedIndividual IRI='#SealDesign.BellowsMetallic'/>
+  <NamedIndividual IRI='#SealDesign.Pusher'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#SealDesign' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#SealDesign.BellowsElastomeric'/>
+    <NamedIndividual IRI='#SealDesign.BellowsMetallic'/>
+    <NamedIndividual IRI='#SealDesign.Pusher'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#SealFabricationProcess' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealFabricationProcess</IRI>
+  <Literal>SealFabricationProcess</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealFabricationProcess</IRI>
+  <Literal>The category of manufacturing process used to fabricate stem and shaft seals.  The process affects deformability and brittleness.</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#SealFabricationProcess.Cast' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealFabricationProcess.Cast</IRI>
+  <Literal>Cast</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealFabricationProcess.Cast</IRI>
+  <Literal>Casting is a manufacturing process by which a liquid material is usually poured into a mold, which contains a hollow cavity of the desired shape, and then allowed to solidify. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealFabricationProcess'/>
+  <NamedIndividual IRI='#SealFabricationProcess.Cast'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealFabricationProcess.DieFormed' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealFabricationProcess.DieFormed</IRI>
+  <Literal>DieFormed</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealFabricationProcess.DieFormed</IRI>
+  <Literal>A manufacturing process in which the part is created by forcing a sheet of material around an uncompressable &quot;die&quot; (or &quot;form&quot;) using a press. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealFabricationProcess'/>
+  <NamedIndividual IRI='#SealFabricationProcess.DieFormed'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealFabricationProcess.Forged' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealFabricationProcess.Forged</IRI>
+  <Literal>Forged</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealFabricationProcess.Forged</IRI>
+  <Literal>Forging is a manufacturing process involving the shaping of metal using localized compressive forces. Forging is often classified according to the temperature at which it is performed: &quot;cold&quot;, &quot;warm&quot;, or &quot;hot&quot; forging. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealFabricationProcess'/>
+  <NamedIndividual IRI='#SealFabricationProcess.Forged'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealFabricationProcess.Other' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealFabricationProcess.Other</IRI>
+  <Literal>Other</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealFabricationProcess'/>
+  <NamedIndividual IRI='#SealFabricationProcess.Other'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#SealFabricationProcess.Cast'/>
+  <NamedIndividual IRI='#SealFabricationProcess.DieFormed'/>
+  <NamedIndividual IRI='#SealFabricationProcess.Forged'/>
+  <NamedIndividual IRI='#SealFabricationProcess.Other'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#SealFabricationProcess' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#SealFabricationProcess.Cast'/>
+    <NamedIndividual IRI='#SealFabricationProcess.DieFormed'/>
+    <NamedIndividual IRI='#SealFabricationProcess.Forged'/>
+    <NamedIndividual IRI='#SealFabricationProcess.Other'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#SealOperatingMode' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealOperatingMode</IRI>
+  <Literal>SealOperatingMode</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealOperatingMode</IRI>
+  <Literal>general categorization of mechanical seals, based on whether they have internal lubrication or not </Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#SealOperatingMode.DryGasContacting' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealOperatingMode.DryGasContacting</IRI>
+  <Literal>DryGasContacting</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealOperatingMode.DryGasContacting</IRI>
+  <Literal>A mechanical seal that is a main or back-up seal operating without liquid lubrication between its faces.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealOperatingMode'/>
+  <NamedIndividual IRI='#SealOperatingMode.DryGasContacting'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealOperatingMode.DryGasNoncontacting' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealOperatingMode.DryGasNoncontacting</IRI>
+  <Literal>DryGasNoncontacting</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealOperatingMode.DryGasNoncontacting</IRI>
+  <Literal>Dry gas seals are non-contacting, dry-running mechanical face seals consist of a mating (rotating) ring and a primary (stationary) ring. When operating, grooves in the rotating ring generate a fluid-dynamic force causing the stationary ring to separate and create a gap between the two rings. Dry gas seals are mechanical seals but use other chemicals and functions so that they do not contaminate a process.
+
+Source: (Wikipedia 2013)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealOperatingMode'/>
+  <NamedIndividual IRI='#SealOperatingMode.DryGasNoncontacting'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealOperatingMode.LiquidContacting' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealOperatingMode.LiquidContacting</IRI>
+  <Literal>LiquidContacting</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealOperatingMode.LiquidContacting</IRI>
+  <Literal>A mechanical seal by which the sealing medium is a liquid that forms a thin liquid film between the seal faces intended to prevent heat of friction.
+
+Source: RDL
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealOperatingMode'/>
+  <NamedIndividual IRI='#SealOperatingMode.LiquidContacting'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#SealOperatingMode.DryGasContacting'/>
+  <NamedIndividual IRI='#SealOperatingMode.DryGasNoncontacting'/>
+  <NamedIndividual IRI='#SealOperatingMode.LiquidContacting'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#SealOperatingMode' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#SealOperatingMode.DryGasContacting'/>
+    <NamedIndividual IRI='#SealOperatingMode.DryGasNoncontacting'/>
+    <NamedIndividual IRI='#SealOperatingMode.LiquidContacting'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#SealType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType</IRI>
+  <Literal>SealType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType</IRI>
+  <Literal>General categorization of mechanical seals, based on their structure</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#SealType.Component' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType.Component</IRI>
+  <Literal>Component</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType.Component</IRI>
+  <Literal>A component seal is one where each part of the seal must be assembled on the pump individually, requiring an accurate operating length, accurate center of the stationary face, protection of the seal faces, and protection of the elastomers.
+
+Source: (Mackay 2004)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealType'/>
+  <NamedIndividual IRI='#SealType.Component'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealType.Cartridge' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType.Cartridge</IRI>
+  <Literal>Cartridge</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType.Cartridge</IRI>
+  <Literal>A mechanical seal that is preassembled for sliding onto a shaft and bolting to a face.
+
+Source: RDL
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealType'/>
+  <NamedIndividual IRI='#SealType.Cartridge'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealType.Diaphragm' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType.Diaphragm</IRI>
+  <Literal>Diaphragm</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType.Diaphragm</IRI>
+  <Literal>A diaphragm seal is a flexible membrane that seals and isolates an enclosure, allowing pressure effects to cross the barrier but not the material being contained.  
+Diaphragm seals are commonly used to protect pressure sensors from the fluid whose pressure is being measured.
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealType'/>
+  <NamedIndividual IRI='#SealType.Diaphragm'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealType.Labyrinth' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType.Labyrinth</IRI>
+  <Literal>Labyrinth</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType.Labyrinth</IRI>
+  <Literal>a type of mechanical seal that provides a tortuous path to help prevent leakage. A labyrinth seal may be composed of many grooves that press tightly inside another axle, or inside a hole, so that the fluid has to pass through a long and difficult path to escape. Labyrinth seals on rotating shafts provide non-contact sealing action by controlling the passage of fluid through a variety of chambers by centrifugal motion, as well as by the formation of controlled fluid vortices.
+Source: (Wikipedia n.d.)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealType'/>
+  <NamedIndividual IRI='#SealType.Labyrinth'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealType.LipSeal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType.LipSeal</IRI>
+  <Literal>LipSeal</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType.LipSeal</IRI>
+  <Literal>Technically not a MechanicalSeal, a LipSeal uses an elastomeric sealing element, similar to a gland packing.  The mechanical element of the construction consists of a sprung main sealing lip which has a point contact with the shaft.
+
+Source: (Wikipedia n.d.)
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealType'/>
+  <NamedIndividual IRI='#SealType.LipSeal'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealType.O-ring' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType.O-ring</IRI>
+  <Literal>O-ring</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType.O-ring</IRI>
+  <Literal>A mechanical gasket in the shape of a torus; it is a loop of elastomer with a round cross-section, designed to be seated in a groove and compressed during assembly between two or more parts, creating a seal at the interface.  Also called a toric joint.  Technically not a mechanical seal.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealType'/>
+  <NamedIndividual IRI='#SealType.O-ring'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealType.Solid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType.Solid</IRI>
+  <Literal>Solid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType.Solid</IRI>
+  <Literal>A formed elastomeric material compressed between the valve stem and a sleeve that is fitted into the valve body.  Primarily used on screw stems, allowing the elastomer to compress tightly around the threads.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealType'/>
+  <NamedIndividual IRI='#SealType.Solid'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealType.Split' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType.Split</IRI>
+  <Literal>Split</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType.Split</IRI>
+  <Literal>A mechanical seal where the wearing parts or the whole seal can be split to make it possible to change parts without dismounting the whole machine. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealType'/>
+  <NamedIndividual IRI='#SealType.Split'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SealType.V-ring' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SealType.V-ring</IRI>
+  <Literal>V-ring</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SealType.V-ring</IRI>
+  <Literal>A V-ring seal is a one-piece flexible elastomeric seal that is mounted on a shaft (usually stretch-fit over the shaft) and seals axially against a counterface (a surface at right angles to the shaft) and normally rotates with the shaft.  It is so called because the cross section is roughly V-shaped.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SealType'/>
+  <NamedIndividual IRI='#SealType.V-ring'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#SealType.Component'/>
+  <NamedIndividual IRI='#SealType.Cartridge'/>
+  <NamedIndividual IRI='#SealType.Diaphragm'/>
+  <NamedIndividual IRI='#SealType.Labyrinth'/>
+  <NamedIndividual IRI='#SealType.LipSeal'/>
+  <NamedIndividual IRI='#SealType.O-ring'/>
+  <NamedIndividual IRI='#SealType.Solid'/>
+  <NamedIndividual IRI='#SealType.Split'/>
+  <NamedIndividual IRI='#SealType.V-ring'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#SealType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#SealType.Component'/>
+    <NamedIndividual IRI='#SealType.Cartridge'/>
+    <NamedIndividual IRI='#SealType.Diaphragm'/>
+    <NamedIndividual IRI='#SealType.Labyrinth'/>
+    <NamedIndividual IRI='#SealType.LipSeal'/>
+    <NamedIndividual IRI='#SealType.O-ring'/>
+    <NamedIndividual IRI='#SealType.Solid'/>
+    <NamedIndividual IRI='#SealType.Split'/>
+    <NamedIndividual IRI='#SealType.V-ring'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#AntiExtrusionRing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#AntiExtrusionRing</IRI>
+  <Literal>AntiExtrusionRing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#AntiExtrusionRing</IRI>
+  <Literal>An optional element of a valve stuffing box that prevents the packing from being forced out between the bonnet and the stem when the valve is actuated.
+
+Depending on the design of the stuffing box, the the anti-extrusion ring may or may not be a wetted part.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#AntiExtrusionRing' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#Gland' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Gland</IRI>
+  <Literal>Gland</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Gland</IRI>
+  <Literal>To position and adjust the packing pressure. 
+Source: Applied Process Design, pg. 166
+
+A physical object that is intended to position an item. Typically applied to compress packing rings in a stuffing box.
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Gland</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Gland</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS553229</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Gland' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+<Declaration><Class IRI='#LanternRing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LanternRing</IRI>
+  <Literal>LanternRing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#LanternRing</IRI>
+  <Literal>A ring made out of metallic or synthetic material that forms a chamber between upper and lower sets of compression pacings in a stuffing box. A port from the bonnet connected with the lantern ring may have several functions: f.i. an injection chamber for a gland seal.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#LanternRing</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#LanternRing</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS645074</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#LanternRing' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+<Declaration><Class IRI='#MechanicalSeal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MechanicalSeal</IRI>
+  <Literal>MechanicalSeal</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MechanicalSeal</IRI>
+  <Literal>Provides a mechanical sealing arrangement that takes the place of the packing. Basically it has one surface rotating with the shaft and one stationary face. The minutely close clearance between these two faces prevents leakage of liquid out or air in. 
+Source: Applied Process Design, pg. 166
+
+A seal that comprises of a set of one or more rotating and stationary seal faces, together with auxiliary hardware, separated by a film of fluid intended to reduce flow loss around a rotating shaft to an acceptable level.
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#MechanicalSeal</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#MechanicalSeal</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS446309</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#MechanicalSeal' />
+  <Class abbreviatedIRI='ShaftSeals:ShaftSeal' />
+</SubClassOf>
+<SubClassOf>
+  <Class IRI='#MechanicalSeal' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#MechanicalSeal.fabricationProcess' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MechanicalSeal.fabricationProcess</IRI>
+  <Literal>MechanicalSeal.fabricationProcess</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MechanicalSeal.fabricationProcess</IRI>
+  <Literal>the manufacturing process used to create the Seal.  Together with heat treatment, this affects the tightness and deformation of the seal under pressure.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#MechanicalSeal.fabricationProcess'/>
+  <Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#MechanicalSeal.fabricationProcess'/>
+  <Class abbreviatedIRI='ShaftSeals:SealFabricationProcess' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#MechanicalSeal.fabricationProcess' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#MechanicalSeal.heatTreatment' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MechanicalSeal.heatTreatment</IRI>
+  <Literal>MechanicalSeal.heatTreatment</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MechanicalSeal.heatTreatment</IRI>
+  <Literal>The heat treatment used in fabricating the mechanical seal, if any. </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#MechanicalSeal.heatTreatment'/>
+  <Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#MechanicalSeal.heatTreatment'/>
+  <Class abbreviatedIRI='ShaftSeals:HeatTreatment' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#MechanicalSeal.heatTreatment' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#MechanicalSeal.operatingMode' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MechanicalSeal.operatingMode</IRI>
+  <Literal>MechanicalSeal.operatingMode</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MechanicalSeal.operatingMode</IRI>
+  <Literal>categorization of the mechanical seal with respect to internal lubrication. 
+Provided by the manufacturer.  The owner can indicate a preference.
+Source: HI EDE 50.7
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#MechanicalSeal.operatingMode'/>
+  <Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#MechanicalSeal.operatingMode'/>
+  <Class abbreviatedIRI='ShaftSeals:SealOperatingMode' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#MechanicalSeal.operatingMode' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#MechanicalSeal.sealArrangement' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MechanicalSeal.sealArrangement</IRI>
+  <Literal>MechanicalSeal.sealArrangement</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MechanicalSeal.sealArrangement</IRI>
+  <Literal>categorization of the mechanical seal based on how it is sprung. 
+Provided by the manufacturer.  The owner can indicate a preference. 
+Source: HI EDE 50.7
+
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#MechanicalSeal.sealArrangement'/>
+  <Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#MechanicalSeal.sealArrangement'/>
+  <Class abbreviatedIRI='ShaftSeals:SealArrangement' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#MechanicalSeal.sealArrangement' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#MechanicalSeal.sealDesign' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MechanicalSeal.sealDesign</IRI>
+  <Literal>MechanicalSeal.sealDesign</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MechanicalSeal.sealDesign</IRI>
+  <Literal>categorization of the mechanical seal based on its activation mechanism 
+Provided by the manufacturer.  The owner can indicate a preference. 
+Source: HI EDE 50.7
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#MechanicalSeal.sealDesign'/>
+  <Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#MechanicalSeal.sealDesign'/>
+  <Class abbreviatedIRI='ShaftSeals:SealDesign' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#MechanicalSeal.sealDesign' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#MechanicalSeal.sealType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MechanicalSeal.sealType</IRI>
+  <Literal>MechanicalSeal.sealType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MechanicalSeal.sealType</IRI>
+  <Literal>categorization of the mechanical seal based on the structure of the seal. 
+Provided by the manufacturer.  It can be specified by the owner, based on knowledge of the process fluid or site conditions, usually in consultation with the supplier.  
+Source: HI EDE 50.7
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#MechanicalSeal.sealType'/>
+  <Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#MechanicalSeal.sealType'/>
+  <Class abbreviatedIRI='ShaftSeals:SealType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:MechanicalSeal' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#MechanicalSeal.sealType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Packing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Packing</IRI>
+  <Literal>Packing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Packing</IRI>
+  <Literal>A deformable material that is compressed into the junction between the shaft or stem and the body or casing by the gland to prevent leakage. In the case of a valve, a bonnet (a part separable from the body) may form the base for the seal.
+Source: derived from multiple definitions in (Ludwig 2001) and RDL,
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Packing</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Packing</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS397677521</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Packing' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Packing.packingConstruction' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Packing.packingConstruction</IRI>
+  <Literal>Packing.packingConstruction</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Packing.packingConstruction</IRI>
+  <Literal>Construction choice for the packing.  The owner can specify the construction, based on process knowledge.  If blank, the supplier should indicate the construction that will be used
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Packing.packingConstruction'/>
+  <Class abbreviatedIRI='ShaftSeals:Packing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Packing.packingConstruction'/>
+  <Class abbreviatedIRI='ShaftSeals:PackingConstruction' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:Packing' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Packing.packingConstruction' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ShaftSeal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ShaftSeal</IRI>
+  <Literal>ShaftSeal</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ShaftSeal</IRI>
+  <Literal>a means of throttling the leakage which would otherwise occur at the point of entry of a shaft or stem into the casing/body of the device.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#ShaftSeal</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#ShaftSeal.isCorrosionInhibited' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ShaftSeal.isCorrosionInhibited</IRI>
+  <Literal>ShaftSeal.isCorrosionInhibited</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ShaftSeal.isCorrosionInhibited</IRI>
+  <Literal>true if the Seal is made of or treated with a substance that resists corrosion; else false.
+
+Note:  Corrosion inhibitors depend on the fluid flowing through the PlantItem.  The model of corrosion inhibition is out of scope of the Product Data Sheet ontology.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ShaftSeal.isCorrosionInhibited'/>
+  <Class abbreviatedIRI='ShaftSeals:ShaftSeal' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ShaftSeal.isCorrosionInhibited'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:ShaftSeal' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ShaftSeal.isCorrosionInhibited' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ShaftSeal.maxPressure' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ShaftSeal.maxPressure</IRI>
+  <Literal>ShaftSeal.maxPressure</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ShaftSeal.maxPressure</IRI>
+  <Literal>the maximum fluid/gas pressure the seal is designed to withstand without leakage </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ShaftSeal.maxPressure'/>
+  <Class abbreviatedIRI='ShaftSeals:ShaftSeal' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ShaftSeal.maxPressure'/>
+  <Class abbreviatedIRI='Quantities:Pressure' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:ShaftSeal' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ShaftSeal.maxPressure' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#StuffingBox' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#StuffingBox</IRI>
+  <Literal>StuffingBox</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#StuffingBox</IRI>
+  <Literal>This is a means of throttling the leakage which would otherwise occur at the point of entry of the shaft into the casing. Usually not a separate part, but rather made up of a group of small details. Sometimes called a &quot;gland&quot;, properly a &quot;gland seal&quot;. 
+
+Source: Applied Process Design, pg. 166
+
+ In a Pump, a seal that utilizes several coils of woven material pressed lightly against the rotating shaft to provide a minimal leakage path between the shaft and casing.
+
+Source: ISO 15926 RDL
+
+In a valve, a seal that uses several coils of woven material pressed tightly between components to seal the valve shaft/stem penetration through the valve body or bonnet.
+
+Source: Wikipedia
+
+Also RDL Packing Assembly, 
+http://posccaesar.org/rdl/RDS11160125
+defined as:
+An artefact involved in a connection where packing is the main component
+
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#StuffingBox</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#StuffingBox</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS416429</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#StuffingBox' />
+  <Class abbreviatedIRI='ShaftSeals:ShaftSeal' />
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#StuffingBox.isEnergized' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#StuffingBox.isEnergized</IRI>
+  <Literal>StuffingBox.isEnergized</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#StuffingBox.isEnergized</IRI>
+  <Literal>true if the compression mechanism that effects the seal is dynamically controlled (actuated by valve control); false if the packing compression is static (like a gland nut).</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#StuffingBox.isEnergized'/>
+  <Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#StuffingBox.isEnergized'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#StuffingBox.isEnergized' />
+  </DataMaxCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#StuffingBox.numberOfPackingRings' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#StuffingBox.numberOfPackingRings</IRI>
+  <Literal>StuffingBox.numberOfPackingRings</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#StuffingBox.numberOfPackingRings</IRI>
+  <Literal>Number of rings of packing in the stuffing box. Typically specified by the supplier.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#StuffingBox.numberOfPackingRings'/>
+  <Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#StuffingBox.numberOfPackingRings'/>
+  <Datatype abbreviatedIRI='xsd:integer' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#StuffingBox.numberOfPackingRings' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#StuffingBox.gland' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#StuffingBox.gland</IRI>
+  <Literal>StuffingBox.gland</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#StuffingBox.gland</IRI>
+  <Literal>characterization of the gland, if any, that is part of the stuffing box </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#StuffingBox.gland</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#StuffingBox.gland'/>
+  <Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#StuffingBox.gland'/>
+  <Class abbreviatedIRI='ShaftSeals:Gland' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#StuffingBox.gland' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#StuffingBox.packing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#StuffingBox.packing</IRI>
+  <Literal>StuffingBox.packing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#StuffingBox.packing</IRI>
+  <Literal>characterization of the packing elements that are part of the stuffing box.  The seal structure can involve multiple layers of packing, with different characteristics </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#StuffingBox.packing</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#StuffingBox.packing'/>
+  <Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#StuffingBox.packing'/>
+  <Class abbreviatedIRI='ShaftSeals:Packing' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#StuffingBox.packing' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#StuffingBox.AEring' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#StuffingBox.AEring</IRI>
+  <Literal>StuffingBox.AEring</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#StuffingBox.AEring</IRI>
+  <Literal>The Anti-Extrusion rings included in the stuffing box, if any.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#StuffingBox.AEring</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#StuffingBox.AEring'/>
+  <Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#StuffingBox.AEring'/>
+  <Class abbreviatedIRI='ShaftSeals:AntiExtrusionRing' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#StuffingBox.AEring' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#StuffingBox.lanternRing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#StuffingBox.lanternRing</IRI>
+  <Literal>StuffingBox.lanternRing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#StuffingBox.lanternRing</IRI>
+  <Literal>the characteristics of the Lantern Ring, if any, that is part of the Stuffing Box assembly.
+Note:  It often suffices to indicate whether or not there is one.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#StuffingBox.lanternRing</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#StuffingBox.lanternRing'/>
+  <Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#StuffingBox.lanternRing'/>
+  <Class abbreviatedIRI='ShaftSeals:LanternRing' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='ShaftSeals:StuffingBox' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#StuffingBox.lanternRing' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<DisjointUnion>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>ONEOF MechanicalSeal/StuffingBox</Literal>
+  </Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+    <Literal>Each ShaftSeal is either a Mechanical Seal or a StuffingBox.</Literal>
+  </Annotation>
+  <Class abbreviatedIRI='ShaftSeals:ShaftSeal' />
+  <Class abbreviatedIRI='ShaftSeals:MechanicalSeal'/>
+  <Class abbreviatedIRI='ShaftSeals:StuffingBox'/>
+</DisjointUnion>
+</Ontology>
+

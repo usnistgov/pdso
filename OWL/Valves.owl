@@ -1,0 +1,1759 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/Valves'
+  OntologyIRI='http://el.nist.gov/cre/pdso/Valves' >
+
+<Prefix name='Valves' IRI='http://el.nist.gov/cre/pdso/Valves#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+<Prefix name='ISO-15926' IRI='http://el.nist.gov/cre/pdso/ISO-15926#'/>
+<Prefix name='General' IRI='http://el.nist.gov/cre/pdso/General#'/>
+<Prefix name='Codes' IRI='http://el.nist.gov/cre/pdso/Codes#'/>
+<Prefix name='Quantities' IRI='http://el.nist.gov/cre/pdso/Quantities#'/>
+<Prefix name='Materials' IRI='http://el.nist.gov/cre/pdso/Materials#'/>
+<Prefix name='ShaftSeals' IRI='http://el.nist.gov/cre/pdso/ShaftSeals#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+<Import>http://el.nist.gov/cre/pdso/ISO-15926</Import>
+<Import>http://el.nist.gov/cre/pdso/General</Import>
+<Import>http://el.nist.gov/cre/pdso/Codes</Import>
+<Import>http://el.nist.gov/cre/pdso/Quantities</Import>
+<Import>http://el.nist.gov/cre/pdso/Materials</Import>
+<Import>http://el.nist.gov/cre/pdso/ShaftSeals</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>Valves</Literal>
+  </Annotation>
+
+<Declaration><Class IRI='#GasketForm' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GasketForm</IRI>
+  <Literal>GasketForm</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#GasketForm</IRI>
+  <Literal>The structural form of a Gasket, one of the following:</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#GasketForm.O-Ring' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GasketForm.O-Ring</IRI>
+  <Literal>O-Ring</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#GasketForm.O-Ring</IRI>
+  <Literal>A circular gasket that is a torus, having a rounded cross-section.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#GasketForm'/>
+  <NamedIndividual IRI='#GasketForm.O-Ring'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#GasketForm.Ring' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GasketForm.Ring</IRI>
+  <Literal>Ring</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#GasketForm.Ring</IRI>
+  <Literal>A circular gasket that has flat (or nearly flat) joining surfaces.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#GasketForm'/>
+  <NamedIndividual IRI='#GasketForm.Ring'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#GasketForm.RingJoint' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GasketForm.RingJoint</IRI>
+  <Literal>RingJoint</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#GasketForm'/>
+  <NamedIndividual IRI='#GasketForm.RingJoint'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#GasketForm.SolidFlat' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GasketForm.SolidFlat</IRI>
+  <Literal>SolidFlat</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#GasketForm.SolidFlat</IRI>
+  <Literal>A solid, possibly compressible material in sheet form, having a cutout to match the connection opening, and typically more than enough total size to accommodate the flange.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#GasketForm'/>
+  <NamedIndividual IRI='#GasketForm.SolidFlat'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#GasketForm.SpiralWound' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GasketForm.SpiralWound</IRI>
+  <Literal>SpiralWound</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#GasketForm.SpiralWound</IRI>
+  <Literal>A gasket formed by winding a cord-like material around a core, possibly in multiple layers, and compressing the result into a generally toroid shape.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#GasketForm'/>
+  <NamedIndividual IRI='#GasketForm.SpiralWound'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#GasketForm.O-Ring'/>
+  <NamedIndividual IRI='#GasketForm.Ring'/>
+  <NamedIndividual IRI='#GasketForm.RingJoint'/>
+  <NamedIndividual IRI='#GasketForm.SolidFlat'/>
+  <NamedIndividual IRI='#GasketForm.SpiralWound'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#GasketForm' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#GasketForm.O-Ring'/>
+    <NamedIndividual IRI='#GasketForm.Ring'/>
+    <NamedIndividual IRI='#GasketForm.RingJoint'/>
+    <NamedIndividual IRI='#GasketForm.SolidFlat'/>
+    <NamedIndividual IRI='#GasketForm.SpiralWound'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#TrimCharacteristic' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#TrimCharacteristic</IRI>
+  <Literal>TrimCharacteristic</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#TrimCharacteristic</IRI>
+  <Literal>The relative position of the Seat and Closure Member as the Stem enters the valve body.</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#TrimCharacteristic.frontSeated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#TrimCharacteristic.frontSeated</IRI>
+  <Literal>frontSeated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#TrimCharacteristic.frontSeated</IRI>
+  <Literal>aka &quot;normal&quot;.  A valve is front seated or normal seat when the member is between the stem and the seat.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#TrimCharacteristic'/>
+  <NamedIndividual IRI='#TrimCharacteristic.frontSeated'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#TrimCharacteristic.backSeated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#TrimCharacteristic.backSeated</IRI>
+  <Literal>backSeated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#TrimCharacteristic.backSeated</IRI>
+  <Literal>aka &quot;reverse&quot;.  A valve is reverse seated or back seated when the stem goes through the seat to the member.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#TrimCharacteristic'/>
+  <NamedIndividual IRI='#TrimCharacteristic.backSeated'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#TrimCharacteristic.stemless' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#TrimCharacteristic.stemless</IRI>
+  <Literal>stemless</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#TrimCharacteristic.stemless</IRI>
+  <Literal>A stemless valve has no Valve Stem per se.  The closure member is activated directly by the actuator, usually by hydraulic or pneumatic pressure.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#TrimCharacteristic'/>
+  <NamedIndividual IRI='#TrimCharacteristic.stemless'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#TrimCharacteristic.frontSeated'/>
+  <NamedIndividual IRI='#TrimCharacteristic.backSeated'/>
+  <NamedIndividual IRI='#TrimCharacteristic.stemless'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#TrimCharacteristic' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#TrimCharacteristic.frontSeated'/>
+    <NamedIndividual IRI='#TrimCharacteristic.backSeated'/>
+    <NamedIndividual IRI='#TrimCharacteristic.stemless'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#Ball' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Ball</IRI>
+  <Literal>Ball</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Ball' />
+  <Class abbreviatedIRI='Valves:ValveClosureMember' />
+</SubClassOf>
+<Declaration><Class IRI='#BallValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BallValve</IRI>
+  <Literal>BallValve</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#BallValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#ButterflyValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ButterflyValve</IRI>
+  <Literal>ButterflyValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ButterflyValve</IRI>
+  <Literal>A Butterfly valve is two gate valves hinged in the middle, one side of which functions as a demand valve the opens into the source flow and the other as a relief valve, and possibly having a rigid or spring-loaded interaction.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ButterflyValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#CheckValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CheckValve</IRI>
+  <Literal>CheckValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CheckValve</IRI>
+  <Literal>aka NonReturn Valve.  A Check Valve guarantees flow in only one direction, by closing under back pressure from the outlet side when the inlet pressure is not sufficient to maintain flow.  </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#CheckValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#ChokeValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ChokeValve</IRI>
+  <Literal>ChokeValve</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ChokeValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#ControlValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ControlValve</IRI>
+  <Literal>ControlValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ControlValve</IRI>
+  <Literal>A control valve is a common term for several kinds of valves.  The usual interpretation is a valve that manages flow by varying the size of the chamber, thus increasing or attenuating the flow.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ControlValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#CutoffValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CutoffValve</IRI>
+  <Literal>CutoffValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CutoffValve</IRI>
+  <Literal>Also a &quot;shutoff&quot; valve.  A valve whose function is to interrupt flow entirely, and usually quickly.  </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#CutoffValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#DemandValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DemandValve</IRI>
+  <Literal>DemandValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DemandValve</IRI>
+  <Literal>A valve whose primary purpose is to control input to a process, by opening to allow fluid flow when the pressure on the process side is low, and closing otherwise.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DemandValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#DiaphragmValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DiaphragmValve</IRI>
+  <Literal>DiaphragmValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DiaphragmValve</IRI>
+  <Literal>A diaphragm valve has no seat per se.  It is rather a set of moving members that create a typically round inlet or outlet with a variable diameter.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DiaphragmValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#Disc' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Disc</IRI>
+  <Literal>Disc</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Disc</IRI>
+  <Literal>The general term for valve closure members that are used to attenuate flow.  These may be flat, convex or concave discs or cones.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Disc' />
+  <Class abbreviatedIRI='Valves:ValveClosureMember' />
+</SubClassOf>
+<Declaration><Class IRI='#DiscValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DiscValve</IRI>
+  <Literal>DiscValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DiscValve</IRI>
+  <Literal>A Disc valve attenuates or ultimately interrupts flow by compressing a usually flat or convex disc against a relatively flat seat. </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DiscValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#ExpansionValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ExpansionValve</IRI>
+  <Literal>ExpansionValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ExpansionValve</IRI>
+  <Literal>Thermal  expansion valve, used in air conditioning and refrigeration</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ExpansionValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#Gasket' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Gasket</IRI>
+  <Literal>Gasket</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Gasket</IRI>
+  <Literal>A seal that is one or more closed loops of deformable material used between mating surfaces which have only very limited movement relative to each other.
+
+a part that prevents leakage at a valve joint, between the bonnet and the body, or between the body ports and the piping
+
+The sealing material is deformable in order to effect the sealing between irregularities of the mating surfaces
+hasDefinition 	
+hasIdPCA 	 </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Gasket</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Gasket</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS415394</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#Gasket.form' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Gasket.form</IRI>
+  <Literal>Gasket.form</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Gasket.form</IRI>
+  <Literal>the general physical form of the Gasket</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Gasket.form'/>
+  <Class abbreviatedIRI='Valves:Gasket' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Gasket.form'/>
+  <Class abbreviatedIRI='Valves:GasketForm' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:Gasket' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Gasket.form' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#GasketStandard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GasketStandard</IRI>
+  <Literal>GasketStandard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#GasketStandard</IRI>
+  <Literal>A standard that specifies the structure and properties of a Gasket.
+
+The following standards are commonly referenced:
+- API 600
+- API 602
+- ASME B16.20</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#GasketStandard' />
+  <Class abbreviatedIRI='Codes:Standard' />
+</SubClassOf>
+<Declaration><Class IRI='#GateValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GateValve</IRI>
+  <Literal>GateValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#GateValve</IRI>
+  <Literal>A gate valve is hinged on one side, and functions usually as a relief valve to open under sufficient pressure from the inlet side.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#GateValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#GlobeValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GlobeValve</IRI>
+  <Literal>GlobeValve</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#GlobeValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#Handle' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Handle</IRI>
+  <Literal>Handle</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Handle</IRI>
+  <Literal>A manual actuator whose mechanism is primarily a lever.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Handle' />
+  <Class abbreviatedIRI='Valves:ManualActuator' />
+</SubClassOf>
+<Declaration><Class IRI='#Handwheel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Handwheel</IRI>
+  <Literal>Handwheel</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Handwheel</IRI>
+  <Literal>A manual actuator whose mechanism is primarily a screw.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Handwheel' />
+  <Class abbreviatedIRI='Valves:ManualActuator' />
+</SubClassOf>
+<Declaration><Class IRI='#HardSeat' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HardSeat</IRI>
+  <Literal>HardSeat</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HardSeat</IRI>
+  <Literal>A seat that is an integral part of the valve body.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#HardSeat' />
+  <Class abbreviatedIRI='Valves:ValveSeat' />
+</SubClassOf>
+<Declaration><Class IRI='#HydraulicActuator' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HydraulicActuator</IRI>
+  <Literal>HydraulicActuator</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HydraulicActuator</IRI>
+  <Literal>An actuator intended to be operated by hydraulic power. </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#HydraulicActuator</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#HydraulicActuator</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS430154</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#HydraulicActuator' />
+  <Class abbreviatedIRI='Valves:ValveActuator' />
+</SubClassOf>
+<Declaration><Class IRI='#HydraulicValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HydraulicValve</IRI>
+  <Literal>HydraulicValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HydraulicValve</IRI>
+  <Literal>A valve that has a hydraulic actuator</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#HydraulicValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#KnifeValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#KnifeValve</IRI>
+  <Literal>KnifeValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#KnifeValve</IRI>
+  <Literal>A Knife valve interrupts flow by dropping a blade-shaped member into a slot-shaped seat.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#KnifeValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#ManualActuator' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ManualActuator</IRI>
+  <Literal>ManualActuator</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ManualActuator</IRI>
+  <Literal>An actuator whose action has to be triggered manually, and usually requires human energy to be applied (with mechanical advantage) to change the position of the valve.  In other cases, the manual actuator unlocks a separate mechanism that may use gravity or fluid pressure to change the valve position.
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ManualActuator</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ManualActuator</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS16144925</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ManualActuator' />
+  <Class abbreviatedIRI='Valves:ValveActuator' />
+</SubClassOf>
+<Declaration><Class IRI='#ManualValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ManualValve</IRI>
+  <Literal>ManualValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ManualValve</IRI>
+  <Literal>A valve that has a manual actuator</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ManualValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#MixingValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MixingValve</IRI>
+  <Literal>MixingValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MixingValve</IRI>
+  <Literal>A valve with multiple inlet ports and (usually) a single outlet port, the purpose being to allow multiple incoming flows to mix in the valve chamber.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#MixingValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#MotorActuator' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MotorActuator</IRI>
+  <Literal>MotorActuator</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MotorActuator</IRI>
+  <Literal>An actuator powered by a motor. </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#MotorActuator</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#MotorActuator</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS16145021</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#MotorActuator' />
+  <Class abbreviatedIRI='Valves:ValveActuator' />
+</SubClassOf>
+<Declaration><Class IRI='#MotorValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MotorValve</IRI>
+  <Literal>MotorValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MotorValve</IRI>
+  <Literal>A valve that has a motor actuator</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#MotorValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#NeedleValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#NeedleValve</IRI>
+  <Literal>NeedleValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#NeedleValve</IRI>
+  <Literal>A needle valve is a plug valve in which the member has a small diameter coming to a point.  Needle valves produce fine attenuation control, and effective cutoff.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#NeedleValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#PinchValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PinchValve</IRI>
+  <Literal>PinchValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PinchValve</IRI>
+  <Literal>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+A pinch valve attenuates or interrupts flow moving both the closure member and the seat, so that they come together.
+
+    &lt;/p&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PinchValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#PistonValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PistonValve</IRI>
+  <Literal>PistonValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PistonValve</IRI>
+  <Literal>The function of a PistonValve is to use fluid pressure to produce linear displacement of the valve member, which can then be converted to mechanical energy.  The far end of piston displacement creates a relieving flow, and some other energy source is used to return the valve member to a throttling position.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PistonValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#Plug' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Plug</IRI>
+  <Literal>Plug</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Plug</IRI>
+  <Literal>A general term for a valve closure member intended primarily for interrupting flow by forming a barrier when fitted into the seat.  </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Plug' />
+  <Class abbreviatedIRI='Valves:ValveClosureMember' />
+</SubClassOf>
+<Declaration><Class IRI='#PlugValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PlugValve</IRI>
+  <Literal>PlugValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PlugValve</IRI>
+  <Literal>A Plug valve attenuates or ultimately interrupts flow by having a valve seat that is the chamber and inserting a cone-shaped member into the seat well.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PlugValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#PneumaticActuator' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PneumaticActuator</IRI>
+  <Literal>PneumaticActuator</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PneumaticActuator</IRI>
+  <Literal>An actuator that is intended to be operated by pneumatic power. </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#PneumaticActuator</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#PneumaticActuator</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS430334</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PneumaticActuator' />
+  <Class abbreviatedIRI='Valves:ValveActuator' />
+</SubClassOf>
+<Declaration><Class IRI='#PneumaticValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PneumaticValve</IRI>
+  <Literal>PneumaticValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PneumaticValve</IRI>
+  <Literal>A valve that has a pneumatic actuator</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PneumaticValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#PoppetValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PoppetValve</IRI>
+  <Literal>PoppetValve</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PoppetValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#PressureReducingValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureReducingValve</IRI>
+  <Literal>PressureReducingValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PressureReducingValve</IRI>
+  <Literal>A PressureReducing valve has an adjustable chamber or outlet aperture that increases as fluid pressure at the inlet aperture rises, and decreases as pressure at the inlet aperture falls, so as to maintain a constant lower pressure on the outlet side.  A pressure reduction valve thus typically has a variable flow rate.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PressureReducingValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#ReliefValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ReliefValve</IRI>
+  <Literal>ReliefValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ReliefValve</IRI>
+  <Literal>A valve whose primary purpose is to control output from a process, by opening to allow fluid flow when the pressure on the process side exceeds some threshold, and closing otherwise.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ReliefValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#Rotor' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Rotor</IRI>
+  <Literal>Rotor</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Rotor</IRI>
+  <Literal>A part that is rotated in interrupting, routing or constraining flow.
+A member is not considered a rotor if its rotation is a secondary action, such as preventing backflow or controlling pressure rather than flow.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Rotor' />
+  <Class abbreviatedIRI='Valves:ValveClosureMember' />
+</SubClassOf>
+<Declaration><Class IRI='#RoutingValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RoutingValve</IRI>
+  <Literal>RoutingValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#RoutingValve</IRI>
+  <Literal>A valve with multiple outlet ports and (usually) a single inlet port, the purpose being to direct the incoming flow to one of a choice of continuing processes.
+
+The most common routing valves are rotary valves, which select an outlet by angular displacement, and trumpet valves, which select an outlet by linear displacement.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#RoutingValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#SeatTightness' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SeatTightness</IRI>
+  <Literal>SeatTightness</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SeatTightness</IRI>
+  <Literal>A specification for the tightness of fit between the Valve closure member and the seat, taken from one of several standards for different types of valves.</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#SeatTightness.typeCode' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SeatTightness.typeCode</IRI>
+  <Literal>SeatTightness.typeCode</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SeatTightness.typeCode</IRI>
+  <Literal>A code value, taken from a reference standard, for the Seat Tightness.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SeatTightness.typeCode'/>
+  <Class abbreviatedIRI='Valves:SeatTightness' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SeatTightness.typeCode'/>
+  <Class abbreviatedIRI='Codes:Code' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:SeatTightness' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#SeatTightness.typeCode' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#SoftSeat' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SoftSeat</IRI>
+  <Literal>SoftSeat</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SoftSeat</IRI>
+  <Literal>A seat that is separate from the valve body proper, usually made of a different material and somehow fitted into the body cavity.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SoftSeat' />
+  <Class abbreviatedIRI='Valves:ValveSeat' />
+</SubClassOf>
+<Declaration><Class IRI='#SolenoidActuator' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SolenoidActuator</IRI>
+  <Literal>SolenoidActuator</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SolenoidActuator</IRI>
+  <Literal>An electric actuator that uses a continuous duty linear solenoid to convert electrical energy into mechanical power via a plunger with an axial stroke in either a push or pull action. </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#SolenoidActuator</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#SolenoidActuator</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS7191376</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SolenoidActuator' />
+  <Class abbreviatedIRI='Valves:ValveActuator' />
+</SubClassOf>
+<Declaration><Class IRI='#SolenoidValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SolenoidValve</IRI>
+  <Literal>SolenoidValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SolenoidValve</IRI>
+  <Literal>A valve that has a solenoid actuator</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SolenoidValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#SpoolValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SpoolValve</IRI>
+  <Literal>SpoolValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SpoolValve</IRI>
+  <Literal>A spool valve is a valve with a cylindrical chamber that functions as the seat, and a cylindrical member that rotates to align or disalign openings in the seat and the member to attenuate or alter the direction of flow.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SpoolValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#Spring' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Spring</IRI>
+  <Literal>Spring</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Spring</IRI>
+  <Literal>An &apos;artefact&apos; that is intended to transmit load and that is not damaged by large deformation. 
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Spring</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Spring</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS910844</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Spring' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#TrumpetValve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#TrumpetValve</IRI>
+  <Literal>TrumpetValve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#TrumpetValve</IRI>
+  <Literal>A trumpet valve is a valve with a cylindrical chamber that functions as the seat, and a cylindrical member that is displaced linearly to align or disalign openings in the seat and the member to attenuate or alter the direction of flow.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#TrumpetValve' />
+  <Class abbreviatedIRI='Valves:Valve' />
+</SubClassOf>
+<Declaration><Class IRI='#Valve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve</IRI>
+  <Literal>Valve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve</IRI>
+  <Literal>A mechanical device for permitting or interrupting fluid flow, or for altering the volume, rate, pressure, or direction of fluid flow.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Valve</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Valve</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS224954</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Valve' />
+  <Class abbreviatedIRI='General:LineItemCharacterization' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Valve.pressureRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.pressureRange</IRI>
+  <Literal>Valve.pressureRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.pressureRange</IRI>
+  <Literal>the range of fluid pressure in which the valve is designed to function</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.pressureRange'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.pressureRange'/>
+  <Class abbreviatedIRI='Quantities:PressureRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:Valve' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Valve.pressureRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Valve.temperatureRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.temperatureRange</IRI>
+  <Literal>Valve.temperatureRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.temperatureRange</IRI>
+  <Literal>the range of temperatures in which the valve is designed/required function</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.temperatureRange'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.temperatureRange'/>
+  <Class abbreviatedIRI='Quantities:TemperatureRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:Valve' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Valve.temperatureRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ValveActuator' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveActuator</IRI>
+  <Literal>ValveActuator</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveActuator</IRI>
+  <Literal>An actuator intended to change and/or maintain the position of the closing member of a valve. </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveActuator</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveActuator</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS7019057</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#ValveBody' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBody</IRI>
+  <Literal>ValveBody</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBody</IRI>
+  <Literal>A &apos;pressure vessel&apos; that is the main fluid or pressure containing component of a valve, housing and supporting the working components.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveBody</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveBody</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS427274</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveBody' />
+  <Class abbreviatedIRI='Valves:ValveComponent' />
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#ValveBody.numberOfPorts' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBody.numberOfPorts</IRI>
+  <Literal>ValveBody.numberOfPorts</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBody.numberOfPorts</IRI>
+  <Literal>the number of ports on the valve body, at least two.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ValveBody.numberOfPorts'/>
+  <Class abbreviatedIRI='Valves:ValveBody' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ValveBody.numberOfPorts'/>
+  <Datatype abbreviatedIRI='xsd:integer' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveBody' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ValveBody.numberOfPorts' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ValveBodyType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBodyType</IRI>
+  <Literal>ValveBodyType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBodyType</IRI>
+  <Literal>A standard classification of valve bodies.</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#ValveBodyType.typeCode' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBodyType.typeCode</IRI>
+  <Literal>ValveBodyType.typeCode</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBodyType.typeCode</IRI>
+  <Literal>A code value, taken from a reference standard, for the ValveBodyType</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveBodyType.typeCode'/>
+  <Class abbreviatedIRI='Valves:ValveBodyType' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveBodyType.typeCode'/>
+  <Class abbreviatedIRI='Codes:Code' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveBodyType' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveBodyType.typeCode' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ValveBonnet' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBonnet</IRI>
+  <Literal>ValveBonnet</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBonnet</IRI>
+  <Literal>A fluid- or pressure-containing part of a valve body, that supports the stem and its sealing arrangement, and that may accommodate the valve closure member when in the open position.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveBonnet</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveBonnet</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS431189</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveBonnet' />
+  <Class abbreviatedIRI='Valves:ValveComponent' />
+</SubClassOf>
+<Declaration><Class IRI='#ValveBonnetGasket' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBonnetGasket</IRI>
+  <Literal>ValveBonnetGasket</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBonnetGasket</IRI>
+  <Literal>A gasket that is used to seal between a valve body and a valve bonnet.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveBonnetGasket</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveBonnetGasket</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS552329</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveBonnetGasket' />
+  <Class abbreviatedIRI='Valves:Gasket' />
+</SubClassOf>
+<SubClassOf>
+  <Class IRI='#ValveBonnetGasket' />
+  <Class abbreviatedIRI='Valves:ValveComponent' />
+</SubClassOf>
+<Declaration><Class IRI='#ValveBonnetType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBonnetType</IRI>
+  <Literal>ValveBonnetType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBonnetType</IRI>
+  <Literal>A standard classification of valve bonnets.</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#ValveBonnetType.typeCode' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBonnetType.typeCode</IRI>
+  <Literal>ValveBonnetType.typeCode</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBonnetType.typeCode</IRI>
+  <Literal>A code value, taken from a reference standard, for the ValveBonnetType</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveBonnetType.typeCode'/>
+  <Class abbreviatedIRI='Valves:ValveBonnetType' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveBonnetType.typeCode'/>
+  <Class abbreviatedIRI='Codes:Code' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveBonnetType' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveBonnetType.typeCode' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ValveClosureMember' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveClosureMember</IRI>
+  <Literal>ValveClosureMember</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveClosureMember</IRI>
+  <Literal>The moving element that physically interrupts, alters or constrains the fluid flow through the valve.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveClosureMember</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveClosureMember</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS428894</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveClosureMember' />
+  <Class abbreviatedIRI='Valves:ValveComponent' />
+</SubClassOf>
+<Declaration><Class IRI='#ValveComponent' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveComponent</IRI>
+  <Literal>ValveComponent</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveComponent</IRI>
+  <Literal>(the description of) a physical component of a Valve
+
+This is a specialization of PartCharacterization for Valve-specific components.
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveComponent</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveComponent</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS224684</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveComponent' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#ValveDesignStandard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveDesignStandard</IRI>
+  <Literal>ValveDesignStandard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveDesignStandard</IRI>
+  <Literal>A reference standard for structural and behavioral characteristics of a Valve</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveDesignStandard' />
+  <Class abbreviatedIRI='Codes:Standard' />
+</SubClassOf>
+<Declaration><Class IRI='#ValveSeat' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveSeat</IRI>
+  <Literal>ValveSeat</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveSeat</IRI>
+  <Literal>the fixed element that participates in interrupting or constraining flow
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveSeat</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveSeat</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS646649</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveSeat' />
+  <Class abbreviatedIRI='Valves:ValveComponent' />
+</SubClassOf>
+<Declaration><Class IRI='#ValveStem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveStem</IRI>
+  <Literal>ValveStem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveStem</IRI>
+  <Literal>Valve component that transmits motion from the actuator to the valve closure member
+The stem and the valve member may be one piece.
+In some cases the stem and the actuator are one piece.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveStem</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveStem</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS416339</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveStem' />
+  <Class abbreviatedIRI='Valves:ValveComponent' />
+</SubClassOf>
+<Declaration><Class IRI='#ValveStemSeal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveStemSeal</IRI>
+  <Literal>ValveStemSeal</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveStemSeal</IRI>
+  <Literal>A shaft seal that is a sealing element intended to prevent leakage of fluids/gas between a valve stem and the surrounding body/bonnet. 
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveStemSeal</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveStemSeal</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS720359</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ValveStemSeal' />
+  <Class abbreviatedIRI='ShaftSeals:ShaftSeal' />
+</SubClassOf>
+<SubClassOf>
+  <Class IRI='#ValveStemSeal' />
+  <Class abbreviatedIRI='Valves:ValveComponent' />
+</SubClassOf>
+<Declaration><Class IRI='#ValveTrim' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveTrim</IRI>
+  <Literal>ValveTrim</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveTrim</IRI>
+  <Literal>The components of the Valve that jointly constrain, alter or interrupt flow.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ValveTrim</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ValveTrim</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS224729</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#ValveTrim.characteristic' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveTrim.characteristic</IRI>
+  <Literal>ValveTrim.characteristic</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveTrim.characteristic</IRI>
+  <Literal>The basic structure of the ValveTrim: does the stem go through the seat (back-seated), or not (front-seated).</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveTrim.characteristic'/>
+  <Class abbreviatedIRI='Valves:ValveTrim' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveTrim.characteristic'/>
+  <Class abbreviatedIRI='Valves:TrimCharacteristic' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveTrim' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveTrim.characteristic' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#ValveTrim.isFiresafe' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveTrim.isFiresafe</IRI>
+  <Literal>ValveTrim.isFiresafe</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveTrim.isFiresafe</IRI>
+  <Literal>True if the value will continue to function properly unless the surrounding temperatures exceed a reference value (commonly 2000K) for industrial fire temperatures; false if the valve can fail at a lower temperature. </Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ValveTrim.isFiresafe'/>
+  <Class abbreviatedIRI='Valves:ValveTrim' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ValveTrim.isFiresafe'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveTrim' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ValveTrim.isFiresafe' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ValveBody.port' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBody.port</IRI>
+  <Literal>ValveBody.port</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBody.port</IRI>
+  <Literal>The physical connections between the valve body and the piping.  A valve always has at least one inlet port and one outlet port.  It may have more than one of either.  </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#ValveBody.port</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveBody.port'/>
+  <Class abbreviatedIRI='Valves:ValveBody' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveBody.port'/>
+  <Class abbreviatedIRI='General:FluidPort' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveBody' />
+  <ObjectMinCardinality cardinality='2'>
+    <ObjectProperty IRI='#ValveBody.port' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Gasket.standard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Gasket.standard</IRI>
+  <Literal>Gasket.standard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Gasket.standard</IRI>
+  <Literal>The standard to which the Gasket conforms.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Gasket.standard'/>
+  <Class abbreviatedIRI='Valves:Gasket' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Gasket.standard'/>
+  <Class abbreviatedIRI='Valves:GasketStandard' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:Gasket' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Gasket.standard' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ValveSeat.tightness' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveSeat.tightness</IRI>
+  <Literal>ValveSeat.tightness</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveSeat.tightness</IRI>
+  <Literal>The (standard) seat tightness requirement specification to which the ValveSeat conforms.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveSeat.tightness'/>
+  <Class abbreviatedIRI='Valves:ValveSeat' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveSeat.tightness'/>
+  <Class abbreviatedIRI='Valves:SeatTightness' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveSeat' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveSeat.tightness' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Valve.actuator' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.actuator</IRI>
+  <Literal>Valve.actuator</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.actuator</IRI>
+  <Literal>the mechanism for changing the position of the valve</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.actuator'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.actuator'/>
+  <Class abbreviatedIRI='Valves:ValveActuator' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#Valve.body' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.body</IRI>
+  <Literal>Valve.body</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.body</IRI>
+  <Literal>the body of the valve, the vessel that holds the parts that constrict the flow.  In some cases a single valve body can incorporate multiple distinct valves.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.body'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.body'/>
+  <Class abbreviatedIRI='Valves:ValveBody' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:Valve' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Valve.body' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Valve.bonnet' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.bonnet</IRI>
+  <Literal>Valve.bonnet</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.bonnet</IRI>
+  <Literal>The part of the valve body that supports the stem and the stem seal.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#Valve.bonnet</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.bonnet'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.bonnet'/>
+  <Class abbreviatedIRI='Valves:ValveBonnet' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:Valve' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Valve.bonnet' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Valve.gasket' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.gasket</IRI>
+  <Literal>Valve.gasket</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.gasket</IRI>
+  <Literal>the gaskets that prevent leakage at the valve joints</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#Valve.gasket</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.gasket'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.gasket'/>
+  <Class abbreviatedIRI='Valves:ValveBonnetGasket' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#Valve.spring' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.spring</IRI>
+  <Literal>Valve.spring</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.spring</IRI>
+  <Literal>springs used to maintain or restore the position of the valve closure member, as an element of the actuation mechanism.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#Valve.spring</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.spring'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.spring'/>
+  <Class abbreviatedIRI='Valves:Spring' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#Valve.trim' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.trim</IRI>
+  <Literal>Valve.trim</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.trim</IRI>
+  <Literal>the internal structure of the Valve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#Valve.trim</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.trim'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.trim'/>
+  <Class abbreviatedIRI='Valves:ValveTrim' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:Valve' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Valve.trim' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ValveBody.type' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBody.type</IRI>
+  <Literal>ValveBody.type</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBody.type</IRI>
+  <Literal>The standard valve body specification to which the ValveBody conforms.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveBody.type'/>
+  <Class abbreviatedIRI='Valves:ValveBody' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveBody.type'/>
+  <Class abbreviatedIRI='Valves:ValveBodyType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveBody' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveBody.type' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ValveBonnet.type' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveBonnet.type</IRI>
+  <Literal>ValveBonnet.type</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveBonnet.type</IRI>
+  <Literal>The standard valve bonnet specification to which the ValveBonnet conforms.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveBonnet.type'/>
+  <Class abbreviatedIRI='Valves:ValveBonnet' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveBonnet.type'/>
+  <Class abbreviatedIRI='Valves:ValveBonnetType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveBonnet' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveBonnet.type' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Valve.designStandard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.designStandard</IRI>
+  <Literal>Valve.designStandard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.designStandard</IRI>
+  <Literal>reference standard for the overall design and characteristics of the Valve</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.designStandard'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.designStandard'/>
+  <Class abbreviatedIRI='Valves:ValveDesignStandard' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:Valve' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Valve.designStandard' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ValveTrim.member' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveTrim.member</IRI>
+  <Literal>ValveTrim.member</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#ValveTrim.member</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveTrim.member'/>
+  <Class abbreviatedIRI='Valves:ValveTrim' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveTrim.member'/>
+  <Class abbreviatedIRI='Valves:ValveClosureMember' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveTrim' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveTrim.member' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Valve.seal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Valve.seal</IRI>
+  <Literal>Valve.seal</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Valve.seal</IRI>
+  <Literal>the seal between the stem and the body</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#Valve.seal</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Valve.seal'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Valve.seal'/>
+  <Class abbreviatedIRI='Valves:ValveStemSeal' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:Valve' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Valve.seal' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ValveTrim.seat' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveTrim.seat</IRI>
+  <Literal>ValveTrim.seat</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveTrim.seat</IRI>
+  <Literal>the specification for the ValveSeat element of the trim</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#ValveTrim.seat</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveTrim.seat'/>
+  <Class abbreviatedIRI='Valves:ValveTrim' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveTrim.seat'/>
+  <Class abbreviatedIRI='Valves:ValveSeat' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveTrim' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveTrim.seat' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ValveTrim.stem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ValveTrim.stem</IRI>
+  <Literal>ValveTrim.stem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ValveTrim.stem</IRI>
+  <Literal>the specification for the Stem element of the trim, if any</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#ValveTrim.stem</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ValveTrim.stem'/>
+  <Class abbreviatedIRI='Valves:ValveTrim' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ValveTrim.stem'/>
+  <Class abbreviatedIRI='Valves:ValveStem' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Valves:ValveTrim' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#ValveTrim.stem' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<DisjointUnion>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>ActuatorCategory</Literal>
+  </Annotation>
+  <Class abbreviatedIRI='Valves:Valve' />
+  <Class abbreviatedIRI='Valves:SolenoidValve'/>
+  <Class abbreviatedIRI='Valves:HydraulicValve'/>
+  <Class abbreviatedIRI='Valves:ManualValve'/>
+  <Class abbreviatedIRI='Valves:MotorValve'/>
+  <Class abbreviatedIRI='Valves:PneumaticValve'/>
+</DisjointUnion>
+<DisjointClasses>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>FunctionalCategory</Literal>
+  </Annotation>
+  <Class abbreviatedIRI='Valves:MixingValve'/>
+  <Class abbreviatedIRI='Valves:PressureReducingValve'/>
+  <Class abbreviatedIRI='Valves:ReliefValve'/>
+  <Class abbreviatedIRI='Valves:RoutingValve'/>
+  <Class abbreviatedIRI='Valves:CheckValve'/>
+  <Class abbreviatedIRI='Valves:ControlValve'/>
+  <Class abbreviatedIRI='Valves:DemandValve'/>
+  <Class abbreviatedIRI='Valves:ExpansionValve'/>
+</DisjointClasses>
+<DisjointUnion>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>ONEOF Manual/Hydraulic/Pneumatic/Motor/Solenoid</Literal>
+  </Annotation>
+  <Class abbreviatedIRI='Valves:ValveActuator' />
+  <Class abbreviatedIRI='Valves:PneumaticActuator'/>
+  <Class abbreviatedIRI='Valves:SolenoidActuator'/>
+  <Class abbreviatedIRI='Valves:HydraulicActuator'/>
+  <Class abbreviatedIRI='Valves:ManualActuator'/>
+  <Class abbreviatedIRI='Valves:MotorActuator'/>
+</DisjointUnion>
+</Ontology>
+

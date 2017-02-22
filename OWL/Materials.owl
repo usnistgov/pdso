@@ -1,0 +1,1018 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/Materials'
+  OntologyIRI='http://el.nist.gov/cre/pdso/Materials' >
+
+<Prefix name='Materials' IRI='http://el.nist.gov/cre/pdso/Materials#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+<Prefix name='ISO-15926' IRI='http://el.nist.gov/cre/pdso/ISO-15926#'/>
+<Prefix name='Quantities' IRI='http://el.nist.gov/cre/pdso/Quantities#'/>
+<Prefix name='Codes' IRI='http://el.nist.gov/cre/pdso/Codes#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+<Import>http://el.nist.gov/cre/pdso/ISO-15926</Import>
+<Import>http://el.nist.gov/cre/pdso/Quantities</Import>
+<Import>http://el.nist.gov/cre/pdso/Codes</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>Materials</Literal>
+  </Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+    <Literal>The Materials package is a high-level abstract model of materials and fluids.  </Literal>
+  </Annotation>
+
+<Declaration><Class IRI='#FluidType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidType</IRI>
+  <Literal>FluidType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidType</IRI>
+  <Literal>Pumped fluid characteristic based on pick list choices. 
+
+Values are provided by the owner/purchaser.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidType.Newtonian' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidType.Newtonian</IRI>
+  <Literal>Newtonian</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidType.Newtonian</IRI>
+  <Literal>any fluid such that the viscous stresses that arise from its flow, at every point, are proportional to the local strain rate (the rate of change of its deformation over time).
+Source: An Introduction to Fluid Dynamics by G.K. Batchelor
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidType'/>
+  <NamedIndividual IRI='#FluidType.Newtonian'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidType.Non-Newtonian' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidType.Non-Newtonian</IRI>
+  <Literal>Non-Newtonian</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidType.Non-Newtonian</IRI>
+  <Literal>A non-Newtonian fluid is a fluid whose viscosity is variable based on applied stress or force. The most common everyday example of a non-Newtonian fluid is cornstarch dissolved in water. Behavior of Newtonian fluids like water can be described exclusively by temperature and pressure. However, the physical behavior of non-Newtonian fluid depends on the forces acting on it from second to second. 
+
+Source: General Electric Company
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidType'/>
+  <NamedIndividual IRI='#FluidType.Non-Newtonian'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidType.Plastic' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidType.Plastic</IRI>
+  <Literal>Plastic</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidType.Plastic</IRI>
+  <Literal>A substance whose viscosity increases with rate of shear. Dilatent fluids are solid or highly viscous when stirred, and fluid when undisturbed.
+
+Source: Wikipedia
+
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidType'/>
+  <NamedIndividual IRI='#FluidType.Plastic'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidType.Bingham_Plastic' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidType.Bingham_Plastic</IRI>
+  <Literal>Bingham_Plastic</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidType.Bingham_Plastic</IRI>
+  <Literal>A Bingham plastic is a viscoplastic material that behaves as a rigid body at low stresses but flows as a viscous fluid at high stress.
+
+Source: Wikipedia
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidType'/>
+  <NamedIndividual IRI='#FluidType.Bingham_Plastic'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidType.Pseudoplastic' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidType.Pseudoplastic</IRI>
+  <Literal>Pseudoplastic</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidType.Pseudoplastic</IRI>
+  <Literal>material where the viscosity decreases with increasing shear rate, such as polymer solutions and emulsions, coating dispersions, paints, adhesives, varnishes and resins.
+
+Source: SGIA.org
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidType'/>
+  <NamedIndividual IRI='#FluidType.Pseudoplastic'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidType.Thixotropic' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidType.Thixotropic</IRI>
+  <Literal>Thixotropic</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidType.Thixotropic</IRI>
+  <Literal>Certain gels or fluids that are thick (viscous) under normal conditions flow (become thin, less viscous) over time when shaken, agitated, or otherwise stressed.
+ 
+Source: Wikipedia
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidType'/>
+  <NamedIndividual IRI='#FluidType.Thixotropic'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#FluidType.Dilatant' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FluidType.Dilatant</IRI>
+  <Literal>Dilatant</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#FluidType.Dilatant</IRI>
+  <Literal>A substance whose viscosity increases with rate of shear. Dilatent fluids are solid or highly viscous when stirred, and fluid when undisturbed.
+
+Source: Wikipedia
+</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#FluidType'/>
+  <NamedIndividual IRI='#FluidType.Dilatant'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#FluidType.Newtonian'/>
+  <NamedIndividual IRI='#FluidType.Non-Newtonian'/>
+  <NamedIndividual IRI='#FluidType.Plastic'/>
+  <NamedIndividual IRI='#FluidType.Bingham_Plastic'/>
+  <NamedIndividual IRI='#FluidType.Pseudoplastic'/>
+  <NamedIndividual IRI='#FluidType.Thixotropic'/>
+  <NamedIndividual IRI='#FluidType.Dilatant'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#FluidType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#FluidType.Newtonian'/>
+    <NamedIndividual IRI='#FluidType.Non-Newtonian'/>
+    <NamedIndividual IRI='#FluidType.Plastic'/>
+    <NamedIndividual IRI='#FluidType.Bingham_Plastic'/>
+    <NamedIndividual IRI='#FluidType.Pseudoplastic'/>
+    <NamedIndividual IRI='#FluidType.Thixotropic'/>
+    <NamedIndividual IRI='#FluidType.Dilatant'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#CompositeMaterial' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CompositeMaterial</IRI>
+  <Literal>CompositeMaterial</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CompositeMaterial</IRI>
+  <Literal>A Material that is a composite of other Materials.
+
+Note:  It is only important to model a Material as composite when its composition is important.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#CompositeMaterial' />
+  <Class abbreviatedIRI='Materials:Material' />
+</SubClassOf>
+<Declaration><Class IRI='#Fluid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Fluid</IRI>
+  <Literal>Fluid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Fluid</IRI>
+  <Literal>A material/substance that is amorphous in structure and tends to flow or to conform to the outline of its container.
+a substance that is capable of flowing and that changes shape at a steady rate when acted on by a force that tends to change its shape.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Fluid</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Fluid</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS13051278</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Fluid' />
+  <Class abbreviatedIRI='Materials:Material' />
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#Fluid.abrasiveProperty' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Fluid.abrasiveProperty</IRI>
+  <Literal>Fluid.abrasiveProperty</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Fluid.abrasiveProperty</IRI>
+  <Literal>True if the fluid flow can damage equipment by mechanical means; else false.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Fluid.abrasiveProperty'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Fluid.abrasiveProperty'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:Fluid' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Fluid.abrasiveProperty' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#Fluid.corrosiveProperty' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Fluid.corrosiveProperty</IRI>
+  <Literal>Fluid.corrosiveProperty</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Fluid.corrosiveProperty</IRI>
+  <Literal>True if the fluid flow can damage equipment by chemical means; else false.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Fluid.corrosiveProperty'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Fluid.corrosiveProperty'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:Fluid' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Fluid.corrosiveProperty' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Fluid.density' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Fluid.density</IRI>
+  <Literal>Fluid.density</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Fluid.density</IRI>
+  <Literal>density of the Fluid at a reference temperature and pressure.
+&lt;p&gt;Out of context, the reference is standard temperature and pressure, i.e., 20 C and 1 atmosphere.&lt;/p&gt;</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Fluid.density'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Fluid.density'/>
+  <Class abbreviatedIRI='Quantities:Density' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:Fluid' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Fluid.density' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Fluid.fluidType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Fluid.fluidType</IRI>
+  <Literal>Fluid.fluidType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Fluid.fluidType</IRI>
+  <Literal>Pumped fluid characteristic based on pick list choices. Data to be provided by owner/purchaser.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Fluid.fluidType'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Fluid.fluidType'/>
+  <Class abbreviatedIRI='Materials:FluidType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:Fluid' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Fluid.fluidType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Fluid.specificGravity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Fluid.specificGravity</IRI>
+  <Literal>Fluid.specificGravity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Fluid.specificGravity</IRI>
+  <Literal>&lt;p&gt;specific gravity of the Fluid at a reference temperature and pressure.&lt;/p&gt;
+&lt;p&gt;Out of context, the reference is standard temperature and pressure, i.e., 20 C and 1 atmosphere.&lt;/p&gt;</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Fluid.specificGravity'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Fluid.specificGravity'/>
+  <Class abbreviatedIRI='Quantities:SpecificGravity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:Fluid' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Fluid.specificGravity' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Fluid.specificHeat' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Fluid.specificHeat</IRI>
+  <Literal>Fluid.specificHeat</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Fluid.specificHeat</IRI>
+  <Literal>&lt;p&gt;specific heat of the Fluid at a reference pressure.&lt;/p&gt;
+&lt;p&gt;Out of context, the reference pressure is 1 atmosphere.&lt;/p&gt;</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Fluid.specificHeat'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Fluid.specificHeat'/>
+  <Class abbreviatedIRI='Quantities:SpecificHeat' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:Fluid' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Fluid.specificHeat' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#Fluid.toxicProperty' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Fluid.toxicProperty</IRI>
+  <Literal>Fluid.toxicProperty</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Fluid.toxicProperty</IRI>
+  <Literal>True if Acute or chronic exposure to the fluid can cause physical harm to humans. 
+
+Note:  Any toxic material has an associated Materials Safety Data Sheet (MSDS) that specifies risk, required handling, and required protection for persons and possibly equipment.  The owner of a material is required to provide the MSDS information. 
+</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Fluid.toxicProperty'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Fluid.toxicProperty'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:Fluid' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Fluid.toxicProperty' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Fluid.viscosity' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Fluid.viscosity</IRI>
+  <Literal>Fluid.viscosity</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Fluid.viscosity</IRI>
+  <Literal>&lt;p&gt;viscosity of the Fluid at a reference temperature and pressure.  &lt;/p&gt;
+&lt;p&gt;Out of context, the reference is standard temperature and pressure, i.e., 20 C and 1 atmosphere.&lt;/p&gt;</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Fluid.viscosity'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Fluid.viscosity'/>
+  <Class abbreviatedIRI='Quantities:Viscosity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:Fluid' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Fluid.viscosity' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Material' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Material</IRI>
+  <Literal>Material</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Material</IRI>
+  <Literal>Any substance, but particularly a substance of which things of interest consist or are made. 
+
+Source: RDL </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Material</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Material</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS505139131</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#Material.description' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Material.description</IRI>
+  <Literal>Material.description</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Material.description</IRI>
+  <Literal>A general description of the Material, which may call out its special properties, non-quantifiable properties, or primary uses.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Material.description'/>
+  <Class abbreviatedIRI='Materials:Material' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Material.description'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+
+<Declaration><DataProperty IRI='#Material.name' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Material.name</IRI>
+  <Literal>Material.name</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Material.name</IRI>
+  <Literal>The common name for the Material.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Material.name'/>
+  <Class abbreviatedIRI='Materials:Material' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Material.name'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<Declaration><Class IRI='#MaterialComponent' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MaterialComponent</IRI>
+  <Literal>MaterialComponent</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MaterialComponent</IRI>
+  <Literal>the relationship between the composite material and one of its component materials; the characerization of the component Material as a component of the CompositeMaterial
+
+</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#MaterialComponent.description' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MaterialComponent.description</IRI>
+  <Literal>MaterialComponent.description</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MaterialComponent.description</IRI>
+  <Literal>important properties of the component Material as a component of the CompositeMaterial.
+
+Note: This is a stand-in for a proper model of the important properties of the relationship, such as the amount or concentration of the component material in the composite material.  Such properties are not addressed in detail in this specification.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#MaterialComponent.description'/>
+  <Class abbreviatedIRI='Materials:MaterialComponent' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#MaterialComponent.description'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:MaterialComponent' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#MaterialComponent.description' />
+  </DataMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#MaterialType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MaterialType</IRI>
+  <Literal>MaterialType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MaterialType</IRI>
+  <Literal>A specification that describes the applicable materials.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#MaterialType</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#MaterialType</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS329579</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#MaterialType' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#ProcessFluidStream' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream</IRI>
+  <Literal>ProcessFluidStream</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream</IRI>
+  <Literal>A fluid stream that is a ProcessMaterial for some process.  
+
+Source: JORD RDL as Process Item Fluid Stream
+
+Note:  ProcessFluidStream characterizes the state of the fluid being processed at some specific point in the process.  It usually describes the (expected and possible) states of the fluid at the inlet to the train/line element that is the physical realization of that point in the process.
+
+Note:  The characteristics of the ProcessFluidStream are almost always provided by the plant owner/operator.
+
+Note:  A ProcessFluidStream can be a CompositeMaterial.
+</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ProcessFluidStream</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ProcessFluidStream</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS14309798</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ProcessFluidStream' />
+  <Class abbreviatedIRI='Materials:ProcessMaterial' />
+</SubClassOf>
+<SubClassOf>
+  <Class IRI='#ProcessFluidStream' />
+  <Class abbreviatedIRI='Materials:Fluid' />
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#ProcessFluidStream.GasInFluidDescription' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.GasInFluidDescription</IRI>
+  <Literal>ProcessFluidStream.GasInFluidDescription</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.GasInFluidDescription</IRI>
+  <Literal>Text field describing the gas materials per unit weight of pumped fluid, the gas concentration by volume, the characteristics of solution and dissolution of the gas, and other relevant characteristics of the gas.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ProcessFluidStream.GasInFluidDescription'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ProcessFluidStream.GasInFluidDescription'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ProcessFluidStream.GasInFluidDescription' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#ProcessFluidStream.GasPresentInFluid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.GasPresentInFluid</IRI>
+  <Literal>ProcessFluidStream.GasPresentInFluid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.GasPresentInFluid</IRI>
+  <Literal>Indicates whether gases are present in the fluid (Y/N).  If Yes, describe the characteristics of the gases in the &quot;Gases in Fluid Description.&quot;</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ProcessFluidStream.GasPresentInFluid'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ProcessFluidStream.GasPresentInFluid'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ProcessFluidStream.GasPresentInFluid' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#ProcessFluidStream.SolidsInFluidDescription' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.SolidsInFluidDescription</IRI>
+  <Literal>ProcessFluidStream.SolidsInFluidDescription</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.SolidsInFluidDescription</IRI>
+  <Literal>Text field describing the solid materials per unit weight of pumped fluid, the solids concentration by volume, the minimum and maximum particle size or sphere size of the solid, the friability/attrition,  the solids hardness, or other relevant characteristics of the solids.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ProcessFluidStream.SolidsInFluidDescription'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ProcessFluidStream.SolidsInFluidDescription'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ProcessFluidStream.SolidsInFluidDescription' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#ProcessFluidStream.SolidsPresentInFluid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.SolidsPresentInFluid</IRI>
+  <Literal>ProcessFluidStream.SolidsPresentInFluid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.SolidsPresentInFluid</IRI>
+  <Literal>Indicates whether solids are present in the fluid (Y/N).  If Yes, describe the characteristics of the solids in the &quot;Solids in Fluid Description.&quot;
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ProcessFluidStream.SolidsPresentInFluid'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ProcessFluidStream.SolidsPresentInFluid'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ProcessFluidStream.SolidsPresentInFluid' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.SpecificGravityRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.SpecificGravityRange</IRI>
+  <Literal>ProcessFluidStream.SpecificGravityRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.SpecificGravityRange</IRI>
+  <Literal>The range of specific gravities of the ProcessFluid over the given Temperature and pressure range, where the nominal value is at the nominal temperature and pressure.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.SpecificGravityRange'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.SpecificGravityRange'/>
+  <Class abbreviatedIRI='Quantities:SpecificGravityRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.SpecificGravityRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.SpecificGravityRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.SpecificGravityRated</IRI>
+  <Literal>ProcessFluidStream.SpecificGravityRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.SpecificGravityRated</IRI>
+  <Literal>Specific gravity at the rated temperature
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.SpecificGravityRated'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.SpecificGravityRated'/>
+  <Class abbreviatedIRI='Quantities:SpecificGravity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.SpecificGravityRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.SpecificHeatRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.SpecificHeatRange</IRI>
+  <Literal>ProcessFluidStream.SpecificHeatRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.SpecificHeatRange</IRI>
+  <Literal>The range of specific heat of the process fluid over the specified range of temperatures and pressures.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.SpecificHeatRange'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.SpecificHeatRange'/>
+  <Class abbreviatedIRI='Quantities:SpecificHeatRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.SpecificHeatRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.SpecificHeatRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.SpecificHeatRated</IRI>
+  <Literal>ProcessFluidStream.SpecificHeatRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.SpecificHeatRated</IRI>
+  <Literal>The specific heat of the process fluid at the rated temperature and pressure.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.SpecificHeatRated'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.SpecificHeatRated'/>
+  <Class abbreviatedIRI='Quantities:SpecificHeat' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.SpecificHeatRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.TemperatureRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.TemperatureRange</IRI>
+  <Literal>ProcessFluidStream.TemperatureRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.TemperatureRange</IRI>
+  <Literal>The range of fluid temperatures to which the processing equipment may be exposed. 
+
+The temperature is to be provided by the owner.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.TemperatureRange'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.TemperatureRange'/>
+  <Class abbreviatedIRI='Quantities:TemperatureRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.TemperatureRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.TemperatureRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.TemperatureRated</IRI>
+  <Literal>ProcessFluidStream.TemperatureRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.TemperatureRated</IRI>
+  <Literal>The fluid temperature that corresponds with the rated conditions used to select the processing equipment.   Other rated fluid properties such as specific gravity, vapor pressure, and viscosity are determined at this temperature.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.TemperatureRated'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.TemperatureRated'/>
+  <Class abbreviatedIRI='Quantities:Temperature' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.TemperatureRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.VaporPressureRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.VaporPressureRange</IRI>
+  <Literal>ProcessFluidStream.VaporPressureRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.VaporPressureRange</IRI>
+  <Literal>Over the range of temperatures, the range of absolute pressures at which the liquid and its vapor are in equilibrium.
+
+Source: HI 3.3.9 - 2007
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.VaporPressureRange'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.VaporPressureRange'/>
+  <Class abbreviatedIRI='Quantities:PressureRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.VaporPressureRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.VaporPressureRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.VaporPressureRated</IRI>
+  <Literal>ProcessFluidStream.VaporPressureRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.VaporPressureRated</IRI>
+  <Literal>At the rated temperature, the absolute pressure at which the liquid and its vapor are in equilibrium   The data is provided by the purchaser/owner.  (HI 3.3.9 - 2007)
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.VaporPressureRated'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.VaporPressureRated'/>
+  <Class abbreviatedIRI='Quantities:Pressure' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.VaporPressureRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.ViscosityRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.ViscosityRange</IRI>
+  <Literal>ProcessFluidStream.ViscosityRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.ViscosityRange</IRI>
+  <Literal>The range of viscosities of the fluid over the given TemperatureRange, with the nominalViscosity at the nominalTemperature.
+
+&lt;note&gt; Note: For non-Newtonian fluids, an apparent viscosity is provided that often depends on the rate of shear.&lt;/note&gt;   
+
+Data is provided by the purchaser/owner.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.ViscosityRange'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.ViscosityRange'/>
+  <Class abbreviatedIRI='Quantities:ViscosityRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.ViscosityRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessFluidStream.ViscosityRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessFluidStream.ViscosityRated</IRI>
+  <Literal>ProcessFluidStream.ViscosityRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessFluidStream.ViscosityRated</IRI>
+  <Literal>The fluid viscosity that corresponds with the rated conditions used to select the processing equipment.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessFluidStream.ViscosityRated'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessFluidStream.ViscosityRated'/>
+  <Class abbreviatedIRI='Quantities:Viscosity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:ProcessFluidStream' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessFluidStream.ViscosityRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ProcessMaterial' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessMaterial</IRI>
+  <Literal>ProcessMaterial</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessMaterial</IRI>
+  <Literal>A/the material being processed through a process or the supporting system, usually with the intent of yielding some product.  Technically a ProcessMaterial is a role of the actual Material, but many of the specified characteristics of a ProcessMaterial depend on the model for the process that the material undergoes. </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ProcessMaterial</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ProcessMaterial</IRI>
+  <Literal>http://poscaesar.org/rdl/RDS13103201</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#ProcessMaterial</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ProcessMaterial' />
+  <Class abbreviatedIRI='Materials:Material' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#MaterialComponent.component' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MaterialComponent.component</IRI>
+  <Literal>MaterialComponent.component</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MaterialComponent.component</IRI>
+  <Literal>The Material that is this component of the CompositeMaterial</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#MaterialComponent.component'/>
+  <Class abbreviatedIRI='Materials:MaterialComponent' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#MaterialComponent.component'/>
+  <Class abbreviatedIRI='Materials:Material' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:MaterialComponent' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#MaterialComponent.component' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CompositeMaterial.component' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CompositeMaterial.component</IRI>
+  <Literal>CompositeMaterial.component</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CompositeMaterial.component</IRI>
+  <Literal>the relationship between the composite material and one of its component materials.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CompositeMaterial.component'/>
+  <Class abbreviatedIRI='Materials:CompositeMaterial' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CompositeMaterial.component'/>
+  <Class abbreviatedIRI='Materials:MaterialComponent' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:CompositeMaterial' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#CompositeMaterial.component' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Material.type' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Material.type</IRI>
+  <Literal>Material.type</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Material.type</IRI>
+  <Literal>a name or code that indicates the physical form and chemical nature of the Material, providing sufficient information about its properties to determine its suitability for the intended use.
+
+Source: RDL http://posccaesar.org/rdl/RDS329579</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Material.type'/>
+  <Class abbreviatedIRI='Materials:Material' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Material.type'/>
+  <Class abbreviatedIRI='Materials:MaterialType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Materials:Material' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Material.type' />
+  </ObjectExactCardinality>
+</SubClassOf>
+</Ontology>
+

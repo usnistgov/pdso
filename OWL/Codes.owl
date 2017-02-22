@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/Codes'
+  OntologyIRI='http://el.nist.gov/cre/pdso/Codes' >
+
+<Prefix name='Codes' IRI='http://el.nist.gov/cre/pdso/Codes#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+<Prefix name='ISO-15926' IRI='http://el.nist.gov/cre/pdso/ISO-15926#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+<Import>http://el.nist.gov/cre/pdso/ISO-15926</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>Codes</Literal>
+  </Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+    <Literal>The Codes model is a general model of datatypes whose values are taken from standard &amp;quot;code lists&amp;quot;, rather than explicitly enumerated in the UML/OWL model per se.
+Each code list is a set of verbatim character string values specified by some standard, or specified by some active registry that keeps the current list of admissible values and their meanings.
+So each Code value properly consists of two parts:  the string value of the code itself, and the identification of the standard or registry that defines the Code value.  In some cases of actual use, the specification for the data property whose value is the Code value will specify the standard or registry, and thus permit the standard/registry identifier to be omitted from the Code representation.
+A detailed proper model of Codes and Code registries is contained in ISO 11179 &amp;quot;Metadata registries&amp;quot;.
+</Literal>
+  </Annotation>
+
+<Declaration><Class IRI='#Code' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Code</IRI>
+  <Literal>Code</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Code</IRI>
+  <Literal>A term for some specific thing, or kind of thing, that is defined by a standard or by an industrial registry that specifies the acceptable terms for things of that kind.  A Code is a value taken from a standard &quot;code list&quot;.
+
+For example, a metal alloy Code is an identifier for a particular metal alloy.  In  the case of common metals and alloys that are widely available, the code terms are specified by a standard chemical/metals industry registry.  Specialized alloys are usually identified by the metals producer and his product code.
+
+The representation of a Code usually consists of the Code value and a RegistryId for the Registry that defines the Code.  In some cases, however, the Registry is implicit or specified for that usage of the Code, or explicit in the Code value itself.  
+ 
+An Internationalized Resource Identifier can be seen as representing a Code, in which the &quot;locator part&quot; is the RegistryId and the &quot;local part&quot; is the Code value.</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#Code.value' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Code.value</IRI>
+  <Literal>Code.value</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Code.value</IRI>
+  <Literal>The code value per se -- the unique identifier for the thing, that is defined in the standard or registry. </Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Code.value'/>
+  <Class abbreviatedIRI='Codes:Code' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Code.value'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:Code' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Code.value' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#CodeRegistry' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CodeRegistry</IRI>
+  <Literal>CodeRegistry</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CodeRegistry</IRI>
+  <Literal>The standard, publication, or database that contains and maintains one or more standard &quot;code lists.&quot;
+Example: The Dunn &amp; Bradstreet registry of business organizations.
+</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#CodeRegistry.name' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CodeRegistry.name</IRI>
+  <Literal>CodeRegistry.name</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CodeRegistry.name</IRI>
+  <Literal>the official formal name of the standard or registry.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#CodeRegistry.name'/>
+  <Class abbreviatedIRI='Codes:CodeRegistry' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#CodeRegistry.name'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:CodeRegistry' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#CodeRegistry.name' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Organization' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Organization</IRI>
+  <Literal>Organization</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Organization</IRI>
+  <Literal>&lt;p&gt;An [individual] that is composed of temporal parts of people and other assets, and are organised with a particular purpose.&lt;/p&gt;
+&lt;p&gt;Note: Company, government, and project team are subclasses of &apos;organization&apos;. &lt;/p&gt;
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Organization</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Organization</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS282149</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#Organization.name' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Organization.name</IRI>
+  <Literal>Organization.name</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Organization.name</IRI>
+  <Literal>An organization name string.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Organization.name'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Organization.name'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:Organization' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Organization.name' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#OrganizationId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#OrganizationId</IRI>
+  <Literal>OrganizationId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#OrganizationId</IRI>
+  <Literal>An &apos;identifier&apos; and a &apos;formatted string&apos; [a Code] that identifies an &apos;organization&apos;. 
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#OrganizationId</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#OrganizationId</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS1386499251</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#OrganizationId' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#RegistryId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RegistryId</IRI>
+  <Literal>RegistryId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#RegistryId</IRI>
+  <Literal>A Code that uniquely identifies a code registry. It may be the name or acryonym for a standard publication, the URI for a web-based registry, or a code in some catalog of registries.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#RegistryId' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#Standard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Standard</IRI>
+  <Literal>Standard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Standard</IRI>
+  <Literal>A published specification, adopted by industry convention, that specifies the required structure of an object or the proper conduct of an industry practice.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Standard</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Standard</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS329759</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#Standard.name' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Standard.name</IRI>
+  <Literal>Standard.name</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Standard.name</IRI>
+  <Literal>The formal title for the standard.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Standard.name'/>
+  <Class abbreviatedIRI='Codes:Standard' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Standard.name'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:Standard' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Standard.name' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#StandardId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#StandardId</IRI>
+  <Literal>StandardId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#StandardId</IRI>
+  <Literal>An identifier that uniquely identifies a published industry standard.
+
+The value is typically the code or publication number for the standard in the catalog of the SDO, and the registryId is a short designation for the SDO, such as &quot;ISO&quot; or &quot;API&quot;.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#StandardId' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#RegistryId.registry' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RegistryId.registry</IRI>
+  <Literal>RegistryId.registry</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#RegistryId.registry</IRI>
+  <Literal>The code registry identified by the RegistryId.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#RegistryId.registry'/>
+  <Class abbreviatedIRI='Codes:RegistryId' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#RegistryId.registry'/>
+  <Class abbreviatedIRI='Codes:CodeRegistry' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:RegistryId' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#RegistryId.registry' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CodeRegistry.id' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CodeRegistry.id</IRI>
+  <Literal>CodeRegistry.id</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CodeRegistry.id</IRI>
+  <Literal>a standard identifier for the CodeRegistry. 
+
+This is itself often a code from a code list used by a particular industry domain to identify reference standards and code list repositories.  A given registry can have multiple such identifiers in different code lists for different industries. 
+
+In some cases, the identifier for the CodeRegistry may be the identifier for the Standard or the Organization, when there is no choice of registry from that source, or the choice is implicit in the usage.
+
+Example:  In many industry usages, the Dunn &amp; Bradstreet registry is designated &quot;DUNS&quot;.  In the United Nations CEFACT registry of code registries, the Dunn &amp; Bradstreet registry is designated by code &quot;16&quot;.
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CodeRegistry.id'/>
+  <Class abbreviatedIRI='Codes:CodeRegistry' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CodeRegistry.id'/>
+  <Class abbreviatedIRI='Codes:RegistryId' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:CodeRegistry' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#CodeRegistry.id' />
+  </ObjectMinCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#RegistryId.registry' />
+  <ObjectProperty IRI='#CodeRegistry.id' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#Code.registry' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Code.registry</IRI>
+  <Literal>Code.registry</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Code.registry</IRI>
+  <Literal>The Registry in which the Code is defined.
+
+Some Code terms identify specific things within an organization and are implicitly understood by the organization members, even though there is no formal list or registry of these terms.  As used, the Code is nothing more than the &apos;value&apos;.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Code.registry'/>
+  <Class abbreviatedIRI='Codes:Code' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Code.registry'/>
+  <Class abbreviatedIRI='Codes:CodeRegistry' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:Code' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Code.registry' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CodeRegistry.registeredCode' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CodeRegistry.registeredCode</IRI>
+  <Literal>CodeRegistry.registeredCode</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CodeRegistry.registeredCode</IRI>
+  <Literal>the values in the &quot;code list&quot; in the registry. </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#CodeRegistry.registeredCode</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CodeRegistry.registeredCode'/>
+  <Class abbreviatedIRI='Codes:CodeRegistry' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CodeRegistry.registeredCode'/>
+  <Class abbreviatedIRI='Codes:Code' />
+</ObjectPropertyRange>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#Code.registry' />
+  <ObjectProperty IRI='#CodeRegistry.registeredCode' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#Organization.id' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Organization.id</IRI>
+  <Literal>Organization.id</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Organization.id</IRI>
+  <Literal>An organization identifer string, usually associated with some registry.
+
+Source: RDL</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Organization.id'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Organization.id'/>
+  <Class abbreviatedIRI='Codes:OrganizationId' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:Organization' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#Organization.id' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#OrganizationId.organization' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#OrganizationId.organization</IRI>
+  <Literal>OrganizationId.organization</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#OrganizationId.organization</IRI>
+  <Literal>The organization to which the OrganizationId refers</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#OrganizationId.organization'/>
+  <Class abbreviatedIRI='Codes:OrganizationId' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#OrganizationId.organization'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:OrganizationId' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#OrganizationId.organization' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#Organization.id' />
+  <ObjectProperty IRI='#OrganizationId.organization' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#CodeRegistry.maintainedBy' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CodeRegistry.maintainedBy</IRI>
+  <Literal>CodeRegistry.maintainedBy</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CodeRegistry.maintainedBy</IRI>
+  <Literal>the organization that maintains the registry</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CodeRegistry.maintainedBy'/>
+  <Class abbreviatedIRI='Codes:CodeRegistry' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CodeRegistry.maintainedBy'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:CodeRegistry' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CodeRegistry.maintainedBy' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Standard.sdo' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Standard.sdo</IRI>
+  <Literal>Standard.sdo</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Standard.sdo</IRI>
+  <Literal>The Standards Development Organization (SDO) that is responsible for publication and maintenance of the standard.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Standard.sdo'/>
+  <Class abbreviatedIRI='Codes:Standard' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Standard.sdo'/>
+  <Class abbreviatedIRI='Codes:Organization' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:Standard' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Standard.sdo' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CodeRegistry.definedByStandard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CodeRegistry.definedByStandard</IRI>
+  <Literal>CodeRegistry.definedByStandard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CodeRegistry.definedByStandard</IRI>
+  <Literal>the standard, if any, in which the CodeRegistry (code-list) is specified.
+
+In some cases, the purpose of the standard is to define the registry, and some representation of the identifier for the standard is the identifier for the registry.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CodeRegistry.definedByStandard'/>
+  <Class abbreviatedIRI='Codes:CodeRegistry' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CodeRegistry.definedByStandard'/>
+  <Class abbreviatedIRI='Codes:Standard' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:CodeRegistry' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#CodeRegistry.definedByStandard' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Standard.code-lists' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Standard.code-lists</IRI>
+  <Literal>Standard.code-lists</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Standard.code-lists</IRI>
+  <Literal>The set of code lists defined by or in the Standard.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Standard.code-lists'/>
+  <Class abbreviatedIRI='Codes:Standard' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Standard.code-lists'/>
+  <Class abbreviatedIRI='Codes:CodeRegistry' />
+</ObjectPropertyRange>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#CodeRegistry.definedByStandard' />
+  <ObjectProperty IRI='#Standard.code-lists' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#StandardId.identifiedStandard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#StandardId.identifiedStandard</IRI>
+  <Literal>StandardId.identifiedStandard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#StandardId.identifiedStandard</IRI>
+  <Literal>the industry standard that the StandardId identifies</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#StandardId.identifiedStandard'/>
+  <Class abbreviatedIRI='Codes:StandardId' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#StandardId.identifiedStandard'/>
+  <Class abbreviatedIRI='Codes:Standard' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:StandardId' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#StandardId.identifiedStandard' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Standard.id' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Standard.id</IRI>
+  <Literal>Standard.id</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Standard.id</IRI>
+  <Literal>a formal identifier for the standard, in the form of a registered code.  </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Standard.id'/>
+  <Class abbreviatedIRI='Codes:Standard' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Standard.id'/>
+  <Class abbreviatedIRI='Codes:StandardId' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Codes:Standard' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#Standard.id' />
+  </ObjectMinCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#StandardId.identifiedStandard' />
+  <ObjectProperty IRI='#Standard.id' />
+</InverseObjectProperties>
+</Ontology>
+

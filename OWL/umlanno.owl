@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<Ontology xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.w3.org/2002/07/owl#    http://www.w3.org/2009/09/owl2-xml.xsd"
+          xmlns="http://www.w3.org/2002/07/owl#"
+          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+          xml:base="http://el.nist.gov/cre/pdso/umlanno"
+          OntologyIRI="http://el.nist.gov/cre/pdso/umlanno">
+
+  <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+  <Prefix name="xsd"  IRI="http://www.w3.org/2001/XMLSchema#"/>
+
+  <Annotation><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+   <Literal>Author: Ed Barkmeyer, NIST, August, 2013</Literal></Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <Literal>UML Annotations for OWL</Literal>
+  </Annotation>
+
+<Declaration><AnnotationProperty IRI="#isAbstract"/></Declaration>
+<AnnotationAssertion>
+  <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+  <IRI>#isAbstract</IRI>
+  <Literal>is Abstract</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+  <IRI>#isAbstract</IRI>
+  <Literal>isAbstract = true if every instance of the class or property is an instance of some subClass or subProperty</Literal>
+</AnnotationAssertion>
+
+<Declaration><AnnotationProperty IRI="#isDerived"/></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/>
+  <IRI>#isDerived</IRI>
+  <Literal>is Derived</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+  <IRI>#isDerived</IRI>
+  <Literal>isDerived = true if the property can be defined as a path using other properties</Literal>
+</AnnotationAssertion>
+
+<Declaration><AnnotationProperty IRI="#isComposite"/></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/>
+  <IRI>#isComposite</IRI>
+  <Literal>is Composite</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+  <IRI>#isComposite</IRI>
+  <Literal>isComposite = true if the property is a whole/part relationship</Literal>
+</AnnotationAssertion>
+
+<Declaration><AnnotationProperty IRI="#isAggregate"/></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/>
+  <IRI>#isAggregate</IRI>
+  <Literal>is Aggregate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+  <IRI>#isAggregate</IRI>
+  <Literal>isAggregate = true if the property is a collection/member relationship</Literal>
+</AnnotationAssertion>
+
+<Declaration><AnnotationProperty IRI="#objectifiedProperty"/></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/>
+  <IRI>#objectifiedProperty</IRI>
+  <Literal>objectified property</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+  <IRI>#objectifiedProperty</IRI>
+  <Literal>objectifiedProperty = true if the class represents a relationship, usually with more than 2 roles</Literal>
+</AnnotationAssertion>
+
+<Declaration><AnnotationProperty IRI="#restricts"/></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/>
+  <IRI>#restricts</IRI>
+  <Literal>restricts</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+  <IRI>#restricts</IRI>
+  <Literal>the subject datatype is a (informally specified) restriction/subtype of the object datatype</Literal>
+</AnnotationAssertion>
+
+<Declaration><AnnotationProperty IRI="#representedBy"/></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/>
+  <IRI>#representedBy</IRI>
+  <Literal>is represented by</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+  <IRI>#representedBy</IRI>
+  <Literal>instances of the subject class are represented by values of the object datatype</Literal>
+</AnnotationAssertion>
+
+<Declaration><AnnotationProperty IRI="#dependencyOn"/></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/>
+  <IRI>#dependencyOn</IRI>
+  <Literal>depends on</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+  <IRI>#dependencyOn</IRI>
+  <Literal>the UML model shows a nameless dependency between the subject and the object</Literal>
+</AnnotationAssertion>
+
+<Declaration><AnnotationProperty IRI="#constraint"/></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/>
+  <IRI>#constraint</IRI>
+  <Literal>has constraint</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+  <IRI>#constraint</IRI>
+  <Literal>the object is the text (in some language) of a rule/axiom that constrains the subject</Literal>
+</AnnotationAssertion>
+
+</Ontology>

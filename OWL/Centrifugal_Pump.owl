@@ -1,0 +1,4470 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/Centrifugal_Pump'
+  OntologyIRI='http://el.nist.gov/cre/pdso/Centrifugal_Pump' >
+
+<Prefix name='Centrifugal_Pump' IRI='http://el.nist.gov/cre/pdso/Centrifugal_Pump#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+<Prefix name='ISO-15926' IRI='http://el.nist.gov/cre/pdso/ISO-15926#'/>
+<Prefix name='General' IRI='http://el.nist.gov/cre/pdso/General#'/>
+<Prefix name='ShaftSeals' IRI='http://el.nist.gov/cre/pdso/ShaftSeals#'/>
+<Prefix name='Quantities' IRI='http://el.nist.gov/cre/pdso/Quantities#'/>
+<Prefix name='Materials' IRI='http://el.nist.gov/cre/pdso/Materials#'/>
+<Prefix name='Codes' IRI='http://el.nist.gov/cre/pdso/Codes#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+<Import>http://el.nist.gov/cre/pdso/ISO-15926</Import>
+<Import>http://el.nist.gov/cre/pdso/General</Import>
+<Import>http://el.nist.gov/cre/pdso/ShaftSeals</Import>
+<Import>http://el.nist.gov/cre/pdso/Quantities</Import>
+<Import>http://el.nist.gov/cre/pdso/Materials</Import>
+<Import>http://el.nist.gov/cre/pdso/Codes</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>Centrifugal_Pump</Literal>
+  </Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+    <Literal>This module models the specific properties of a centrifugal pump and its components, as they may appear in a product data sheet for a design element or in a manufacturer&amp;apos;s specification. </Literal>
+  </Annotation>
+
+<Declaration><Class IRI='#BaseplateMounting' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting</IRI>
+  <Literal>BaseplateMounting</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#BaseplateMounting</IRI>
+  <Literal>Information from HI EDE 50.7.</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#BaseplateMounting.Bolted_on_steelwork' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting.Bolted_on_steelwork</IRI>
+  <Literal>Bolted_on_steelwork</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BaseplateMounting'/>
+  <NamedIndividual IRI='#BaseplateMounting.Bolted_on_steelwork'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BaseplateMounting.Freestanding' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting.Freestanding</IRI>
+  <Literal>Freestanding</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BaseplateMounting'/>
+  <NamedIndividual IRI='#BaseplateMounting.Freestanding'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BaseplateMounting.Freestanding_-_3_pt' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting.Freestanding_-_3_pt</IRI>
+  <Literal>Freestanding_-_3_pt</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BaseplateMounting'/>
+  <NamedIndividual IRI='#BaseplateMounting.Freestanding_-_3_pt'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BaseplateMounting.Freestanding_-_4_pt' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting.Freestanding_-_4_pt</IRI>
+  <Literal>Freestanding_-_4_pt</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BaseplateMounting'/>
+  <NamedIndividual IRI='#BaseplateMounting.Freestanding_-_4_pt'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BaseplateMounting.Freestanding_-_stilt' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting.Freestanding_-_stilt</IRI>
+  <Literal>Freestanding_-_stilt</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BaseplateMounting'/>
+  <NamedIndividual IRI='#BaseplateMounting.Freestanding_-_stilt'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BaseplateMounting.Grouted' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting.Grouted</IRI>
+  <Literal>Grouted</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BaseplateMounting'/>
+  <NamedIndividual IRI='#BaseplateMounting.Grouted'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BaseplateMounting.Grouted_-_epoxy' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting.Grouted_-_epoxy</IRI>
+  <Literal>Grouted_-_epoxy</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BaseplateMounting'/>
+  <NamedIndividual IRI='#BaseplateMounting.Grouted_-_epoxy'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BaseplateMounting.Grouted_-_modified_regular' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting.Grouted_-_modified_regular</IRI>
+  <Literal>Grouted_-_modified_regular</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BaseplateMounting'/>
+  <NamedIndividual IRI='#BaseplateMounting.Grouted_-_modified_regular'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BaseplateMounting.Grouted_-_regular' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BaseplateMounting.Grouted_-_regular</IRI>
+  <Literal>Grouted_-_regular</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BaseplateMounting'/>
+  <NamedIndividual IRI='#BaseplateMounting.Grouted_-_regular'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#BaseplateMounting.Bolted_on_steelwork'/>
+  <NamedIndividual IRI='#BaseplateMounting.Freestanding'/>
+  <NamedIndividual IRI='#BaseplateMounting.Freestanding_-_3_pt'/>
+  <NamedIndividual IRI='#BaseplateMounting.Freestanding_-_4_pt'/>
+  <NamedIndividual IRI='#BaseplateMounting.Freestanding_-_stilt'/>
+  <NamedIndividual IRI='#BaseplateMounting.Grouted'/>
+  <NamedIndividual IRI='#BaseplateMounting.Grouted_-_epoxy'/>
+  <NamedIndividual IRI='#BaseplateMounting.Grouted_-_modified_regular'/>
+  <NamedIndividual IRI='#BaseplateMounting.Grouted_-_regular'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#BaseplateMounting' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#BaseplateMounting.Bolted_on_steelwork'/>
+    <NamedIndividual IRI='#BaseplateMounting.Freestanding'/>
+    <NamedIndividual IRI='#BaseplateMounting.Freestanding_-_3_pt'/>
+    <NamedIndividual IRI='#BaseplateMounting.Freestanding_-_4_pt'/>
+    <NamedIndividual IRI='#BaseplateMounting.Freestanding_-_stilt'/>
+    <NamedIndividual IRI='#BaseplateMounting.Grouted'/>
+    <NamedIndividual IRI='#BaseplateMounting.Grouted_-_epoxy'/>
+    <NamedIndividual IRI='#BaseplateMounting.Grouted_-_modified_regular'/>
+    <NamedIndividual IRI='#BaseplateMounting.Grouted_-_regular'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#BearingStructure' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BearingStructure</IRI>
+  <Literal>BearingStructure</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#BearingStructure</IRI>
+  <Literal>The physical shape of the structural mechanism that maintains the shaft position and enables rotation</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#BearingStructure.Ball' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BearingStructure.Ball</IRI>
+  <Literal>Ball</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#BearingStructure.Ball</IRI>
+  <Literal>The bearing structure consists of spherical (ball) bearings in a race</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BearingStructure'/>
+  <NamedIndividual IRI='#BearingStructure.Ball'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BearingStructure.Roller' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BearingStructure.Roller</IRI>
+  <Literal>Roller</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#BearingStructure.Roller</IRI>
+  <Literal>The bearing structure consists of cylindrical (roller) bearings between the shaft and the bearing sleeve</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BearingStructure'/>
+  <NamedIndividual IRI='#BearingStructure.Roller'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BearingStructure.Sleeve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BearingStructure.Sleeve</IRI>
+  <Literal>Sleeve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#BearingStructure.Sleeve</IRI>
+  <Literal>A sleeve bearing, also called a plain bearing or solid bearing, is a hollow cylinder (or other bearing surface) within which the rotating shaft slides freely.  A shaft sleeve itself may function as a sleeve bearing.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BearingStructure'/>
+  <NamedIndividual IRI='#BearingStructure.Sleeve'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BearingStructure.TiltPad' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BearingStructure.TiltPad</IRI>
+  <Literal>TiltPad</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#BearingStructure.TiltPad</IRI>
+  <Literal>A tilt pad bearing is a fluid film bearing involving a ring of pads between the bearing sleeve and the rotating shaft that maintains fluid pressure against the rotating shaft.  The pads rotate freely on loaded pivots in the sleeve, allowing them to maintain local equilibrium, which improves stability and dissipates heat. </Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BearingStructure'/>
+  <NamedIndividual IRI='#BearingStructure.TiltPad'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BearingStructure.Other' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BearingStructure.Other</IRI>
+  <Literal>Other</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#BearingStructure.Other</IRI>
+  <Literal>An unusual bearing structure that is separately described.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BearingStructure'/>
+  <NamedIndividual IRI='#BearingStructure.Other'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#BearingStructure.Ball'/>
+  <NamedIndividual IRI='#BearingStructure.Roller'/>
+  <NamedIndividual IRI='#BearingStructure.Sleeve'/>
+  <NamedIndividual IRI='#BearingStructure.TiltPad'/>
+  <NamedIndividual IRI='#BearingStructure.Other'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#BearingStructure' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#BearingStructure.Ball'/>
+    <NamedIndividual IRI='#BearingStructure.Roller'/>
+    <NamedIndividual IRI='#BearingStructure.Sleeve'/>
+    <NamedIndividual IRI='#BearingStructure.TiltPad'/>
+    <NamedIndividual IRI='#BearingStructure.Other'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#BearingType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BearingType</IRI>
+  <Literal>BearingType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#BearingType</IRI>
+  <Literal>The operating principle on which the bearing(s) supporting the radial loads operate.  This may be specified by the owner, based on preference or operating history. If blank, supplier should indicate the type of radial bearing which is intended to be used.
+
+The operating principle on which the bearing(s) supporting axial or thrust loads operate.  This may be specified by the owner, based on preference or operating history. If blank, supplier should indicate the type of thrust bearing which is intended to be used.
+
+For either radial or thrust their subtype can be one of these:
+Ball; Roller; Sleeve; Tilt Pad; Other; Unspecified
+
+Source: HI EDE 50.7
+
+</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#BearingType.Radial' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BearingType.Radial</IRI>
+  <Literal>Radial</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BearingType'/>
+  <NamedIndividual IRI='#BearingType.Radial'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#BearingType.Thrust' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#BearingType.Thrust</IRI>
+  <Literal>Thrust</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#BearingType'/>
+  <NamedIndividual IRI='#BearingType.Thrust'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#BearingType.Radial'/>
+  <NamedIndividual IRI='#BearingType.Thrust'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#BearingType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#BearingType.Radial'/>
+    <NamedIndividual IRI='#BearingType.Thrust'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#CasingMounting' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingMounting</IRI>
+  <Literal>CasingMounting</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CasingMounting</IRI>
+  <Literal>Classes of pump casings classified after the way a pump casing is designed with regards to how it shall be mounted on to a fundament.
+
+Source:Industry Pump data sheet.</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#CasingMounting.Foot' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingMounting.Foot</IRI>
+  <Literal>Foot</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CasingMounting'/>
+  <NamedIndividual IRI='#CasingMounting.Foot'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CasingMounting.Vertical_Inline' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingMounting.Vertical_Inline</IRI>
+  <Literal>Vertical_Inline</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CasingMounting'/>
+  <NamedIndividual IRI='#CasingMounting.Vertical_Inline'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CasingMounting.Centerline' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingMounting.Centerline</IRI>
+  <Literal>Centerline</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CasingMounting'/>
+  <NamedIndividual IRI='#CasingMounting.Centerline'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CasingMounting.Close-Coupled' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingMounting.Close-Coupled</IRI>
+  <Literal>Close-Coupled</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CasingMounting'/>
+  <NamedIndividual IRI='#CasingMounting.Close-Coupled'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#CasingMounting.Foot'/>
+  <NamedIndividual IRI='#CasingMounting.Vertical_Inline'/>
+  <NamedIndividual IRI='#CasingMounting.Centerline'/>
+  <NamedIndividual IRI='#CasingMounting.Close-Coupled'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#CasingMounting' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#CasingMounting.Foot'/>
+    <NamedIndividual IRI='#CasingMounting.Vertical_Inline'/>
+    <NamedIndividual IRI='#CasingMounting.Centerline'/>
+    <NamedIndividual IRI='#CasingMounting.Close-Coupled'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#CasingType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingType</IRI>
+  <Literal>CasingType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CasingType</IRI>
+  <Literal>The general structural shape of a pump casing 
+
+Source: Perry&apos;s Chemical Engineering Handbook 10-24
+</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#CasingType.Circular_Casing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingType.Circular_Casing</IRI>
+  <Literal>Circular_Casing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CasingType.Circular_Casing</IRI>
+  <Literal>Consisting of an annular chamber around the impeller; no attempt is made to overcome the losses that will arise from eddies and shock when the liquid leaving the impeller at relatively high velocities enters this chamber. Such casings are seldom used. (Perry&apos;s Chemical Engineering Handbook, Seventh Edition, 10-24)</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CasingType'/>
+  <NamedIndividual IRI='#CasingType.Circular_Casing'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CasingType.Volute_Casing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingType.Volute_Casing</IRI>
+  <Literal>Volute_Casing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CasingType.Volute_Casing</IRI>
+  <Literal>Take the form of a spiral increasing uniformly in cross-sectional area as the outlet is approached. The volute efficiently converts the velocity energy imparted to the liquid by the impeller into pressure energy.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CasingType'/>
+  <NamedIndividual IRI='#CasingType.Volute_Casing'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CasingType.Diffuser_Type' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingType.Diffuser_Type</IRI>
+  <Literal>Diffuser_Type</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CasingType.Diffuser_Type</IRI>
+  <Literal>In this type, guide vanes or diffusers are interposed between the impeller discharge and the casing chamber. Losses are kept to a minimum in a well-designed pump of this type, and improved efficiency is obtained over a wider range of capacities. This construction is often used in multistage high-head pumps. (Perry&apos;s Chemical Engineering Handbook, Seventh Edition, 10-24)</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CasingType'/>
+  <NamedIndividual IRI='#CasingType.Diffuser_Type'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#CasingType.Circular_Casing'/>
+  <NamedIndividual IRI='#CasingType.Volute_Casing'/>
+  <NamedIndividual IRI='#CasingType.Diffuser_Type'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#CasingType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#CasingType.Circular_Casing'/>
+    <NamedIndividual IRI='#CasingType.Volute_Casing'/>
+    <NamedIndividual IRI='#CasingType.Diffuser_Type'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#Controller_Type' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Controller_Type</IRI>
+  <Literal>Controller_Type</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#Controller_Type.AdjustableSpeedDrive' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Controller_Type.AdjustableSpeedDrive</IRI>
+  <Literal>AdjustableSpeedDrive</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#Controller_Type'/>
+  <NamedIndividual IRI='#Controller_Type.AdjustableSpeedDrive'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#Controller_Type.Throttled' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Controller_Type.Throttled</IRI>
+  <Literal>Throttled</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#Controller_Type'/>
+  <NamedIndividual IRI='#Controller_Type.Throttled'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#Controller_Type.Bypass_Re-circ' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Controller_Type.Bypass_Re-circ</IRI>
+  <Literal>Bypass_Re-circ</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#Controller_Type'/>
+  <NamedIndividual IRI='#Controller_Type.Bypass_Re-circ'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#Controller_Type.On_Off' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Controller_Type.On_Off</IRI>
+  <Literal>On_Off</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#Controller_Type'/>
+  <NamedIndividual IRI='#Controller_Type.On_Off'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#Controller_Type.SplitDuty' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Controller_Type.SplitDuty</IRI>
+  <Literal>SplitDuty</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#Controller_Type'/>
+  <NamedIndividual IRI='#Controller_Type.SplitDuty'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#Controller_Type.NotControlled' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Controller_Type.NotControlled</IRI>
+  <Literal>NotControlled</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#Controller_Type'/>
+  <NamedIndividual IRI='#Controller_Type.NotControlled'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#Controller_Type.AdjustableSpeedDrive'/>
+  <NamedIndividual IRI='#Controller_Type.Throttled'/>
+  <NamedIndividual IRI='#Controller_Type.Bypass_Re-circ'/>
+  <NamedIndividual IRI='#Controller_Type.On_Off'/>
+  <NamedIndividual IRI='#Controller_Type.SplitDuty'/>
+  <NamedIndividual IRI='#Controller_Type.NotControlled'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#Controller_Type' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#Controller_Type.AdjustableSpeedDrive'/>
+    <NamedIndividual IRI='#Controller_Type.Throttled'/>
+    <NamedIndividual IRI='#Controller_Type.Bypass_Re-circ'/>
+    <NamedIndividual IRI='#Controller_Type.On_Off'/>
+    <NamedIndividual IRI='#Controller_Type.SplitDuty'/>
+    <NamedIndividual IRI='#Controller_Type.NotControlled'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#CouplingType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CouplingType</IRI>
+  <Literal>CouplingType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CouplingType</IRI>
+  <Literal>Types of connectors.</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#CouplingType.BalanceCoupling' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CouplingType.BalanceCoupling</IRI>
+  <Literal>BalanceCoupling</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CouplingType'/>
+  <NamedIndividual IRI='#CouplingType.BalanceCoupling'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CouplingType.DiskPackCoupling' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CouplingType.DiskPackCoupling</IRI>
+  <Literal>DiskPackCoupling</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CouplingType'/>
+  <NamedIndividual IRI='#CouplingType.DiskPackCoupling'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CouplingType.ElastomericCoupling' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CouplingType.ElastomericCoupling</IRI>
+  <Literal>ElastomericCoupling</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CouplingType'/>
+  <NamedIndividual IRI='#CouplingType.ElastomericCoupling'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CouplingType.PinDriveCoupling' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CouplingType.PinDriveCoupling</IRI>
+  <Literal>PinDriveCoupling</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CouplingType'/>
+  <NamedIndividual IRI='#CouplingType.PinDriveCoupling'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CouplingType.SpacerCoupling' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CouplingType.SpacerCoupling</IRI>
+  <Literal>SpacerCoupling</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CouplingType'/>
+  <NamedIndividual IRI='#CouplingType.SpacerCoupling'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#CouplingType.GearCoupling' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CouplingType.GearCoupling</IRI>
+  <Literal>GearCoupling</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CouplingType.GearCoupling</IRI>
+  <Literal>A mechanical device for transmitting torque between two shafts that are not collinear. It consists of a flexible joint fixed to each shaft. The two joints are connected by a third shaft, called the spindle.
+
+Source:  (Wikipedia n.d.)
+
+A mechanical contact coupling designed to transmit torque and accommodate misalignment and axial displacement by relative rocking and sliding motion between mating internal and external profiled gears.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#CouplingType'/>
+  <NamedIndividual IRI='#CouplingType.GearCoupling'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#CouplingType.BalanceCoupling'/>
+  <NamedIndividual IRI='#CouplingType.DiskPackCoupling'/>
+  <NamedIndividual IRI='#CouplingType.ElastomericCoupling'/>
+  <NamedIndividual IRI='#CouplingType.PinDriveCoupling'/>
+  <NamedIndividual IRI='#CouplingType.SpacerCoupling'/>
+  <NamedIndividual IRI='#CouplingType.GearCoupling'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#CouplingType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#CouplingType.BalanceCoupling'/>
+    <NamedIndividual IRI='#CouplingType.DiskPackCoupling'/>
+    <NamedIndividual IRI='#CouplingType.ElastomericCoupling'/>
+    <NamedIndividual IRI='#CouplingType.PinDriveCoupling'/>
+    <NamedIndividual IRI='#CouplingType.SpacerCoupling'/>
+    <NamedIndividual IRI='#CouplingType.GearCoupling'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#DutyCycle' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DutyCycle</IRI>
+  <Literal>DutyCycle</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#DutyCycle.Continuous' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DutyCycle.Continuous</IRI>
+  <Literal>Continuous</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#DutyCycle'/>
+  <NamedIndividual IRI='#DutyCycle.Continuous'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#DutyCycle.Intermittent' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DutyCycle.Intermittent</IRI>
+  <Literal>Intermittent</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#DutyCycle'/>
+  <NamedIndividual IRI='#DutyCycle.Intermittent'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#DutyCycle.Standby' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DutyCycle.Standby</IRI>
+  <Literal>Standby</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#DutyCycle'/>
+  <NamedIndividual IRI='#DutyCycle.Standby'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#DutyCycle.Continuous'/>
+  <NamedIndividual IRI='#DutyCycle.Intermittent'/>
+  <NamedIndividual IRI='#DutyCycle.Standby'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#DutyCycle' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#DutyCycle.Continuous'/>
+    <NamedIndividual IRI='#DutyCycle.Intermittent'/>
+    <NamedIndividual IRI='#DutyCycle.Standby'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#EnclosureType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#EnclosureType</IRI>
+  <Literal>EnclosureType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#EnclosureType</IRI>
+  <Literal>&lt;p&gt;A classification of impellers by the physical structure that guides the fluid. &lt;/p&gt;
+&lt;p&gt;Source: Applied Process Design&lt;/p&gt;
+</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#EnclosureType.Fully_Enclosed' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#EnclosureType.Fully_Enclosed</IRI>
+  <Literal>Fully_Enclosed</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#EnclosureType.Fully_Enclosed</IRI>
+  <Literal>Used for high head, high pressure applications. (Applied Process Design, pg. 164)</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#EnclosureType'/>
+  <NamedIndividual IRI='#EnclosureType.Fully_Enclosed'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#EnclosureType.Open' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#EnclosureType.Open</IRI>
+  <Literal>Open</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#EnclosureType.Open</IRI>
+  <Literal>Used for low heads, suspended solids applications, very small flows. (Applied Process Design, pg. 164)</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#EnclosureType'/>
+  <NamedIndividual IRI='#EnclosureType.Open'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#EnclosureType.Semi_Enclosed' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#EnclosureType.Semi_Enclosed</IRI>
+  <Literal>Semi_Enclosed</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#EnclosureType.Semi_Enclosed</IRI>
+  <Literal>Used for general purpose applications, has open vane tips at entrance to break up suspended particles and prevent clogging. (Applied Process Design, pg. 164)</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#EnclosureType'/>
+  <NamedIndividual IRI='#EnclosureType.Semi_Enclosed'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#EnclosureType.Radial' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#EnclosureType.Radial</IRI>
+  <Literal>Radial</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#EnclosureType.Radial</IRI>
+  <Literal>Does not require close running clearances, it eliminates the necessity for oversizing to compensate for performance deterioration common to conventional pumps.
+
+Source: Applied Process Design by Ernest E. Ludwig</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#EnclosureType'/>
+  <NamedIndividual IRI='#EnclosureType.Radial'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#EnclosureType.Fully_Enclosed'/>
+  <NamedIndividual IRI='#EnclosureType.Open'/>
+  <NamedIndividual IRI='#EnclosureType.Semi_Enclosed'/>
+  <NamedIndividual IRI='#EnclosureType.Radial'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#EnclosureType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#EnclosureType.Fully_Enclosed'/>
+    <NamedIndividual IRI='#EnclosureType.Open'/>
+    <NamedIndividual IRI='#EnclosureType.Semi_Enclosed'/>
+    <NamedIndividual IRI='#EnclosureType.Radial'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#HousingSealType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HousingSealType</IRI>
+  <Literal>HousingSealType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HousingSealType</IRI>
+  <Literal>A designation of which type of bearing housing seal is required.  This may be specified by the owner, based on preference or operating history. If blank, supplier should indicate the type of bearing cover seal which is intended to be used.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#HousingSealType.Deflector' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HousingSealType.Deflector</IRI>
+  <Literal>Deflector</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#HousingSealType'/>
+  <NamedIndividual IRI='#HousingSealType.Deflector'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#HousingSealType.Isolator' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HousingSealType.Isolator</IRI>
+  <Literal>Isolator</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#HousingSealType'/>
+  <NamedIndividual IRI='#HousingSealType.Isolator'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#HousingSealType.Lipseal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HousingSealType.Lipseal</IRI>
+  <Literal>Lipseal</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#HousingSealType'/>
+  <NamedIndividual IRI='#HousingSealType.Lipseal'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#HousingSealType.Purge_Oil_Mist' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HousingSealType.Purge_Oil_Mist</IRI>
+  <Literal>Purge_Oil_Mist</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#HousingSealType'/>
+  <NamedIndividual IRI='#HousingSealType.Purge_Oil_Mist'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#HousingSealType.Pure_Oil_Mist' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HousingSealType.Pure_Oil_Mist</IRI>
+  <Literal>Pure_Oil_Mist</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#HousingSealType'/>
+  <NamedIndividual IRI='#HousingSealType.Pure_Oil_Mist'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#HousingSealType.Deflector'/>
+  <NamedIndividual IRI='#HousingSealType.Isolator'/>
+  <NamedIndividual IRI='#HousingSealType.Lipseal'/>
+  <NamedIndividual IRI='#HousingSealType.Purge_Oil_Mist'/>
+  <NamedIndividual IRI='#HousingSealType.Pure_Oil_Mist'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#HousingSealType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#HousingSealType.Deflector'/>
+    <NamedIndividual IRI='#HousingSealType.Isolator'/>
+    <NamedIndividual IRI='#HousingSealType.Lipseal'/>
+    <NamedIndividual IRI='#HousingSealType.Purge_Oil_Mist'/>
+    <NamedIndividual IRI='#HousingSealType.Pure_Oil_Mist'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#LubricationType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LubricationType</IRI>
+  <Literal>LubricationType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#LubricationType</IRI>
+  <Literal>A designation of the lubrication system type. This item can be specified by the  owner, but usually by supplier depending on pump design.
+
+Soure: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#LubricationType.Grease' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LubricationType.Grease</IRI>
+  <Literal>Grease</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#LubricationType'/>
+  <NamedIndividual IRI='#LubricationType.Grease'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#LubricationType.Flood' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LubricationType.Flood</IRI>
+  <Literal>Flood</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#LubricationType'/>
+  <NamedIndividual IRI='#LubricationType.Flood'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#LubricationType.Ring_Oil' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LubricationType.Ring_Oil</IRI>
+  <Literal>Ring_Oil</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#LubricationType'/>
+  <NamedIndividual IRI='#LubricationType.Ring_Oil'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#LubricationType.Pressure_Lube' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LubricationType.Pressure_Lube</IRI>
+  <Literal>Pressure_Lube</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#LubricationType'/>
+  <NamedIndividual IRI='#LubricationType.Pressure_Lube'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#LubricationType.Purge_Oil_Mist' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LubricationType.Purge_Oil_Mist</IRI>
+  <Literal>Purge_Oil_Mist</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#LubricationType'/>
+  <NamedIndividual IRI='#LubricationType.Purge_Oil_Mist'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#LubricationType.Pure_Oil_Mist' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LubricationType.Pure_Oil_Mist</IRI>
+  <Literal>Pure_Oil_Mist</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#LubricationType'/>
+  <NamedIndividual IRI='#LubricationType.Pure_Oil_Mist'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#LubricationType.Grease'/>
+  <NamedIndividual IRI='#LubricationType.Flood'/>
+  <NamedIndividual IRI='#LubricationType.Ring_Oil'/>
+  <NamedIndividual IRI='#LubricationType.Pressure_Lube'/>
+  <NamedIndividual IRI='#LubricationType.Purge_Oil_Mist'/>
+  <NamedIndividual IRI='#LubricationType.Pure_Oil_Mist'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#LubricationType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#LubricationType.Grease'/>
+    <NamedIndividual IRI='#LubricationType.Flood'/>
+    <NamedIndividual IRI='#LubricationType.Ring_Oil'/>
+    <NamedIndividual IRI='#LubricationType.Pressure_Lube'/>
+    <NamedIndividual IRI='#LubricationType.Purge_Oil_Mist'/>
+    <NamedIndividual IRI='#LubricationType.Pure_Oil_Mist'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#Orientation' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Orientation</IRI>
+  <Literal>Orientation</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#Orientation.Horizontal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Orientation.Horizontal</IRI>
+  <Literal>Horizontal</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#Orientation'/>
+  <NamedIndividual IRI='#Orientation.Horizontal'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#Orientation.Vertical' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Orientation.Vertical</IRI>
+  <Literal>Vertical</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#Orientation'/>
+  <NamedIndividual IRI='#Orientation.Vertical'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#Orientation.Inclined' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Orientation.Inclined</IRI>
+  <Literal>Inclined</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#Orientation'/>
+  <NamedIndividual IRI='#Orientation.Inclined'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#Orientation.Horizontal'/>
+  <NamedIndividual IRI='#Orientation.Vertical'/>
+  <NamedIndividual IRI='#Orientation.Inclined'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#Orientation' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#Orientation.Horizontal'/>
+    <NamedIndividual IRI='#Orientation.Vertical'/>
+    <NamedIndividual IRI='#Orientation.Inclined'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#PumpArrangement' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpArrangement</IRI>
+  <Literal>PumpArrangement</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpArrangement</IRI>
+  <Literal>The physical orientation of connections between pump/s.</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#PumpArrangement.Series' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpArrangement.Series</IRI>
+  <Literal>Series</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PumpArrangement'/>
+  <NamedIndividual IRI='#PumpArrangement.Series'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PumpArrangement.Parallel' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpArrangement.Parallel</IRI>
+  <Literal>Parallel</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PumpArrangement'/>
+  <NamedIndividual IRI='#PumpArrangement.Parallel'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#PumpArrangement.Standalone' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpArrangement.Standalone</IRI>
+  <Literal>Standalone</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#PumpArrangement'/>
+  <NamedIndividual IRI='#PumpArrangement.Standalone'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#PumpArrangement.Series'/>
+  <NamedIndividual IRI='#PumpArrangement.Parallel'/>
+  <NamedIndividual IRI='#PumpArrangement.Standalone'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#PumpArrangement' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#PumpArrangement.Series'/>
+    <NamedIndividual IRI='#PumpArrangement.Parallel'/>
+    <NamedIndividual IRI='#PumpArrangement.Standalone'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#RotationDirection' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RotationDirection</IRI>
+  <Literal>RotationDirection</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#RotationDirection.Counterclockwise' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RotationDirection.Counterclockwise</IRI>
+  <Literal>Counterclockwise</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#RotationDirection'/>
+  <NamedIndividual IRI='#RotationDirection.Counterclockwise'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#RotationDirection.Clockwise' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RotationDirection.Clockwise</IRI>
+  <Literal>Clockwise</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#RotationDirection'/>
+  <NamedIndividual IRI='#RotationDirection.Clockwise'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#RotationDirection.Counterclockwise'/>
+  <NamedIndividual IRI='#RotationDirection.Clockwise'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#RotationDirection' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#RotationDirection.Counterclockwise'/>
+    <NamedIndividual IRI='#RotationDirection.Clockwise'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#SuctionType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SuctionType</IRI>
+  <Literal>SuctionType</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#SuctionType.Single_Suction' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SuctionType.Single_Suction</IRI>
+  <Literal>Single_Suction</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SuctionType.Single_Suction</IRI>
+  <Literal>If the liquid enters from one side. (Perry&apos;s Chemical Engineering Handbook, Seventh Edition, 10-24)</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SuctionType'/>
+  <NamedIndividual IRI='#SuctionType.Single_Suction'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#SuctionType.Double_Suction' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SuctionType.Double_Suction</IRI>
+  <Literal>Double_Suction</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SuctionType.Double_Suction</IRI>
+  <Literal>If liquid enters from both sides. (Perry&apos;s Chemical Engineering Handbook, Seventh Edition, 10-24)</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#SuctionType'/>
+  <NamedIndividual IRI='#SuctionType.Double_Suction'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#SuctionType.Single_Suction'/>
+  <NamedIndividual IRI='#SuctionType.Double_Suction'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#SuctionType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#SuctionType.Single_Suction'/>
+    <NamedIndividual IRI='#SuctionType.Double_Suction'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#AxialFlowPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#AxialFlowPump</IRI>
+  <Literal>AxialFlowPump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#AxialFlowPump</IRI>
+  <Literal>A centrifugal pump that is provided with an axial flow impeller to generate relatively low head at large flows.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#AxialFlowPump</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#AxialFlowPump</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS16765074</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#AxialFlowPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</SubClassOf>
+<Declaration><Class IRI='#Bearings' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Bearings</IRI>
+  <Literal>Bearings</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Bearings</IRI>
+  <Literal>Accurately locate shaft and carry radial and thrust loads. Source: Applied Process Design, pg. 166
+
+An &apos;artefact&apos; and &apos;support&apos; intended to support and locate a moving or static element.
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Bearings</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Bearings</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS286874</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#Bearings.BearingType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Bearings.BearingType</IRI>
+  <Literal>Bearings.BearingType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Bearings.BearingType</IRI>
+  <Literal>For either radial or thrust: The operating principle on which the bearing(s) supporting the radial loads operate.  This may be specified by the owner, based on preference or operating history. If blank, supplier should indicate the type of radial bearing which is intended to be used.
+The operating principle on which the bearing(s) supporting axial or thrust loads operate.  This may be specified by the owner, based on preference or operating history. If blank, supplier should indicate the type of thrust bearing which is intended to be used.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Bearings.BearingType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Bearings.BearingType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:BearingType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Bearings.BearingType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Bearings.HousingSealMaterial' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Bearings.HousingSealMaterial</IRI>
+  <Literal>Bearings.HousingSealMaterial</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Bearings.HousingSealMaterial</IRI>
+  <Literal>Bearing housing seal material of construction. Owner can select his choice; if not, supplier should provide the recommended material.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Bearings.HousingSealMaterial'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Bearings.HousingSealMaterial'/>
+  <Class abbreviatedIRI='Materials:Material' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Bearings.HousingSealMaterial' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Bearings.HousingSealType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Bearings.HousingSealType</IRI>
+  <Literal>Bearings.HousingSealType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Bearings.HousingSealType</IRI>
+  <Literal>A designation of which type of bearing housing seal is required.  This may be specified by the owner, based on preference or operating history. If blank, supplier should indicate the type of bearing cover seal which is intended to be used.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Bearings.HousingSealType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Bearings.HousingSealType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:HousingSealType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Bearings.HousingSealType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Bearings.Lubrication' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Bearings.Lubrication</IRI>
+  <Literal>Bearings.Lubrication</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Bearings.Lubrication</IRI>
+  <Literal>A designation of the lubrication system type. This item can be specified by the  owner, but usually by supplier depending on pump design.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Bearings.Lubrication'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Bearings.Lubrication'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:LubricationType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Bearings.Lubrication' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Bearings.structure' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Bearings.structure</IRI>
+  <Literal>Bearings.structure</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Bearings.structure</IRI>
+  <Literal>the physical structure of the bearings</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Bearings.structure'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Bearings.structure'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:BearingStructure' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Bearings.structure' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#CasingCover' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingCover</IRI>
+  <Literal>CasingCover</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CasingCover</IRI>
+  <Literal>A cover that is a closure part of a casing.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#CasingCover</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#CasingCover</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS16766964</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#CasingCover' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+<Declaration><Class IRI='#CasingGasket' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CasingGasket</IRI>
+  <Literal>CasingGasket</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CasingGasket</IRI>
+  <Literal>A gasket that is intended to seal parts of a casing where they are connected.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#CasingGasket</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#CasingGasket</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS16767054</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#CasingGasket' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+<Declaration><Class IRI='#CentrifugalPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump</IRI>
+  <Literal>CentrifugalPump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump</IRI>
+  <Literal>A CentrifugalPump is a Pump whose function it is to raise the pressure of a liquid using kinetic energy.
+Source: AEX cfiXML
+
+A dynamic pump utilizing impellers provided with vanes generating centrifugal force to achieve the required pressure head.
+Source: RDL (http://193.212.132.108/apps/rdsclient.html)</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#CentrifugalPump</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#CentrifugalPump</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS416834</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#CentrifugalPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:KineticPump' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.DifferentialHeadRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.DifferentialHeadRange</IRI>
+  <Literal>CentrifugalPump.DifferentialHeadRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.DifferentialHeadRange</IRI>
+  <Literal>The maximum algebraic difference in the same units between the discharge and suction head.  This is typically the difference between maximum discharge head and minimum suction head.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.DifferentialHeadRange'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.DifferentialHeadRange'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:HeadRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.DifferentialHeadRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.DifferentialPressureRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.DifferentialPressureRange</IRI>
+  <Literal>CentrifugalPump.DifferentialPressureRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.DifferentialPressureRange</IRI>
+  <Literal>The maximum algebraic difference in the same pressure units between the discharge and suction pressure.  This is typically the difference between maximum discharge pressure and minimum suction pressure.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.DifferentialPressureRange'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.DifferentialPressureRange'/>
+  <Class abbreviatedIRI='Quantities:PressureRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.DifferentialPressureRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.DifferentialPressureRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.DifferentialPressureRated</IRI>
+  <Literal>CentrifugalPump.DifferentialPressureRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.DifferentialPressureRated</IRI>
+  <Literal>The algebraic difference in the same pressure units between the discharge and suction pressure at rated conditions, as specified by the purchaser.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.DifferentialPressureRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.DifferentialPressureRated'/>
+  <Class abbreviatedIRI='Quantities:Pressure' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.DifferentialPressureRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.DirectionOfRotation' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.DirectionOfRotation</IRI>
+  <Literal>CentrifugalPump.DirectionOfRotation</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.DirectionOfRotation</IRI>
+  <Literal>Direction of the rotation of the shaft view from the coupling end of the pump.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.DirectionOfRotation'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.DirectionOfRotation'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:RotationDirection' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.DirectionOfRotation' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.DischargePressureRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.DischargePressureRange</IRI>
+  <Literal>CentrifugalPump.DischargePressureRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.DischargePressureRange</IRI>
+  <Literal>The discharge pressure measured in pressure units associated with the pump operation at a maximum, minimum, and normal capacity conditions.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.DischargePressureRange'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.DischargePressureRange'/>
+  <Class abbreviatedIRI='Quantities:PressureRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.DischargePressureRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.DischargePressureRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.DischargePressureRated</IRI>
+  <Literal>CentrifugalPump.DischargePressureRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.DischargePressureRated</IRI>
+  <Literal>The discharge pressure measured in pressure units associated with the pump operation at rated capacity conditions.
+
+Source: HI EDE 50.7
+
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.DischargePressureRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.DischargePressureRated'/>
+  <Class abbreviatedIRI='Quantities:Pressure' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.DischargePressureRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.DutyCycle' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.DutyCycle</IRI>
+  <Literal>CentrifugalPump.DutyCycle</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.DutyCycle</IRI>
+  <Literal>A statement of whether the pump will be operated continuously (more than 4 hours per run) or will be cycled on/off (less than 4 hours per run) within an operating day. A more detailed description of the duty cycle including number of hours of operation per day can be described in the &quot;Operating Conditions Comments&quot;.
+
+Source: HI EDE 50.7
+
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.DutyCycle'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.DutyCycle'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:DutyCycle' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.DutyCycle' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.EfficiencyAtRatedCondition' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.EfficiencyAtRatedCondition</IRI>
+  <Literal>CentrifugalPump.EfficiencyAtRatedCondition</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.EfficiencyAtRatedCondition</IRI>
+  <Literal>The pump efficiency at the rated impeller diameter, the rated flow rate, and the rated speed.   Efficiency is defined as the ratio of the energy imparted to the liquid by the pump to the energy input to the pump shaft expressed as a percent (Reference ANSI/HI 1.1-1.2).
+
+Source: HI EDE 50.7
+
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.EfficiencyAtRatedCondition'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.EfficiencyAtRatedCondition'/>
+  <Class abbreviatedIRI='Quantities:Efficiency' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.EfficiencyAtRatedCondition' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.FlowrateRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.FlowrateRange</IRI>
+  <Literal>CentrifugalPump.FlowrateRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.FlowrateRange</IRI>
+  <Literal>The maximum volumetric quantity of fluid to be delivered per unit of time, including entrained and dissolved gas.  This value should be used to evaluate the driver brake horsepower selection and the NPSH-available vs. NPSH margin.  This is important in variable speed operation.  Data provided by purchaser.
+
+Source: HI EDE 50.7
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.FlowrateRange'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.FlowrateRange'/>
+  <Class abbreviatedIRI='Quantities:FlowrateRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.FlowrateRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.FlowrateRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.FlowrateRated</IRI>
+  <Literal>CentrifugalPump.FlowrateRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.FlowrateRated</IRI>
+  <Literal>Volumetric quantity of fluid required to be delivered per unit of time, including entrained and dissolved gas, at rated conditions of speed, differential pressure, specific gravity, viscosity.  This is the purchase contract flow rate that is used to select the pump.  Note that the choice of pump classification and fixed vs. variable speed will affect the relevance of a fixed, rated capacity.  Data provided by purchaser.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.FlowrateRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.FlowrateRated'/>
+  <Class abbreviatedIRI='Quantities:Flowrate' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.FlowrateRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.MaxDifferentialHeadAtRatedImpellerDiameter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.MaxDifferentialHeadAtRatedImpellerDiameter</IRI>
+  <Literal>CentrifugalPump.MaxDifferentialHeadAtRatedImpellerDiameter</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.MaxDifferentialHeadAtRatedImpellerDiameter</IRI>
+  <Literal>The maximum difference between the discharge head and the suction head at the rated impeller diameter. This is typically the difference between maximum discharge head and minimum suction head. 
+
+Note: This value may be given only as the number that is the algebraic difference, the units being the same as those used for the two head values involved.
+
+Source: HI EDE 50.7
+
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.MaxDifferentialHeadAtRatedImpellerDiameter'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.MaxDifferentialHeadAtRatedImpellerDiameter'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.MaxDifferentialHeadAtRatedImpellerDiameter' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.MinimumContinuousStableFlow' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.MinimumContinuousStableFlow</IRI>
+  <Literal>CentrifugalPump.MinimumContinuousStableFlow</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.MinimumContinuousStableFlow</IRI>
+  <Literal>the lowest flow rate at which a centrifugal pump may 
+be operated on a continuous basis without exceeding the design constraints of the 
+manufacturer or the equipment specifier.
+
+Source: Lawrence Pumps</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.MinimumContinuousStableFlow'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.MinimumContinuousStableFlow'/>
+  <Class abbreviatedIRI='Quantities:Flowrate' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.MinimumContinuousStableFlow' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtMaximumFlowrate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.NPSHAvailableAtMaximumFlowrate</IRI>
+  <Literal>CentrifugalPump.NPSHAvailableAtMaximumFlowrate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.NPSHAvailableAtMaximumFlowrate</IRI>
+  <Literal>the head available after loss of head due to friction in the flow at the maximum flowrate
+
+Source: Wikipedia </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtMaximumFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtMaximumFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtMaximumFlowrate' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtMinimumFlowrate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.NPSHAvailableAtMinimumFlowrate</IRI>
+  <Literal>CentrifugalPump.NPSHAvailableAtMinimumFlowrate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.NPSHAvailableAtMinimumFlowrate</IRI>
+  <Literal>the head available after loss of head due to friction in the flow at the minimum flowrate
+
+Source: Wikipedia </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtMinimumFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtMinimumFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtMinimumFlowrate' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtNormalFlowrate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.NPSHAvailableAtNormalFlowrate</IRI>
+  <Literal>CentrifugalPump.NPSHAvailableAtNormalFlowrate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.NPSHAvailableAtNormalFlowrate</IRI>
+  <Literal>the head available after loss of head due to friction in the flow at the normal/expected flowrate
+
+Source: Wikipedia </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtNormalFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtNormalFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.NPSHAvailableAtNormalFlowrate' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#CentrifugalPump.NPSHInletDatum' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.NPSHInletDatum</IRI>
+  <Literal>CentrifugalPump.NPSHInletDatum</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.NPSHInletDatum</IRI>
+  <Literal>The inlet datum reference for the NPSHAvailable ratings 
+See HI 1.1-1.2, HI 2.1-2.2 for description of inlet datums. When the purchaser specifies the rating, this information is required.
+
+Source: HI EDE 50.7 
+</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#CentrifugalPump.NPSHInletDatum'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#CentrifugalPump.NPSHInletDatum'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#CentrifugalPump.NPSHInletDatum' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#CentrifugalPump.NumberOfStages' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.NumberOfStages</IRI>
+  <Literal>CentrifugalPump.NumberOfStages</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.NumberOfStages</IRI>
+  <Literal>Number of stages on a common pump shaft indicated by a rotating element and  its stationary casing. Multiple stages are typically provided to enable the pump to develop full system pressure.  If a pump has only one stage,enter one (1).
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#CentrifugalPump.NumberOfStages'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#CentrifugalPump.NumberOfStages'/>
+  <Datatype abbreviatedIRI='xsd:integer' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#CentrifugalPump.NumberOfStages' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#CentrifugalPump.OperatingConditionsComments' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.OperatingConditionsComments</IRI>
+  <Literal>CentrifugalPump.OperatingConditionsComments</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.OperatingConditionsComments</IRI>
+  <Literal>Specific conditions about the operating condition that the purchaser wants to clarify.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#CentrifugalPump.OperatingConditionsComments'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#CentrifugalPump.OperatingConditionsComments'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#CentrifugalPump.OperatingConditionsComments' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtMaximumFlowrate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.OperatingTimeAtMaximumFlowrate</IRI>
+  <Literal>CentrifugalPump.OperatingTimeAtMaximumFlowrate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.OperatingTimeAtMaximumFlowrate</IRI>
+  <Literal>The maximum amount of time the pump can operate at a max flowrate.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtMaximumFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtMaximumFlowrate'/>
+  <Class abbreviatedIRI='Quantities:Time' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtMaximumFlowrate' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtMinimumFlowrate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.OperatingTimeAtMinimumFlowrate</IRI>
+  <Literal>CentrifugalPump.OperatingTimeAtMinimumFlowrate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.OperatingTimeAtMinimumFlowrate</IRI>
+  <Literal>The maximum amount of time the pump can operate at a minimum flowrate.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtMinimumFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtMinimumFlowrate'/>
+  <Class abbreviatedIRI='Quantities:Time' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtMinimumFlowrate' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtNormalFlowrate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.OperatingTimeAtNormalFlowrate</IRI>
+  <Literal>CentrifugalPump.OperatingTimeAtNormalFlowrate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.OperatingTimeAtNormalFlowrate</IRI>
+  <Literal>Operating time per year at the Rated Capacity
+
+Source: HI EDE 50.7
+
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtNormalFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtNormalFlowrate'/>
+  <Class abbreviatedIRI='Quantities:Time' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtNormalFlowrate' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtRatedFlowrate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.OperatingTimeAtRatedFlowrate</IRI>
+  <Literal>CentrifugalPump.OperatingTimeAtRatedFlowrate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.OperatingTimeAtRatedFlowrate</IRI>
+  <Literal>The maximum amount of time the pump can operate at a rated flowrate.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtRatedFlowrate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtRatedFlowrate'/>
+  <Class abbreviatedIRI='Quantities:Time' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.OperatingTimeAtRatedFlowrate' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.PowerMaximum' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.PowerMaximum</IRI>
+  <Literal>CentrifugalPump.PowerMaximum</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.PowerMaximum</IRI>
+  <Literal>The maximum BHP (shaft input power measured at the pump-to-driver coupling) at any flowrate between zero and maximum,  at the rated impeller diameter and the rated speed.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.PowerMaximum'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.PowerMaximum'/>
+  <Class abbreviatedIRI='Quantities:Power' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.PowerMaximum' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.PowerRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.PowerRated</IRI>
+  <Literal>CentrifugalPump.PowerRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.PowerRated</IRI>
+  <Literal>The pump BHP (shaft input power measured at the pump-to-driver coupling) required at the rated impeller diameter, the rated flow rate, and the rated speed.   Reference ANSI/HI 1.1-1.2.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.PowerRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.PowerRated'/>
+  <Class abbreviatedIRI='Quantities:Power' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.PowerRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.PumpOrientation' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.PumpOrientation</IRI>
+  <Literal>CentrifugalPump.PumpOrientation</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.PumpOrientation</IRI>
+  <Literal>A choice of pump orientation which indicates the pump construction configuration.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.PumpOrientation'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.PumpOrientation'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Orientation' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.PumpOrientation' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.PumpSpeedRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.PumpSpeedRated</IRI>
+  <Literal>CentrifugalPump.PumpSpeedRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.PumpSpeedRated</IRI>
+  <Literal>A rotational speed which is the rotational speed of a rotating machine working at its full load.
+
+Source: RDL  http://posccaesar.org/rdl/RDS13233604</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.PumpSpeedRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.PumpSpeedRated'/>
+  <Class abbreviatedIRI='Quantities:AngularVelocity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.PumpSpeedRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.ShutoffHead' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.ShutoffHead</IRI>
+  <Literal>CentrifugalPump.ShutoffHead</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.ShutoffHead</IRI>
+  <Literal>The shut-off head is the Total Head that the pump can deliver at zero flow.
+
+Source: http://www.pumpfundamentals.com/pump_glossary.htm
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.ShutoffHead'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.ShutoffHead'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.ShutoffHead' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.SpeedRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.SpeedRange</IRI>
+  <Literal>CentrifugalPump.SpeedRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.SpeedRange</IRI>
+  <Literal>The maximum recommended rotational speed for the pump type and corresponding pump construction.  This is applicable only for variable speed operation.  To be provided by the pump manufacturer.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.SpeedRange'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.SpeedRange'/>
+  <Class abbreviatedIRI='Quantities:AngularVelocityRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.SpeedRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.StaticHead' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.StaticHead</IRI>
+  <Literal>CentrifugalPump.StaticHead</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.StaticHead</IRI>
+  <Literal>Static head is the actual vertical distance measured from the minimum water level in the basin to the highest point in the discharge piping. 
+
+Source: http://water.me.vccs.edu/courses/CIV240/lesson8_print.htm</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.StaticHead'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.StaticHead'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.StaticHead' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.SuctionPressureRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.SuctionPressureRange</IRI>
+  <Literal>CentrifugalPump.SuctionPressureRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.SuctionPressureRange</IRI>
+  <Literal>The suction pressure in absolute pressure units.  This represents the suction pressure associated with max, min, and normal capacity conditions.
+
+Source: HI EDE 50.7
+
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.SuctionPressureRange'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.SuctionPressureRange'/>
+  <Class abbreviatedIRI='Quantities:PressureRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.SuctionPressureRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.SuctionPressureRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.SuctionPressureRated</IRI>
+  <Literal>CentrifugalPump.SuctionPressureRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.SuctionPressureRated</IRI>
+  <Literal>The rated suction pressure in absolute pressure units.  This represents the suction pressure associated with rated capacity conditions. It may or may not be the same as the minimum or maximum suction pressure.
+
+Source: HI EDE 50.7
+
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.SuctionPressureRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.SuctionPressureRated'/>
+  <Class abbreviatedIRI='Quantities:Pressure' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.SuctionPressureRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.SuctionSpecSpeed' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.SuctionSpecSpeed</IRI>
+  <Literal>CentrifugalPump.SuctionSpecSpeed</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.SuctionSpecSpeed</IRI>
+  <Literal>An index of pump suction operating characteristics determined at the BEP rate of flow with the maximum diameter impeller and based on NPSH3.  NPSH3 is the net positive suction head that results in a 3% loss of head (first stage in a multistage pump).   Reference ANSI/HI 2.1-2.2.  Expressed in Metric units.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.SuctionSpecSpeed'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.SuctionSpecSpeed'/>
+  <Class abbreviatedIRI='Quantities:AngularVelocity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.SuctionSpecSpeed' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.SuctionType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.SuctionType</IRI>
+  <Literal>CentrifugalPump.SuctionType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.SuctionType</IRI>
+  <Literal>Either single suction or double suction. Single suction if the liquid enters from one side, double suction if it enters from both sides.
+
+Source: Perry&apos;s Handbook 10-24</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.SuctionType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.SuctionType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:SuctionType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.SuctionType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#CouplingGuardStandard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CouplingGuardStandard</IRI>
+  <Literal>CouplingGuardStandard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CouplingGuardStandard</IRI>
+  <Literal>a specification for standard characteristics of the coupling guard 
+There are several industry standard specifications, e.g., ASME B15.1, EN 953, ISO 14120, but the specification may also be a manufacturer&apos;s proprietary standard.
+</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#CouplingGuardStandard' />
+  <Class abbreviatedIRI='Codes:Standard' />
+</SubClassOf>
+<Declaration><Class IRI='#DesignStandard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DesignStandard</IRI>
+  <Literal>DesignStandard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DesignStandard</IRI>
+  <Literal>A Standard that specifies required structural and operational characteristics of the driver mechanism (for a pump). 
+Several such standards are commonly in use, e.g., API 610, API 676, ASME B73.1r, ISO 3661, ISO 13709, PIP RESP002, 
+</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DesignStandard' />
+  <Class abbreviatedIRI='Codes:Standard' />
+</SubClassOf>
+<Declaration><Class IRI='#DirectActingPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DirectActingPump</IRI>
+  <Literal>DirectActingPump</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DirectActingPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</SubClassOf>
+<Declaration><Class IRI='#Driver' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver</IRI>
+  <Literal>Driver</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver</IRI>
+  <Literal>A physical object that provides rotational or reciprocating energy to driven equipment.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Driver</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Driver</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS299024</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#Driver.ControllerType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.ControllerType</IRI>
+  <Literal>Driver.ControllerType</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.ControllerType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.ControllerType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Controller_Type' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.ControllerType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Driver.DriverFullLoadSpeed' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.DriverFullLoadSpeed</IRI>
+  <Literal>Driver.DriverFullLoadSpeed</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.DriverFullLoadSpeed</IRI>
+  <Literal>The rotational driver speed at full nameplate power loading.  The speed can be specified by either the owner or supplier.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.DriverFullLoadSpeed'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.DriverFullLoadSpeed'/>
+  <Class abbreviatedIRI='Quantities:AngularVelocity' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.DriverFullLoadSpeed' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#Driver.DriverNamePlateData' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.DriverNamePlateData</IRI>
+  <Literal>Driver.DriverNamePlateData</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.DriverNamePlateData</IRI>
+  <Literal>A list of parameters that will be included on the driver nameplate.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Driver.DriverNamePlateData'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Driver.DriverNamePlateData'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Driver.DriverNamePlateData' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Driver.DriverOrientation' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.DriverOrientation</IRI>
+  <Literal>Driver.DriverOrientation</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.DriverOrientation</IRI>
+  <Literal>A choice of driver shaft orientation which indicates the driver construction configuration.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.DriverOrientation'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.DriverOrientation'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Orientation' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.DriverOrientation' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Driver.NameplatePower' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.NameplatePower</IRI>
+  <Literal>Driver.NameplatePower</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.NameplatePower</IRI>
+  <Literal>The power rating to appear on the Driver nameplate.  If blank, the supplier should indicate the driver power rating that will be supplied
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.NameplatePower'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.NameplatePower'/>
+  <Class abbreviatedIRI='Quantities:Power' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.NameplatePower' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Driver.Voltage' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.Voltage</IRI>
+  <Literal>Driver.Voltage</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.Voltage</IRI>
+  <Literal>An electrical potential or potential difference expressed in volts.
+
+Source: http://posccaesar.org/rdl/RDS372374</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.Voltage'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.Voltage'/>
+  <Class abbreviatedIRI='Quantities:Voltage' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.Voltage' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#DriverType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DriverType</IRI>
+  <Literal>DriverType</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DriverType' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#Head' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Head</IRI>
+  <Literal>Head</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Head</IRI>
+  <Literal>A Pressure value expressed as the pressure equivalent to that of a given height of a column of a given reference liquid  -- usually water or mercury -- at a given temperature.  The values are therefore given as: length (of) liquid (material) type at temperature, such as &quot;5 m H2O at 4 C&quot; or &quot;750 mm Hg at 293K&quot;.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Head' />
+  <Class abbreviatedIRI='Quantities:Pressure' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Head.height' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Head.height</IRI>
+  <Literal>Head.height</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Head.height</IRI>
+  <Literal>The equivalent height of the column of liquid.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Head.height'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Head.height'/>
+  <Class abbreviatedIRI='Quantities:Length' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Head' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Head.height' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Head.referenceLiquid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Head.referenceLiquid</IRI>
+  <Literal>Head.referenceLiquid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Head.referenceLiquid</IRI>
+  <Literal>The reference liquid, usually water or mercury.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Head.referenceLiquid'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Head.referenceLiquid'/>
+  <Class abbreviatedIRI='Materials:MaterialType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Head' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Head.referenceLiquid' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Head.referenceTemperature' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Head.referenceTemperature</IRI>
+  <Literal>Head.referenceTemperature</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Head.referenceTemperature</IRI>
+  <Literal>The reference temperature of the reference liquid.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Head.referenceTemperature'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Head.referenceTemperature'/>
+  <Class abbreviatedIRI='Quantities:Temperature' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Head' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Head.referenceTemperature' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#HeadRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HeadRange</IRI>
+  <Literal>HeadRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HeadRange</IRI>
+  <Literal>A range of Pressure values expressed as the pressure equivalent to that of a given height of a column of a given reference liquid -- usually water or mercury.  The values are therefore given as: 
+length range (of) liquid (material) type at temperature, such as &quot;minimum 6 m, maximum 8 m H2O at 4 C&quot;.
+</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#HeadRange' />
+  <Class abbreviatedIRI='Quantities:PressureRange' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#HeadRange.heightRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HeadRange.heightRange</IRI>
+  <Literal>HeadRange.heightRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HeadRange.heightRange</IRI>
+  <Literal>The range of equivalent heights of the column of liquid.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#HeadRange.heightRange'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:HeadRange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#HeadRange.heightRange'/>
+  <Class abbreviatedIRI='Quantities:LengthRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:HeadRange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#HeadRange.heightRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#HeadRange.referenceLiquid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HeadRange.referenceLiquid</IRI>
+  <Literal>HeadRange.referenceLiquid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HeadRange.referenceLiquid</IRI>
+  <Literal>The reference liquid, usually water or mercury.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#HeadRange.referenceLiquid'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:HeadRange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#HeadRange.referenceLiquid'/>
+  <Class abbreviatedIRI='Materials:MaterialType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:HeadRange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#HeadRange.referenceLiquid' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#HeadRange.referenceTemperature' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#HeadRange.referenceTemperature</IRI>
+  <Literal>HeadRange.referenceTemperature</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#HeadRange.referenceTemperature</IRI>
+  <Literal>The reference temperature of the reference liquid.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#HeadRange.referenceTemperature'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:HeadRange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#HeadRange.referenceTemperature'/>
+  <Class abbreviatedIRI='Quantities:Temperature' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:HeadRange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#HeadRange.referenceTemperature' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Impeller' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Impeller</IRI>
+  <Literal>Impeller</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Impeller</IRI>
+  <Literal>&lt;p&gt;The device that imparts velocity to the liquid, resulting from centrifugal force as the impeller is rotated. 
+&lt;/p&gt;&lt;p&gt;
+Source: Applied Process Design&lt;/p&gt;
+&lt;p&gt;
+An Impeller is a BulkItem and is the mechanical component that imparts kinetic energy to the fluid in a RotatingEquipmentItem
+&lt;/p&gt;
+&lt;p&gt;Source: AEX cfiXML&lt;/p&gt;</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Impeller</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Impeller</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS414539</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Impeller' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Impeller.DiameterRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Impeller.DiameterRange</IRI>
+  <Literal>Impeller.DiameterRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Impeller.DiameterRange</IRI>
+  <Literal>The range of impeller diameters that can be installed in the selected pump.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Impeller.DiameterRange'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Impeller.DiameterRange'/>
+  <Class abbreviatedIRI='Quantities:LengthRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Impeller.DiameterRange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Impeller.DiameterRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Impeller.DiameterRated</IRI>
+  <Literal>Impeller.DiameterRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Impeller.DiameterRated</IRI>
+  <Literal>The manufacturer&apos;s recommended impeller diameter for the selected pump to produce the rated head 
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Impeller.DiameterRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Impeller.DiameterRated'/>
+  <Class abbreviatedIRI='Quantities:Length' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Impeller.DiameterRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Impeller.ImpellerType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Impeller.ImpellerType</IRI>
+  <Literal>Impeller.ImpellerType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Impeller.ImpellerType</IRI>
+  <Literal>The general structure of the impeller
+
+Source: Industry Data Sheet</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Impeller.ImpellerType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Impeller.ImpellerType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:EnclosureType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Impeller.ImpellerType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Industrial_Pump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Industrial_Pump</IRI>
+  <Literal>Industrial_Pump</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Industrial_Pump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</SubClassOf>
+<Declaration><Class IRI='#KineticPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#KineticPump</IRI>
+  <Literal>KineticPump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#KineticPump</IRI>
+  <Literal>A kinetic pump imparts velocity energy to the fluid, which is converted to pressure energy upon exiting the pump casing.
+
+Source: http://www.pdhengineer.com/Course%20Files/Completed%20Course%20PDF%20Files/Pumps%20Centrifugal%20vs%20Positive%20Displacement%20Word%20Document.htm
+
+A pump that impels fluid by reaction forces from moving or rotating vanes or blades inside a pump casing.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#KineticPump</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#KineticPump</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS432584</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#KineticPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</SubClassOf>
+<Declaration><Class IRI='#LateralAnalysisData' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LateralAnalysisData</IRI>
+  <Literal>LateralAnalysisData</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#LateralAnalysisData</IRI>
+  <Literal>A collection of detailed technical data for the Driver suitable for performing rotordynamic lateral analysis of the entire Pump drivetrain.
+
+Provided by the driver manufacturer when required.
+
+Source:  HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#MixedFlowPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MixedFlowPump</IRI>
+  <Literal>MixedFlowPump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MixedFlowPump</IRI>
+  <Literal>A centrifugal pump that uses a mixed flow pump impeller.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#MixedFlowPump</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#MixedFlowPump</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS409575791</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#MixedFlowPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</SubClassOf>
+<Declaration><Class IRI='#PeripheralTurbinePump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PeripheralTurbinePump</IRI>
+  <Literal>PeripheralTurbinePump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PeripheralTurbinePump</IRI>
+  <Literal>N/A</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#PeripheralTurbinePump</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#PeripheralTurbinePump</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS412376541</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PeripheralTurbinePump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:RegenerativeTurbinePump' />
+</SubClassOf>
+<Declaration><Class IRI='#Pump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Pump</IRI>
+  <Literal>Pump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Pump</IRI>
+  <Literal>A physical object that is a driven piece of equipment in which energy is either constantly or periodically added to an amount of pumped liquid in order to increase the pressure required for the process in which the pump is in operation.
+Source: ISO 15926</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#Pump</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#Pump</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS327239</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Pump' />
+  <Class abbreviatedIRI='General:EquipmentCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#PumpBaseplate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpBaseplate</IRI>
+  <Literal>PumpBaseplate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpBaseplate</IRI>
+  <Literal>A Baseplate is an EquipmentItem upon which the driver and the driven equipment items for a RotatingEquipmentItem are mounted.
+
+Source: AEX cfiXML</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#PumpBaseplate.BaseplateMaterial' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpBaseplate.BaseplateMaterial</IRI>
+  <Literal>PumpBaseplate.BaseplateMaterial</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpBaseplate.BaseplateMaterial</IRI>
+  <Literal>Baseplate material of construction.  This is a non-wetted part.  If blank, supplier should provide the recommended material.  A recognized material  designation (ISO, ASTM, UNS, etc.) is recommended where possible.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpBaseplate.BaseplateMaterial'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpBaseplate' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpBaseplate.BaseplateMaterial'/>
+  <Class abbreviatedIRI='Materials:Material' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpBaseplate' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpBaseplate.BaseplateMaterial' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpBaseplate.BaseplateMountingType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpBaseplate.BaseplateMountingType</IRI>
+  <Literal>PumpBaseplate.BaseplateMountingType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpBaseplate.BaseplateMountingType</IRI>
+  <Literal>Data to be provided by the pump supplier.  (HI 3.2.28.3-2007)
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpBaseplate.BaseplateMountingType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpBaseplate' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpBaseplate.BaseplateMountingType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:BaseplateMounting' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpBaseplate' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpBaseplate.BaseplateMountingType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#PumpCasing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing</IRI>
+  <Literal>PumpCasing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCasing</IRI>
+  <Literal>Gives direction to the flow from the impeller and converts the velocity energy into pressure energy which is usually measured in feet of head. (Applied Process Design, pg. 166)
+
+A Casing is a component part of a RotatingEquipmentItem that contains the driven equipment rotating element, e.g., impeller and the process fluid which is being raised in pressure.
+
+Source: AEX cfiXML</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#PumpCasing</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#PumpCasing</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS461204</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PumpCasing' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCasing.CasingMounting' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing.CasingMounting</IRI>
+  <Literal>PumpCasing.CasingMounting</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCasing.CasingMounting</IRI>
+  <Literal>Casing mounting is described in a Flour data sheet under &quot;Mechanical Data&quot;
+
+Source: Industry Data Sheet</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCasing.CasingMounting'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCasing.CasingMounting'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CasingMounting' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCasing.CasingMounting' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#PumpCasing.Drain' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing.Drain</IRI>
+  <Literal>PumpCasing.Drain</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCasing.Drain</IRI>
+  <Literal>Provison for controlled removal of pumped fluids from pressurized areas of the pump unit.
+</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#PumpCasing.Drain'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#PumpCasing.Drain'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#PumpCasing.Drain' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCasing.MAWP' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing.MAWP</IRI>
+  <Literal>PumpCasing.MAWP</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCasing.MAWP</IRI>
+  <Literal>&quot;Maximum continuous pressure for which the manufacturer has designed the equipment (or any part to which the term is referred) when the equipment is operating under the most adverse operating condidtions.  
+
+Data to be provided by the pump supplier.  (HI 3.2.28.3-2007)&quot;
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCasing.MAWP'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCasing.MAWP'/>
+  <Class abbreviatedIRI='Quantities:Pressure' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCasing.MAWP' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCasing.MAWPrefTemp' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing.MAWPrefTemp</IRI>
+  <Literal>PumpCasing.MAWPrefTemp</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCasing.MAWPrefTemp</IRI>
+  <Literal>The reference temperature at which the maximum allowable working pressure for the casing is determined. Data to be provided by the pump supplier.
+
+Source: HI EDE 50.1
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCasing.MAWPrefTemp'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCasing.MAWPrefTemp'/>
+  <Class abbreviatedIRI='Quantities:Temperature' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCasing.MAWPrefTemp' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCasing.type' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing.type</IRI>
+  <Literal>PumpCasing.type</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCasing.type</IRI>
+  <Literal>The general structural shape of a pump casing 
+
+Source: Perry&apos;s Chemical Engineering Handbook 10-24
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCasing.type'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCasing.type'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CasingType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCasing.type' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#PumpComplex' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpComplex</IRI>
+  <Literal>PumpComplex</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpComplex</IRI>
+  <Literal>a collection of pumps that perform a common function.  This includes staging arrangements, parallel online arrangements, primary and backup arrangements, etc. It may also describe a group of like pumps that are simultaneously acquired</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#PumpComplex.arrangement' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpComplex.arrangement</IRI>
+  <Literal>PumpComplex.arrangement</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpComplex.arrangement</IRI>
+  <Literal>The structural arrangement of the pumps in the PumpComplex.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpComplex.arrangement'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpComplex' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpComplex.arrangement'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpArrangement' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpComplex' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpComplex.arrangement' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#PumpComplex.description' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpComplex.description</IRI>
+  <Literal>PumpComplex.description</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpComplex.description</IRI>
+  <Literal>A description of the PumpComplex that conveys its purpose and structure and the roles of the individual pumps or kinds of pumps.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#PumpComplex.description'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpComplex' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#PumpComplex.description'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpComplex' />
+  <DataMaxCardinality cardinality='1'>
+    <DataProperty IRI='#PumpComplex.description' />
+  </DataMaxCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#PumpComplex.numberOfPumps' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpComplex.numberOfPumps</IRI>
+  <Literal>PumpComplex.numberOfPumps</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpComplex.numberOfPumps</IRI>
+  <Literal>Total number of pumps in the complex (or the number of Pumps with the given characterization that will be required)</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#PumpComplex.numberOfPumps'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpComplex' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#PumpComplex.numberOfPumps'/>
+  <Datatype abbreviatedIRI='xsd:integer' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpComplex' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#PumpComplex.numberOfPumps' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#PumpCoupling' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCoupling</IRI>
+  <Literal>PumpCoupling</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCoupling</IRI>
+  <Literal>The mechanism that connects the pump to the driver and transfers energy from the driver to the pump shaft
+
+Source: Applied Process Design, pg. 166
+
+</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#PumpCoupling.serviceFactor' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCoupling.serviceFactor</IRI>
+  <Literal>PumpCoupling.serviceFactor</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCoupling.serviceFactor</IRI>
+  <Literal>Coupling manufacturer&apos;s service factor, based on selected motor&apos;s name plate horsepower.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#PumpCoupling.serviceFactor'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#PumpCoupling.serviceFactor'/>
+  <Datatype abbreviatedIRI='xsd:decimal' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#PumpCoupling.serviceFactor' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#PumpCoupling.size' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCoupling.size</IRI>
+  <Literal>PumpCoupling.size</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCoupling.size</IRI>
+  <Literal>Coupling size, using the coupling manufacturer&apos;s nomenclature.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#PumpCoupling.size'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#PumpCoupling.size'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#PumpCoupling.size' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCoupling.type' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCoupling.type</IRI>
+  <Literal>PumpCoupling.type</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCoupling.type</IRI>
+  <Literal>the nature of the mechanism for energy transference, taken from a list of standard types </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCoupling.type'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCoupling.type'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CouplingType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCoupling.type' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#PumpCurve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCurve</IRI>
+  <Literal>PumpCurve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCurve</IRI>
+  <Literal>A description of the interrelationship of pump performance parameters (pressure, flowrate, power, head, and impeller size) as a mathematical function, represented by a graph of the function.
+
+The diagram is provided by the pump manufacturer to explain the relationship between the head and the flow rate of a pump using various size impellers. The curve may also include efficiency, NPSH required, and power consumption as a function of flow.
+
+Source: http://www.pumpscout.com/articles-scout-guide/20-pump-industry-terms-you-should-know-aid64.html</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#PumpCurve.curveId' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCurve.curveId</IRI>
+  <Literal>PumpCurve.curveId</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCurve.curveId</IRI>
+  <Literal>an identifier for the PumpCurve, to distinguish it from others in a collection of pump specifications</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#PumpCurve.curveId'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCurve' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#PumpCurve.curveId'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCurve' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#PumpCurve.curveId' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#PumpShaft' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpShaft</IRI>
+  <Literal>PumpShaft</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpShaft</IRI>
+  <Literal>Transmits power from the driver to the impeller
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#PumpShaft</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#PumpShaft</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS869714</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PumpShaft' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#PumpShaftSeal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpShaftSeal</IRI>
+  <Literal>PumpShaftSeal</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpShaftSeal</IRI>
+  <Literal> a means of throttling the leakage which would otherwise occur at the point of entry of the shaft into the casing.</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PumpShaftSeal' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+<SubClassOf>
+  <Class IRI='#PumpShaftSeal' />
+  <Class abbreviatedIRI='ShaftSeals:ShaftSeal' />
+</SubClassOf>
+<Declaration><Class IRI='#PumpUsage' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpUsage</IRI>
+  <Literal>PumpUsage</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpUsage</IRI>
+  <Literal>Characteristics of a Pump when used to pump a specific ProcessFluid.
+
+Note:  Since most pumps are acquired and installed for a specific purpose, they are typically used for only one process fluid.  But in the petroleum industry, the nature of the crude oil stream and its early refinements can be significantly variable.</Literal>
+</AnnotationAssertion>
+
+<Declaration><ObjectProperty IRI='#PumpUsage.DifferentialHeadRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpUsage.DifferentialHeadRated</IRI>
+  <Literal>PumpUsage.DifferentialHeadRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpUsage.DifferentialHeadRated</IRI>
+  <Literal>The total discharge head less the total suction head measured relative to any common horizontal datum plane.  Total head is the static head plus the velocity head plus the vertical distance from the static head measurement instrument to the datum.  This is the purchase contract differential head that is used to select the pump.  Rated conditions are specified by the purchaser
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpUsage.DifferentialHeadRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpUsage.DifferentialHeadRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpUsage.DifferentialHeadRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpUsage.NPSH3AtRatedCondition' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpUsage.NPSH3AtRatedCondition</IRI>
+  <Literal>PumpUsage.NPSH3AtRatedCondition</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpUsage.NPSH3AtRatedCondition</IRI>
+  <Literal>net positive suction head required, in meters (feet), that will cause the total head (or first-stage head of multistage pumps) to be reduced by 3 percent.
+
+Source: HI http://www.pumps.org/content_detail.aspx?id=6268</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpUsage.NPSH3AtRatedCondition'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpUsage.NPSH3AtRatedCondition'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpUsage.NPSH3AtRatedCondition' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpUsage.NPSHAvailableRated' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpUsage.NPSHAvailableRated</IRI>
+  <Literal>PumpUsage.NPSHAvailableRated</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpUsage.NPSHAvailableRated</IRI>
+  <Literal>The total suction head of liquid absolute, determined at the inlet datum, typically the centerline of the first stage impeller, minus the absolute vapor pressure of the liquid at the rated capacity and temperature. 
+
+See references HI 1.1-1.2, HI 2.1 -2.2 for description of inlet datums. 
+
+Source: HI EDE 50.7
+
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpUsage.NPSHAvailableRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpUsage.NPSHAvailableRated'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpUsage.NPSHAvailableRated' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpUsage.NPSHRequiredAtRatedCondition' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpUsage.NPSHRequiredAtRatedCondition</IRI>
+  <Literal>PumpUsage.NPSHRequiredAtRatedCondition</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpUsage.NPSHRequiredAtRatedCondition</IRI>
+  <Literal>Net Positive Suction Head Required is the minimum net positive suction required for the pump to prevent cavitation.
+Since impellers produce low pressure zones at various points along the impeller profile this will normally be far higher
+than that required to produce boiling in a static condition and is affected by the specific pump design.
+
+Source: http://www.pump-zone.com/topics/net-positive-suction-head-npshr-and-npsha</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpUsage.NPSHRequiredAtRatedCondition'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpUsage.NPSHRequiredAtRatedCondition'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpUsage.NPSHRequiredAtRatedCondition' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpUsage.TotalDifferentialHeadAtRatedCondition' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpUsage.TotalDifferentialHeadAtRatedCondition</IRI>
+  <Literal>PumpUsage.TotalDifferentialHeadAtRatedCondition</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpUsage.TotalDifferentialHeadAtRatedCondition</IRI>
+  <Literal>It is the total discharge head minus the total suction 
+head.
+
+Source: http://www.cedengineering.com/upload/HVAC%20Pump%20Characteristics.pdf</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpUsage.TotalDifferentialHeadAtRatedCondition'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpUsage.TotalDifferentialHeadAtRatedCondition'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Head' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpUsage.TotalDifferentialHeadAtRatedCondition' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#RadialFlowPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RadialFlowPump</IRI>
+  <Literal>RadialFlowPump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#RadialFlowPump</IRI>
+  <Literal>A centrifugal pump that uses a radial flow impeller.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#RadialFlowPump</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#RadialFlowPump</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS12957061</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#RadialFlowPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</SubClassOf>
+<Declaration><Class IRI='#ReciprocatingPowerPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ReciprocatingPowerPump</IRI>
+  <Literal>ReciprocatingPowerPump</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ReciprocatingPowerPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</SubClassOf>
+<Declaration><Class IRI='#RegenerativeTurbinePump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RegenerativeTurbinePump</IRI>
+  <Literal>RegenerativeTurbinePump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#RegenerativeTurbinePump</IRI>
+  <Literal>A turbine that contains a wheel or runner which carries curved vanes or buckets and is supplied with water directed by a number of stationary guide vanes or hit by a high pressure water jet, intended to recover energy and to serve as a driver.
+
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#RegenerativeTurbinePump</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#RegenerativeTurbinePump</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS1083689</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#RegenerativeTurbinePump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:KineticPump' />
+</SubClassOf>
+<Declaration><Class IRI='#ReversibleCentrifugalPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ReversibleCentrifugalPump</IRI>
+  <Literal>ReversibleCentrifugalPump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ReversibleCentrifugalPump</IRI>
+  <Literal>N/A</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ReversibleCentrifugalPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:SpecialEffectPump' />
+</SubClassOf>
+<Declaration><Class IRI='#RotaryPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RotaryPump</IRI>
+  <Literal>RotaryPump</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#RotaryPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</SubClassOf>
+<Declaration><Class IRI='#RotatingCasingPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#RotatingCasingPump</IRI>
+  <Literal>RotatingCasingPump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#RotatingCasingPump</IRI>
+  <Literal>N/A</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#RotatingCasingPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:SpecialEffectPump' />
+</SubClassOf>
+<Declaration><Class IRI='#SeamlessCentrifugalPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SeamlessCentrifugalPump</IRI>
+  <Literal>SeamlessCentrifugalPump</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SeamlessCentrifugalPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</SubClassOf>
+<Declaration><Class IRI='#ShaftSleeve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ShaftSleeve</IRI>
+  <Literal>ShaftSleeve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ShaftSleeve</IRI>
+  <Literal>Protects the shaft where it passes through the stuffing box. Usually used in pumps with packing but often eliminated if mechanical seals are employed. 
+Source: Applied Process Design, pg. 166
+
+A sleeve that is a bushing part around the shaft used to mount and position bearings, seals, possibly impellers, remaining rotor parts etc. and to protect the shaft from any product.
+Source: ISO 15926 RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ShaftSleeve</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ShaftSleeve</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS435644</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ShaftSleeve' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+<Declaration><Class IRI='#SideChannelPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SideChannelPump</IRI>
+  <Literal>SideChannelPump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SideChannelPump</IRI>
+  <Literal>N/A</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#SideChannelPump</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#SideChannelPump</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS418675451</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SideChannelPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:RegenerativeTurbinePump' />
+</SubClassOf>
+<Declaration><Class IRI='#SpecialEffectPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SpecialEffectPump</IRI>
+  <Literal>SpecialEffectPump</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SpecialEffectPump</IRI>
+  <Literal>N/A</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#SpecialEffectPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:KineticPump' />
+</SubClassOf>
+<Declaration><Class IRI='#TorsionalAnalysisData' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#TorsionalAnalysisData</IRI>
+  <Literal>TorsionalAnalysisData</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#TorsionalAnalysisData</IRI>
+  <Literal>A collection of detailed technical data for the Driver suitable for performing rotordynamic torsional analysis of the entire Pump drivetrain.
+
+Provided by the driver manufacturer when required.
+
+Source:  HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#VerticalPump' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#VerticalPump</IRI>
+  <Literal>VerticalPump</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#VerticalPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</SubClassOf>
+<Declaration><Class IRI='#WearRing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#WearRing</IRI>
+  <Literal>WearRing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#WearRing</IRI>
+  <Literal>&lt;p&gt;An insulating ring between the impeller end and the casing that keeps internal recirculation down to a minimum. Having these rings as replaceable wearing surfaces permits renewal of clearances to keep pump efficiencies high. On small pump types only one ring is used in the casing; on larger sizes, companion rings are used in the casing and on the impeller.
+&lt;/p&gt;
+&lt;p&gt;Source:  Applied Process Design&lt;/p&gt;</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#WearRing</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#WearRing</IRI>
+  <Literal>http://posccaesar.org/rdl/RDS417554</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#WearRing' />
+  <Class abbreviatedIRI='General:WettedPart' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.casing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.casing</IRI>
+  <Literal>CentrifugalPump.casing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#CentrifugalPump.casing</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.casing'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.casing'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.casing' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.impeller' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.impeller</IRI>
+  <Literal>CentrifugalPump.impeller</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#CentrifugalPump.impeller</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.impeller'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.impeller'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.impeller' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.shaftSeal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.shaftSeal</IRI>
+  <Literal>CentrifugalPump.shaftSeal</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.shaftSeal</IRI>
+  <Literal>the means by which the pump shaft is prevented from leaking at the point it enters the casing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#CentrifugalPump.shaftSeal</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.shaftSeal'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.shaftSeal'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaftSeal' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.shaftSeal' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.baseplate' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.baseplate</IRI>
+  <Literal>CentrifugalPump.baseplate</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#CentrifugalPump.baseplate</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.baseplate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.baseplate'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpBaseplate' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.baseplate' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Driver.DesignStandard' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.DesignStandard</IRI>
+  <Literal>Driver.DesignStandard</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.DesignStandard</IRI>
+  <Literal>Applicable published design standard for the driver, with reference to the latest edition unless otherwise noted in the Applicable Driver Standard Comment.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.DesignStandard'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.DesignStandard'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:DesignStandard' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.DesignStandard' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Pump.pumpedFluid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Pump.pumpedFluid</IRI>
+  <Literal>Pump.pumpedFluid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Pump.pumpedFluid</IRI>
+  <Literal>the Fluid whose flow is the purpose of the Pump.  For most uses of this ontology, that is the ProcessFluidStream</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Pump.pumpedFluid'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Pump.pumpedFluid'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#Pump.pumpedFluid' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCasing.cover' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing.cover</IRI>
+  <Literal>PumpCasing.cover</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PumpCasing.cover</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCasing.cover'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCasing.cover'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CasingCover' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCasing.cover' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCasing.gasket' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing.gasket</IRI>
+  <Literal>PumpCasing.gasket</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCasing.gasket</IRI>
+  <Literal>The gasket between the casing and the impeller?</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PumpCasing.gasket</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCasing.gasket'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCasing.gasket'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CasingGasket' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCasing.gasket' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCasing.ports' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing.ports</IRI>
+  <Literal>PumpCasing.ports</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PumpCasing.ports</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCasing.ports'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCasing.ports'/>
+  <Class abbreviatedIRI='General:FluidPort' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+  <ObjectMinCardinality cardinality='2'>
+    <ObjectProperty IRI='#PumpCasing.ports' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCasing.wearRing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCasing.wearRing</IRI>
+  <Literal>PumpCasing.wearRing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCasing.wearRing</IRI>
+  <Literal>The WearRing that is physically bound to, or embedded in, the casing.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PumpCasing.wearRing</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCasing.wearRing'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCasing.wearRing'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:WearRing' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCasing.wearRing' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#WearRing.fittedTo' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#WearRing.fittedTo</IRI>
+  <Literal>WearRing.fittedTo</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#WearRing.fittedTo</IRI>
+  <Literal>the casing for a wear ring that is physically bound to the casing.  If the wear ring is bound to the impeller, this relationship is void. </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#WearRing.fittedTo'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:WearRing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#WearRing.fittedTo'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:WearRing' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#WearRing.fittedTo' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#PumpCasing.wearRing' />
+  <ObjectProperty IRI='#WearRing.fittedTo' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#PumpCoupling.guardRequirement' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCoupling.guardRequirement</IRI>
+  <Literal>PumpCoupling.guardRequirement</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCoupling.guardRequirement</IRI>
+  <Literal>the characteristics of the coupling guard, if one is required 
+
+May be specified by either owner or supplier.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCoupling.guardRequirement'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCoupling.guardRequirement'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CouplingGuardStandard' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCoupling.guardRequirement' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Driver.coupling' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.coupling</IRI>
+  <Literal>Driver.coupling</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.coupling</IRI>
+  <Literal>the characteristics of the coupling that links the Driver to the pump shaft </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.coupling'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.coupling'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.coupling' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCoupling.driver' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCoupling.driver</IRI>
+  <Literal>PumpCoupling.driver</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCoupling.driver</IRI>
+  <Literal>the characteristics of the Driver that has the motor shaft to which the coupling is attached</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCoupling.driver'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCoupling.driver'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCoupling.driver' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#Driver.coupling' />
+  <ObjectProperty IRI='#PumpCoupling.driver' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#Driver.LateralData' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.LateralData</IRI>
+  <Literal>Driver.LateralData</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.LateralData</IRI>
+  <Literal>Manufacturer&apos;s technical data for lateral analysis of the drive train
+
+Provided by the driver manufacturer when required.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.LateralData'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.LateralData'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:LateralAnalysisData' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.LateralData' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Driver.TorsionalData' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.TorsionalData</IRI>
+  <Literal>Driver.TorsionalData</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.TorsionalData</IRI>
+  <Literal>Manufacturer&apos;s technical data for torsional analysis of the drive train.
+
+Provided by the driver manufacturer when required.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.TorsionalData'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.TorsionalData'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:TorsionalAnalysisData' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.TorsionalData' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Driver.DriverType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.DriverType</IRI>
+  <Literal>Driver.DriverType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.DriverType</IRI>
+  <Literal>A choice of the driver type as assigned by the owner.  If blank, the supplier should indicate the type of driver that will be used.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.DriverType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.DriverType'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:DriverType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.DriverType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Driver.mount' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Driver.mount</IRI>
+  <Literal>Driver.mount</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Driver.mount</IRI>
+  <Literal>the baseplate structure on which the Driver and the Pump are mounted </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Driver.mount'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Driver.mount'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpBaseplate' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Driver.mount' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Impeller.wearRing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Impeller.wearRing</IRI>
+  <Literal>Impeller.wearRing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Impeller.wearRing</IRI>
+  <Literal>the WearRing that is physically bound to the impeller, if any.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#Impeller.wearRing</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Impeller.wearRing'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Impeller.wearRing'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:WearRing' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Impeller.wearRing' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#WearRing.attachedTo' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#WearRing.attachedTo</IRI>
+  <Literal>WearRing.attachedTo</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#WearRing.attachedTo</IRI>
+  <Literal>the impeller to which the wear ring is physically bound, if any.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#WearRing.attachedTo'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:WearRing' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#WearRing.attachedTo'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Impeller' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:WearRing' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#WearRing.attachedTo' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#Impeller.wearRing' />
+  <ObjectProperty IRI='#WearRing.attachedTo' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#Pump.connections' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Pump.connections</IRI>
+  <Literal>Pump.connections</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Pump.connections</IRI>
+  <Literal>The (conceptual) connections between the Pump and the piping system, which are ultimately implemented by some Port on the casing.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#Pump.connections</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Pump.connections'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Pump.connections'/>
+  <Class abbreviatedIRI='General:Connection' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+  <ObjectMinCardinality cardinality='2'>
+    <ObjectProperty IRI='#Pump.connections' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.driver' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.driver</IRI>
+  <Literal>CentrifugalPump.driver</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.driver'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.driver'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Driver' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.driver' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.pumpCurve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.pumpCurve</IRI>
+  <Literal>CentrifugalPump.pumpCurve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.pumpCurve</IRI>
+  <Literal>A graph of pump performance as a mathematical function of flowrate and pressure.  There may be multiple such curves if the Pump has a choice of Impellers or other components.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.pumpCurve'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.pumpCurve'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCurve' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.usage' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.usage</IRI>
+  <Literal>CentrifugalPump.usage</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CentrifugalPump.usage</IRI>
+  <Literal>characteristics of the Pump that are dependent on the nature of the ProcessFluidStream</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.usage'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.usage'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.usage' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpComplex.pumps' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpComplex.pumps</IRI>
+  <Literal>PumpComplex.pumps</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpComplex.pumps</IRI>
+  <Literal>the (kinds of) Pumps that are the elements of the PumpComplex.
+
+If the Pump characterization is used for design and acquisition, there may be only one characterization that describes all the pumps in the complex.  If the Pump characterization describes the operational status of the PumpComplex, there will be one Pump characterization per actual Pump. 
+</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpComplex.pumps'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpComplex' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpComplex.pumps'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpComplex' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpComplex.pumps' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Pump.inComplex' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Pump.inComplex</IRI>
+  <Literal>Pump.inComplex</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Pump.inComplex</IRI>
+  <Literal>the PumpComplex, if any, to which this Pump belongs</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Pump.inComplex'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Pump.inComplex'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpComplex' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:Pump' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Pump.inComplex' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#PumpComplex.pumps' />
+  <ObjectProperty IRI='#Pump.inComplex' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#PumpUsage.pumpedFluid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpUsage.pumpedFluid</IRI>
+  <Literal>PumpUsage.pumpedFluid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpUsage.pumpedFluid</IRI>
+  <Literal>the process fluid to which the PumpUsage characteristics apply</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpUsage.pumpedFluid'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpUsage.pumpedFluid'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpUsage' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpUsage.pumpedFluid' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CentrifugalPump.shaft' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CentrifugalPump.shaft</IRI>
+  <Literal>CentrifugalPump.shaft</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#CentrifugalPump.shaft</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CentrifugalPump.shaft'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CentrifugalPump.shaft'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#CentrifugalPump.shaft' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpShaftSeal.shaft' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpShaftSeal.shaft</IRI>
+  <Literal>PumpShaftSeal.shaft</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpShaftSeal.shaft</IRI>
+  <Literal>The shaft sealed by the ShaftSeal</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpShaftSeal.shaft'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaftSeal' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpShaftSeal.shaft'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpShaftSeal' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpShaftSeal.shaft' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpShaft.seal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpShaft.seal</IRI>
+  <Literal>PumpShaft.seal</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpShaft.seal</IRI>
+  <Literal>specification for the seal between the shaft and the casing</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpShaft.seal'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpShaft.seal'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaftSeal' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpShaft.seal' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#PumpShaftSeal.shaft' />
+  <ObjectProperty IRI='#PumpShaft.seal' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#PumpShaftSeal.casing' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpShaftSeal.casing</IRI>
+  <Literal>PumpShaftSeal.casing</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpShaftSeal.casing</IRI>
+  <Literal>The pump casing to which the ShaftSeal is fitted.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpShaftSeal.casing'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaftSeal' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpShaftSeal.casing'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCasing' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpShaftSeal' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpShaftSeal.casing' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpShaft.bufferFluid' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpShaft.bufferFluid</IRI>
+  <Literal>PumpShaft.bufferFluid</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpShaft.bufferFluid</IRI>
+  <Literal>A Fluid that fills the space between the shaft and the sleeve, and/or between the shaft and a mechanical seal.  It serves to lubricate the surfaces in contact, and to prevent flow of the process fluid into the buffer space.  Seal barrier or buffer fluids are only required when dual seals are specified.
+
+Source: HI EDE 50.7</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpShaft.bufferFluid'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpShaft.bufferFluid'/>
+  <Class abbreviatedIRI='Materials:Fluid' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpShaft.bufferFluid' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpShaft.coupling' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpShaft.coupling</IRI>
+  <Literal>PumpShaft.coupling</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpShaft.coupling</IRI>
+  <Literal>specification for the coupling that links the pump shaft to the driver </Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpShaft.coupling'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpShaft.coupling'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpShaft.coupling' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpCoupling.shaft' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpCoupling.shaft</IRI>
+  <Literal>PumpCoupling.shaft</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpCoupling.shaft</IRI>
+  <Literal>the characteristics of the PumpShaft to which the coupling is (to be) attached</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpCoupling.shaft'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpCoupling.shaft'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpCoupling' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpCoupling.shaft' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#PumpShaft.coupling' />
+  <ObjectProperty IRI='#PumpCoupling.shaft' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#PumpShaft.bearings' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpShaft.bearings</IRI>
+  <Literal>PumpShaft.bearings</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpShaft.bearings</IRI>
+  <Literal>specification for the bearings that locate the shaft and allocate radial loads </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PumpShaft.bearings</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpShaft.bearings'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpShaft.bearings'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:Bearings' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpShaft.bearings' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PumpShaft.sleeve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PumpShaft.sleeve</IRI>
+  <Literal>PumpShaft.sleeve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PumpShaft.sleeve</IRI>
+  <Literal>specification for the sleeve, if any, that protects the shaft at the point of contact with the casing and seal </Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PumpShaft.sleeve</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PumpShaft.sleeve'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PumpShaft.sleeve'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:ShaftSleeve' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Centrifugal_Pump:PumpShaft' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PumpShaft.sleeve' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<DisjointUnion>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>kineticPumps</Literal>
+  </Annotation>
+  <Class abbreviatedIRI='Centrifugal_Pump:KineticPump' />
+  <Class abbreviatedIRI='Centrifugal_Pump:SpecialEffectPump'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:RegenerativeTurbinePump'/>
+  <Class abbreviatedIRI='Centrifugal_Pump:CentrifugalPump'/>
+</DisjointUnion>
+</Ontology>
+

@@ -1,0 +1,1431 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/Instruments'
+  OntologyIRI='http://el.nist.gov/cre/pdso/Instruments' >
+
+<Prefix name='Instruments' IRI='http://el.nist.gov/cre/pdso/Instruments#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+<Prefix name='ISO-15926' IRI='http://el.nist.gov/cre/pdso/ISO-15926#'/>
+<Prefix name='Valves' IRI='http://el.nist.gov/cre/pdso/Valves#'/>
+<Prefix name='Materials' IRI='http://el.nist.gov/cre/pdso/Materials#'/>
+<Prefix name='Quantities' IRI='http://el.nist.gov/cre/pdso/Quantities#'/>
+<Prefix name='General' IRI='http://el.nist.gov/cre/pdso/General#'/>
+<Prefix name='Codes' IRI='http://el.nist.gov/cre/pdso/Codes#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+<Import>http://el.nist.gov/cre/pdso/ISO-15926</Import>
+<Import>http://el.nist.gov/cre/pdso/Valves</Import>
+<Import>http://el.nist.gov/cre/pdso/Materials</Import>
+<Import>http://el.nist.gov/cre/pdso/Quantities</Import>
+<Import>http://el.nist.gov/cre/pdso/General</Import>
+<Import>http://el.nist.gov/cre/pdso/Codes</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>produced from pdso.mdxml by uml2owl v1.1b</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>Instruments</Literal>
+  </Annotation>
+
+<Declaration><Class IRI='#InstrumentFlangeMountingType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#InstrumentFlangeMountingType</IRI>
+  <Literal>InstrumentFlangeMountingType</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#InstrumentFlangeMountingType.Vertical' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#InstrumentFlangeMountingType.Vertical</IRI>
+  <Literal>Vertical</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#InstrumentFlangeMountingType'/>
+  <NamedIndividual IRI='#InstrumentFlangeMountingType.Vertical'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#InstrumentFlangeMountingType.Adapter_Manifold_Bolting' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#InstrumentFlangeMountingType.Adapter_Manifold_Bolting</IRI>
+  <Literal>Adapter_Manifold_Bolting</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#InstrumentFlangeMountingType'/>
+  <NamedIndividual IRI='#InstrumentFlangeMountingType.Adapter_Manifold_Bolting'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#InstrumentFlangeMountingType.Vertical'/>
+  <NamedIndividual IRI='#InstrumentFlangeMountingType.Adapter_Manifold_Bolting'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#InstrumentFlangeMountingType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#InstrumentFlangeMountingType.Vertical'/>
+    <NamedIndividual IRI='#InstrumentFlangeMountingType.Adapter_Manifold_Bolting'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#MountType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MountType</IRI>
+  <Literal>MountType</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#MountType.coplanar' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MountType.coplanar</IRI>
+  <Literal>coplanar</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#MountType'/>
+  <NamedIndividual IRI='#MountType.coplanar'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#MountType.inline' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MountType.inline</IRI>
+  <Literal>inline</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#MountType'/>
+  <NamedIndividual IRI='#MountType.inline'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#MountType.coplanar'/>
+  <NamedIndividual IRI='#MountType.inline'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#MountType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#MountType.coplanar'/>
+    <NamedIndividual IRI='#MountType.inline'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#MultivariableInstrumentType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MultivariableInstrumentType</IRI>
+  <Literal>MultivariableInstrumentType</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#MultivariableInstrumentType.temperature' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MultivariableInstrumentType.temperature</IRI>
+  <Literal>temperature</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#MultivariableInstrumentType'/>
+  <NamedIndividual IRI='#MultivariableInstrumentType.temperature'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#MultivariableInstrumentType.level' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MultivariableInstrumentType.level</IRI>
+  <Literal>level</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#MultivariableInstrumentType'/>
+  <NamedIndividual IRI='#MultivariableInstrumentType.level'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#MultivariableInstrumentType.flow' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MultivariableInstrumentType.flow</IRI>
+  <Literal>flow</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#MultivariableInstrumentType'/>
+  <NamedIndividual IRI='#MultivariableInstrumentType.flow'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#MultivariableInstrumentType.temperature'/>
+  <NamedIndividual IRI='#MultivariableInstrumentType.level'/>
+  <NamedIndividual IRI='#MultivariableInstrumentType.flow'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#MultivariableInstrumentType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#MultivariableInstrumentType.temperature'/>
+    <NamedIndividual IRI='#MultivariableInstrumentType.level'/>
+    <NamedIndividual IRI='#MultivariableInstrumentType.flow'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#ProcessConnectionType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessConnectionType</IRI>
+  <Literal>ProcessConnectionType</Literal>
+</AnnotationAssertion>
+
+<Declaration><NamedIndividual IRI='#ProcessConnectionType.in-line' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessConnectionType.in-line</IRI>
+  <Literal>in-line</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessConnectionType.in-line</IRI>
+  <Literal>one connection to process fluid</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#ProcessConnectionType'/>
+  <NamedIndividual IRI='#ProcessConnectionType.in-line'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#ProcessConnectionType.co-planar' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessConnectionType.co-planar</IRI>
+  <Literal>co-planar</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessConnectionType.co-planar</IRI>
+  <Literal>inlet and outlet to process fluid in the flow of the process fluid</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#ProcessConnectionType'/>
+  <NamedIndividual IRI='#ProcessConnectionType.co-planar'/>
+</ClassAssertion>
+
+<Declaration><NamedIndividual IRI='#ProcessConnectionType.remote-seal' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessConnectionType.remote-seal</IRI>
+  <Literal>remote-seal</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessConnectionType.remote-seal</IRI>
+  <Literal>a connection to the process fluid is made with a diaphragm seal (two such seals for differential pressure measurement). A signal is transmitted to the transmitter using capillaries and a transmission fluid.</Literal>
+</AnnotationAssertion>
+<ClassAssertion>
+  <Class  IRI='#ProcessConnectionType'/>
+  <NamedIndividual IRI='#ProcessConnectionType.remote-seal'/>
+</ClassAssertion>
+<DifferentIndividuals>
+  <NamedIndividual IRI='#ProcessConnectionType.in-line'/>
+  <NamedIndividual IRI='#ProcessConnectionType.co-planar'/>
+  <NamedIndividual IRI='#ProcessConnectionType.remote-seal'/>
+</DifferentIndividuals>
+<EquivalentClasses>
+  <Class IRI='#ProcessConnectionType' />
+  <ObjectOneOf>
+    <NamedIndividual IRI='#ProcessConnectionType.in-line'/>
+    <NamedIndividual IRI='#ProcessConnectionType.co-planar'/>
+    <NamedIndividual IRI='#ProcessConnectionType.remote-seal'/>
+  </ObjectOneOf>
+</EquivalentClasses>
+<Declaration><Class IRI='#ANSIFlangeType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ANSIFlangeType</IRI>
+  <Literal>ANSIFlangeType</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ANSIFlangeType' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<SubClassOf>
+  <Class IRI='#ANSIFlangeType' />
+  <Class abbreviatedIRI='Instruments:FlangeType' />
+</SubClassOf>
+<Declaration><Class IRI='#AbsolutePressureTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#AbsolutePressureTransmitter</IRI>
+  <Literal>AbsolutePressureTransmitter</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#AbsolutePressureTransmitter</IRI>
+  <Literal>The transmitter are generating a standardized output signal representing the actual pressure relative to full vacuum. 
+
+Source: POSC/Caesar RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#AbsolutePressureTransmitter</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#AbsolutePressureTransmitter</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS819044</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#AbsolutePressureTransmitter' />
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</SubClassOf>
+<Declaration><Class IRI='#CommunicationsProtocol' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CommunicationsProtocol</IRI>
+  <Literal>CommunicationsProtocol</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#CommunicationsProtocol</IRI>
+  <Literal>A standard specification for signaling conventions that use digital electronic messages.
+Both open standards, such as Fieldbus, and proprietary/licensed protocols are commonly used.
+</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#CommunicationsProtocol' />
+  <Class abbreviatedIRI='Codes:Standard' />
+</SubClassOf>
+<Declaration><Class IRI='#ConnectionType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ConnectionType</IRI>
+  <Literal>ConnectionType</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#DINFlangeType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DINFlangeType</IRI>
+  <Literal>DINFlangeType</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DINFlangeType' />
+  <Class abbreviatedIRI='Instruments:FlangeType' />
+</SubClassOf>
+<Declaration><Class IRI='#DetectingInstrument' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DetectingInstrument</IRI>
+  <Literal>DetectingInstrument</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DetectingInstrument</IRI>
+  <Literal>A physical object that detects an aspect of something; records, modifies and/or displays such an aspect or performs a combination of these activities.
+
+Source: POSC/Caesar RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#DetectingInstrument</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:coInanimatePhysicalObject'/>
+  <IRI>#DetectingInstrument</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#DetectingInstrument</IRI>
+  <Literal>http://posccaesar.org/rdl/page/RDS462599</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#DetectingInstrument</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DetectingInstrument' />
+  <Class abbreviatedIRI='Instruments:MeasuringDevice' />
+</SubClassOf>
+<SubClassOf>
+  <Class IRI='#DetectingInstrument' />
+  <Class abbreviatedIRI='Instruments:ProcessInstrument' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#DetectingInstrument.body_material' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DetectingInstrument.body_material</IRI>
+  <Literal>DetectingInstrument.body_material</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DetectingInstrument.body_material</IRI>
+  <Literal>the Material of which the instrument body is constructed</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#DetectingInstrument.body_material'/>
+  <Class abbreviatedIRI='Instruments:DetectingInstrument' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#DetectingInstrument.body_material'/>
+  <Class abbreviatedIRI='Materials:Material' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:DetectingInstrument' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#DetectingInstrument.body_material' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#DetectingInstrument.max_ambient_temperature' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DetectingInstrument.max_ambient_temperature</IRI>
+  <Literal>DetectingInstrument.max_ambient_temperature</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DetectingInstrument.max_ambient_temperature</IRI>
+  <Literal>the maximum temperature of the operating environment in which the instrument will function correctly</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#DetectingInstrument.max_ambient_temperature'/>
+  <Class abbreviatedIRI='Instruments:DetectingInstrument' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#DetectingInstrument.max_ambient_temperature'/>
+  <Class abbreviatedIRI='Quantities:Temperature' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:DetectingInstrument' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#DetectingInstrument.max_ambient_temperature' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#DetectingInstrument.max_operating__temperature' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DetectingInstrument.max_operating__temperature</IRI>
+  <Literal>DetectingInstrument.max_operating__temperature</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DetectingInstrument.max_operating__temperature</IRI>
+  <Literal>the maximum temperature of the process fluid for which the instrument will function correctly</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#DetectingInstrument.max_operating__temperature'/>
+  <Class abbreviatedIRI='Instruments:DetectingInstrument' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#DetectingInstrument.max_operating__temperature'/>
+  <Class abbreviatedIRI='Quantities:Temperature' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:DetectingInstrument' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#DetectingInstrument.max_operating__temperature' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#DifferentialPressureFlowTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DifferentialPressureFlowTransmitter</IRI>
+  <Literal>DifferentialPressureFlowTransmitter</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DifferentialPressureFlowTransmitter' />
+  <Class abbreviatedIRI='Instruments:DifferentialPressureTransmitter' />
+</SubClassOf>
+<Declaration><Class IRI='#DifferentialPressureLevelTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DifferentialPressureLevelTransmitter</IRI>
+  <Literal>DifferentialPressureLevelTransmitter</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DifferentialPressureLevelTransmitter' />
+  <Class abbreviatedIRI='Instruments:DifferentialPressureTransmitter' />
+</SubClassOf>
+<Declaration><Class IRI='#DifferentialPressureTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DifferentialPressureTransmitter</IRI>
+  <Literal>DifferentialPressureTransmitter</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#DifferentialPressureTransmitter</IRI>
+  <Literal>A pressure transmitter that is producing a standardized output signal dependent of a received pressure difference signal. 
+
+Source: POSC/Caesar RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#DifferentialPressureTransmitter</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#DifferentialPressureTransmitter</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS428849</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#DifferentialPressureTransmitter' />
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</SubClassOf>
+<Declaration><Class IRI='#Drain' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Drain</IRI>
+  <Literal>Drain</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Drain' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#ElectricalPressureTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ElectricalPressureTransmitter</IRI>
+  <Literal>ElectricalPressureTransmitter</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ElectricalPressureTransmitter</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ElectricalPressureTransmitter</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS5769585</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ElectricalPressureTransmitter' />
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</SubClassOf>
+<Declaration><Class IRI='#ElectricalSystem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ElectricalSystem</IRI>
+  <Literal>ElectricalSystem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ElectricalSystem</IRI>
+  <Literal>A subsystem whose purpose is to acquire and possibly convert electrical power for a device.  It is typically presumed to possess all the electrical power properties of the device.</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#ElectricalSystem.electrical_connection' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ElectricalSystem.electrical_connection</IRI>
+  <Literal>ElectricalSystem.electrical_connection</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#ElectricalSystem.electrical_connection'/>
+  <Class abbreviatedIRI='Instruments:ElectricalSystem' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#ElectricalSystem.electrical_connection'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:ElectricalSystem' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#ElectricalSystem.electrical_connection' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ElectricalSystem.power_consumption' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ElectricalSystem.power_consumption</IRI>
+  <Literal>ElectricalSystem.power_consumption</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ElectricalSystem.power_consumption'/>
+  <Class abbreviatedIRI='Instruments:ElectricalSystem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ElectricalSystem.power_consumption'/>
+  <Class abbreviatedIRI='Quantities:Power' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:ElectricalSystem' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ElectricalSystem.power_consumption' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#Enclosure' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Enclosure</IRI>
+  <Literal>Enclosure</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Enclosure' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#Flange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Flange</IRI>
+  <Literal>Flange</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Flange' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Flange.adapterBoltSize' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Flange.adapterBoltSize</IRI>
+  <Literal>Flange.adapterBoltSize</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Flange.adapterBoltSize'/>
+  <Class abbreviatedIRI='Instruments:Flange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Flange.adapterBoltSize'/>
+  <Class abbreviatedIRI='Quantities:Length' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:Flange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Flange.adapterBoltSize' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><DataProperty IRI='#Flange.drain_vent' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Flange.drain_vent</IRI>
+  <Literal>Flange.drain_vent</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Flange.drain_vent</IRI>
+  <Literal>indicates whether the flange has a drain (aka a vent).</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#Flange.drain_vent'/>
+  <Class abbreviatedIRI='Instruments:Flange' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#Flange.drain_vent'/>
+  <Datatype abbreviatedIRI='xsd:boolean' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:Flange' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#Flange.drain_vent' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Flange.flangeSize' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Flange.flangeSize</IRI>
+  <Literal>Flange.flangeSize</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Flange.flangeSize</IRI>
+  <Literal>the size of the flange</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Flange.flangeSize'/>
+  <Class abbreviatedIRI='Instruments:Flange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Flange.flangeSize'/>
+  <Class abbreviatedIRI='Quantities:Length' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:Flange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Flange.flangeSize' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Flange.flangeType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Flange.flangeType</IRI>
+  <Literal>Flange.flangeType</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Flange.flangeType'/>
+  <Class abbreviatedIRI='Instruments:Flange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Flange.flangeType'/>
+  <Class abbreviatedIRI='Instruments:FlangeType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:Flange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Flange.flangeType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Flange.mountingType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Flange.mountingType</IRI>
+  <Literal>Flange.mountingType</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Flange.mountingType'/>
+  <Class abbreviatedIRI='Instruments:Flange' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Flange.mountingType'/>
+  <Class abbreviatedIRI='Instruments:InstrumentFlangeMountingType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:Flange' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#Flange.mountingType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#FlangeType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FlangeType</IRI>
+  <Literal>FlangeType</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#FlangeType.description' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FlangeType.description</IRI>
+  <Literal>FlangeType.description</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#FlangeType.description'/>
+  <Class abbreviatedIRI='Instruments:FlangeType' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#FlangeType.description'/>
+  <Datatype abbreviatedIRI='xsd:string' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:FlangeType' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#FlangeType.description' />
+  </DataExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#FlowTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#FlowTransmitter</IRI>
+  <Literal>FlowTransmitter</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#GagePressureTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#GagePressureTransmitter</IRI>
+  <Literal>GagePressureTransmitter</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#GagePressureTransmitter</IRI>
+  <Literal>
+
+Source: POSC/Caesar RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#GagePressureTransmitter</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#GagePressureTransmitter</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS818999</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#GagePressureTransmitter' />
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</SubClassOf>
+<Declaration><Class IRI='#Gasket' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Gasket</IRI>
+  <Literal>Gasket</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Gasket' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#IsolatingDiaphragm' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#IsolatingDiaphragm</IRI>
+  <Literal>IsolatingDiaphragm</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#IsolatingDiaphragm' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#LevelTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#LevelTransmitter</IRI>
+  <Literal>LevelTransmitter</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#Manifold' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Manifold</IRI>
+  <Literal>Manifold</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Manifold' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#ManifoldMountingType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ManifoldMountingType</IRI>
+  <Literal>ManifoldMountingType</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ManifoldMountingType' />
+  <Class abbreviatedIRI='Codes:Code' />
+</SubClassOf>
+<Declaration><Class IRI='#Mat' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Mat</IRI>
+  <Literal>Mat</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#MeasuringDevice' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MeasuringDevice</IRI>
+  <Literal>MeasuringDevice</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MeasuringDevice</IRI>
+  <Literal>A &apos;device&apos; intended for &apos;measuring&apos;. 
+
+Source: POSC/Caesar RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#MeasuringDevice</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:coInanimatePhysicalObject'/>
+  <IRI>#MeasuringDevice</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#MeasuringDevice</IRI>
+  <Literal>http://posccaesar.org/rdl/page/RDS1415826371</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#MeasuringDevice</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+
+<Declaration><DataProperty IRI='#MeasuringDevice.accuracy' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MeasuringDevice.accuracy</IRI>
+  <Literal>MeasuringDevice.accuracy</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MeasuringDevice.accuracy</IRI>
+  <Literal>the relative accuracy of the measurements.  The uncertainty is expressed as a percentage of the reported values.</Literal>
+</AnnotationAssertion>
+<DataPropertyDomain>
+  <DataProperty IRI='#MeasuringDevice.accuracy'/>
+  <Class abbreviatedIRI='Instruments:MeasuringDevice' />
+</DataPropertyDomain>
+<DataPropertyRange>
+  <DataProperty IRI='#MeasuringDevice.accuracy'/>
+  <Datatype abbreviatedIRI='xsd:decimal' />
+</DataPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:MeasuringDevice' />
+  <DataExactCardinality cardinality='1'>
+    <DataProperty IRI='#MeasuringDevice.accuracy' />
+  </DataExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#MeasuringDevice.calibratedRange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#MeasuringDevice.calibratedRange</IRI>
+  <Literal>MeasuringDevice.calibratedRange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#MeasuringDevice.calibratedRange</IRI>
+  <Literal>The range of quantities of the measured kind for which the Device has been calibrated to produce results of a known accuracy.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#MeasuringDevice.calibratedRange'/>
+  <Class abbreviatedIRI='Instruments:MeasuringDevice' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#MeasuringDevice.calibratedRange'/>
+  <Class abbreviatedIRI='Quantities:QuantityRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:MeasuringDevice' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#MeasuringDevice.calibratedRange' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#O-Ring' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#O-Ring</IRI>
+  <Literal>O-Ring</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#O-Ring</IRI>
+  <Literal>A seal ring that has a circular cross section. </Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#O-Ring' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+<Declaration><Class IRI='#PneumaticPressureTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PneumaticPressureTransmitter</IRI>
+  <Literal>PneumaticPressureTransmitter</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PneumaticPressureTransmitter</IRI>
+  <Literal>
+
+
+Source: POSC/Caesar RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#PneumaticPressureTransmitter</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#PneumaticPressureTransmitter</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS5769675</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PneumaticPressureTransmitter' />
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</SubClassOf>
+<Declaration><Class IRI='#PressureTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter</IRI>
+  <Literal>PressureTransmitter</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PressureTransmitter</IRI>
+  <Literal>JORD: a transmitter that is producing a standardized output signal dependent of a received input signal from a pressure element.
+
+Source: POSC/Caesar RDL</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#PressureTransmitter</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#PressureTransmitter</IRI>
+  <Literal>http://jord-dev.org/rdl/RDS743399</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#PressureTransmitter</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#PressureTransmitter' />
+  <Class abbreviatedIRI='Instruments:DetectingInstrument' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.calibrated_range' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.calibrated_range</IRI>
+  <Literal>PressureTransmitter.calibrated_range</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PressureTransmitter.calibrated_range</IRI>
+  <Literal>The range of operating pressures for which the instrument has been calibrated to guarantee reliable measurement data
+
+Note:  The is the specialization of the calibratedRange property of MeasuringDevice.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.calibrated_range'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.calibrated_range'/>
+  <Class abbreviatedIRI='Quantities:PressureRange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.calibrated_range' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<SubObjectPropertyOf>
+    <ObjectProperty IRI='#PressureTransmitter.calibrated_range'/>
+    <ObjectProperty abbreviatedIRI='Instruments:MeasuringDevice.calibratedRange'/>
+</SubObjectPropertyOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.max_operating_pressure' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.max_operating_pressure</IRI>
+  <Literal>PressureTransmitter.max_operating_pressure</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#PressureTransmitter.max_operating_pressure</IRI>
+  <Literal>the maximum process fluid pressure that can be measured by the instrument</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.max_operating_pressure'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.max_operating_pressure'/>
+  <Class abbreviatedIRI='Quantities:Pressure' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.max_operating_pressure' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ProcessInstrument' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessInstrument</IRI>
+  <Literal>ProcessInstrument</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:RDLclass'/>
+  <IRI>#ProcessInstrument</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:coInanimatePhysicalObject'/>
+  <IRI>#ProcessInstrument</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='ISO-15926:URI'/>
+  <IRI>#ProcessInstrument</IRI>
+  <Literal>http://posccaesar.org/rdl/page/RDS934064</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#ProcessInstrument</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#ProcessInstrument' />
+  <Class abbreviatedIRI='General:InstrumentCharacterization' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessInstrument.connectionSize' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessInstrument.connectionSize</IRI>
+  <Literal>ProcessInstrument.connectionSize</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessInstrument.connectionSize'/>
+  <Class abbreviatedIRI='Instruments:ProcessInstrument' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessInstrument.connectionSize'/>
+  <Class abbreviatedIRI='Quantities:Length' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:ProcessInstrument' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessInstrument.connectionSize' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessInstrument.connectionType' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessInstrument.connectionType</IRI>
+  <Literal>ProcessInstrument.connectionType</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessInstrument.connectionType</IRI>
+  <Literal>For example, NPTF</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessInstrument.connectionType'/>
+  <Class abbreviatedIRI='Instruments:ProcessInstrument' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessInstrument.connectionType'/>
+  <Class abbreviatedIRI='Instruments:ProcessConnectionType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:ProcessInstrument' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessInstrument.connectionType' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<Declaration><Class IRI='#ProcessMaterial' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessMaterial</IRI>
+  <Literal>ProcessMaterial</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isAbstract'/>
+  <IRI>#ProcessMaterial</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#SignalSystem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SignalSystem</IRI>
+  <Literal>SignalSystem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SignalSystem</IRI>
+  <Literal>A subsystem whose purpose is to provide communications between a device an other systems, and possibly communications between subsystems of the device.
+
+These communications are implemented by signals of some kind (usually electronic), and may include higher-levels of messaging.</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#TemperatureTransmitter' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#TemperatureTransmitter</IRI>
+  <Literal>TemperatureTransmitter</Literal>
+</AnnotationAssertion>
+<Declaration><Class IRI='#Vent' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Vent</IRI>
+  <Literal>Vent</Literal>
+</AnnotationAssertion>
+<SubClassOf>
+  <Class IRI='#Vent' />
+  <Class abbreviatedIRI='General:PartCharacterization' />
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#SignalSystem.protocol' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#SignalSystem.protocol</IRI>
+  <Literal>SignalSystem.protocol</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#SignalSystem.protocol</IRI>
+  <Literal>The standard signaling conventions supported by the SignalSystem.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#SignalSystem.protocol'/>
+  <Class abbreviatedIRI='Instruments:SignalSystem' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#SignalSystem.protocol'/>
+  <Class abbreviatedIRI='Instruments:CommunicationsProtocol' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:SignalSystem' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#SignalSystem.protocol' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#CommunicationsProtocol._inv1_protocol' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#CommunicationsProtocol._inv1_protocol</IRI>
+  <Literal>CommunicationsProtocol._inv1_protocol</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#CommunicationsProtocol._inv1_protocol'/>
+  <Class abbreviatedIRI='Instruments:CommunicationsProtocol' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#CommunicationsProtocol._inv1_protocol'/>
+  <Class abbreviatedIRI='Instruments:SignalSystem' />
+</ObjectPropertyRange>
+<InverseObjectProperties>
+  <ObjectProperty IRI='#SignalSystem.protocol' />
+  <ObjectProperty IRI='#CommunicationsProtocol._inv1_protocol' />
+</InverseObjectProperties>
+
+<Declaration><ObjectProperty IRI='#DINFlangeType.DINdnDiameterNumber' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DINFlangeType.DINdnDiameterNumber</IRI>
+  <Literal>DINFlangeType.DINdnDiameterNumber</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#DINFlangeType.DINdnDiameterNumber'/>
+  <Class abbreviatedIRI='Instruments:DINFlangeType' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#DINFlangeType.DINdnDiameterNumber'/>
+  <Class abbreviatedIRI='Codes:Code' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:DINFlangeType' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#DINFlangeType.DINdnDiameterNumber' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#DINFlangeType.DINpnPressureValue' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#DINFlangeType.DINpnPressureValue</IRI>
+  <Literal>DINFlangeType.DINpnPressureValue</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#DINFlangeType.DINpnPressureValue'/>
+  <Class abbreviatedIRI='Instruments:DINFlangeType' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#DINFlangeType.DINpnPressureValue'/>
+  <Class abbreviatedIRI='Codes:Code' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:DINFlangeType' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#DINFlangeType.DINpnPressureValue' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessInstrument.powerSystem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessInstrument.powerSystem</IRI>
+  <Literal>ProcessInstrument.powerSystem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessInstrument.powerSystem</IRI>
+  <Literal>The subsystem that supplies electric power to the ProcessInstrument.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#ProcessInstrument.powerSystem</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessInstrument.powerSystem'/>
+  <Class abbreviatedIRI='Instruments:ProcessInstrument' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessInstrument.powerSystem'/>
+  <Class abbreviatedIRI='Instruments:ElectricalSystem' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:ProcessInstrument' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessInstrument.powerSystem' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#ProcessInstrument.signalSystem' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessInstrument.signalSystem</IRI>
+  <Literal>ProcessInstrument.signalSystem</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessInstrument.signalSystem</IRI>
+  <Literal>The subsystem that enables communication between the ProcessInstrument and the overall Instrumentation and Control systems.</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#ProcessInstrument.signalSystem</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessInstrument.signalSystem'/>
+  <Class abbreviatedIRI='Instruments:ProcessInstrument' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessInstrument.signalSystem'/>
+  <Class abbreviatedIRI='Instruments:SignalSystem' />
+</ObjectPropertyRange>
+
+<Declaration><ObjectProperty IRI='#ProcessInstrument.measuredProcessMaterial' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ProcessInstrument.measuredProcessMaterial</IRI>
+  <Literal>ProcessInstrument.measuredProcessMaterial</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ProcessInstrument.measuredProcessMaterial</IRI>
+  <Literal>The specification for the process fluid that is (to be) measured by the ProcessInstrument,  including the range of relevant properties.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#ProcessInstrument.measuredProcessMaterial'/>
+  <Class abbreviatedIRI='Instruments:ProcessInstrument' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#ProcessInstrument.measuredProcessMaterial'/>
+  <Class abbreviatedIRI='Materials:ProcessFluidStream' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:ProcessInstrument' />
+  <ObjectMinCardinality cardinality='1'>
+    <ObjectProperty IRI='#ProcessInstrument.measuredProcessMaterial' />
+  </ObjectMinCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Manifold.inlet_valve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Manifold.inlet_valve</IRI>
+  <Literal>Manifold.inlet_valve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Manifold.inlet_valve</IRI>
+  <Literal>the valve that connects the manifold to the pipeline on the upstream side.  This is often a splitter/router valve that feeds multiple internal flow lines in the manifold.
+
+Note:the relevant valve properties (type, max pressure, material, etc.) may be captured as a standard ValveType or as a specific product id chosen by the instrument manufacturer.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Manifold.inlet_valve'/>
+  <Class abbreviatedIRI='Instruments:Manifold' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Manifold.inlet_valve'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:Manifold' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Manifold.inlet_valve' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Manifold.outlet_valve' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Manifold.outlet_valve</IRI>
+  <Literal>Manifold.outlet_valve</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Manifold.outlet_valve</IRI>
+  <Literal>the valve that connects the internal lines in the manifold to the pipeline on the downstream side.  This is often a merging (routing) valve that feeds multiple internal flow lines back into the main pipeline.
+
+Note:the relevant valve properties (type, max pressure, material, etc.) may be captured as a standard ValveType or as a specific product id chosen by the instrument manufacturer.</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Manifold.outlet_valve'/>
+  <Class abbreviatedIRI='Instruments:Manifold' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Manifold.outlet_valve'/>
+  <Class abbreviatedIRI='Valves:Valve' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:Manifold' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Manifold.outlet_valve' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#Manifold.mounting' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Manifold.mounting</IRI>
+  <Literal>Manifold.mounting</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#Manifold.mounting'/>
+  <Class abbreviatedIRI='Instruments:Manifold' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#Manifold.mounting'/>
+  <Class abbreviatedIRI='Instruments:ManifoldMountingType' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:Manifold' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#Manifold.mounting' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.Oring' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.Oring</IRI>
+  <Literal>PressureTransmitter.Oring</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PressureTransmitter.Oring</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.Oring'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.Oring'/>
+  <Class abbreviatedIRI='Instruments:O-Ring' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectMaxCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.Oring' />
+  </ObjectMaxCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.diaphragm' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.diaphragm</IRI>
+  <Literal>PressureTransmitter.diaphragm</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PressureTransmitter.diaphragm</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.diaphragm'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.diaphragm'/>
+  <Class abbreviatedIRI='Instruments:IsolatingDiaphragm' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.diaphragm' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.drain' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.drain</IRI>
+  <Literal>PressureTransmitter.drain</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PressureTransmitter.drain</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.drain'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.drain'/>
+  <Class abbreviatedIRI='Instruments:Drain' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.drain' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.enclosure' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.enclosure</IRI>
+  <Literal>PressureTransmitter.enclosure</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PressureTransmitter.enclosure</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.enclosure'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.enclosure'/>
+  <Class abbreviatedIRI='Instruments:Enclosure' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.enclosure' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.flange' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.flange</IRI>
+  <Literal>PressureTransmitter.flange</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PressureTransmitter.flange</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.flange'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.flange'/>
+  <Class abbreviatedIRI='Instruments:Flange' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.flange' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.gasket' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.gasket</IRI>
+  <Literal>PressureTransmitter.gasket</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PressureTransmitter.gasket</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.gasket'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.gasket'/>
+  <Class abbreviatedIRI='Instruments:Gasket' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.gasket' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.manifold' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.manifold</IRI>
+  <Literal>PressureTransmitter.manifold</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PressureTransmitter.manifold</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.manifold'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.manifold'/>
+  <Class abbreviatedIRI='Instruments:Manifold' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.manifold' />
+  </ObjectExactCardinality>
+</SubClassOf>
+
+<Declaration><ObjectProperty IRI='#PressureTransmitter.vent' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#PressureTransmitter.vent</IRI>
+  <Literal>PressureTransmitter.vent</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='umlowl:isComposite'/>
+  <IRI>#PressureTransmitter.vent</IRI>
+  <Literal>true</Literal>
+</AnnotationAssertion>
+<ObjectPropertyDomain>
+  <ObjectProperty IRI='#PressureTransmitter.vent'/>
+  <Class abbreviatedIRI='Instruments:PressureTransmitter' />
+</ObjectPropertyDomain>
+<ObjectPropertyRange>
+  <ObjectProperty IRI='#PressureTransmitter.vent'/>
+  <Class abbreviatedIRI='Instruments:Vent' />
+</ObjectPropertyRange>
+<SubClassOf><Class abbreviatedIRI='Instruments:PressureTransmitter' />
+  <ObjectExactCardinality cardinality='1'>
+    <ObjectProperty IRI='#PressureTransmitter.vent' />
+  </ObjectExactCardinality>
+</SubClassOf>
+<DisjointClasses>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>ONEOF Differential/Gage/Absolute</Literal>
+  </Annotation>
+  <Class abbreviatedIRI='Instruments:AbsolutePressureTransmitter'/>
+  <Class abbreviatedIRI='Instruments:GagePressureTransmitter'/>
+  <Class abbreviatedIRI='Instruments:DifferentialPressureTransmitter'/>
+</DisjointClasses>
+<DisjointClasses>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>ONEOF Electrical/Pneumatic</Literal>
+  </Annotation>
+  <Class abbreviatedIRI='Instruments:PneumaticPressureTransmitter'/>
+  <Class abbreviatedIRI='Instruments:ElectricalPressureTransmitter'/>
+</DisjointClasses>
+</Ontology>
+

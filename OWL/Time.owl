@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Ontology
+  xmlns='http://www.w3.org/2002/07/owl'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+  xsi:schemaLocation='http://www.w3.org/2002/07/owl#
+   http://www.w3.org/2009/09/owl2-xml.xsd'
+  xml:base='http://el.nist.gov/cre/pdso/Time'
+  OntologyIRI='http://el.nist.gov/cre/pdso/Time' >
+
+<Prefix name='Time' IRI='http://el.nist.gov/cre/pdso/Time#'/>
+<Prefix name='rdfs' IRI='http://www.w3.org/2000/01/rdf-schema#'/>
+<Prefix name='xsd'  IRI='http://www.w3.org/2001/XMLSchema#'/>
+<Prefix name='owl'  IRI='http://www.w3.org/2002/07/owl#'/>
+<Prefix name='umlowl' IRI='http://el.nist.gov/cre/pdso/umlanno.owl#'/>
+
+<Import>http://el.nist.gov/cre/pdso/umlanno.owl</Import>
+
+<Annotation>
+  <AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <Literal>Replacement Time ontology to use XSD types</Literal>
+</Annotation>
+  <Annotation><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+    <Literal>Time</Literal>
+  </Annotation>
+
+<Declaration><Datatype IRI='#ISO8601String' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#ISO8601String</IRI>
+  <Literal>ISO8601String</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#ISO8601String</IRI>
+  <Literal>A character string that represents a TimeCoordinate according a representation rule specified by ISO 8601:2004.</Literal>
+</AnnotationAssertion>
+<DatatypeDefinition>
+  <Annotation><AnnotationProperty abbreviatedIRI='umlowl:restricts'/>
+    <Literal>true</Literal>
+  </Annotation>
+  <Datatype IRI='#ISO8601String' />
+  <Datatype abbreviatedIRI='xsd:string' />
+</DatatypeDefinition>
+
+<Declaration><Datatype IRI='#TimeOfDay' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#TimeOfDay</IRI>
+  <Literal>TimeOfDay</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#TimeOfDay</IRI>
+  <Literal>A subtype of ISO8601String that identifies time intervals that have a duration of less than one day</Literal>
+</AnnotationAssertion>
+<DatatypeDefinition>
+  <Datatype IRI='#TimeOfDay' />
+  <Datatype abbreviatedIRI='Time:ISO8601String' />
+</DatatypeDefinition>
+
+<Declaration><Datatype IRI='#Date' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Date</IRI>
+  <Literal>Date</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Date</IRI>
+  <Literal>The Date part of the DateTime, which identifies exactly one day-long TimeInterval.</Literal>
+</AnnotationAssertion>
+<DatatypeDefinition>
+  <Datatype IRI='#Date' />
+  <Datatype abbreviatedIRI='Time:ISO8601String' />
+</DatatypeDefinition>
+
+<Declaration><Datatype IRI='#Time' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Time</IRI>
+  <Literal>time</Literal>
+</AnnotationAssertion>
+<DatatypeDefinition>
+  <Datatype IRI='#Time' />
+  <Datatype abbreviatedIRI='Time:TimeOfDay' />
+</DatatypeDefinition>
+
+<Declaration><Datatype IRI='#DateTime' /></Declaration>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:label'/>
+  <IRI>#Date</IRI>
+  <Literal>Date</Literal>
+</AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI='rdfs:comment'/>
+  <IRI>#Date</IRI>
+  <Literal>A date and time coordinate, which identifies a specific time interval on the TimeAxis down to fractions of a second.</Literal>
+</AnnotationAssertion>
+<DatatypeDefinition>
+  <Datatype IRI='#DateTime' />
+  <Datatype abbreviatedIRI='xsd:dateTime' />
+</DatatypeDefinition>
+
+</Ontology>
+
