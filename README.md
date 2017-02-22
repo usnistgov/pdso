@@ -8,7 +8,7 @@ The ontology provided by this repository is a formal machine-readable terminolog
 standard glossaries of terms and definitions. The work specifically includes the concepts used in
 Centrifugal Pump, Pressure Transmitter, and Valve data sheets.
 
-A paper describing the ontology can be found [here](http://nvlpubs.nist.gov/nistpubs/ir/2014/NIST.IR.8035.pdf).
+A paper describing the ontology can be found [here](https://doi.org/10.6028/NIST.IR.8035).
 
 
 ## Disclaimer
